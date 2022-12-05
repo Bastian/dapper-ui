@@ -21,7 +21,6 @@
 		});
 		worker?.addEventListener('message', (message) => {
 			highlighted = message.data;
-			console.log(highlighted);
 		});
 		onDestroy(() => worker.terminate());
 	}
@@ -35,7 +34,7 @@
 </script>
 
 <div class={className}>
-	<pre class="text-sm overflow-x"><code class="rounded-lg hljs"
+	<pre class="overflow-x text-sm"><code class="hljs rounded-lg"
 			>{#if highlighted}{@html highlighted}{:else}{noDedent
 					? code
 					: dedentFunction(code)}{/if}</code

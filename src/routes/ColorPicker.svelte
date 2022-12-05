@@ -7,9 +7,9 @@
 
 <div class="space-y-1 text-sm font-medium text-gray-700">
 	<Text>Color</Text>
-	<div class="flex max-w-xs flex-wrap gap-1">
+	<div class="flex max-w-sm flex-wrap gap-1">
 		{#each ['gray', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose'] as c}
-			<Button size="sm" truncate={false} color={c} on:click={() => (color = c)}>
+			<Button size="sm" truncate={false} color={c} class="w-9" on:click={() => (color = c)}>
 				{#if color === c}<span class="-m-1.5">✓</span>{/if}
 			</Button>
 		{/each}

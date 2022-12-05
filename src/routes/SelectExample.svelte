@@ -25,7 +25,7 @@
 			label: 'Favorite Fruit',
 			disabled,
 			color,
-			size
+			size: size === 'base' ? undefined : size
 		}
 	});
 </script>

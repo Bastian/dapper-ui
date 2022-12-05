@@ -14,17 +14,32 @@
 		string
 	];
 
+	/*
+	<div class="flex gap-1 bg-white p-8">
+		<div class="h-16 w-16 rounded bg-[hsl(220,9%,6%)] shadow" />
+		<div class="h-16 w-16 rounded bg-[hsl(220,8%,8%)] shadow" />
+		<div class="h-16 w-16 rounded bg-[hsl(220,7%,11%)] shadow" />
+		<div class="h-16 w-16 rounded bg-[hsl(220,6%,17%)] shadow" />
+		<div class="h-16 w-16 rounded bg-[hsl(220,5%,20%)] shadow" />
+		<div class="h-16 w-16 rounded bg-[hsl(220,4%,25%)] shadow" />
+		<div class="h-16 w-16 rounded bg-[hsl(220,3%,35%)] shadow" />
+		<div class="h-16 w-16 rounded bg-[hsl(220,3%,45%)] shadow" />
+		<div class="h-16 w-16 rounded bg-[hsl(220,2%,59%)] shadow" />
+		<div class="h-16 w-16 rounded bg-[hsl(220,1%,75%)] shadow" />
+	</div>
+	*/
+
 	export const dark: ColorPalette = [
-		'#5f7181',
-		'#576775',
-		'#4e5c6a',
-		'#45525e',
-		'#3d4852',
-		'#343e46',
-		'#2b333b',
-		'#23292f',
-		'#1a1f23',
-		'#111517'
+		'#bfbfc0',
+		'#949699',
+		'#6f7276',
+		'#57585c',
+		'#3d3f42',
+		'#303236',
+		'#292a2e',
+		'#1a1b1e',
+		'#131416',
+		'#0e0f11'
 	];
 
 	export const tailwindGray: ColorPalette = [

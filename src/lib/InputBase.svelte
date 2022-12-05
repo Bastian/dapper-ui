@@ -5,8 +5,9 @@
 	export let label: string;
 	export let hasIconLabel = false;
 	export let disabled = false;
+	export let size: 'base' | 'sm' | undefined = 'base';
 	/**
-	 *Visually hides the label. You should still provide a label for accessibility concerns.
+	 * Visually hides the label. You should still provide a label for accessibility concerns.
 	 */
 	export let hideLabel = false;
 	export let id: string;
@@ -27,12 +28,16 @@
 	<Text
 		tag="label"
 		for={id}
-		contrast="low"
-		size="sm"
-		class="mb-0.5 flex items-center gap-0.5 {hideLabel ? 'hidden' : ''} {classLabel}"
+		contrast="lower"
+		size={size === 'sm' ? 'xs' : 'sm'}
+		weight="semibold"
+		class="mb-0.5 flex items-center gap-1 {hideLabel ? 'hidden' : ''} {classLabel}"
 	>
 		{#if hasIconLabel}
-			<Text class="scale-75" contrast="lower"><slot name="icon-label" /></Text>
+			<Text
+				class={size === 'sm' ? 'dapper-ui-input-icon-label-sm' : 'dapper-ui-input-icon-label-base'}
+				contrast="lower"><slot name="icon-label" /></Text
+			>
 		{/if}
 		{label}
 	</Text>
@@ -43,3 +48,12 @@
 		<Text size="xs" contrast="lower">{helpText}</Text>
 	{/if}
 </div>
+
+<style lang="postcss" global>
+	.dapper-ui-input-icon-label-base > svg {
+		@apply h-4 w-4;
+	}
+	.dapper-ui-input-icon-label-sm > svg {
+		@apply h-3.5 w-3.5;
+	}
+</style>

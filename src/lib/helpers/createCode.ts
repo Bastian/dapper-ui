@@ -6,14 +6,7 @@ export function createCode(options: {
 	};
 	compact?: boolean;
 }) {
-	return `<${options.name} ${Object.entries(options?.props ?? {})
-		.map(([key, value]) => {
-			if (value === undefined) return '';
-			if (typeof value === 'boolean') return value ? key : '';
-			return `${key}="${value}"`;
-		})
-		.filter(Boolean)
-		.join(' ')}${options.children ? `>${renderChildren(options.children, options.compact)}${options.compact ? '' : '\n'}</${options.name}>` : '/>'}`;
+	return `<${options.name}${renderProps(options.props)}${options.children ? `>${renderChildren(options.children, options.compact)}${options.compact ? '' : '\n'}</${options.name}>` : '/>'}`;
 }
 
 function renderChildren(children: string | (string | undefined)[], compact = false) {
@@ -22,4 +15,16 @@ function renderChildren(children: string | (string | undefined)[], compact = fal
 		rendered = `\n${rendered}`;
 	}
 	return rendered.replace(new RegExp("\\n", 'g'), "\n    ");
+}
+
+function renderProps(props?: { [key: string]: string | boolean | undefined }) {
+	return Object.entries(props ?? {})
+		.map(([key, value]) => {
+			if (value === undefined) return '';
+			if (typeof value === 'boolean') return value ? key : '';
+			return `${key}="${value}"`;
+		})
+		.filter(Boolean)
+		.map((prop, index) => `${index === 0 ? ' ' : ''}${prop}`)
+		.join(' ');
 }

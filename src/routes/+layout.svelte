@@ -23,7 +23,7 @@
 </script>
 
 <ThemeProvider
-	class="h-full overflow-y-auto bg-gray-100 p-16 dark:bg-dark-800"
+	class="h-full overflow-y-auto bg-gray-100 p-16 dark:bg-dark-700"
 	colors={{
 		primary: tailwindIndigo,
 		gray: tailwindGray,

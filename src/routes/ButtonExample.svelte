@@ -26,8 +26,8 @@
 		props: {
 			disabled,
 			color,
-			variant,
-			size
+			variant: variant === 'solid' ? undefined : variant,
+			size: size === 'base' ? undefined : size
 		}
 	});
 </script>

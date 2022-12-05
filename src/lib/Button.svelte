@@ -53,7 +53,7 @@
 	}
 
 	:local(.size-sm) {
-		@apply h-8 px-4;
+		@apply h-9 px-4;
 	}
 
 	:local(.icon-start.size-sm) {

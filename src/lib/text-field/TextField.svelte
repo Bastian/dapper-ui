@@ -8,6 +8,8 @@
 
 	export let fullWidth = false;
 
+	export let size: 'sm' | 'base' | undefined = 'base';
+
 	export let label: string;
 	export let hideLabel = false;
 	export let id: string = generateRandomId();
@@ -54,6 +56,7 @@
 	{classLabel}
 	{disabled}
 	{fullWidth}
+	{size}
 	class={className}
 	hasIconLabel={$$slots['icon-label']}
 >
@@ -61,6 +64,8 @@
 	<input
 		style={overwriteColor(color, [200, 300, 600, 700])}
 		class:w-full={fullWidth}
+		class:size-base={size === 'base' || size === undefined}
+		class:size-sm={size === 'sm'}
 		{id}
 		{type}
 		{name}
@@ -77,6 +82,14 @@
 
 <style lang="postcss" global>
 	:local(input) {
-		@apply rounded border-gray-300 text-gray-700 focus:border-primary-300 focus:outline-none focus:ring-primary-700/70 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:focus:border-primary-600;
+		@apply rounded border-gray-300 text-gray-700 transition-all focus:border-primary-300 focus:outline-none focus:ring-primary-700/70 dark:border-dark-400 dark:bg-dark-600 dark:text-gray-200 dark:focus:border-primary-600;
+	}
+
+	:local(.size-base) {
+		@apply h-10;
+	}
+
+	:local(.size-sm) {
+		@apply h-9;
 	}
 </style>
