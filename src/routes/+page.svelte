@@ -26,14 +26,4 @@
 
 	<div class="mt-16 text-center"><Text>Login Form Example:</Text></div>
 	<LoginForm />
-
-	<div class="mt-16 text-center"><Text>Button Example:</Text></div>
-	<div class="flex items-end">
-		<TextField label="Hi" />
-		<Button>Hi</Button>
-	</div>
-	<div class="flex items-end">
-		<TextField size="sm" label="Hi" />
-		<Button size="sm">Hi</Button>
-	</div>
 </div>
