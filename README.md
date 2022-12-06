@@ -1,38 +1,28 @@
-# create-svelte
+# 🤵 Dapper UI
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+![Component Examples](.github/component-example.png)
 
-## Creating a project
+Dapper UI is a UI library for Svelte. It is built on top of [TailwindCSS](https://tailwindcss.com/), but can also be used without it.
 
-If you're seeing this, you've probably already done this step. Congrats!
+A small demo of the components is available at [https://bastian.github.io/dapper-ui/](https://bastian.github.io/dapper-ui/).
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+This is a project that is still under development and is very experimental. It is not recommended to use it in production or for serious projects.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Install
 
-## Developing
+tbd. Not published to NPM yet.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Current State of Development
 
-```bash
-npm run dev
+Components and structure are still experimental and can change at any time.
+Hell, not even the name is final and can change.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Do not use this in production, but if you like it, feel free to star this repository to show your interest.
 
-## Building
+## Contributing
 
-To create a production version of your app:
+At this stage of development, I am not looking for contributions.
 
-```bash
-npm run build
-```
+## License
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+This project is licensed under the [MIT License](/LICENSE).
