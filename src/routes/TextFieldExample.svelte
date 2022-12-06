@@ -9,8 +9,6 @@
 
 	let label = 'Example';
 	let disabled = false;
-	let iconStart = false;
-	let iconEnd = false;
 	let color: string | undefined = undefined;
 	export let size: 'sm' | 'base' = 'base';
 
@@ -49,8 +47,6 @@
 		<ColorPicker bind:color />
 		<div class="space-y-1">
 			<Checkbox bind:checked={disabled}>Disabled</Checkbox>
-			<Checkbox bind:checked={iconStart}>Icon Start</Checkbox>
-			<Checkbox bind:checked={iconEnd}>Icon End</Checkbox>
 		</div>
 	</svelte:fragment>
 </Example>

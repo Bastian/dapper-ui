@@ -5,11 +5,15 @@
 </script>
 
 <div class="flex flex-col border border-gray-200 bg-white dark:border-dark-600 dark:bg-dark-800">
-	<div class="flex">
-		<div class="flex w-96 items-center justify-center rounded p-8">
+	<div class="flex flex-col md:flex-row">
+		<div
+			class="flex w-full items-center justify-center rounded border-gray-200 p-8  dark:border-dark-600 md:w-96"
+		>
 			<slot name="preview" />
 		</div>
-		<div class="space-y-1 border-l border-gray-200 p-8 dark:border-dark-600">
+		<div
+			class="space-y-1 border-t border-gray-200 p-8 dark:border-dark-600 md:border-t-0 md:border-l"
+		>
 			<div class="space-y-4">
 				<slot name="controls" />
 			</div>
