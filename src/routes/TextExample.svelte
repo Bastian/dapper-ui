@@ -35,7 +35,7 @@
 	});
 </script>
 
-<Example {code}>
+<Example title="Text" {code}>
 	<Text slot="preview" {color} {contrast} {size} {truncate}>{content}</Text>
 	<svelte:fragment slot="controls">
 		<div>

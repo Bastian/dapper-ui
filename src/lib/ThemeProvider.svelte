@@ -14,36 +14,22 @@
 		string
 	];
 
-
 	export const dark: ColorPalette = [
-		'#bfbfc0',
-		'#93949a',
-		'#6d6f78',
-		'#525460',
-		'#3d3e43',
-		'#2e3038',
-		'#232634',
-		'#141624',
-		'#0c0f1d',
-		'#080a17'
+		hslToHex(230, 1, 75),
+		hslToHex(230, 2, 59),
+		hslToHex(230, 4, 45),
+		hslToHex(230, 6, 35),
+		hslToHex(230, 8, 25),
+		hslToHex(230, 10, 20),
+		hslToHex(230, 15, 17),
+		hslToHex(230, 20, 11),
+		hslToHex(230, 25, 8),
+		hslToHex(230, 30, 6)
 	];
 
-	/*
-<div class="flex gap-1 bg-white p-8">
-	<div class="h-16 w-16 rounded bg-dark-900 shadow" />
-	<div class="h-16 w-16 rounded bg-dark-800 shadow" />
-	<div class="h-16 w-16 rounded bg-dark-700 shadow" />
-	<div class="h-16 w-16 rounded bg-dark-600 shadow" />
-	<div class="h-16 w-16 rounded bg-dark-500 shadow" />
-	<div class="h-16 w-16 rounded bg-dark-400 shadow" />
-	<div class="h-16 w-16 rounded bg-dark-300 shadow" />
-	<div class="h-16 w-16 rounded bg-dark-200 shadow" />
-	<div class="h-16 w-16 rounded bg-dark-100 shadow" />
-	<div class="h-16 w-16 rounded bg-dark-50 shadow" />
-</div>
+	/* console.log(dark.map((c) => `"${c}"`).join(',')); */
 
-	console.log(darkTest.map((c) => `"${c}"`).join(','));
-
+	// From https://stackoverflow.com/a/44134328
 	function hslToHex(h: number, s: number, l: number) {
 		l /= 100;
 		const a = (s * Math.min(l, 1 - l)) / 100;
@@ -52,11 +38,10 @@
 			const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
 			return Math.round(255 * color)
 				.toString(16)
-				.padStart(2, '0'); // convert to Hex and prefix "0" if needed
+				.padStart(2, '0');
 		};
 		return `#${f(0)}${f(8)}${f(4)}`;
 	}
-	*/
 
 	export const tailwindGray: ColorPalette = [
 		'#f9fafb',

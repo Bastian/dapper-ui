@@ -30,7 +30,7 @@
 	});
 </script>
 
-<Example {code}>
+<Example title="Select" {code}>
 	<Select label="Favorite Fruit" slot="preview" {disabled} {color} {size}>
 		<option value="apple">Apple</option>
 		<option value="banana">Bananna</option>

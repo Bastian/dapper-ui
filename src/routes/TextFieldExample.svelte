@@ -29,7 +29,7 @@
 	});
 </script>
 
-<Example {code}>
+<Example title="TextField" {code}>
 	<svelte:fragment slot="preview">
 		<TextField {label} {color} {size} {disabled}>
 			<Bulb slot="icon-label" />

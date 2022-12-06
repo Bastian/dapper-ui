@@ -15,7 +15,7 @@
 	});
 </script>
 
-<Example {code}>
+<Example title="Slider" {code}>
 	<Slider label="Example" slot="preview" {color} />
 	<svelte:fragment slot="controls">
 		<ColorPicker bind:color />
