@@ -6,7 +6,7 @@
 </script>
 
 <div class="space-y-1 text-sm font-medium text-gray-700">
-	<Text>Color</Text>
+	<Text contrast="lower" size={'sm'} weight="semibold">Color</Text>
 	<div class="flex max-w-sm flex-wrap gap-1">
 		{#each ['gray', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose'] as c}
 			<Button size="sm" truncate={false} color={c} class="w-9" on:click={() => (color = c)}>
