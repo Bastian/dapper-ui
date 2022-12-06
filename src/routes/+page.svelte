@@ -1,10 +1,6 @@
 <script lang="ts">
 	import Button from '$lib/Button.svelte';
-	import Select from '$lib/select/Select.svelte';
-	import Slider from '$lib/slider/Slider.svelte';
-	import TextField from '$lib/text-field/TextField.svelte';
 	import Text from '$lib/Text.svelte';
-	import { Bulb, ClipboardCheck } from 'tabler-icons-svelte';
 	import ButtonExample from './ButtonExample.svelte';
 	import LoginForm from './LoginForm.svelte';
 	import SelectExample from './SelectExample.svelte';

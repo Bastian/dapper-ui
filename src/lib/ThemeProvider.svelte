@@ -14,33 +14,49 @@
 		string
 	];
 
-	/*
-	<div class="flex gap-1 bg-white p-8">
-		<div class="h-16 w-16 rounded bg-[hsl(220,9%,6%)] shadow" />
-		<div class="h-16 w-16 rounded bg-[hsl(220,8%,8%)] shadow" />
-		<div class="h-16 w-16 rounded bg-[hsl(220,7%,11%)] shadow" />
-		<div class="h-16 w-16 rounded bg-[hsl(220,6%,17%)] shadow" />
-		<div class="h-16 w-16 rounded bg-[hsl(220,5%,20%)] shadow" />
-		<div class="h-16 w-16 rounded bg-[hsl(220,4%,25%)] shadow" />
-		<div class="h-16 w-16 rounded bg-[hsl(220,3%,35%)] shadow" />
-		<div class="h-16 w-16 rounded bg-[hsl(220,3%,45%)] shadow" />
-		<div class="h-16 w-16 rounded bg-[hsl(220,2%,59%)] shadow" />
-		<div class="h-16 w-16 rounded bg-[hsl(220,1%,75%)] shadow" />
-	</div>
-	*/
 
 	export const dark: ColorPalette = [
 		'#bfbfc0',
-		'#949699',
-		'#6f7276',
-		'#57585c',
-		'#3d3f42',
-		'#303236',
-		'#292a2e',
-		'#1a1b1e',
-		'#131416',
-		'#0e0f11'
+		'#93949a',
+		'#6d6f78',
+		'#525460',
+		'#3d3e43',
+		'#2e3038',
+		'#232634',
+		'#141624',
+		'#0c0f1d',
+		'#080a17'
 	];
+
+	/*
+<div class="flex gap-1 bg-white p-8">
+	<div class="h-16 w-16 rounded bg-dark-900 shadow" />
+	<div class="h-16 w-16 rounded bg-dark-800 shadow" />
+	<div class="h-16 w-16 rounded bg-dark-700 shadow" />
+	<div class="h-16 w-16 rounded bg-dark-600 shadow" />
+	<div class="h-16 w-16 rounded bg-dark-500 shadow" />
+	<div class="h-16 w-16 rounded bg-dark-400 shadow" />
+	<div class="h-16 w-16 rounded bg-dark-300 shadow" />
+	<div class="h-16 w-16 rounded bg-dark-200 shadow" />
+	<div class="h-16 w-16 rounded bg-dark-100 shadow" />
+	<div class="h-16 w-16 rounded bg-dark-50 shadow" />
+</div>
+
+	console.log(darkTest.map((c) => `"${c}"`).join(','));
+
+	function hslToHex(h: number, s: number, l: number) {
+		l /= 100;
+		const a = (s * Math.min(l, 1 - l)) / 100;
+		const f = (n) => {
+			const k = (n + h / 30) % 12;
+			const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+			return Math.round(255 * color)
+				.toString(16)
+				.padStart(2, '0'); // convert to Hex and prefix "0" if needed
+		};
+		return `#${f(0)}${f(8)}${f(4)}`;
+	}
+	*/
 
 	export const tailwindGray: ColorPalette = [
 		'#f9fafb',
