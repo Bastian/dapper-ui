@@ -37,7 +37,7 @@
 
 <style lang="postcss" global>
 	:local(button) {
-		@apply flex items-center justify-center gap-2 truncate rounded font-medium text-gray-100 outline-none transition-all focus:outline-none focus:ring-2 focus:ring-primary-600/50 focus:ring-offset-1 disabled:opacity-50;
+		@apply flex items-center justify-center gap-2 truncate rounded font-medium text-gray-100 outline-none transition-all focus:outline-none focus:ring-2 focus:ring-primary-600/50 focus:ring-offset-1 disabled:opacity-50 dark:focus:ring-primary-300/50 dark:focus:ring-offset-dark-800;
 	}
 
 	:local(.size-base) {

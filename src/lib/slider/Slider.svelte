@@ -17,7 +17,7 @@
 </script>
 
 <InputBase {id} {label}>
-	<div style={overwriteColor(color, [500, 600], 'primary')}>
+	<div style={overwriteColor(color, [300, 500, 600], 'primary')}>
 		<input
 			{id}
 			bind:value
@@ -32,7 +32,7 @@
 
 <style lang="postcss" global>
 	:local(input) {
-		@apply h-[3px] w-full appearance-none rounded-full bg-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-600/50 focus:ring-offset-8 dark:bg-dark-400;
+		@apply h-[3px] w-full appearance-none rounded-full bg-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-600/50 focus:ring-offset-8 dark:bg-dark-400 dark:focus:ring-primary-600/50 dark:focus:ring-offset-dark-800;
 	}
 
 	:local(input::-webkit-slider-thumb) {
