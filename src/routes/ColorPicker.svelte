@@ -5,7 +5,7 @@
 	export let color: string | undefined = undefined;
 </script>
 
-<div class="space-y-1 text-sm font-medium text-gray-700">
+<div class="space-y-1 text-sm font-medium text-neutral-700">
 	<Text contrast="lower" size={'sm'} weight="semibold">Color</Text>
 	<div class="flex max-w-sm flex-wrap gap-1">
 		{#each ['gray', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose'] as c}

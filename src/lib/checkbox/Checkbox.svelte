@@ -13,7 +13,7 @@
 	<input
 		style={overwriteColor(color, [300, 600, 700])}
 		type="checkbox"
-		class="rounded border-gray-600 text-primary-600 !ring-offset-1 focus:outline-none focus:ring-2 focus:ring-primary-600/50 dark:border-dark-400 dark:bg-dark-600 dark:focus:border-gray-600 dark:focus:ring-primary-500/50 dark:focus:ring-offset-dark-800"
+		class="rounded border-neutral-600 text-primary-600 !ring-offset-1 focus:outline-none focus:ring-2 focus:ring-primary-600/50 dark:border-dark-400 dark:bg-dark-600 dark:focus:border-neutral-600 dark:focus:ring-primary-500/50 dark:focus:ring-offset-dark-800"
 		{id}
 		bind:checked
 		on:click

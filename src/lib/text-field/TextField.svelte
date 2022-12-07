@@ -82,7 +82,7 @@
 
 <style lang="postcss" global>
 	:local(input) {
-		@apply rounded border-gray-300 text-gray-700 transition-all focus:border-primary-300 focus:outline-none focus:ring-primary-700/70 dark:border-dark-400 dark:bg-dark-600 dark:text-gray-200 dark:focus:border-primary-600;
+		@apply rounded border-neutral-300 text-neutral-700 transition-all focus:border-primary-300 focus:outline-none focus:ring-primary-700/70 dark:border-dark-400 dark:bg-dark-600 dark:text-neutral-200 dark:focus:border-primary-600;
 	}
 
 	:local(.size-base) {

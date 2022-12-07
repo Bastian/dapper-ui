@@ -86,26 +86,26 @@
 	}
 
 	:local(.contrast-higher) {
-		@apply text-gray-900 dark:text-gray-50;
+		@apply text-neutral-900 dark:text-neutral-50;
 	}
 
 	:local(.contrast-high) {
-		@apply text-gray-800 dark:text-gray-100;
+		@apply text-neutral-800 dark:text-neutral-100;
 	}
 
 	:local(.contrast-base) {
-		@apply text-gray-700 dark:text-gray-200;
+		@apply text-neutral-700 dark:text-neutral-200;
 	}
 
 	:local(.contrast-low) {
-		@apply text-gray-600 dark:text-gray-300;
+		@apply text-neutral-600 dark:text-neutral-300;
 	}
 
 	:local(.contrast-lower) {
-		@apply text-gray-500 dark:text-gray-400;
+		@apply text-neutral-500 dark:text-neutral-400;
 	}
 
 	:local(.contrast-lowest) {
-		@apply text-gray-400 dark:text-gray-600;
+		@apply text-neutral-400 dark:text-neutral-600;
 	}
 </style>

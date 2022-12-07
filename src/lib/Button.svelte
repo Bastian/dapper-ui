@@ -37,7 +37,7 @@
 
 <style lang="postcss" global>
 	:local(button) {
-		@apply flex items-center justify-center gap-2 truncate rounded font-medium text-gray-100 outline-none transition-all focus:outline-none focus:ring-2 focus:ring-primary-600/50 focus:ring-offset-1 disabled:opacity-50 dark:focus:ring-primary-300/50 dark:focus:ring-offset-dark-800;
+		@apply flex items-center justify-center gap-2 truncate rounded font-medium text-neutral-100 outline-none transition-all focus:outline-none focus:ring-2 focus:ring-primary-600/50 focus:ring-offset-1 disabled:opacity-50 dark:focus:ring-primary-300/50 dark:focus:ring-offset-dark-800;
 	}
 
 	:local(.size-base) {
@@ -73,6 +73,6 @@
 	}
 
 	:local(.solid) {
-		@apply bg-primary-600 text-gray-100 hover:bg-primary-700 hover:disabled:bg-primary-600;
+		@apply bg-primary-600 text-neutral-100 hover:bg-primary-700 hover:disabled:bg-primary-600;
 	}
 </style>

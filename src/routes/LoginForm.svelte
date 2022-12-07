@@ -22,8 +22,8 @@
 		<Checkbox>Accept Terms of Use</Checkbox>
 		<Button fullWidth>Create Account</Button>
 		<div class="relative my-8 flex h-6 w-full justify-center">
-			<div class="absolute top-3 h-0.5 w-full bg-gray-300 dark:bg-gray-500" />
-			<span class="z-10 bg-white px-2 text-gray-600 dark:bg-dark-700 dark:text-gray-300">
+			<div class="absolute top-3 h-0.5 w-full bg-neutral-300 dark:bg-neutral-500" />
+			<span class="z-10 bg-white px-2 text-neutral-600 dark:bg-dark-700 dark:text-neutral-300">
 				or login with
 			</span>
 		</div>

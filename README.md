@@ -10,7 +10,21 @@ This is a project that is still under development and is very experimental. It i
 
 ## Install
 
-tbd. Not published to NPM yet.
+```bash
+npm i @dapper-ui/core
+```
+
+(not tested, might not work yet)
+
+## Usage
+
+Any component that is used must be a child of the `ThemeProvider` component. It is recommended to use it as high up in the component tree as possible.
+
+```svelte
+<ThemeProvider>
+	<Button>Click me!</Button>
+</ThemeProvider>
+```
 
 ## Current State of Development
 

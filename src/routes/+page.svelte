@@ -14,7 +14,7 @@
 </script>
 
 <div class="flex items-end justify-end">
-	<Button color="gray" class="my-8" on:click={toggleDarkMode}>Toogle Dark Mode</Button>
+	<Button color="neutral" class="my-8" on:click={toggleDarkMode}>Toogle Dark Mode</Button>
 </div>
 <div class="space-y-8">
 	<SliderExample />
