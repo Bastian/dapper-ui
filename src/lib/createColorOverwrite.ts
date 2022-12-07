@@ -6,5 +6,7 @@ export function overwriteColor(
 	if (to === undefined || to === from) {
 		return undefined;
 	}
-	return shades.map((shade) => `--color-${from}-${shade}: var(--color-${to}-${shade});`).join('');
+	return shades
+		.map((shade) => `--d4r-color-${from}-${shade}: var(--d4r-color-${to}-${shade});`)
+		.join('');
 }

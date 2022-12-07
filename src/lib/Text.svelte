@@ -59,22 +59,22 @@
 	class:contrast-low={contrast === 'low'}
 	class:contrast-lower={contrast === 'lower'}
 	class:contrast-lowest={contrast === 'lowest'}
-	class:text-xs={size === 'xs'}
-	class:text-sm={size === 'sm'}
-	class:text-base={size === 'base'}
-	class:text-lg={size === 'lg'}
-	class:text-xl={size === 'xl'}
-	class:font-thin={weight === 'thin'}
-	class:font-extralight={weight === 'extralight'}
-	class:font-light={weight === 'light'}
-	class:font-normal={weight === 'normal'}
-	class:font-medium={weight === 'medium'}
-	class:font-semibold={weight === 'semibold'}
-	class:font-bold={weight === 'bold'}
-	class:font-extrabold={weight === 'extrabold'}
-	class:font-black={weight === 'black'}
-	class:truncate
-	style={overwriteColor(color, usedShades, 'gray')}
+	class:d4r-text-xs={size === 'xs'}
+	class:d4r-text-sm={size === 'sm'}
+	class:d4r-text-base={size === 'base'}
+	class:d4r-text-lg={size === 'lg'}
+	class:d4r-text-xl={size === 'xl'}
+	class:d4r-font-thin={weight === 'thin'}
+	class:d4r-font-extralight={weight === 'extralight'}
+	class:d4r-font-light={weight === 'light'}
+	class:d4r-font-normal={weight === 'normal'}
+	class:d4r-font-medium={weight === 'medium'}
+	class:d4r-font-semibold={weight === 'semibold'}
+	class:d4r-font-bold={weight === 'bold'}
+	class:d4r-font-extrabold={weight === 'extrabold'}
+	class:d4r-font-black={weight === 'black'}
+	class:d4r-truncate={truncate}
+	style={overwriteColor(color, usedShades, 'neutral')}
 	{...$$restProps}
 >
 	<slot />
@@ -82,30 +82,30 @@
 
 <style lang="postcss" global>
 	:local(.contrast-highest) {
-		@apply text-black dark:text-white;
+		@apply d4r-text-black dark:d4r-text-white;
 	}
 
 	:local(.contrast-higher) {
-		@apply text-neutral-900 dark:text-neutral-50;
+		@apply d4r-text-neutral-900 dark:d4r-text-neutral-50;
 	}
 
 	:local(.contrast-high) {
-		@apply text-neutral-800 dark:text-neutral-100;
+		@apply d4r-text-neutral-800 dark:d4r-text-neutral-100;
 	}
 
 	:local(.contrast-base) {
-		@apply text-neutral-700 dark:text-neutral-200;
+		@apply d4r-text-neutral-700 dark:d4r-text-neutral-200;
 	}
 
 	:local(.contrast-low) {
-		@apply text-neutral-600 dark:text-neutral-300;
+		@apply d4r-text-neutral-600 dark:d4r-text-neutral-300;
 	}
 
 	:local(.contrast-lower) {
-		@apply text-neutral-500 dark:text-neutral-400;
+		@apply d4r-text-neutral-500 dark:d4r-text-neutral-400;
 	}
 
 	:local(.contrast-lowest) {
-		@apply text-neutral-400 dark:text-neutral-600;
+		@apply d4r-text-neutral-400 dark:d4r-text-neutral-600;
 	}
 </style>

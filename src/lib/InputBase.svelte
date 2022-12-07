@@ -20,10 +20,10 @@
 
 <div
 	class={className}
-	class:inline-block={!fullWidth}
-	class:block={fullWidth}
-	class:w-full={fullWidth}
-	class:opacity-50={disabled}
+	class:d4r-inline-block={!fullWidth}
+	class:d4r-block={fullWidth}
+	class:d4r-w-full={fullWidth}
+	class:d4r-opacity-50={disabled}
 >
 	<Text
 		tag="label"
@@ -31,13 +31,17 @@
 		contrast="lower"
 		size={size === 'sm' ? 'xs' : 'sm'}
 		weight="semibold"
-		class="mb-0.5 flex items-center gap-1 {hideLabel ? 'hidden' : ''} {classLabel}"
+		class="d4r-mb-0.5 d4r-flex d4r-items-center d4r-gap-1 {hideLabel
+			? 'd4r-hidden'
+			: ''} {classLabel}"
 	>
 		{#if hasIconLabel}
 			<Text
 				class={size === 'sm' ? 'dapper-ui-input-icon-label-sm' : 'dapper-ui-input-icon-label-base'}
-				contrast="lower"><slot name="icon-label" /></Text
+				contrast="lower"
 			>
+				<slot name="icon-label" />
+			</Text>
 		{/if}
 		{label}
 	</Text>
@@ -51,9 +55,9 @@
 
 <style lang="postcss" global>
 	.dapper-ui-input-icon-label-base > svg {
-		@apply h-4 w-4;
+		@apply d4r-h-4 d4r-w-4;
 	}
 	.dapper-ui-input-icon-label-sm > svg {
-		@apply h-3.5 w-3.5;
+		@apply d4r-h-3.5 d4r-w-3.5;
 	}
 </style>

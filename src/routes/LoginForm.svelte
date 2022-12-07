@@ -9,7 +9,9 @@
 </script>
 
 <div>
-	<div class="mx-auto w-full max-w-lg space-y-4 rounded bg-white p-8 shadow dark:bg-dark-800">
+	<div
+		class="d4r-mx-auto d4r-w-full d4r-max-w-lg d4r-space-y-4 d4r-rounded d4r-bg-white d4r-p-8 d4r-shadow dark:d4r-bg-dark-800"
+	>
 		<TextField fullWidth id="email" label="Email">
 			<Mail slot="icon-label" />
 		</TextField>
@@ -21,13 +23,17 @@
 		</TextField>
 		<Checkbox>Accept Terms of Use</Checkbox>
 		<Button fullWidth>Create Account</Button>
-		<div class="relative my-8 flex h-6 w-full justify-center">
-			<div class="absolute top-3 h-0.5 w-full bg-neutral-300 dark:bg-neutral-500" />
-			<span class="z-10 bg-white px-2 text-neutral-600 dark:bg-dark-700 dark:text-neutral-300">
+		<div class="d4r-relative d4r-my-8 d4r-flex d4r-h-6 d4r-w-full d4r-justify-center">
+			<div
+				class="d4r-absolute d4r-top-3 d4r-h-0.5 d4r-w-full d4r-bg-neutral-300 dark:d4r-bg-neutral-500"
+			/>
+			<span
+				class="d4r-z-10 d4r-bg-white d4r-px-2 d4r-text-neutral-600 dark:d4r-bg-dark-800 dark:d4r-text-neutral-300"
+			>
 				or login with
 			</span>
 		</div>
-		<div class="flex justify-between gap-2">
+		<div class="d4r-flex d4r-justify-between d4r-gap-2">
 			<Button fullWidth variant="outline" color="gray">
 				<GoogleIcon slot="icon-start" />
 				Google

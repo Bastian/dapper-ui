@@ -1,6 +1,6 @@
 <svg
 	xmlns="http://www.w3.org/2000/svg"
-	class="h-5 w-5"
+	class="d4r-h-5 d4r-w-5"
 	version="1.1"
 	viewBox="0 0 300.00006 244.18703"
 	><defs /><metadata

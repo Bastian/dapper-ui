@@ -1,9 +1,22 @@
 <script lang="ts">
-	import ThemeProvider from '$lib/ThemeProvider.svelte';
+	import ThemeProvider, { defaultDapperUiTheme } from '$lib/ThemeProvider.svelte';
 </script>
 
 <ThemeProvider
-	class="h-full overflow-y-auto bg-neutral-100 p-4 dark:bg-dark-700 sm:p-6 md:p-8 lg:p-16"
+	theme={{
+		...defaultDapperUiTheme,
+		radiuses: {
+			...defaultDapperUiTheme.radiuses
+			// button: 'full',
+			// slider: {
+			// 	thumb: 'none',
+			// 	track: 'none'
+			// },
+			// checkbox: 'none',
+			// input: 'none'
+		}
+	}}
+	class="d4r-h-full d4r-overflow-y-auto d4r-bg-neutral-100 d4r-p-4 dark:d4r-bg-dark-700 sm:d4r-p-6 md:d4r-p-8 lg:d4r-p-16"
 >
-	<div class="container mx-auto"><slot /></div>
+	<div class="d4r-container d4r-mx-auto"><slot /></div>
 </ThemeProvider>

@@ -63,7 +63,7 @@
 	<slot name="icon-label" slot="icon-label" />
 	<input
 		style={overwriteColor(color, [200, 300, 600, 700])}
-		class:w-full={fullWidth}
+		class:d4r-w-full={fullWidth}
 		class:size-base={size === 'base' || size === undefined}
 		class:size-sm={size === 'sm'}
 		{id}
@@ -82,14 +82,14 @@
 
 <style lang="postcss" global>
 	:local(input) {
-		@apply rounded border-neutral-300 text-neutral-700 transition-all focus:border-primary-300 focus:outline-none focus:ring-primary-700/70 dark:border-dark-400 dark:bg-dark-600 dark:text-neutral-200 dark:focus:border-primary-600;
+		@apply d4r-rounded-input d4r-border-neutral-300 d4r-text-neutral-700 d4r-transition-all focus:d4r-border-primary-300 focus:d4r-outline-none focus:d4r-ring-primary-700/70 dark:d4r-border-dark-400 dark:d4r-bg-dark-600 dark:d4r-text-neutral-200 dark:focus:d4r-border-primary-600;
 	}
 
 	:local(.size-base) {
-		@apply h-10;
+		@apply d4r-h-10;
 	}
 
 	:local(.size-sm) {
-		@apply h-9;
+		@apply d4r-h-9;
 	}
 </style>

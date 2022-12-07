@@ -67,91 +67,91 @@ Visual Studio-like style based on original C# coloring by Jason Diamond <jason@d
  * Visual Studio 2015 dark style
  * Author: Nicolas LLOBERA <nllobera@gmail.com>
  *
- * Modified to only apply when parent of .dark class
+ * Modified to only apply when parent of .d4r-dark class
  */
 
-.dark .hljs {
+.d4r-dark .hljs {
 	display: block;
 	overflow-x: auto;
 	padding: 0.5em;
 	color: #dcdcdc;
 }
 
-.dark .hljs-keyword,
-.dark .hljs-literal,
-.dark .hljs-symbol,
-.dark .hljs-name {
+.d4r-dark .hljs-keyword,
+.d4r-dark .hljs-literal,
+.d4r-dark .hljs-symbol,
+.d4r-dark .hljs-name {
 	color: #569cd6;
 }
-.dark .hljs-link {
+.d4r-dark .hljs-link {
 	color: #569cd6;
 	text-decoration: underline;
 }
 
-.dark .hljs-built_in,
-.dark .hljs-type {
+.d4r-dark .hljs-built_in,
+.d4r-dark .hljs-type {
 	color: #4ec9b0;
 }
 
-.dark .hljs-number,
-.dark .hljs-class {
+.d4r-dark .hljs-number,
+.d4r-dark .hljs-class {
 	color: #b8d7a3;
 }
 
-.dark .hljs-string,
-.dark .hljs-meta-string {
+.d4r-dark .hljs-string,
+.d4r-dark .hljs-meta-string {
 	color: #d69d85;
 }
 
-.dark .hljs-regexp,
-.dark .hljs-template-tag {
+.d4r-dark .hljs-regexp,
+.d4r-dark .hljs-template-tag {
 	color: #9a5334;
 }
 
-.dark .hljs-subst,
-.dark .hljs-function,
-.dark .hljs-title,
-.dark .hljs-params,
-.dark .hljs-formula {
+.d4r-dark .hljs-subst,
+.d4r-dark .hljs-function,
+.d4r-dark .hljs-title,
+.d4r-dark .hljs-params,
+.d4r-dark .hljs-formula {
 	color: #dcdcdc;
 }
 
-.dark .hljs-comment,
-.dark .hljs-quote {
+.d4r-dark .hljs-comment,
+.d4r-dark .hljs-quote {
 	color: #57a64a;
 	font-style: italic;
 }
 
-.dark .hljs-doctag {
+.d4r-dark .hljs-doctag {
 	color: #608b4e;
 }
 
-.dark .hljs-meta,
-.dark .hljs-meta-keyword,
-.dark .hljs-tag {
+.d4r-dark .hljs-meta,
+.d4r-dark .hljs-meta-keyword,
+.d4r-dark .hljs-tag {
 	color: #9b9b9b;
 }
 
-.dark .hljs-variable,
-.dark .hljs-template-variable {
+.d4r-dark .hljs-variable,
+.d4r-dark .hljs-template-variable {
 	color: #bd63c5;
 }
 
-.dark .hljs-attr,
-.dark .hljs-attribute,
-.dark .hljs-builtin-name {
+.d4r-dark .hljs-attr,
+.d4r-dark .hljs-attribute,
+.d4r-dark .hljs-builtin-name {
 	color: #9cdcfe;
 }
 
-.dark .hljs-section {
+.d4r-dark .hljs-section {
 	color: gold;
 }
 
-.dark .hljs-emphasis {
+.d4r-dark .hljs-emphasis {
 	font-style: italic;
 }
 
-.dark .hljs-strong {
+.d4r-dark .hljs-strong {
 	font-weight: bold;
 }
 
@@ -159,22 +159,22 @@ Visual Studio-like style based on original C# coloring by Jason Diamond <jason@d
   font-family:'Monospace';
 }*/
 
-.dark .hljs-bullet,
-.dark .hljs-selector-tag,
-.dark .hljs-selector-id,
-.dark .hljs-selector-class,
-.dark .hljs-selector-attr,
-.dark .hljs-selector-pseudo {
+.d4r-dark .hljs-bullet,
+.d4r-dark .hljs-selector-tag,
+.d4r-dark .hljs-selector-id,
+.d4r-dark .hljs-selector-class,
+.d4r-dark .hljs-selector-attr,
+.d4r-dark .hljs-selector-pseudo {
 	color: #d7ba7d;
 }
 
-.dark .hljs-addition {
+.d4r-dark .hljs-addition {
 	background-color: #144212;
 	display: inline-block;
 	width: 100%;
 }
 
-.dark .hljs-deletion {
+.d4r-dark .hljs-deletion {
 	background-color: #600;
 	display: inline-block;
 	width: 100%;

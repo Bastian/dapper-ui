@@ -16,7 +16,7 @@
 		const cssVar = palette.reduce((acc, color, index) => {
 			const rgb = hexToRgb(color);
 			const rgbString = `${rgb.r} ${rgb.g} ${rgb.b}`;
-			return `${acc}--color-${prefix}-${n[index]}: ${rgbString};`;
+			return `${acc}--d4r-color-${prefix}-${n[index]}: ${rgbString};`;
 		}, '');
 
 		return cssVar;
@@ -27,6 +27,8 @@
 			return `${acc}${colorPaletteToCssVar(value, key)}`;
 		}, '');
 	}
+
+	export type Radius = 'none' | 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | 'full';
 
 	export interface DapperUiTheme {
 		colors: {
@@ -47,6 +49,33 @@
 			 * Other colors that can be referenced by name in components.
 			 */
 			[other: string]: ColorPalette;
+		};
+		radiuses: {
+			/**
+			 * The default radius for buttons.
+			 */
+			button: Radius;
+			/**
+			 * The default radius for input fields (TextField, Select, etc.)
+			 */
+			input: Radius;
+			/**
+			 * The default radius for checkboxes.
+			 */
+			checkbox: Radius;
+			/**
+			 * The default radiuses for the slider.
+			 */
+			slider: {
+				/**
+				 * The default radius for the slider thumb.
+				 */
+				thumb: Radius;
+				/**
+				 * The default radius for the slider track.
+				 */
+				track: Radius;
+			};
 		};
 		// TODO: Instead of overwriting, also allow extending the default theme similar to Tailwind's "extend"
 	}
@@ -79,8 +108,39 @@
 			fuchsia: colorTailwindFuchsia,
 			pink: colorTailwindPink,
 			rose: colorTailwindRose
+		},
+		radiuses: {
+			button: 'base',
+			input: 'base',
+			checkbox: 'base',
+			slider: {
+				thumb: 'full',
+				track: 'full'
+			}
 		}
 	};
+
+	function getRadiusCssVars(theme: DapperUiTheme) {
+		function mapBorderRadius(from: string, to: string) {
+			return `--d4r-border-radius-${from}: var(--d4r-border-radius-${to});`;
+		}
+		return (
+			'--d4r-border-radius-none: 0px;' +
+			'--d4r-border-radius-sm: 0.125rem;' +
+			'--d4r-border-radius-base: 0.25rem;' +
+			'--d4r-border-radius-md: 0.375rem;' +
+			'--d4r-border-radius-lg: 0.5rem;' +
+			'--d4r-border-radius-xl: 0.75rem;' +
+			'--d4r-border-radius-2xl: 1rem;' +
+			'--d4r-border-radius-3xl: 1.5rem;' +
+			'--d4r-border-radius-full: 9999px;' +
+			mapBorderRadius('button', theme.radiuses.button) +
+			mapBorderRadius('input', theme.radiuses.input) +
+			mapBorderRadius('checkbox', theme.radiuses.checkbox) +
+			mapBorderRadius('slider-thumb', theme.radiuses.slider.thumb) +
+			mapBorderRadius('slider-track', theme.radiuses.slider.track)
+		);
+	}
 </script>
 
 <script lang="ts">
@@ -118,6 +178,6 @@
 	export let theme: DapperUiTheme = defaultDapperUiTheme;
 </script>
 
-<div class={className} style={`${colorsToCssVar(theme.colors)}`}>
+<div class={className} style={`${colorsToCssVar(theme.colors)}${getRadiusCssVars(theme)}`}>
 	<slot />
 </div>

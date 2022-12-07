@@ -45,7 +45,7 @@
 			<option value="sm">Small</option>
 		</Select>
 		<ColorPicker bind:color />
-		<div class="space-y-1">
+		<div class="d4r-space-y-1">
 			<Checkbox bind:checked={disabled}>Disabled</Checkbox>
 		</div>
 	</svelte:fragment>
