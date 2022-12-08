@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{html,js,svelte,ts}'],
+	content: [
+		process.env.BUILD_TARGET === 'lib'
+			? './src/lib/**/*.{html,js,svelte,ts}'
+			: './src/**/*.{html,js,svelte,ts}'
+	],
 	darkMode: 'class',
 	prefix: 'd4r-',
 	theme: {

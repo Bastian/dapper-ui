@@ -37,7 +37,7 @@
 	>
 		{#if hasIconLabel}
 			<Text
-				class={size === 'sm' ? 'dapper-ui-input-icon-label-sm' : 'dapper-ui-input-icon-label-base'}
+				class={size === 'sm' ? 'd4r-input-icon-label-sm' : 'd4r-input-icon-label-base'}
 				contrast="lower"
 			>
 				<slot name="icon-label" />
@@ -54,10 +54,10 @@
 </div>
 
 <style lang="postcss" global>
-	.dapper-ui-input-icon-label-base > svg {
+	.d4r-input-icon-label-base > svg {
 		@apply d4r-h-4 d4r-w-4;
 	}
-	.dapper-ui-input-icon-label-sm > svg {
+	.d4r-input-icon-label-sm > svg {
 		@apply d4r-h-3.5 d4r-w-3.5;
 	}
 </style>
