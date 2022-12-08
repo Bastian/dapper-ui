@@ -1,6 +1,6 @@
 {
 	"name": "@dapper-ui/core",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "An UI library for Svelte",
 	"homepage": "https://github.com/Bastian/dapper-ui/",
 	"license": "MIT",
