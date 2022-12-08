@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Checkbox from '$lib/checkbox/Checkbox.svelte';
+	import { getTheme } from '$lib/getTheme';
 	import { createCode } from '$lib/helpers/createCode';
 	import Select from '$lib/select/Select.svelte';
 	import type { Radius } from '$lib/ThemeProvider.svelte';
@@ -7,10 +8,12 @@
 	import Example from './Example.svelte';
 	import RadiusSlider from './RadiusSlider.svelte';
 
+	const theme = getTheme();
+
 	let disabled = false;
 	let color: string | undefined = undefined;
 	export let size: 'sm' | 'base' = 'base';
-	export let radius: Radius = 'base';
+	export let radius: Radius = $theme.radiuses.input;
 
 	$: code = createCode({
 		name: 'Select',
@@ -29,7 +32,7 @@
 			disabled,
 			color,
 			size: size === 'base' ? undefined : size,
-			radius
+			radius: radius === $theme.radiuses.input ? undefined : radius
 		}
 	});
 </script>

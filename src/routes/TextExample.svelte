@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Checkbox from '$lib/checkbox/Checkbox.svelte';
 	import { createCode } from '$lib/helpers/createCode';
-	import Select from '$lib/select/Select.svelte';
 	import Slider from '$lib/slider/Slider.svelte';
 	import TextField from '$lib/text-field/TextField.svelte';
 	import Text from '$lib/Text.svelte';

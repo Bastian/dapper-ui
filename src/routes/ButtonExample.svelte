@@ -1,15 +1,17 @@
 <script lang="ts">
 	import Button from '$lib/Button.svelte';
 	import Checkbox from '$lib/checkbox/Checkbox.svelte';
+	import { getTheme } from '$lib/getTheme';
 	import { createCode } from '$lib/helpers/createCode';
 	import Select from '$lib/select/Select.svelte';
-	import Slider from '$lib/slider/Slider.svelte';
 	import TextField from '$lib/text-field/TextField.svelte';
 	import type { Radius } from '$lib/ThemeProvider.svelte';
 	import { ClipboardCheck } from 'tabler-icons-svelte';
 	import ColorPicker from './ColorPicker.svelte';
 	import Example from './Example.svelte';
 	import RadiusSlider from './RadiusSlider.svelte';
+
+	const theme = getTheme();
 
 	let content = 'Confirm';
 	let disabled = false;
@@ -19,7 +21,7 @@
 	let variant: 'solid' | 'outline' = 'solid';
 	export let size: 'sm' | 'base' = 'base';
 
-	let radius: Radius = 'base';
+	let radius: Radius = $theme.radiuses.button;
 
 	$: code = createCode({
 		name: 'Button',
@@ -33,7 +35,7 @@
 			color,
 			variant: variant === 'solid' ? undefined : variant,
 			size: size === 'base' ? undefined : size,
-			radius: radius === 'base' ? undefined : radius
+			radius: radius === $theme.radiuses.button ? undefined : radius
 		}
 	});
 </script>

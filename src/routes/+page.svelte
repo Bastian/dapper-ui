@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Button from '$lib/Button.svelte';
+	import { getTheme } from '$lib/getTheme';
 	import Text from '$lib/Text.svelte';
 	import ButtonExample from './ButtonExample.svelte';
 	import LoginForm from './LoginForm.svelte';

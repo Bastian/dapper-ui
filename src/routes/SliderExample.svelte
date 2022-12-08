@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { getTheme } from '$lib/getTheme';
 	import { createCode } from '$lib/helpers/createCode';
 	import Slider from '$lib/slider/Slider.svelte';
 	import type { Radius } from '$lib/ThemeProvider.svelte';
@@ -6,15 +7,17 @@
 	import Example from './Example.svelte';
 	import RadiusSlider from './RadiusSlider.svelte';
 
+	const theme = getTheme();
+
 	let color: string | undefined = undefined;
-	let radius: Radius = 'full';
+	let radius: Radius = $theme.radiuses.slider.thumb;
 
 	$: code = createCode({
 		name: 'Slider',
 		props: {
 			label: 'Example',
 			color,
-			radius
+			radius: radius === $theme.radiuses.slider.thumb ? undefined : radius
 		}
 	});
 </script>

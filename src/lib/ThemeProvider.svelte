@@ -146,6 +146,8 @@
 <script lang="ts">
 	import '$lib/base.css';
 	import type { ColorPalette } from '$lib/colors/color';
+	import { setContext } from 'svelte';
+	import { derived, writable } from 'svelte/store';
 	import { colorDark } from './colors/dapper-ui';
 	import {
 		colorTailwindAmber,
@@ -176,6 +178,14 @@
 	export { className as class };
 
 	export let theme: DapperUiTheme = defaultDapperUiTheme;
+
+	const themeStore = writable(theme);
+	$: $themeStore = theme;
+
+	setContext(
+		'd4r-theme',
+		derived(themeStore, ($themeStore) => $themeStore)
+	);
 </script>
 
 <div class={className} style={`${colorsToCssVar(theme.colors)}${getRadiusCssVars(theme)}`}>
