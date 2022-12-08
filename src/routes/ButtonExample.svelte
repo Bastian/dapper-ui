@@ -3,10 +3,13 @@
 	import Checkbox from '$lib/checkbox/Checkbox.svelte';
 	import { createCode } from '$lib/helpers/createCode';
 	import Select from '$lib/select/Select.svelte';
+	import Slider from '$lib/slider/Slider.svelte';
 	import TextField from '$lib/text-field/TextField.svelte';
+	import type { Radius } from '$lib/ThemeProvider.svelte';
 	import { ClipboardCheck } from 'tabler-icons-svelte';
 	import ColorPicker from './ColorPicker.svelte';
 	import Example from './Example.svelte';
+	import RadiusSlider from './RadiusSlider.svelte';
 
 	let content = 'Confirm';
 	let disabled = false;
@@ -15,6 +18,8 @@
 	let color: string | undefined = undefined;
 	let variant: 'solid' | 'outline' = 'solid';
 	export let size: 'sm' | 'base' = 'base';
+
+	let radius: Radius = 'base';
 
 	$: code = createCode({
 		name: 'Button',
@@ -27,7 +32,8 @@
 			disabled,
 			color,
 			variant: variant === 'solid' ? undefined : variant,
-			size: size === 'base' ? undefined : size
+			size: size === 'base' ? undefined : size,
+			radius: radius === 'base' ? undefined : radius
 		}
 	});
 </script>
@@ -36,22 +42,22 @@
 	<svelte:fragment slot="preview">
 		<!-- Workaround until https://github.com/sveltejs/rfcs/pull/641 gets solved -->
 		{#if !iconStart && !iconEnd}
-			<Button {variant} {disabled} {color} {size}>{content}</Button>
+			<Button {variant} {disabled} {color} {size} {radius}>{content}</Button>
 		{/if}
 		{#if iconStart && !iconEnd}
-			<Button {variant} {disabled} {color} {size}>
+			<Button {variant} {disabled} {color} {size} {radius}>
 				<ClipboardCheck slot="icon-start" />
 				{content}
 			</Button>
 		{/if}
 		{#if !iconStart && iconEnd}
-			<Button {variant} {disabled} {color} {size}>
+			<Button {variant} {disabled} {color} {size} {radius}>
 				{content}
 				<ClipboardCheck slot="icon-end" />
 			</Button>
 		{/if}
 		{#if iconStart && iconEnd}
-			<Button {variant} {disabled} {color} {size}>
+			<Button {variant} {disabled} {color} {size} {radius}>
 				<ClipboardCheck slot="icon-start" />
 				{content}
 				<ClipboardCheck slot="icon-end" />
@@ -69,6 +75,9 @@
 			<option value="base">Base</option>
 			<option value="sm">Small</option>
 		</Select>
+		<div>
+			<RadiusSlider bind:radius />
+		</div>
 		<ColorPicker bind:color />
 		<div class="space-y-1">
 			<Checkbox bind:checked={disabled}>Disabled</Checkbox>

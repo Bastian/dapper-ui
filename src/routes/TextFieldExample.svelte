@@ -3,14 +3,17 @@
 	import { createCode } from '$lib/helpers/createCode';
 	import Select from '$lib/select/Select.svelte';
 	import TextField from '$lib/text-field/TextField.svelte';
+	import type { Radius } from '$lib/ThemeProvider.svelte';
 	import { Bulb } from 'tabler-icons-svelte';
 	import ColorPicker from './ColorPicker.svelte';
 	import Example from './Example.svelte';
+	import RadiusSlider from './RadiusSlider.svelte';
 
 	let label = 'Example';
 	let disabled = false;
 	let color: string | undefined = undefined;
 	export let size: 'sm' | 'base' = 'base';
+	export let radius: Radius = 'base';
 
 	$: code = createCode({
 		name: 'TextField',
@@ -24,14 +27,15 @@
 			label,
 			disabled,
 			color,
-			size: size === 'base' ? undefined : size
+			size: size === 'base' ? undefined : size,
+			radius
 		}
 	});
 </script>
 
 <Example title="TextField" {code}>
 	<svelte:fragment slot="preview">
-		<TextField {label} {color} {size} {disabled}>
+		<TextField {label} {color} {size} {disabled} {radius}>
 			<Bulb slot="icon-label" />
 		</TextField>
 	</svelte:fragment>
@@ -44,6 +48,9 @@
 			<option value="base">Base</option>
 			<option value="sm">Small</option>
 		</Select>
+		<div>
+			<RadiusSlider bind:radius />
+		</div>
 		<ColorPicker bind:color />
 		<div class="d4r-space-y-1">
 			<Checkbox bind:checked={disabled}>Disabled</Checkbox>

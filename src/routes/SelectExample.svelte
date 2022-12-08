@@ -2,12 +2,15 @@
 	import Checkbox from '$lib/checkbox/Checkbox.svelte';
 	import { createCode } from '$lib/helpers/createCode';
 	import Select from '$lib/select/Select.svelte';
+	import type { Radius } from '$lib/ThemeProvider.svelte';
 	import ColorPicker from './ColorPicker.svelte';
 	import Example from './Example.svelte';
+	import RadiusSlider from './RadiusSlider.svelte';
 
 	let disabled = false;
 	let color: string | undefined = undefined;
 	export let size: 'sm' | 'base' = 'base';
+	export let radius: Radius = 'base';
 
 	$: code = createCode({
 		name: 'Select',
@@ -25,13 +28,14 @@
 			label: 'Favorite Fruit',
 			disabled,
 			color,
-			size: size === 'base' ? undefined : size
+			size: size === 'base' ? undefined : size,
+			radius
 		}
 	});
 </script>
 
 <Example title="Select" {code}>
-	<Select label="Favorite Fruit" slot="preview" {disabled} {color} {size}>
+	<Select label="Favorite Fruit" slot="preview" {disabled} {color} {size} {radius}>
 		<option value="apple">Apple</option>
 		<option value="banana">Bananna</option>
 		<option value="orange">Orange</option>
@@ -42,6 +46,10 @@
 			<option value="base">Base</option>
 			<option value="sm">Small</option>
 		</Select>
+
+		<div>
+			<RadiusSlider bind:radius />
+		</div>
 		<ColorPicker bind:color />
 		<Checkbox bind:checked={disabled}>Disabled</Checkbox>
 	</svelte:fragment>

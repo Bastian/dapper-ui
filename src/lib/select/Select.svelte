@@ -1,11 +1,14 @@
 <script lang="ts">
 	import { overwriteColor } from '$lib/createColorOverwrite';
+	import { overwriteRadius } from '$lib/createRadiusOverwrite';
 	import { generateRandomId } from '$lib/helpers/generateRandomId';
 	import InputBase from '$lib/InputBase.svelte';
+	import type { Radius } from '$lib/ThemeProvider.svelte';
 
 	export let id: string = generateRandomId();
 
 	export let size: 'sm' | 'base' | undefined = 'base';
+	export let radius: Radius | undefined = undefined;
 
 	export let value: string | never | undefined = undefined;
 
@@ -33,7 +36,10 @@
 	<slot slot="icon-label" name="icon-label" />
 	<select
 		{id}
-		style={overwriteColor(color, [200, 300, 600, 700], 'primary')}
+		style="{overwriteColor(color, [200, 300, 600, 700], 'primary')}{overwriteRadius(
+			radius,
+			'input'
+		)}"
 		class:size-base={size === 'base' || size === undefined}
 		class:size-sm={size === 'sm'}
 		bind:value

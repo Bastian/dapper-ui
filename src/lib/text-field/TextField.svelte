@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { overwriteColor } from '$lib/createColorOverwrite';
+	import { overwriteRadius } from '$lib/createRadiusOverwrite';
 	import { generateRandomId } from '$lib/helpers/generateRandomId';
 	import InputBase from '$lib/InputBase.svelte';
+	import type { Radius } from '$lib/ThemeProvider.svelte';
 	import { createEventDispatcher } from 'svelte';
 
 	export let color: string | undefined = undefined;
@@ -9,6 +11,7 @@
 	export let fullWidth = false;
 
 	export let size: 'sm' | 'base' | undefined = 'base';
+	export let radius: Radius | undefined = undefined;
 
 	export let label: string;
 	export let hideLabel = false;
@@ -62,7 +65,7 @@
 >
 	<slot name="icon-label" slot="icon-label" />
 	<input
-		style={overwriteColor(color, [200, 300, 600, 700])}
+		style="{overwriteColor(color, [200, 300, 600, 700])}{overwriteRadius(radius, 'input')}"
 		class:d4r-w-full={fullWidth}
 		class:size-base={size === 'base' || size === undefined}
 		class:size-sm={size === 'sm'}

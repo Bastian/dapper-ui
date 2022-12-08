@@ -1,12 +1,20 @@
 <script lang="ts">
 	import { overwriteColor } from '$lib/createColorOverwrite';
+	import { overwriteRadius } from '$lib/createRadiusOverwrite';
 	import { generateRandomId } from '$lib/helpers/generateRandomId';
 	import InputBase from '$lib/InputBase.svelte';
+	import type { Radius } from '$lib/ThemeProvider.svelte';
 
 	export let label: string;
 	export let id: string = generateRandomId();
 
 	export let color: string | undefined = undefined;
+	export let radius: Radius | undefined = undefined;
+
+	/** Overwrites the more general radius prop */
+	export let radiusThumb: Radius | undefined = undefined;
+	/** Overwrites the more general radius prop */
+	export let radiusTrack: Radius | undefined = undefined;
 
 	export let min = 0;
 	export let max = 100;
@@ -17,7 +25,12 @@
 </script>
 
 <InputBase {id} {label}>
-	<div style={overwriteColor(color, [300, 500, 600], 'primary')}>
+	<div
+		style="{overwriteColor(color, [300, 500, 600], 'primary')}{overwriteRadius(
+			radiusThumb ?? radius,
+			'slider-thumb'
+		)}{overwriteRadius(radiusTrack ?? radius, 'slider-track')}"
+	>
 		<input
 			{id}
 			bind:value
@@ -26,6 +39,8 @@
 			type="range"
 			class="group"
 			style="background: linear-gradient(90deg, rgb(var(--d4r-color-primary-600)) {percentage}%, rgb(var(--d4r-color-neutral-300)) {percentage}%, rgb(var(--d4r-color-neutral-300)) 100%);"
+			on:change
+			on:input
 		/>
 	</div>
 </InputBase>

@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { overwriteColor } from '$lib/createColorOverwrite';
+	import { overwriteRadius } from './createRadiusOverwrite';
+	import type { Radius } from './ThemeProvider.svelte';
 
 	export let fullWidth = false;
 	export let disabled = false;
 	export let color: string | undefined = undefined;
 	export let size: 'sm' | 'base' = 'base';
+	export let radius: Radius | undefined = undefined;
 	export let truncate = true;
 
 	export let variant: 'solid' | 'outline' = 'solid';
@@ -16,7 +19,7 @@
 <button
 	class={className}
 	class:d4r-w-full={fullWidth}
-	style={overwriteColor(color, [50, 300, 500, 600, 700, 800])}
+	style="{overwriteColor(color, [50, 300, 500, 600, 700, 800])}{overwriteRadius(radius, 'button')}"
 	class:size-base={size === 'base'}
 	class:size-sm={size === 'sm'}
 	class:outline={variant === 'outline'}
