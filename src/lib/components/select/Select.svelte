@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { overwriteColor } from '$lib/createColorOverwrite';
-	import { overwriteRadius } from '$lib/createRadiusOverwrite';
+	import { overwriteColor } from '$lib/util/createColorOverwrite';
+	import { overwriteRadius } from '$lib/util/createRadiusOverwrite';
 	import { generateRandomId } from '$lib/helpers/generateRandomId';
 	import InputBase from '$lib/InputBase.svelte';
 	import type { Radius } from '$lib/ThemeProvider.svelte';

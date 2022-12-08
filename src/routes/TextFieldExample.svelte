@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Checkbox from '$lib/checkbox/Checkbox.svelte';
+	import Checkbox from '$lib/components/checkbox/Checkbox.svelte';
 	import { getTheme } from '$lib/getTheme';
-	import { createCode } from '$lib/helpers/createCode';
-	import Select from '$lib/select/Select.svelte';
-	import TextField from '$lib/text-field/TextField.svelte';
+	import { createCode } from '../doc-components/helpers/createCode';
+	import Select from '$lib/components/select/Select.svelte';
+	import TextField from '$lib/components/text-field/TextField.svelte';
 	import type { Radius } from '$lib/ThemeProvider.svelte';
 	import { Bulb } from 'tabler-icons-svelte';
 	import ColorPicker from './ColorPicker.svelte';

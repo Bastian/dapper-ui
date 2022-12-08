@@ -1,6 +1,6 @@
 <script lang="ts">
-	import CodeBlock from '$lib/code-highlight/CodeBlock.svelte';
-	import Text from '$lib/Text.svelte';
+	import CodeBlock from '../doc-components/code-highlight/CodeBlock.svelte';
+	import Text from '$lib/components/text/Text.svelte';
 
 	export let title: string;
 	export let code = '';

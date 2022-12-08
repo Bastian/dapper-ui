@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Text from './Text.svelte';
+	import Text from './components/text/Text.svelte';
 
 	export let fullWidth = false;
 	export let label: string;

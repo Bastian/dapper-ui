@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Slider from '$lib/slider/Slider.svelte';
+	import Slider from '$lib/components/slider/Slider.svelte';
 	import type { Radius } from '$lib/ThemeProvider.svelte';
 
 	export let radius: Radius;

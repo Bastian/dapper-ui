@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Button from '$lib/Button.svelte';
-	import Text from '$lib/Text.svelte';
+	import Button from '$lib/components/button/Button.svelte';
+	import Text from '$lib/components/text/Text.svelte';
 
 	export let color: string | undefined = undefined;
 </script>

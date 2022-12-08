@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { overwriteColor } from '$lib/createColorOverwrite';
-	import { overwriteRadius } from '$lib/createRadiusOverwrite';
+	import { overwriteColor } from '$lib/util/createColorOverwrite';
+	import { overwriteRadius } from '$lib/util/createRadiusOverwrite';
 	import { generateRandomId } from '$lib/helpers/generateRandomId';
-	import Text from '$lib/Text.svelte';
+	import Text from '$lib/components/text/Text.svelte';
 	import type { Radius } from '$lib/ThemeProvider.svelte';
 
 	export let id: string = generateRandomId();

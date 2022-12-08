@@ -1,5 +1,8 @@
-import type { Radius } from './ThemeProvider.svelte';
+import type { Radius } from '$lib/ThemeProvider.svelte';
 
+/**
+ * @internal Creates a string of CSS variables that overwrite previous boder radius variables.
+ */
 export function overwriteRadius(to: Radius | undefined, from: string) {
 	if (to === undefined || to === from) {
 		return '';

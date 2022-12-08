@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { overwriteColor } from './createColorOverwrite';
-	import type { Shades } from './ThemeProvider.svelte';
+	import { overwriteColor } from '../../util/createColorOverwrite';
+	import type { Shades } from '../../ThemeProvider.svelte';
 
 	let className = '';
 	export { className as class };

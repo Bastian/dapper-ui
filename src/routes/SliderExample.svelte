@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Checkbox from '$lib/checkbox/Checkbox.svelte';
+	import Checkbox from '$lib/components/checkbox/Checkbox.svelte';
 	import { getTheme } from '$lib/getTheme';
-	import { createCode } from '$lib/helpers/createCode';
-	import Slider from '$lib/slider/Slider.svelte';
+	import { createCode } from '../doc-components/helpers/createCode';
+	import Slider from '$lib/components/slider/Slider.svelte';
 	import type { Radius } from '$lib/ThemeProvider.svelte';
 	import ColorPicker from './ColorPicker.svelte';
 	import Example from './Example.svelte';

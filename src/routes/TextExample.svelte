@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Checkbox from '$lib/checkbox/Checkbox.svelte';
-	import { createCode } from '$lib/helpers/createCode';
-	import Slider from '$lib/slider/Slider.svelte';
-	import TextField from '$lib/text-field/TextField.svelte';
-	import Text from '$lib/Text.svelte';
+	import Checkbox from '$lib/components/checkbox/Checkbox.svelte';
+	import { createCode } from '../doc-components/helpers/createCode';
+	import Slider from '$lib/components/slider/Slider.svelte';
+	import TextField from '$lib/components/text-field/TextField.svelte';
+	import Text from '$lib/components/text/Text.svelte';
 	import ColorPicker from './ColorPicker.svelte';
 	import Example from './Example.svelte';
 

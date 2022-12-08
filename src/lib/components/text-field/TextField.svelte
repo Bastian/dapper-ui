@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { overwriteColor } from '$lib/createColorOverwrite';
-	import { overwriteRadius } from '$lib/createRadiusOverwrite';
+	import { overwriteColor } from '$lib/util/createColorOverwrite';
+	import { overwriteRadius } from '$lib/util/createRadiusOverwrite';
 	import { generateRandomId } from '$lib/helpers/generateRandomId';
 	import InputBase from '$lib/InputBase.svelte';
 	import type { Radius } from '$lib/ThemeProvider.svelte';
@@ -85,7 +85,7 @@
 
 <style lang="postcss" global>
 	:local(input) {
-		@apply d4r-rounded-input d4r-border-neutral-300 d4r-text-neutral-700 d4r-transition-all focus:d4r-border-primary-300 focus:d4r-outline-none focus:d4r-ring-primary-700/70 dark:d4r-border-dark-400 dark:d4r-bg-dark-600 dark:d4r-text-neutral-200 dark:focus:d4r-border-primary-600;
+		@apply d4r-rounded-input d4r-border-neutral-300 d4r-text-neutral-700 focus:d4r-border-primary-300 focus:d4r-outline-none focus:d4r-ring-primary-700/70 dark:d4r-border-dark-400 dark:d4r-bg-dark-600 dark:d4r-text-neutral-200 dark:focus:d4r-border-primary-600;
 	}
 
 	:local(.size-base) {

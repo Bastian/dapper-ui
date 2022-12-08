@@ -1,6 +1,6 @@
 <script lang="ts">
 	import './highlight.css';
-	import CodeHighlightWorker from '$lib/code-highlight/CodeHighlightWorker?worker&inline';
+	import CodeHighlightWorker from './CodeHighlightWorker?worker&inline';
 	import dedentFunction from 'dedent';
 	import { onDestroy } from 'svelte';
 	let className = '';
