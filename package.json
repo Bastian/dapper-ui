@@ -44,11 +44,10 @@
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.3",
 		"vite": "^3.2.4",
-		"vitest": "^0.25.3"
-	},
-	"type": "module",
-	"dependencies": {
+		"vitest": "^0.25.3",
 		"dedent": "^0.7.0",
 		"highlight.js": "^11.7.0"
-	}
+	},
+	"type": "module",
+	"dependencies": {}
 }
