@@ -5,7 +5,7 @@
 	import Text from '$lib/components/text/Text.svelte';
 	import CustomizationSection from './CustomizationSection.svelte';
 	import ToggleDarkModeButton from './ToggleDarkModeButton.svelte';
-	import heroImgSrc from './hero-image.jpg';
+	import heroImgSrc from './hero-image.webp';
 </script>
 
 <div
