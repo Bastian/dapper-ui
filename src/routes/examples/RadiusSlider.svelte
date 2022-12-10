@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Slider from '$lib/components/slider/Slider.svelte';
-	import type { Radius } from '$lib/ThemeProvider.svelte';
+	import type { Radius } from '$lib/theme/DapperUiTheme';
 
 	export let radius: Radius;
 

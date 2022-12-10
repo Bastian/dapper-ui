@@ -12,7 +12,7 @@
 	<div
 		class="d4r-mx-auto d4r-w-full d4r-max-w-lg d4r-space-y-4 d4r-rounded d4r-bg-white d4r-p-8 d4r-shadow dark:d4r-bg-dark-800"
 	>
-		<TextField fullWidth id="email" label="Email">
+		<TextField fullWidth id="email" label="Email" placeholder="jane.doe@dapper-ui.dev">
 			<Mail slot="icon-label" />
 		</TextField>
 		<TextField fullWidth id="password" label="Password" type="password">

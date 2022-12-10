@@ -1,4 +1,4 @@
-import type { Radius } from '$lib/ThemeProvider.svelte';
+import type { Radius } from '$lib/theme/ThemeProvider.svelte';
 
 /**
  * @internal Creates a string of CSS variables that overwrite previous boder radius variables.

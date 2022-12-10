@@ -3,7 +3,7 @@
 	import { overwriteRadius } from '$lib/util/createRadiusOverwrite';
 	import { generateRandomId } from '$lib/helpers/generateRandomId';
 	import InputBase from '$lib/InputBase.svelte';
-	import type { Radius } from '$lib/ThemeProvider.svelte';
+	import type { Radius } from '$lib/theme/ThemeProvider.svelte';
 	import { createEventDispatcher } from 'svelte';
 
 	export let color: string | undefined = undefined;
@@ -85,7 +85,7 @@
 
 <style lang="postcss" global>
 	:local(input) {
-		@apply d4r-rounded-input d4r-border-neutral-300 d4r-text-neutral-700 focus:d4r-border-primary-300 focus:d4r-outline-none focus:d4r-ring-primary-700/70 dark:d4r-border-dark-400 dark:d4r-bg-dark-600 dark:d4r-text-neutral-200 dark:focus:d4r-border-primary-600;
+		@apply d4r-rounded-input d4r-border-neutral-300 d4r-text-neutral-700 placeholder:d4r-text-neutral-400 focus:d4r-border-primary-300 focus:d4r-outline-none focus:d4r-ring-primary-700/70 dark:d4r-border-dark-400 dark:d4r-bg-dark-600 dark:d4r-text-neutral-200 dark:placeholder:d4r-text-neutral-500 dark:focus:d4r-border-primary-600;
 	}
 
 	:local(.size-base) {

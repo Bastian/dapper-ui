@@ -44,6 +44,8 @@
 
 	export let tag: 'span' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | string = 'span';
 
+	export let prose = false;
+
 	export let truncate = false;
 
 	let usedShades: Shades[];
@@ -86,6 +88,7 @@
 	class:d4r-text-7xl={size === '7xl'}
 	class:d4r-text-8xl={size === '8xl'}
 	class:d4r-text-9xl={size === '9xl'}
+	class:d4r-max-w-prose={prose}
 	class:d4r-font-thin={weight === 'thin'}
 	class:d4r-font-extralight={weight === 'extralight'}
 	class:d4r-font-light={weight === 'light'}

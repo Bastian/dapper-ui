@@ -3,7 +3,7 @@
 	import { overwriteRadius } from '$lib/util/createRadiusOverwrite';
 	import { generateRandomId } from '$lib/helpers/generateRandomId';
 	import Text from '$lib/components/text/Text.svelte';
-	import type { Radius } from '$lib/ThemeProvider.svelte';
+	import type { Radius } from '$lib/theme/ThemeProvider.svelte';
 
 	export let id: string = generateRandomId();
 

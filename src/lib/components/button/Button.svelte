@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { overwriteColor } from '$lib/util/createColorOverwrite';
 	import { overwriteRadius } from '$lib/util/createRadiusOverwrite';
-	import type { Radius } from '../../ThemeProvider.svelte';
+	import type { Radius } from '../../theme/ThemeProvider.svelte';
 
 	export let fullWidth = false;
 	export let disabled = false;

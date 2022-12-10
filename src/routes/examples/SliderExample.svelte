@@ -1,12 +1,12 @@
 <script lang="ts">
 	import Checkbox from '$lib/components/checkbox/Checkbox.svelte';
 	import { getTheme } from '$lib/getTheme';
-	import { createCode } from '../doc-components/helpers/createCode';
+	import { createCode } from '../../doc-components/helpers/createCode';
 	import Slider from '$lib/components/slider/Slider.svelte';
-	import type { Radius } from '$lib/ThemeProvider.svelte';
 	import ColorPicker from './ColorPicker.svelte';
 	import Example from './Example.svelte';
 	import RadiusSlider from './RadiusSlider.svelte';
+	import type { Radius } from '$lib/theme/DapperUiTheme';
 
 	const theme = getTheme();
 

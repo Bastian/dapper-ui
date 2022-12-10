@@ -1,5 +1,5 @@
 <script lang="ts">
-	import CodeBlock from '../doc-components/code-highlight/CodeBlock.svelte';
+	import CodeBlock from '../../doc-components/code-highlight/CodeBlock.svelte';
 	import Text from '$lib/components/text/Text.svelte';
 
 	export let title: string;
