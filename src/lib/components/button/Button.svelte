@@ -10,14 +10,18 @@
 	export let radius: Radius | undefined = undefined;
 	export let truncate = true;
 
+	export let href: string | undefined = undefined;
+
 	export let variant: 'solid' | 'outline' = 'solid';
 
 	let className = '';
 	export { className as class };
 </script>
 
-<button
-	class={className}
+<svelte:element
+	this={href ? 'a' : 'button'}
+	{href}
+	class="button {className}"
 	class:d4r-w-full={fullWidth}
 	style="{overwriteColor(color, [50, 300, 500, 600, 700, 800])}{overwriteRadius(radius, 'button')}"
 	class:size-base={size === 'base'}
@@ -27,7 +31,10 @@
 	class:icon-start={$$slots['icon-start']}
 	class:icon-end={$$slots['icon-end']}
 	{disabled}
+	type="button"
 	on:click
+	on:keydown
+	on:keyup
 >
 	{#if $$slots['icon-start']}
 		<span>
@@ -40,11 +47,11 @@
 			<slot name="icon-end" />
 		</span>
 	{/if}
-</button>
+</svelte:element>
 
 <style lang="postcss" global>
-	:local(button) {
-		@apply d4r-flex d4r-items-center d4r-justify-center d4r-gap-2 d4r-truncate d4r-rounded-button d4r-font-medium d4r-text-neutral-100 d4r-outline-none d4r-transition-all focus:d4r-outline-none focus:d4r-ring-2 focus:d4r-ring-primary-600/50 focus:d4r-ring-offset-1 disabled:d4r-opacity-50 dark:focus:d4r-ring-primary-300/50 dark:focus:d4r-ring-offset-dark-800;
+	:local(.button) {
+		@apply d4r-inline-flex d4r-appearance-none d4r-items-center d4r-justify-center d4r-gap-2 d4r-truncate d4r-rounded-button d4r-font-medium d4r-text-neutral-100 d4r-outline-none d4r-transition-all focus:d4r-outline-none focus:d4r-ring-2 focus:d4r-ring-primary-600/50 focus:d4r-ring-offset-1 disabled:d4r-opacity-50 dark:focus:d4r-ring-primary-300/50 dark:focus:d4r-ring-offset-dark-800;
 	}
 
 	:local(.size-base) {

@@ -6,6 +6,4 @@
 	}
 </script>
 
-<div class="d4r-flex d4r-items-end d4r-justify-end">
-	<Button color="neutral" class="d4r-my-8" on:click={toggleDarkMode}>Toogle Dark Mode</Button>
-</div>
+<Button color="neutral" on:click={toggleDarkMode}>Toogle Dark Mode</Button>
