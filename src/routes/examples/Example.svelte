@@ -28,7 +28,15 @@
 		<div
 			class="d4r-border-t d4r-border-neutral-200 d4r-bg-neutral-50 d4r-p-4 dark:d4r-border-dark-600 dark:d4r-bg-dark-800"
 		>
-			<CodeBlock language="xml" {code} />
+			<div />
+			<div class="d4r-flex d4r-items-center d4r-gap-2">
+				<div
+					class="d4r-select-none d4r-border-r d4r-border-neutral-200 d4r-px-4 d4r-text-sm d4r-text-neutral-500 dark:d4r-border-dark-600"
+				>
+					<pre>{[...Array(code.split('\n').length)].map((_, i) => `${i + 1}`).join('\n')}</pre>
+				</div>
+				<CodeBlock language="xml" {code} />
+			</div>
 		</div>
 	</div>
 </article>
