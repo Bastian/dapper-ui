@@ -6,14 +6,14 @@
 	export let code = '';
 </script>
 
-<div class="d4r-space-y-2">
-	<Text size="lg" weight="medium">{title}</Text>
+<article class="d4r-space-y-2">
+	<Text tag="h3" size="lg" weight="medium">{title}</Text>
 	<div
 		class="d4r-flex d4r-flex-col d4r-border d4r-border-neutral-200 d4r-bg-white dark:d4r-border-dark-600 dark:d4r-bg-dark-800"
 	>
 		<div class="d4r-flex d4r-flex-col md:d4r-flex-row">
 			<div
-				class="d4r-flex d4r-w-full d4r-items-center d4r-justify-center d4r-rounded d4r-border-neutral-200 d4r-p-8 dark:d4r-border-dark-600 md:d4r-w-96"
+				class="d4r-flex d4r-w-full d4r-items-center d4r-justify-center d4r-overflow-hidden d4r-rounded d4r-border-neutral-200 d4r-p-8 dark:d4r-border-dark-600 md:d4r-w-96"
 			>
 				<slot name="preview" />
 			</div>
@@ -31,4 +31,4 @@
 			<CodeBlock language="xml" {code} />
 		</div>
 	</div>
-</div>
+</article>
