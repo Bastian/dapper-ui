@@ -6,29 +6,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
 		<link href="/dapper-ui/_app/immutable/assets/_layout-32dab159.css" rel="stylesheet">
-		<link href="/dapper-ui/_app/immutable/assets/Container-2f25c76b.css" rel="stylesheet">
-		<link href="/dapper-ui/_app/immutable/assets/Text-766c024b.css" rel="stylesheet">
-		<link href="/dapper-ui/_app/immutable/assets/Button-25c3515c.css" rel="stylesheet">
-		<link href="/dapper-ui/_app/immutable/assets/ToggleDarkModeButton-5718686d.css" rel="stylesheet">
+		<link href="/dapper-ui/_app/immutable/assets/Text-651d20e8.css" rel="stylesheet">
+		<link href="/dapper-ui/_app/immutable/assets/ToggleDarkModeButton-46202e8c.css" rel="stylesheet">
 		<link href="/dapper-ui/_app/immutable/assets/_page-2f6b7ac6.css" rel="stylesheet">
 		<link href="/dapper-ui/_app/immutable/assets/Select-2a5365be.css" rel="stylesheet">
+		<link href="/dapper-ui/_app/immutable/assets/Container-2f25c76b.css" rel="stylesheet">
 		<link href="/dapper-ui/_app/immutable/assets/Checkbox-6b45aede.css" rel="stylesheet">
 		<link href="/dapper-ui/_app/immutable/assets/TextField-99a2b34b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/start-b9877d59.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/index-5f0290d7.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/singletons-6d970b06.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/index-1ca1145b.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/paths-6cd3a76e.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/_layout.svelte-73783d59.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Text-a7eaacd0.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Button-28e73c89.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/ToggleDarkModeButton-d9579f37.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/start-64a04c51.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/index-ccf69386.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/singletons-4927ead1.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/paths-65ef2094.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/_layout.svelte-c48513e7.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Text-8a3e5c45.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/ToggleDarkModeButton-87013dfa.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/_layout-1daba58d.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/_page.svelte-ea0c1834.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Container-bff2d95e.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Checkbox-455d5f17.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/TextField-ac354890.js"><!-- HEAD_svelte-1i1kraa_START -->
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/_page.svelte-aaad376d.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Container-243df257.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Checkbox-5b0af420.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/TextField-6e12943a.js"><!-- HEAD_svelte-1i1kraa_START -->
 		<!-- HTML_TAG_START --><style type="text/css">:root {
 --d4r-color-primary-50: 238 242 255;
 --d4r-color-primary-100: 224 231 255;
@@ -302,10 +299,16 @@
 
 
 
-<div class="d4r-flex d4r-h-full d4r-flex-col"><header class="d4r-flex d4r-justify-between d4r-px-8 svelte-s4j3c4"><span class="  contrast-higher          d4r-text-xl              d4r-font-medium      svelte-1ltnbjr" style="--d4r-color-neutral-50: var(--d4r-color-gray-50);--d4r-color-neutral-900: var(--d4r-color-gray-900);"><a href="/dapper-ui/">Dapper UI</a>
-</span>
-			<button class="button  svelte-djus5a  size-base  ring  solid      d4r-justify-center" style="--d4r-color-primary-50: var(--d4r-color-neutral-50);--d4r-color-primary-300: var(--d4r-color-neutral-300);--d4r-color-primary-500: var(--d4r-color-neutral-500);--d4r-color-primary-600: var(--d4r-color-neutral-600);--d4r-color-primary-700: var(--d4r-color-neutral-700);--d4r-color-primary-800: var(--d4r-color-neutral-800);"  type="button">
-	<span class="d4r-truncate">Toogle Dark Mode</span>
+<div class="d4r-flex d4r-h-full d4r-flex-col"><header class="d4r-flex d4r-justify-between d4r-px-8 svelte-s4j3c4"><div class="d4r-flex d4r-items-center d4r-gap-4"><button class="button d4r-w-10 !d4r-p-0 md:!d4r-hidden svelte-djus5a  size-base      subtle    d4r-justify-center" style=""  type="button">
+	<span class="d4r-truncate"><span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/menu-2
+    </desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg></span></span>
+	
+</button>
+				<span class="  contrast-higher          d4r-text-xl              d4r-font-medium      svelte-1ltnbjr" style="--d4r-color-neutral-50: var(--d4r-color-gray-50);--d4r-color-neutral-900: var(--d4r-color-gray-900);"><a href="/dapper-ui/">Dapper UI</a>
+</span></div>
+			<button class="button d4r-w-10 !d4r-p-0 svelte-djus5a  size-base      subtle    d4r-justify-center" style=""  type="button">
+	<span class="d4r-truncate"><span class="dark:d4r-hidden"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/moon</desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path></svg></span>
+		<span class="d4r-hidden dark:d4r-inline"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/sun</desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="4"></circle><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path></svg></span></span>
 	
 </button></header>
 
@@ -379,8 +382,8 @@
 	<input style="" id="password-repeat" type="password" value=""  class="svelte-cwf21f d4r-w-full size-base">
 	
 </div>
-		<div class="flex items-center gap-2"><input style="" type="checkbox" class="d4r-rounded-checkbox d4r-border-neutral-600 d4r-text-primary-600 !d4r-ring-offset-1 focus:d4r-outline-none focus:d4r-ring-2 focus:d4r-ring-primary-600/50 dark:d4r-border-dark-400 dark:d4r-bg-dark-600 dark:focus:d4r-border-neutral-600 dark:focus:d4r-ring-primary-500/50 dark:focus:d4r-ring-offset-dark-800" id="kiptwzidix">
-	<label class="    contrast-base     d4r-text-sm                 d4r-font-medium      svelte-1ltnbjr" style="--d4r-color-neutral-200: var(--d4r-color-gray-200);--d4r-color-neutral-700: var(--d4r-color-gray-700);" for="kiptwzidix">Accept Terms of Use
+		<div class="flex items-center gap-2"><input style="" type="checkbox" class="d4r-rounded-checkbox d4r-border-neutral-600 d4r-text-primary-600 !d4r-ring-offset-1 focus:d4r-outline-none focus:d4r-ring-2 focus:d4r-ring-primary-600/50 dark:d4r-border-dark-400 dark:d4r-bg-dark-600 dark:focus:d4r-border-neutral-600 dark:focus:d4r-ring-primary-500/50 dark:focus:d4r-ring-offset-dark-800" id="9hauhzuposd">
+	<label class="    contrast-base     d4r-text-sm                 d4r-font-medium      svelte-1ltnbjr" style="--d4r-color-neutral-200: var(--d4r-color-gray-200);--d4r-color-neutral-700: var(--d4r-color-gray-700);" for="9hauhzuposd">Accept Terms of Use
 </label></div>
 		<button class="button  svelte-djus5a d4r-w-full size-base  ring  solid      d4r-justify-center" style=""  type="button">
 	<span class="d4r-truncate">Create Account</span>
@@ -407,8 +410,8 @@
 </div></div></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="1u2331h">
-			import { start } from "/dapper-ui/_app/immutable/start-b9877d59.js";
+		<script type="module" data-sveltekit-hydrate="cj06ga">
+			import { start } from "/dapper-ui/_app/immutable/start-64a04c51.js";
 
 			start({
 				env: {},
@@ -422,8 +425,8 @@
 					form: null
 				},
 				paths: {"base":"/dapper-ui","assets":"/dapper-ui"},
-				target: document.querySelector('[data-sveltekit-hydrate="1u2331h"]').parentNode,
-				version: "1670710891996"
+				target: document.querySelector('[data-sveltekit-hydrate="cj06ga"]').parentNode,
+				version: "1670712498823"
 			});
 		</script>
 	</div>
