@@ -1,12 +1,12 @@
 {
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-9f78c89f.js",
+    "file": "_app/immutable/start-dbea35f9.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-972f31bf.js",
-      "_singletons-40b79806.js",
-      "_paths-1935d5f9.js"
+      "_index-7336cbf1.js",
+      "_singletons-635c0130.js",
+      "_paths-5e0c6e80.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -16,45 +16,45 @@
     ]
   },
   "src/routes/+layout.svelte": {
-    "file": "_app/immutable/components/pages/_layout.svelte-d25eb6a7.js",
+    "file": "_app/immutable/components/pages/_layout.svelte-7c803868.js",
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index-972f31bf.js",
-      "_paths-1935d5f9.js",
-      "_Text-5c2a3eff.js",
-      "_ThemeProvider-b4ed41f3.js"
+      "_index-7336cbf1.js",
+      "_paths-5e0c6e80.js",
+      "_Text-412cb7d7.js",
+      "_ThemeProvider-dbe619a1.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-ec080173.js",
+    "file": "_app/immutable/components/error.svelte-e4a1f19d.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index-972f31bf.js",
-      "_singletons-40b79806.js"
+      "_index-7336cbf1.js",
+      "_singletons-635c0130.js"
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-f24f58c5.js",
+    "file": "_app/immutable/components/pages/_page.svelte-a6cee813.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-972f31bf.js",
-      "_paths-1935d5f9.js",
-      "_Text-5c2a3eff.js",
-      "_ThemeProvider-b4ed41f3.js",
-      "_ToggleDarkModeButton-e7ef803e.js"
+      "_index-7336cbf1.js",
+      "_paths-5e0c6e80.js",
+      "_Text-412cb7d7.js",
+      "_ThemeProvider-dbe619a1.js",
+      "_ToggleDarkModeButton-7c5bf38f.js"
     ]
   },
   "src/routes/examples/+page.svelte": {
-    "file": "_app/immutable/components/pages/examples/_page.svelte-d3c6ac50.js",
+    "file": "_app/immutable/components/pages/examples/_page.svelte-b39b26fe.js",
     "src": "src/routes/examples/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-972f31bf.js",
-      "_ToggleDarkModeButton-e7ef803e.js",
-      "_Text-5c2a3eff.js"
+      "_index-7336cbf1.js",
+      "_Text-412cb7d7.js",
+      "_ToggleDarkModeButton-7c5bf38f.js"
     ],
     "css": [
       "_app/immutable/assets/_page-9023f4f5.css"
@@ -68,55 +68,55 @@
       "__layout-1daba58d.js"
     ]
   },
-  "_singletons-40b79806.js": {
-    "file": "_app/immutable/chunks/singletons-40b79806.js",
+  "_singletons-635c0130.js": {
+    "file": "_app/immutable/chunks/singletons-635c0130.js",
     "imports": [
-      "_paths-1935d5f9.js"
+      "_paths-5e0c6e80.js"
     ]
   },
-  "_paths-1935d5f9.js": {
-    "file": "_app/immutable/chunks/paths-1935d5f9.js",
+  "_paths-5e0c6e80.js": {
+    "file": "_app/immutable/chunks/paths-5e0c6e80.js",
     "imports": [
-      "_index-972f31bf.js"
+      "_index-7336cbf1.js"
     ]
   },
-  "_index-972f31bf.js": {
-    "file": "_app/immutable/chunks/index-972f31bf.js"
+  "_index-7336cbf1.js": {
+    "file": "_app/immutable/chunks/index-7336cbf1.js"
   },
-  "_Text-5c2a3eff.js": {
-    "file": "_app/immutable/chunks/Text-5c2a3eff.js",
+  "_Text-412cb7d7.js": {
+    "file": "_app/immutable/chunks/Text-412cb7d7.js",
     "imports": [
-      "_index-972f31bf.js"
+      "_index-7336cbf1.js"
     ],
     "css": [
-      "_app/immutable/assets/Text-766c024b.css"
+      "_app/immutable/assets/Text-c863f03a.css"
     ]
   },
-  "_ThemeProvider-b4ed41f3.js": {
-    "file": "_app/immutable/chunks/ThemeProvider-b4ed41f3.js",
+  "_ThemeProvider-dbe619a1.js": {
+    "file": "_app/immutable/chunks/ThemeProvider-dbe619a1.js",
     "imports": [
-      "_index-972f31bf.js",
-      "_paths-1935d5f9.js"
+      "_index-7336cbf1.js",
+      "_paths-5e0c6e80.js"
     ],
     "css": [
-      "_app/immutable/assets/ThemeProvider-e844c622.css"
+      "_app/immutable/assets/ThemeProvider-d3b5ac60.css"
     ]
   },
   "__layout-1daba58d.js": {
     "file": "_app/immutable/chunks/_layout-1daba58d.js"
   },
-  "_ToggleDarkModeButton-e7ef803e.js": {
-    "file": "_app/immutable/chunks/ToggleDarkModeButton-e7ef803e.js",
+  "_ToggleDarkModeButton-7c5bf38f.js": {
+    "file": "_app/immutable/chunks/ToggleDarkModeButton-7c5bf38f.js",
     "imports": [
-      "_index-972f31bf.js",
-      "_Text-5c2a3eff.js"
+      "_index-7336cbf1.js",
+      "_Text-412cb7d7.js"
     ],
     "css": [
       "_app/immutable/assets/ToggleDarkModeButton-c4e31da9.css"
     ]
   },
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "_app/immutable/chunks/0-b3e509eb.js",
+    "file": "_app/immutable/chunks/0-5a83ead5.js",
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
@@ -125,7 +125,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-e87ea9e9.js",
+    "file": "_app/immutable/chunks/1-e33266ea.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -133,7 +133,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-573847b9.js",
+    "file": "_app/immutable/chunks/2-ce459258.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -141,7 +141,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/3.js": {
-    "file": "_app/immutable/chunks/3-ad82fe7a.js",
+    "file": "_app/immutable/chunks/3-fc469237.js",
     "src": ".svelte-kit/generated/nodes/3.js",
     "isDynamicEntry": true,
     "imports": [
@@ -149,19 +149,19 @@
     ]
   },
   "Text.css": {
-    "file": "_app/immutable/assets/Text-766c024b.css",
+    "file": "_app/immutable/assets/Text-c863f03a.css",
     "src": "Text.css"
-  },
-  "src/routes/examples/+page.css": {
-    "file": "_app/immutable/assets/_page-9023f4f5.css",
-    "src": "src/routes/examples/+page.css"
   },
   "ToggleDarkModeButton.css": {
     "file": "_app/immutable/assets/ToggleDarkModeButton-c4e31da9.css",
     "src": "ToggleDarkModeButton.css"
   },
+  "src/routes/examples/+page.css": {
+    "file": "_app/immutable/assets/_page-9023f4f5.css",
+    "src": "src/routes/examples/+page.css"
+  },
   "ThemeProvider.css": {
-    "file": "_app/immutable/assets/ThemeProvider-e844c622.css",
+    "file": "_app/immutable/assets/ThemeProvider-d3b5ac60.css",
     "src": "ThemeProvider.css"
   }
 }
