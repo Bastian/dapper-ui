@@ -1,16 +1,31 @@
+<script lang="ts" context="module">
+	export let drawerOpen = writable(false);
+</script>
+
 <script lang="ts">
 	import { base } from '$app/paths';
-	import Container from '$lib/components/container/Container.svelte';
+	import Button from '$lib/components/button/Button.svelte';
 	import Text from '$lib/components/text/Text.svelte';
 	import ThemeProvider from '$lib/theme/ThemeProvider.svelte';
+	import { writable } from 'svelte/store';
+	import { Menu2 } from 'tabler-icons-svelte';
 	import ToggleDarkModeButton from './ToggleDarkModeButton.svelte';
 </script>
 
 <ThemeProvider>
 	<div class="d4r-flex d4r-h-full d4r-flex-col">
 		<header class="d4r-flex d4r-justify-between d4r-px-8">
-			<Text size="xl" weight="medium" contrast="higher"><a href="{base}/">Dapper UI</a></Text>
-			<ToggleDarkModeButton />
+			<div class="d4r-flex d4r-items-center d4r-gap-4">
+				<Button
+					on:click={() => ($drawerOpen = !$drawerOpen)}
+					variant="subtle"
+					class="d4r-w-10 !d4r-p-0 md:!d4r-hidden"
+				>
+					<span><Menu2 /></span>
+				</Button>
+				<Text size="xl" weight="medium" contrast="higher"><a href="{base}/">Dapper UI</a></Text>
+			</div>
+			<ToggleDarkModeButton icon />
 		</header>
 
 		<div class="d4r-h-full d4r-flex-grow">

@@ -4,7 +4,7 @@
 	export let href: string | undefined = undefined;
 </script>
 
-<Button {href} contentJustify="start" color="neutral" fullWidth variant="subtle">
+<Button {href} contentJustify="start" color="neutral" fullWidth variant="subtle" on:click>
 	<slot slot="icon-start" name="icon-start" />
 	<slot />
 	<slot slot="icon-end" name="icon-end" />

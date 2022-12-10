@@ -35,7 +35,9 @@
 				>
 					<pre>{[...Array(code.split('\n').length)].map((_, i) => `${i + 1}`).join('\n')}</pre>
 				</div>
-				<CodeBlock language="xml" {code} />
+				<div class="d4r-overflow-x-auto">
+					<CodeBlock language="xml" {code} />
+				</div>
 			</div>
 		</div>
 	</div>
