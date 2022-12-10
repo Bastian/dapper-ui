@@ -3,8 +3,8 @@
 	import { overwriteRadius } from '$lib/util/createRadiusOverwrite';
 	import { generateRandomId } from '$lib/helpers/generateRandomId';
 	import InputBase from '$lib/InputBase.svelte';
-	import type { Radius } from '$lib/theme/ThemeProvider.svelte';
 	import { createEventDispatcher } from 'svelte';
+	import type { Radius } from '$lib/theme/DapperUiTheme';
 
 	export let color: string | undefined = undefined;
 
