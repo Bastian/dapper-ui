@@ -27,7 +27,7 @@
 				user-friendly component for your next project.
 			</Text>
 			<div class="d4r-flex d4r-flex-col d4r-gap-4 md:d4r-flex-row">
-				<Button href="{base}/examples">To Component List</Button>
+				<Button href="{base}/examples/button">To Component List</Button>
 				<ToggleDarkModeButton />
 			</div>
 		</div>

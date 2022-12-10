@@ -34,15 +34,15 @@
 			</span>
 		</div>
 		<div class="d4r-flex d4r-justify-between d4r-gap-2">
-			<Button fullWidth variant="outline" color="gray">
+			<Button fullWidth variant="light" color="gray">
 				<GoogleIcon slot="icon-start" />
 				Google
 			</Button>
-			<Button fullWidth variant="outline" color="gray">
+			<Button fullWidth variant="light" color="gray">
 				<GitHubIcon slot="icon-start" />
 				GitHub
 			</Button>
-			<Button fullWidth variant="outline" color="gray">
+			<Button fullWidth variant="light" color="gray">
 				<TwitterIcon slot="icon-start" />
 				Twitter
 			</Button>

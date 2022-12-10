@@ -1,11 +1,11 @@
 <script lang="ts">
 	import Checkbox from '$lib/components/checkbox/Checkbox.svelte';
-	import { createCode } from '../../doc-components/helpers/createCode';
+	import { createCode } from '../../../doc-components/helpers/createCode';
 	import Slider from '$lib/components/slider/Slider.svelte';
 	import TextField from '$lib/components/text-field/TextField.svelte';
 	import Text from '$lib/components/text/Text.svelte';
-	import ColorPicker from './ColorPicker.svelte';
-	import Example from './Example.svelte';
+	import ColorPicker from '../ColorPicker.svelte';
+	import Example from '../Example.svelte';
 	import type { ComponentProps } from 'svelte';
 	import Select from '$lib/components/select/Select.svelte';
 

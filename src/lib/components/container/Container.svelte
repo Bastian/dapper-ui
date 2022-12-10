@@ -12,6 +12,6 @@
 
 <style lang="postcss" global>
 	:local(.padding) {
-		@apply d4r-p-4 sm:d4r-p-6 md:d4r-p-8 lg:d4r-p-16 xl:d4r-p-20 2xl:d4r-p-24;
+		@apply d4r-px-4 sm:d4r-px-6 md:d4r-px-8 lg:d4r-px-16 xl:d4r-px-20 2xl:d4r-px-24;
 	}
 </style>

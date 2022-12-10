@@ -2,13 +2,13 @@
 	import Button from '$lib/components/button/Button.svelte';
 	import Checkbox from '$lib/components/checkbox/Checkbox.svelte';
 	import { getTheme } from '$lib/getTheme';
-	import { createCode } from '../../doc-components/helpers/createCode';
+	import { createCode } from '../../../doc-components/helpers/createCode';
 	import Select from '$lib/components/select/Select.svelte';
 	import TextField from '$lib/components/text-field/TextField.svelte';
 	import { ClipboardCheck } from 'tabler-icons-svelte';
-	import ColorPicker from './ColorPicker.svelte';
-	import Example from './Example.svelte';
-	import RadiusSlider from './RadiusSlider.svelte';
+	import ColorPicker from '../ColorPicker.svelte';
+	import Example from '../Example.svelte';
+	import RadiusSlider from '../RadiusSlider.svelte';
 	import type { Radius } from '$lib/theme/DapperUiTheme';
 
 	const theme = getTheme();
@@ -44,7 +44,9 @@
 	<svelte:fragment slot="preview">
 		<!-- Workaround until https://github.com/sveltejs/rfcs/pull/641 gets solved -->
 		{#if !iconStart && !iconEnd}
-			<Button {variant} {disabled} {color} {size} {radius}>{content}</Button>
+			<Button class="d4r-transition-all" {variant} {disabled} {color} {size} {radius}
+				>{content}</Button
+			>
 		{/if}
 		{#if iconStart && !iconEnd}
 			<Button {variant} {disabled} {color} {size} {radius}>
@@ -68,10 +70,14 @@
 	</svelte:fragment>
 
 	<svelte:fragment slot="controls">
-		<div><TextField id="wefewf" label="Content" bind:value={content} /></div>
+		<div>
+			<TextField id="wefewf" label="Content" bind:value={content} />
+		</div>
 		<Select label="Variant" bind:value={variant}>
 			<option value="solid">Solid</option>
 			<option value="outline">Outline</option>
+			<option value="light">Light</option>
+			<option value="subtle">Subtle</option>
 		</Select>
 		<Select label="Size" bind:value={size}>
 			<option value="base">Base</option>

@@ -12,7 +12,9 @@
 
 	export let href: string | undefined = undefined;
 
-	export let variant: 'solid' | 'outline' = 'solid';
+	export let variant: 'solid' | 'outline' | 'light' | 'subtle' = 'solid';
+
+	export let contentJustify: 'start' | 'center' | 'end' = 'center';
 
 	let className = '';
 	export { className as class };
@@ -26,10 +28,16 @@
 	style="{overwriteColor(color, [50, 300, 500, 600, 700, 800])}{overwriteRadius(radius, 'button')}"
 	class:size-base={size === 'base'}
 	class:size-sm={size === 'sm'}
+	class:ring={variant === 'outline' || variant === 'solid' || variant === 'light'}
 	class:outline={variant === 'outline'}
 	class:solid={variant === 'solid'}
+	class:light={variant === 'light'}
+	class:subtle={variant === 'subtle'}
 	class:icon-start={$$slots['icon-start']}
 	class:icon-end={$$slots['icon-end']}
+	class:d4r-justify-start={contentJustify === 'start'}
+	class:d4r-justify-center={contentJustify === 'center'}
+	class:d4r-justify-end={contentJustify === 'end'}
 	{disabled}
 	type="button"
 	on:click
@@ -51,7 +59,11 @@
 
 <style lang="postcss" global>
 	:local(.button) {
-		@apply d4r-inline-flex d4r-appearance-none d4r-items-center d4r-justify-center d4r-gap-2 d4r-truncate d4r-rounded-button d4r-font-medium d4r-text-neutral-100 d4r-outline-none d4r-transition-all focus:d4r-outline-none focus:d4r-ring-2 focus:d4r-ring-primary-600/50 focus:d4r-ring-offset-1 disabled:d4r-opacity-50 dark:focus:d4r-ring-primary-300/50 dark:focus:d4r-ring-offset-dark-800;
+		@apply d4r-inline-flex d4r-appearance-none d4r-items-center d4r-gap-2 d4r-truncate d4r-rounded-button d4r-font-medium d4r-text-neutral-100 d4r-outline-none focus:d4r-outline-none disabled:d4r-opacity-50;
+	}
+
+	:local(.ring) {
+		@apply focus:d4r-ring-2 focus:d4r-ring-primary-600/50 focus:d4r-ring-offset-1 dark:focus:d4r-ring-primary-300/50 dark:focus:d4r-ring-offset-dark-800;
 	}
 
 	:local(.size-base) {
@@ -88,5 +100,13 @@
 
 	:local(.solid) {
 		@apply d4r-bg-primary-600 d4r-text-neutral-100 hover:d4r-bg-primary-700 hover:disabled:d4r-bg-primary-600;
+	}
+
+	:local(.light) {
+		@apply d4r-bg-neutral-100 d4r-text-neutral-500 hover:d4r-bg-neutral-200 dark:d4r-bg-dark-600 dark:d4r-text-neutral-300;
+	}
+
+	:local(.subtle) {
+		@apply d4r-text-neutral-500 d4r-ring-opacity-10 hover:d4r-bg-neutral-100 focus:d4r-ring-1 focus:d4r-ring-primary-600/25 focus:d4r-ring-offset-1 dark:d4r-text-neutral-300 dark:hover:d4r-bg-dark-600 dark:focus:d4r-ring-primary-300/25 dark:focus:d4r-ring-offset-dark-800;
 	}
 </style>
