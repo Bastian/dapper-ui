@@ -1,5 +1,33 @@
 <script>
+	import TextField from '$lib/components/text-field/TextField.svelte';
+	import { User } from 'tabler-icons-svelte';
+	import DocSection from '../DocSection.svelte';
 	import TextFieldExample from './TextFieldExample.svelte';
 </script>
 
-<TextFieldExample />
+<div class="d4r-space-y-16">
+	<TextFieldExample />
+
+	<DocSection title="Variants">
+		<div class="d4r-grid d4r-grid-cols-1 d4r-gap-4 d4r-p-8 sm:d4r-grid-cols-2 lg:d4r-grid-cols-3">
+			<TextField label="Default" />
+			<TextField label="Number" type="number" />
+			<TextField label="Password" type="password" />
+			<TextField label="Placeholder" placeholder="Placeholder" />
+			<TextField placeholder="jane.doe@dapper-ui.dev" label="Start Icon">
+				<User slot="icon-start" />
+			</TextField>
+			<TextField label="Required" required />
+			<TextField label="Disabled" disabled />
+			<TextField label="Readonly" readonly value="Readonly" />
+			<TextField label="Error" error="Something is wrong!" />
+			<TextField label="Help Text" helpText="Need Help?" />
+			<TextField label="Round" radius="full" />
+			<TextField label="Square" radius="none" />
+			<TextField label="Colored" color="green" />
+			<TextField class="d4r-self-end" label="Hidden Label" placeholder="Hidden Label" hideLabel />
+			<TextField class="d4r-self-end" label="Small" size="sm" />
+			<TextField class="d4r-col-span-1 sm:d4r-col-span-2 lg:d4r-col-span-3" label="Full Width" />
+		</div>
+	</DocSection>
+</div>

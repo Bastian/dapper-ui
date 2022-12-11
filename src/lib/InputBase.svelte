@@ -20,7 +20,7 @@
 </script>
 
 <div
-	class={className}
+	class="d4r-inline-flex d4r-flex-col d4r-gap-1 {className}"
 	class:d4r-inline-block={!fullWidth}
 	class:d4r-block={fullWidth}
 	class:d4r-w-full={fullWidth}
@@ -31,7 +31,7 @@
 		for={id}
 		contrast="low"
 		size={size === 'sm' ? 'xs' : 'sm'}
-		class="d4r-mb-1 d4r-flex d4r-items-center d4r-gap-1.5 {hideLabel ? 'd4r-hidden' : ''} {required
+		class="d4r-flex d4r-items-center d4r-gap-1.5 {hideLabel ? 'd4r-hidden' : ''} {required
 			? 'd4r-input-required'
 			: ''} {classLabel}"
 	>

@@ -1,19 +1,40 @@
 <script lang="ts">
-	import { colorTailwindGreen, colorTailwindSlate } from '$lib/colors/tailwind';
+	import { colorTailwindPink, colorTailwindSlate } from '$lib/colors/tailwind';
 	import Button from '$lib/components/button/Button.svelte';
 	import Container from '$lib/components/container/Container.svelte';
-	import Select from '$lib/components/select/Select.svelte';
 	import Text from '$lib/components/text/Text.svelte';
 	import type { DapperUiTheme } from '$lib/theme/DapperUiTheme';
 	import { defaultDapperUiTheme } from '$lib/theme/default-theme';
 	import ThemeProvider from '$lib/theme/ThemeProvider.svelte';
-	import BrowserWindow from './BrowserWindow.svelte';
 	import LoginForm from './examples/LoginForm.svelte';
 
 	const themes: Record<string, DapperUiTheme> = {
 		default: defaultDapperUiTheme,
+		playful: {
+			...defaultDapperUiTheme,
+			font: {
+				default: 'sans-serif'
+			},
+			colors: {
+				...defaultDapperUiTheme.colors,
+				primary: colorTailwindPink
+			},
+			radiuses: {
+				...defaultDapperUiTheme.radiuses,
+				button: '2xl',
+				checkbox: 'md',
+				input: '2xl',
+				slider: {
+					thumb: 'full',
+					track: 'full'
+				}
+			}
+		},
 		professional: {
 			...defaultDapperUiTheme,
+			font: {
+				default: 'serif'
+			},
 			colors: {
 				...defaultDapperUiTheme.colors,
 				primary: colorTailwindSlate
@@ -28,30 +49,13 @@
 					track: 'none'
 				}
 			}
-		},
-		playful: {
-			...defaultDapperUiTheme,
-			colors: {
-				...defaultDapperUiTheme.colors,
-				primary: colorTailwindGreen
-			},
-			radiuses: {
-				...defaultDapperUiTheme.radiuses,
-				button: 'full',
-				checkbox: 'md',
-				input: 'full',
-				slider: {
-					thumb: 'full',
-					track: 'full'
-				}
-			}
 		}
 	};
 
-	let theme: DapperUiTheme = themes.default;
+	let themeName: 'default' | 'playful' | 'professional' = 'default';
 </script>
 
-<div class="d4r-bg-white d4r-py-16 dark:d4r-bg-dark-900">
+<div class="d4r-bg-neutral-100 d4r-py-16 dark:d4r-bg-dark-900">
 	<Container
 		center
 		class="d4r-flex d4r-flex-col d4r-items-center d4r-justify-center d4r-gap-16 xl:d4r-flex-row-reverse"
@@ -66,27 +70,23 @@
 			</Text>
 
 			<div class="d4r-flex d4r-flex-col d4r-gap-2 sm:d4r-flex-row">
-				<Button on:click={() => (theme = themes.default)}>Default</Button>
-				<Button radius="full" color="green" on:click={() => (theme = themes.playful)}>
-					Playful
-				</Button>
-				<Button radius="none" color="slate" on:click={() => (theme = themes.professional)}>
+				<Button on:click={() => (themeName = 'default')}>Default</Button>
+				<Button radius="2xl" color="pink" on:click={() => (themeName = 'playful')}>Playful</Button>
+				<Button radius="none" color="slate" on:click={() => (themeName = 'professional')}>
 					Professional
 				</Button>
 			</div>
 		</div>
-		<BrowserWindow class="d4r-w-full d4r-max-w-xl 2xl:d4r-max-w-2xl">
-			<ThemeProvider localStyle {theme}>
-				<div class="d4r-flex d4r-items-center d4r-justify-center">
-					<div class="d4r-w-full d4r-max-w-lg">
-						<div
-							class="-d4r-ml-[12.5%] d4r-w-[125%] d4r-scale-75 d4r-space-y-2 d4r-rounded lg:d4r-p-8"
-						>
-							<LoginForm />
+		<div class="d4r-w-full d4r-max-w-xl 2xl:d4r-max-w-2xl">
+			<ThemeProvider localStyle theme={themes[themeName]} class="d4r-w-full">
+				<div class="d4r-flex d4r-w-full d4r-items-center d4r-justify-center">
+					<div class="d4r-w-full d4r-max-w-xl 2xl:d4r-max-w-2xl">
+						<div class="d4r-w-full d4r-space-y-2 d4r-rounded lg:d4r-p-8">
+							<LoginForm theme={themeName} />
 						</div>
 					</div>
 				</div>
 			</ThemeProvider>
-		</BrowserWindow>
+		</div>
 	</Container>
 </div>

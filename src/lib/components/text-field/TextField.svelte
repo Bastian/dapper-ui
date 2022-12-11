@@ -5,6 +5,7 @@
 	import InputBase from '$lib/InputBase.svelte';
 	import { createEventDispatcher } from 'svelte';
 	import type { Radius } from '$lib/theme/DapperUiTheme';
+	import Text from '../text/Text.svelte';
 
 	let className = '';
 	export { className as class };
@@ -18,6 +19,7 @@
 	export let error: string | undefined = undefined;
 	export let disabled = false;
 	export let required = false;
+	export let readonly = false;
 
 	export let value: string | number = '';
 
@@ -70,28 +72,44 @@
 	hasIconLabel={$$slots['icon-label']}
 >
 	<slot name="icon-label" slot="icon-label" />
-	<input
-		style="{overwriteColor(color, [400, 500, 700])}{overwriteRadius(radius, 'input')}"
-		class="d4r-input-base"
-		class:d4r-w-full={fullWidth}
-		class:size-base={size === 'base' || size === undefined}
-		class:size-sm={size === 'sm'}
-		{id}
-		{name}
-		{placeholder}
-		{type}
-		{disabled}
-		{required}
-		{value}
-		{min}
-		{max}
-		{step}
-		on:change
-		on:input={handleInput}
-	/>
+	<div class="d4r-relative d4r-w-full">
+		{#if $$slots['icon-start']}
+			<Text contrast="lower" class="d4r-input-icon-start">
+				<slot name="icon-start" />
+			</Text>
+		{/if}
+		<input
+			style="{overwriteColor(color, [400, 500, 700])}{overwriteRadius(radius, 'input')}"
+			class="d4r-input-base d4r-w-full"
+			class:size-base={size === 'base' || size === undefined}
+			class:size-sm={size === 'sm'}
+			class:d4r-pl-9={$$slots['icon-start']}
+			{id}
+			{name}
+			{placeholder}
+			{type}
+			{disabled}
+			{required}
+			{readonly}
+			{value}
+			{min}
+			{max}
+			{step}
+			on:change
+			on:input={handleInput}
+		/>
+	</div>
 </InputBase>
 
 <style lang="postcss" global>
+	.d4r-input-icon-start {
+		@apply d4r-absolute d4r-bottom-2.5 d4r-left-3;
+	}
+
+	.d4r-input-icon-start svg {
+		@apply d4r-h-5 d4r-w-5;
+	}
+
 	:local(input) {
 		@apply d4r-rounded-input;
 	}

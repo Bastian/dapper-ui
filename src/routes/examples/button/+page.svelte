@@ -1,25 +1,47 @@
-<script>
+<script lang="ts">
 	import Button from '$lib/components/button/Button.svelte';
-	import Text from '$lib/components/text/Text.svelte';
+	import IconButton from '$lib/components/icon-button/IconButton.svelte';
+	import type { ComponentProps } from 'svelte';
+	import { ColorSwatch, Paint, Palette, Sun } from 'tabler-icons-svelte';
+	import DocSection from '../DocSection.svelte';
 	import ButtonExample from './ButtonExample.svelte';
 	import IconButtonExample from './IconButtonExample.svelte';
+
+	const variants: ComponentProps<IconButton>['variant'][] = [
+		'solid',
+		'outline',
+		'outline-dashed',
+		'light',
+		'subtle'
+	];
 </script>
 
 <div class="d4r-space-y-16">
 	<ButtonExample />
-	<article class="d4r-space-y-2">
-		<Text tag="h3" size="lg" weight="medium">Variants</Text>
-		<div
-			class="d4r-border d4r-border-neutral-200 d4r-bg-white d4r-p-8 dark:d4r-border-dark-600 dark:d4r-bg-dark-800"
-		>
-			<div class="d4r-flex d4r-flex-wrap d4r-items-center d4r-justify-center d4r-gap-4">
-				<Button>Solid</Button>
-				<Button variant="outline">Outline</Button>
-				<Button variant="outline-dashed">Dashed</Button>
-				<Button variant="light">Light</Button>
-				<Button variant="subtle">Subtle</Button>
-			</div>
+
+	<DocSection title="Variants">
+		<div class="d4r-flex d4r-flex-wrap d4r-items-center d4r-justify-center d4r-gap-4 d4r-p-8">
+			<Button>Solid</Button>
+			<Button variant="outline">Outline</Button>
+			<Button variant="outline-dashed">Dashed</Button>
+			<Button variant="light">Light</Button>
+			<Button variant="subtle">Subtle</Button>
 		</div>
-	</article>
+	</DocSection>
+
 	<IconButtonExample />
+
+	<DocSection title="Colors" class="d4r-space-y-2 d4r-p-8">
+		<span slot="description">
+			The default color palette of Dapper UI is a replica of TailwindCSS's color palette. You can
+			see it in action below.
+		</span>
+		{#each variants as variant}
+			<div class="d4r-flex d4r-flex-wrap d4r-items-center d4r-justify-center d4r-gap-1">
+				{#each ['gray', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose'] as c}
+					<IconButton size="xs" {variant} color={c}><Palette /></IconButton>
+				{/each}
+			</div>
+		{/each}
+	</DocSection>
 </div>

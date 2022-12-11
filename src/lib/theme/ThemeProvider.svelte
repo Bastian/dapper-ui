@@ -24,6 +24,13 @@
 			mapBorderRadius('slider-track', theme.radiuses.slider.track)
 		];
 	}
+
+	function getFontStyle(theme: DapperUiTheme): string[] {
+		if (!theme.font?.default) {
+			return [];
+		}
+		return [`font-family: ${theme.font.default};`];
+	}
 </script>
 
 <script lang="ts">
@@ -63,7 +70,7 @@
 		{@html `<` +
 			`style type="text/css">:root {\n${colorsToCssVar(theme.colors).join(
 				'\n'
-			)}\n${getRadiusCssVars(theme).join('\n')}
+			)}\n${getRadiusCssVars(theme).join('\n')}\n${getFontStyle(theme).join('\n')}
 	</style>`}
 	{/if}
 </svelte:head>
@@ -71,7 +78,9 @@
 {#if localStyle}
 	<div
 		class={className}
-		style="{colorsToCssVar(theme.colors).join('')}{getRadiusCssVars(theme).join('')}"
+		style="{colorsToCssVar(theme.colors).join('')}{getRadiusCssVars(theme).join('')}{getFontStyle(
+			theme
+		).join('')}"
 	>
 		<slot />
 	</div>
