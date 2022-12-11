@@ -27,6 +27,7 @@
 	class="d4r-h-10 d4r-w-10 !d4r-p-0 
     {size === 'base' || size === undefined ? '!d4r-h-10 !d4r-w-10 ' : ''}
     {size === 'sm' ? '!d4r-h-9 !d4r-w-9 ' : ''}
+    {size === 'xs' ? '!d4r-h-8 !d4r-w-8 ' : ''}
     {className}"
 	on:click
 	on:keydown

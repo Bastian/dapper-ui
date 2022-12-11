@@ -6,7 +6,7 @@
 	export let fullWidth = false;
 	export let disabled = false;
 	export let color: string | undefined = undefined;
-	export let size: 'sm' | 'base' = 'base';
+	export let size: 'xs' | 'sm' | 'base' = 'base';
 	export let radius: Radius | undefined = undefined;
 	export let noTruncate = false;
 
@@ -25,9 +25,13 @@
 	{href}
 	class="button {className}"
 	class:d4r-w-full={fullWidth}
-	style="{overwriteColor(color, [50, 300, 500, 600, 700, 800])}{overwriteRadius(radius, 'button')}"
+	style="{overwriteColor(color, [50, 100, 200, 300, 400, 500, 600, 700, 800])}{overwriteRadius(
+		radius,
+		'button'
+	)}"
 	class:size-base={size === 'base'}
 	class:size-sm={size === 'sm'}
+	class:size-xs={size === 'xs'}
 	class:outline={variant === 'outline' || variant === 'outline-dashed'}
 	class:outline-dashed={variant === 'outline-dashed'}
 	class:solid={variant === 'solid'}
@@ -39,6 +43,9 @@
 	class:d4r-justify-center={contentJustify === 'center'}
 	class:d4r-justify-end={contentJustify === 'end'}
 	class:d4r-truncate={!noTruncate}
+	class:d4r-button-icon-base={size === 'base' || size === undefined}
+	class:d4r-button-icon-sm={size === 'sm'}
+	class:d4r-button-icon-xs={size === 'xs'}
 	{disabled}
 	type="button"
 	on:click
@@ -69,6 +76,18 @@
 		@apply disabled:d4r-opacity-50;
 	}
 
+	.d4r-button-icon-base svg {
+		@apply d4r-h-6 d4r-w-6;
+	}
+
+	.d4r-button-icon-sm svg {
+		@apply d4r-h-6 d4r-w-6;
+	}
+
+	.d4r-button-icon-xs svg {
+		@apply d4r-h-5 d4r-w-5;
+	}
+
 	:local(.size-base) {
 		@apply d4r-h-10 d4r-px-6;
 	}
@@ -93,6 +112,18 @@
 		@apply d4r-pr-2;
 	}
 
+	:local(.size-xs) {
+		@apply d4r-h-8 d4r-px-3 d4r-text-sm;
+	}
+
+	:local(.icon-start.size-xs) {
+		@apply d4r-pl-2;
+	}
+
+	:local(.icon-end.size-xs) {
+		@apply d4r-pr-2;
+	}
+
 	:local(.outline) {
 		@apply d4r-border d4r-border-primary-300/70 d4r-text-primary-500 hover:d4r-bg-primary-50 dark:d4r-border-primary-300/70 dark:d4r-text-primary-300 dark:hover:d4r-bg-primary-500/20;
 		@apply focus:d4r-ring-1 focus:d4r-ring-primary-300/50 focus:d4r-ring-offset-1 dark:focus:d4r-ring-primary-300/50 dark:focus:d4r-ring-offset-dark-800;
@@ -112,9 +143,9 @@
 	}
 
 	:local(.light) {
-		@apply d4r-bg-neutral-100 d4r-text-neutral-500 dark:d4r-bg-dark-600 dark:d4r-text-neutral-300;
-		@apply d4r-border d4r-border-neutral-100 hover:d4r-border-neutral-200 dark:d4r-border-dark-600 dark:hover:d4r-border-dark-400;
-		@apply focus:d4r-ring-1 focus:d4r-ring-neutral-600/20 focus:d4r-ring-offset-0 dark:focus:d4r-ring-neutral-300/20 dark:focus:d4r-ring-offset-dark-800;
+		@apply d4r-bg-primary-200/50 d4r-text-primary-500 dark:d4r-bg-primary-700/50 dark:d4r-text-primary-300;
+		@apply d4r-border d4r-border-primary-200/0 hover:d4r-border-primary-200 dark:d4r-border-dark-600 dark:hover:d4r-border-dark-400;
+		@apply focus:d4r-ring-1 focus:d4r-ring-primary-600/20 focus:d4r-ring-offset-0 dark:focus:d4r-ring-primary-300/20 dark:focus:d4r-ring-offset-dark-800;
 	}
 
 	:local(.subtle) {

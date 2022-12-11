@@ -84,6 +84,7 @@
 		<Select label="Size" bind:value={size}>
 			<option value="base">Base</option>
 			<option value="sm">Small</option>
+			<option value="xs">Xs</option>
 		</Select>
 		<div>
 			<RadiusSlider bind:radius />
