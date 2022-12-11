@@ -21,7 +21,7 @@
 		<TextField fullWidth required id="password-repeat" label="Repeat Password" type="password">
 			<Key slot="icon-label" />
 		</TextField>
-		<Checkbox required>Accept Terms of Use</Checkbox>
+		<Checkbox label="Accept Terms of Use" required />
 		<Button fullWidth>Create Account</Button>
 		<div class="d4r-relative d4r-my-8 d4r-flex d4r-h-6 d4r-w-full d4r-justify-center">
 			<div

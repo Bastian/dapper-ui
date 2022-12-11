@@ -29,7 +29,7 @@
 		</header>
 
 		<div class="d4r-h-full d4r-flex-grow">
-			<div class="d4r-h-16 d4r-w-full" />
+			<div class="d4r-h-14 d4r-w-full" />
 			<slot />
 		</div>
 	</div>
@@ -37,6 +37,6 @@
 
 <style lang="postcss" global>
 	:local(header) {
-		@apply d4r-fixed d4r-top-0 d4r-left-0 d4r-right-0 d4r-z-10 d4r-flex d4r-h-16 d4r-items-center d4r-bg-white d4r-bg-opacity-75 d4r-shadow d4r-backdrop-blur-2xl d4r-backdrop-filter dark:d4r-border-b dark:d4r-border-dark-600 dark:d4r-bg-dark-800;
+		@apply d4r-fixed d4r-top-0 d4r-left-0 d4r-right-0 d4r-z-10 d4r-flex d4r-h-14 d4r-items-center d4r-border-b d4r-border-neutral-200 d4r-bg-white d4r-bg-opacity-75 d4r-backdrop-blur-2xl d4r-backdrop-filter dark:d4r-border-dark-600 dark:d4r-bg-dark-800;
 	}
 </style>

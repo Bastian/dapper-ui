@@ -6,30 +6,34 @@
 	import { createEventDispatcher } from 'svelte';
 	import type { Radius } from '$lib/theme/DapperUiTheme';
 
-	export let color: string | undefined = undefined;
-
-	export let fullWidth = false;
-
-	export let size: 'sm' | 'base' | undefined = 'base';
-	export let radius: Radius | undefined = undefined;
-
-	export let label: string;
-	export let hideLabel = false;
-	export let id: string = generateRandomId();
-	export let name: string | undefined = undefined;
-	export let type: 'text' | 'password' | 'number' = 'text';
-	export let min: number | undefined = undefined;
-	export let max: number | undefined = undefined;
-	export let step: number | undefined = undefined;
-	export let placeholder: string | undefined = undefined;
-	export let disabled = false;
-	export let required = false;
-	export let value: string | number = '';
-	export let helpText: string | undefined = undefined;
-	export let error: string | undefined = undefined;
 	let className = '';
 	export { className as class };
 	export let classLabel = '';
+
+	export let id: string = generateRandomId();
+	export let name: string | undefined = undefined;
+	export let placeholder: string | undefined = undefined;
+	export let type: 'text' | 'password' | 'number' = 'text';
+	export let helpText: string | undefined = undefined;
+	export let error: string | undefined = undefined;
+	export let disabled = false;
+	export let required = false;
+
+	export let value: string | number = '';
+
+	export let label: string;
+	export let hideLabel = false;
+
+	export let color: string | undefined = undefined;
+	export let size: 'sm' | 'base' | undefined = 'base';
+	export let radius: Radius | undefined = undefined;
+
+	export let fullWidth = false;
+
+	// For number type
+	export let min: number | undefined = undefined;
+	export let max: number | undefined = undefined;
+	export let step: number | undefined = undefined;
 
 	export let transform: (value: string | number) => string | number = (v) => v;
 
@@ -53,31 +57,32 @@
 
 <InputBase
 	{id}
+	{disabled}
+	{required}
 	{label}
 	{hideLabel}
 	{helpText}
 	{error}
-	{classLabel}
-	{disabled}
-	{required}
 	{fullWidth}
 	{size}
+	{classLabel}
 	class={className}
 	hasIconLabel={$$slots['icon-label']}
 >
 	<slot name="icon-label" slot="icon-label" />
 	<input
-		style="{overwriteColor(color, [200, 300, 600, 700])}{overwriteRadius(radius, 'input')}"
+		style="{overwriteColor(color, [400, 500, 700])}{overwriteRadius(radius, 'input')}"
+		class="d4r-input-base"
 		class:d4r-w-full={fullWidth}
 		class:size-base={size === 'base' || size === undefined}
 		class:size-sm={size === 'sm'}
 		{id}
-		{type}
 		{name}
-		{value}
 		{placeholder}
+		{type}
 		{disabled}
 		{required}
+		{value}
 		{min}
 		{max}
 		{step}
@@ -88,7 +93,7 @@
 
 <style lang="postcss" global>
 	:local(input) {
-		@apply d4r-rounded-input d4r-border-neutral-300 d4r-text-neutral-700 placeholder:d4r-text-neutral-400 focus:d4r-border-primary-300 focus:d4r-outline-none focus:d4r-ring-primary-700/70 dark:d4r-border-dark-400 dark:d4r-bg-dark-600 dark:d4r-text-neutral-200 dark:placeholder:d4r-text-neutral-500 dark:focus:d4r-border-primary-600;
+		@apply d4r-rounded-input;
 	}
 
 	:local(.size-base) {

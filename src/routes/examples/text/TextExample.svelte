@@ -78,6 +78,6 @@
 			<Slider label="Size" bind:value={sizeNum} min={0} max={12} />
 		</div>
 		<ColorPicker bind:color />
-		<Checkbox bind:checked={truncate}>Truncate</Checkbox>
+		<Checkbox label="Truncate" bind:checked={truncate} />
 	</svelte:fragment>
 </Example>

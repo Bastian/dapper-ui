@@ -27,7 +27,7 @@ import type { DapperUiTheme } from './DapperUiTheme';
 
 export const defaultDapperUiTheme: DapperUiTheme = {
 	colors: {
-		primary: colorTailwindIndigo,
+		primary: colorTailwindBlue,
 		neutral: colorTailwindGray,
 		dark: colorDark,
 		// Custom colors

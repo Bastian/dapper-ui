@@ -87,10 +87,10 @@
 			<RadiusSlider bind:radius />
 		</div>
 		<ColorPicker bind:color />
-		<div class="space-y-1">
-			<Checkbox bind:checked={disabled}>Disabled</Checkbox>
-			<Checkbox bind:checked={iconStart}>Icon Start</Checkbox>
-			<Checkbox bind:checked={iconEnd}>Icon End</Checkbox>
+		<div class="d4r-space-y-1">
+			<Checkbox label="Disabled" bind:checked={disabled} />
+			<Checkbox label="Icon Start" bind:checked={iconStart} />
+			<Checkbox label="Icon End" bind:checked={iconEnd} />
 		</div>
 	</svelte:fragment>
 </Example>

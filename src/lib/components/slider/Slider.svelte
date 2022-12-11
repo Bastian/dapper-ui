@@ -5,30 +5,53 @@
 	import InputBase from '$lib/InputBase.svelte';
 	import type { Radius } from '$lib/theme/DapperUiTheme';
 
-	export let label: string;
+	let className = '';
+	export { className as class };
+	export let classLabel = '';
+
 	export let id: string = generateRandomId();
+	export let disabled = false;
+	export let helpText: string | undefined = undefined;
+	export let error: string | undefined = undefined;
+	export let required = false;
+
+	export let value = 0;
+
+	export let label: string;
+	export let hideLabel = false;
 
 	export let color: string | undefined = undefined;
 	export let radius: Radius | undefined = undefined;
-	export let disabled = false;
-	export let required = false;
-
 	/** Overwrites the more general radius prop */
 	export let radiusThumb: Radius | undefined = undefined;
 	/** Overwrites the more general radius prop */
 	export let radiusTrack: Radius | undefined = undefined;
 
+	export let fullWidth = false;
+
 	export let min = 0;
 	export let max = 100;
-	export let value = 0;
 
 	let percentage: number;
 	$: percentage = ((value - min) / (max - min)) * 100;
 </script>
 
-<InputBase {id} {label} {disabled} {required}>
+<InputBase
+	{id}
+	{disabled}
+	{required}
+	{label}
+	{hideLabel}
+	{helpText}
+	{error}
+	{fullWidth}
+	{classLabel}
+	class={className}
+	hasIconLabel={$$slots['icon-label']}
+>
+	<slot name="icon-label" slot="icon-label" />
 	<div
-		style="{overwriteColor(color, [300, 500, 600], 'primary')}{overwriteRadius(
+		style="{overwriteColor(color, [300, 500, 600, 700], 'primary')}{overwriteRadius(
 			radiusThumb ?? radius,
 			'slider-thumb'
 		)}{overwriteRadius(radiusTrack ?? radius, 'slider-track')}"
@@ -41,7 +64,7 @@
 			{min}
 			{max}
 			type="range"
-			class="group"
+			class="d4r-group"
 			style="background: linear-gradient(90deg, rgb(var(--d4r-color-primary-600)) {percentage}%, rgb(var(--d4r-color-neutral-300)) {percentage}%, rgb(var(--d4r-color-neutral-300)) 100%);"
 			on:change
 			on:input
@@ -51,7 +74,8 @@
 
 <style lang="postcss" global>
 	:local(input) {
-		@apply d4r-h-[3px] d4r-w-full d4r-appearance-none d4r-rounded-slider-track d4r-bg-neutral-300 focus:d4r-outline-none focus:d4r-ring-2 focus:d4r-ring-primary-600/50 focus:d4r-ring-offset-8 dark:d4r-bg-dark-400 dark:focus:d4r-ring-primary-600/50 dark:focus:d4r-ring-offset-dark-800;
+		@apply d4r-h-[3px] d4r-w-full d4r-appearance-none d4r-rounded-slider-track d4r-bg-neutral-300 focus:d4r-outline-none dark:d4r-bg-dark-400;
+		@apply focus:d4r-ring-2 focus:d4r-ring-primary-700/20 focus:d4r-ring-offset-8 dark:focus:d4r-ring-primary-400/20 dark:focus:d4r-ring-offset-dark-800;
 	}
 
 	:local(input::-webkit-slider-thumb) {

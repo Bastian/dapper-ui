@@ -58,8 +58,8 @@
 		</div>
 		<ColorPicker bind:color />
 		<div class="d4r-space-y-1">
-			<Checkbox bind:checked={disabled}>Disabled</Checkbox>
-			<Checkbox bind:checked={required}>Required</Checkbox>
+			<Checkbox label="Disabled" bind:checked={disabled} />
+			<Checkbox label="Required" bind:checked={required} />
 		</div>
 	</svelte:fragment>
 </Example>
