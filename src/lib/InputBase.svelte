@@ -6,6 +6,7 @@
 	export let hasIconLabel = false;
 	export let disabled = false;
 	export let size: 'base' | 'sm' | undefined = 'base';
+	export let required = false;
 	/**
 	 * Visually hides the label. You should still provide a label for accessibility concerns.
 	 */
@@ -31,8 +32,8 @@
 		contrast="lower"
 		size={size === 'sm' ? 'xs' : 'sm'}
 		weight="semibold"
-		class="d4r-mb-0.5 d4r-flex d4r-items-center d4r-gap-1 {hideLabel
-			? 'd4r-hidden'
+		class="d4r-mb-0.5 d4r-flex d4r-items-center d4r-gap-1 {hideLabel ? 'd4r-hidden' : ''} {required
+			? 'd4r-input-required'
 			: ''} {classLabel}"
 	>
 		{#if hasIconLabel}
@@ -59,5 +60,10 @@
 	}
 	.d4r-input-icon-label-sm > svg {
 		@apply d4r-h-3.5 d4r-w-3.5;
+	}
+
+	.d4r-input-required::after {
+		color: #dc2626;
+		content: '*';
 	}
 </style>

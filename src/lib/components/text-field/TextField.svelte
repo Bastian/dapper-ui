@@ -23,6 +23,7 @@
 	export let step: number | undefined = undefined;
 	export let placeholder: string | undefined = undefined;
 	export let disabled = false;
+	export let required = false;
 	export let value: string | number = '';
 	export let helpText: string | undefined = undefined;
 	export let error: string | undefined = undefined;
@@ -58,6 +59,7 @@
 	{error}
 	{classLabel}
 	{disabled}
+	{required}
 	{fullWidth}
 	{size}
 	class={className}
@@ -75,6 +77,7 @@
 		{value}
 		{placeholder}
 		{disabled}
+		{required}
 		{min}
 		{max}
 		{step}

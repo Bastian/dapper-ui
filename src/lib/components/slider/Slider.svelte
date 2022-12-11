@@ -11,6 +11,7 @@
 	export let color: string | undefined = undefined;
 	export let radius: Radius | undefined = undefined;
 	export let disabled = false;
+	export let required = false;
 
 	/** Overwrites the more general radius prop */
 	export let radiusThumb: Radius | undefined = undefined;
@@ -25,7 +26,7 @@
 	$: percentage = ((value - min) / (max - min)) * 100;
 </script>
 
-<InputBase {id} {label} {disabled}>
+<InputBase {id} {label} {disabled} {required}>
 	<div
 		style="{overwriteColor(color, [300, 500, 600], 'primary')}{overwriteRadius(
 			radiusThumb ?? radius,
@@ -35,6 +36,7 @@
 		<input
 			{id}
 			{disabled}
+			{required}
 			bind:value
 			{min}
 			{max}

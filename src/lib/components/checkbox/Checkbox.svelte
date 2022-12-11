@@ -10,6 +10,8 @@
 	export let color: string | undefined = undefined;
 	export let radius: Radius | undefined = undefined;
 
+	export let required = false;
+
 	export let checked = false;
 </script>
 
@@ -20,10 +22,25 @@
 		class="d4r-rounded-checkbox d4r-border-neutral-600 d4r-text-primary-600 !d4r-ring-offset-1 focus:d4r-outline-none focus:d4r-ring-2 focus:d4r-ring-primary-600/50 dark:d4r-border-dark-400 dark:d4r-bg-dark-600 dark:focus:d4r-border-neutral-600 dark:focus:d4r-ring-primary-500/50 dark:focus:d4r-ring-offset-dark-800"
 		{id}
 		bind:checked
+		{required}
 		on:click
 		on:change
 	/>
-	<Text tag="label" size="sm" for={id} weight="medium">
+	<Text
+		tag="label"
+		size="sm"
+		for={id}
+		weight="medium"
+		class={required ? 'd4r-input-checkbox-required' : ''}
+	>
 		<slot />
 	</Text>
 </div>
+
+<style lang="postcss" global>
+	.d4r-input-checkbox-required::after {
+		@apply d4r-ml-1;
+		color: #dc2626;
+		content: '*';
+	}
+</style>

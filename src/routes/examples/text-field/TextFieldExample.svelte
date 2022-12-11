@@ -14,6 +14,7 @@
 
 	let label = 'Example';
 	let disabled = false;
+	let required = false;
 	let color: string | undefined = undefined;
 	export let size: 'sm' | 'base' = 'base';
 	export let radius: Radius = $theme.radiuses.input;
@@ -31,14 +32,15 @@
 			disabled,
 			color,
 			size: size === 'base' ? undefined : size,
-			radius: radius === $theme.radiuses.input ? undefined : radius
+			radius: radius === $theme.radiuses.input ? undefined : radius,
+			required
 		}
 	});
 </script>
 
 <Example title="TextField" {code}>
 	<svelte:fragment slot="preview">
-		<TextField {label} {color} {size} {disabled} {radius}>
+		<TextField {label} {color} {size} {disabled} {radius} {required}>
 			<Bulb slot="icon-label" />
 		</TextField>
 	</svelte:fragment>
@@ -57,6 +59,7 @@
 		<ColorPicker bind:color />
 		<div class="d4r-space-y-1">
 			<Checkbox bind:checked={disabled}>Disabled</Checkbox>
+			<Checkbox bind:checked={required}>Required</Checkbox>
 		</div>
 	</svelte:fragment>
 </Example>

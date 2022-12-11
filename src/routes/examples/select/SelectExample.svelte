@@ -11,6 +11,7 @@
 	const theme = getTheme();
 
 	let disabled = false;
+	let required = false;
 	let color: string | undefined = undefined;
 	export let size: 'sm' | 'base' = 'base';
 	export let radius: Radius = $theme.radiuses.input;
@@ -32,13 +33,14 @@
 			disabled,
 			color,
 			size: size === 'base' ? undefined : size,
-			radius: radius === $theme.radiuses.input ? undefined : radius
+			radius: radius === $theme.radiuses.input ? undefined : radius,
+			required
 		}
 	});
 </script>
 
 <Example title="Select" {code}>
-	<Select label="Favorite Fruit" slot="preview" {disabled} {color} {size} {radius}>
+	<Select label="Favorite Fruit" slot="preview" {disabled} {color} {size} {radius} {required}>
 		<option value="apple">Apple</option>
 		<option value="banana">Bananna</option>
 		<option value="orange">Orange</option>
@@ -55,5 +57,6 @@
 		</div>
 		<ColorPicker bind:color />
 		<Checkbox bind:checked={disabled}>Disabled</Checkbox>
+		<Checkbox bind:checked={required}>Required</Checkbox>
 	</svelte:fragment>
 </Example>

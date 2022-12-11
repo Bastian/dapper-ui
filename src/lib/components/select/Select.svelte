@@ -13,6 +13,7 @@
 	export let value: string | never | undefined = undefined;
 
 	export let disabled = false;
+	export let required = false;
 	export let color: string | undefined = undefined;
 
 	export let label: string;
@@ -28,6 +29,7 @@
 	{helpText}
 	{error}
 	{disabled}
+	{required}
 	{size}
 	class={className}
 	hasIconLabel={$$slots['icon-label']}
@@ -44,6 +46,7 @@
 		class:size-sm={size === 'sm'}
 		bind:value
 		{disabled}
+		{required}
 		{...$$restProps}
 	>
 		<slot />

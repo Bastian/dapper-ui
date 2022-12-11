@@ -13,6 +13,7 @@
 	let color: string | undefined = undefined;
 	let radius: Radius = $theme.radiuses.slider.thumb;
 	let disabled = false;
+	let required = false;
 
 	$: code = createCode({
 		name: 'Slider',
@@ -20,13 +21,14 @@
 			label: 'Example',
 			color,
 			radius: radius === $theme.radiuses.slider.thumb ? undefined : radius,
-			disabled
+			disabled,
+			required
 		}
 	});
 </script>
 
 <Example title="Slider" {code}>
-	<Slider label="Example" slot="preview" {color} {radius} {disabled} />
+	<Slider label="Example" slot="preview" {color} {radius} {disabled} {required} />
 	<svelte:fragment slot="controls">
 		<div>
 			<RadiusSlider bind:radius />
@@ -35,6 +37,7 @@
 
 		<div class="d4r-space-y-1">
 			<Checkbox bind:checked={disabled}>Disabled</Checkbox>
+			<Checkbox bind:checked={required}>Required</Checkbox>
 		</div>
 	</svelte:fragment>
 </Example>
