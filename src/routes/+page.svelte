@@ -6,6 +6,7 @@
 	import CustomizationSection from './CustomizationSection.svelte';
 	import ToggleDarkModeButton from './ToggleDarkModeButton.svelte';
 	import heroImgSrc from './hero-image.webp';
+	import Footer from './Footer.svelte';
 </script>
 
 <div
@@ -35,6 +36,8 @@
 </div>
 
 <CustomizationSection />
+
+<Footer />
 
 <style lang="postcss">
 	.background-blur {

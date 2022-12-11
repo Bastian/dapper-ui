@@ -28,8 +28,7 @@
 			<ToggleDarkModeButton icon />
 		</header>
 
-		<div class="d4r-h-full d4r-flex-grow">
-			<div class="d4r-h-14 d4r-w-full" />
+		<div class="d4r-h-full d4r-flex-grow d4r-pt-14">
 			<slot />
 		</div>
 	</div>

@@ -71,10 +71,12 @@
 
 			<div class="d4r-flex d4r-flex-col d4r-gap-2 sm:d4r-flex-row">
 				<Button on:click={() => (themeName = 'default')}>Default</Button>
-				<Button radius="2xl" color="pink" on:click={() => (themeName = 'playful')}>Playful</Button>
-				<Button radius="none" color="slate" on:click={() => (themeName = 'professional')}>
-					Professional
-				</Button>
+				<ThemeProvider localStyle theme={themes.playful}>
+					<Button on:click={() => (themeName = 'playful')}>Playful</Button>
+				</ThemeProvider>
+				<ThemeProvider localStyle theme={themes.professional}>
+					<Button on:click={() => (themeName = 'professional')}>Professional</Button>
+				</ThemeProvider>
 			</div>
 		</div>
 		<div class="d4r-w-full d4r-max-w-xl 2xl:d4r-max-w-2xl">
