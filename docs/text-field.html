@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en" class="d4r-h-full">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/dapper-ui/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="/dapper-ui/_app/immutable/assets/_layout-0eda187a.css" rel="stylesheet">
+		<link href="/dapper-ui/_app/immutable/assets/IconButton-8f0140b6.css" rel="stylesheet">
+		<link href="/dapper-ui/_app/immutable/assets/Text-766c024b.css" rel="stylesheet">
+		<link href="/dapper-ui/_app/immutable/assets/ToggleDarkModeButton-d8d6237b.css" rel="stylesheet">
+		<link href="/dapper-ui/_app/immutable/assets/TextField-0aa27560.css" rel="stylesheet">
+		<link href="/dapper-ui/_app/immutable/assets/InputBase-e080cb50.css" rel="stylesheet">
+		<link href="/dapper-ui/_app/immutable/assets/Slider-bf9f187f.css" rel="stylesheet">
+		<link href="/dapper-ui/_app/immutable/assets/Select-775a58c1.css" rel="stylesheet">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/start-ae7db4d7.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/index-83d82b2f.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/singletons-6c000c1b.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/paths-6b439ae5.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/_layout.svelte-150a6014.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/IconButton-a575ebf2.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Text-29f1ea43.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/ToggleDarkModeButton-d3f659dc.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/_layout-1daba58d.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/docs/_layout.svelte-434a657d.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Footer-b705cab0.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/docs/text-field/_page.svelte-c18dd31e.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/TextField-eb261cda.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/InputBase-e5824610.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Slider-26a10f7d.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/RadiusSlider-49698155.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Select-256fe6c7.js"><!-- HEAD_svelte-14llyz1_START -->
+		<!-- HTML_TAG_START --><style type="text/css">:root {
+--d4r-color-primary-50: 239 246 255;
+--d4r-color-primary-100: 219 234 254;
+--d4r-color-primary-200: 191 219 254;
+--d4r-color-primary-300: 147 197 253;
+--d4r-color-primary-400: 96 165 250;
+--d4r-color-primary-500: 59 130 246;
+--d4r-color-primary-600: 37 99 235;
+--d4r-color-primary-700: 29 78 216;
+--d4r-color-primary-800: 30 64 175;
+--d4r-color-primary-900: 30 58 138;
+--d4r-color-neutral-50: 249 250 251;
+--d4r-color-neutral-100: 243 244 246;
+--d4r-color-neutral-200: 229 231 235;
+--d4r-color-neutral-300: 209 213 219;
+--d4r-color-neutral-400: 156 163 175;
+--d4r-color-neutral-500: 107 114 128;
+--d4r-color-neutral-600: 75 85 99;
+--d4r-color-neutral-700: 55 65 81;
+--d4r-color-neutral-800: 31 41 55;
+--d4r-color-neutral-900: 17 24 39;
+--d4r-color-dark-50: 191 191 192;
+--d4r-color-dark-100: 148 149 153;
+--d4r-color-dark-200: 110 112 119;
+--d4r-color-dark-300: 84 86 95;
+--d4r-color-dark-400: 59 60 69;
+--d4r-color-dark-500: 46 48 56;
+--d4r-color-dark-600: 37 39 50;
+--d4r-color-dark-700: 22 24 34;
+--d4r-color-dark-800: 15 17 26;
+--d4r-color-dark-900: 11 12 20;
+--d4r-color-slate-50: 248 250 252;
+--d4r-color-slate-100: 241 245 249;
+--d4r-color-slate-200: 226 232 240;
+--d4r-color-slate-300: 203 213 225;
+--d4r-color-slate-400: 148 163 184;
+--d4r-color-slate-500: 100 116 139;
+--d4r-color-slate-600: 71 85 105;
+--d4r-color-slate-700: 51 65 85;
+--d4r-color-slate-800: 30 41 59;
+--d4r-color-slate-900: 15 23 42;
+--d4r-color-gray-50: 249 250 251;
+--d4r-color-gray-100: 243 244 246;
+--d4r-color-gray-200: 229 231 235;
+--d4r-color-gray-300: 209 213 219;
+--d4r-color-gray-400: 156 163 175;
+--d4r-color-gray-500: 107 114 128;
+--d4r-color-gray-600: 75 85 99;
+--d4r-color-gray-700: 55 65 81;
+--d4r-color-gray-800: 31 41 55;
+--d4r-color-gray-900: 17 24 39;
+--d4r-color-zinc-50: 250 250 250;
+--d4r-color-zinc-100: 244 244 245;
+--d4r-color-zinc-200: 228 228 231;
+--d4r-color-zinc-300: 212 212 216;
+--d4r-color-zinc-400: 161 161 170;
+--d4r-color-zinc-500: 113 113 122;
+--d4r-color-zinc-600: 82 82 91;
+--d4r-color-zinc-700: 63 63 70;
+--d4r-color-zinc-800: 39 39 42;
+--d4r-color-zinc-900: 24 24 27;
+--d4r-color-neutral-gray-50: 250 250 250;
+--d4r-color-neutral-gray-100: 245 245 245;
+--d4r-color-neutral-gray-200: 229 229 229;
+--d4r-color-neutral-gray-300: 212 212 212;
+--d4r-color-neutral-gray-400: 163 163 163;
+--d4r-color-neutral-gray-500: 115 115 115;
+--d4r-color-neutral-gray-600: 82 82 82;
+--d4r-color-neutral-gray-700: 64 64 64;
+--d4r-color-neutral-gray-800: 38 38 38;
+--d4r-color-neutral-gray-900: 23 23 23;
+--d4r-color-stone-50: 250 250 249;
+--d4r-color-stone-100: 245 245 244;
+--d4r-color-stone-200: 231 229 228;
+--d4r-color-stone-300: 214 211 209;
+--d4r-color-stone-400: 168 162 158;
+--d4r-color-stone-500: 120 113 108;
+--d4r-color-stone-600: 87 83 78;
+--d4r-color-stone-700: 68 64 60;
+--d4r-color-stone-800: 41 37 36;
+--d4r-color-stone-900: 28 25 23;
+--d4r-color-red-50: 254 242 242;
+--d4r-color-red-100: 254 226 226;
+--d4r-color-red-200: 254 202 202;
+--d4r-color-red-300: 252 165 165;
+--d4r-color-red-400: 248 113 113;
+--d4r-color-red-500: 239 68 68;
+--d4r-color-red-600: 220 38 38;
+--d4r-color-red-700: 185 28 28;
+--d4r-color-red-800: 153 27 27;
+--d4r-color-red-900: 127 29 29;
+--d4r-color-orange-50: 255 247 237;
+--d4r-color-orange-100: 255 237 213;
+--d4r-color-orange-200: 254 215 170;
+--d4r-color-orange-300: 253 186 116;
+--d4r-color-orange-400: 251 146 60;
+--d4r-color-orange-500: 249 115 22;
+--d4r-color-orange-600: 234 88 12;
+--d4r-color-orange-700: 194 65 12;
+--d4r-color-orange-800: 154 52 18;
+--d4r-color-orange-900: 124 45 18;
+--d4r-color-amber-50: 255 251 235;
+--d4r-color-amber-100: 254 243 199;
+--d4r-color-amber-200: 253 230 138;
+--d4r-color-amber-300: 252 211 77;
+--d4r-color-amber-400: 251 191 36;
+--d4r-color-amber-500: 245 158 11;
+--d4r-color-amber-600: 217 119 6;
+--d4r-color-amber-700: 180 83 9;
+--d4r-color-amber-800: 146 64 14;
+--d4r-color-amber-900: 120 53 15;
+--d4r-color-yellow-50: 254 252 232;
+--d4r-color-yellow-100: 254 249 195;
+--d4r-color-yellow-200: 254 240 138;
+--d4r-color-yellow-300: 253 224 71;
+--d4r-color-yellow-400: 250 204 21;
+--d4r-color-yellow-500: 234 179 8;
+--d4r-color-yellow-600: 202 138 4;
+--d4r-color-yellow-700: 161 98 7;
+--d4r-color-yellow-800: 133 77 14;
+--d4r-color-yellow-900: 113 63 18;
+--d4r-color-lime-50: 247 254 231;
+--d4r-color-lime-100: 236 252 203;
+--d4r-color-lime-200: 217 249 157;
+--d4r-color-lime-300: 190 242 100;
+--d4r-color-lime-400: 163 230 53;
+--d4r-color-lime-500: 132 204 22;
+--d4r-color-lime-600: 101 163 13;
+--d4r-color-lime-700: 77 124 15;
+--d4r-color-lime-800: 63 98 18;
+--d4r-color-lime-900: 54 83 20;
+--d4r-color-green-50: 240 253 244;
+--d4r-color-green-100: 220 252 231;
+--d4r-color-green-200: 187 247 208;
+--d4r-color-green-300: 134 239 172;
+--d4r-color-green-400: 74 222 128;
+--d4r-color-green-500: 34 197 94;
+--d4r-color-green-600: 22 163 74;
+--d4r-color-green-700: 21 128 61;
+--d4r-color-green-800: 22 101 52;
+--d4r-color-green-900: 20 83 45;
+--d4r-color-emerald-50: 236 253 245;
+--d4r-color-emerald-100: 209 250 229;
+--d4r-color-emerald-200: 167 243 208;
+--d4r-color-emerald-300: 110 231 183;
+--d4r-color-emerald-400: 52 211 153;
+--d4r-color-emerald-500: 16 185 129;
+--d4r-color-emerald-600: 5 150 105;
+--d4r-color-emerald-700: 4 120 87;
+--d4r-color-emerald-800: 6 95 70;
+--d4r-color-emerald-900: 6 78 59;
+--d4r-color-teal-50: 240 253 250;
+--d4r-color-teal-100: 204 251 241;
+--d4r-color-teal-200: 153 246 228;
+--d4r-color-teal-300: 94 234 212;
+--d4r-color-teal-400: 45 212 191;
+--d4r-color-teal-500: 20 184 166;
+--d4r-color-teal-600: 13 148 136;
+--d4r-color-teal-700: 15 118 110;
+--d4r-color-teal-800: 17 94 89;
+--d4r-color-teal-900: 19 78 74;
+--d4r-color-cyan-50: 236 254 255;
+--d4r-color-cyan-100: 207 250 254;
+--d4r-color-cyan-200: 165 243 252;
+--d4r-color-cyan-300: 103 232 249;
+--d4r-color-cyan-400: 34 211 238;
+--d4r-color-cyan-500: 6 182 212;
+--d4r-color-cyan-600: 8 145 178;
+--d4r-color-cyan-700: 14 116 144;
+--d4r-color-cyan-800: 21 94 117;
+--d4r-color-cyan-900: 22 78 99;
+--d4r-color-sky-50: 240 249 255;
+--d4r-color-sky-100: 224 242 254;
+--d4r-color-sky-200: 186 230 253;
+--d4r-color-sky-300: 125 211 252;
+--d4r-color-sky-400: 56 189 248;
+--d4r-color-sky-500: 14 165 233;
+--d4r-color-sky-600: 2 132 199;
+--d4r-color-sky-700: 3 105 161;
+--d4r-color-sky-800: 7 89 133;
+--d4r-color-sky-900: 12 74 110;
+--d4r-color-blue-50: 239 246 255;
+--d4r-color-blue-100: 219 234 254;
+--d4r-color-blue-200: 191 219 254;
+--d4r-color-blue-300: 147 197 253;
+--d4r-color-blue-400: 96 165 250;
+--d4r-color-blue-500: 59 130 246;
+--d4r-color-blue-600: 37 99 235;
+--d4r-color-blue-700: 29 78 216;
+--d4r-color-blue-800: 30 64 175;
+--d4r-color-blue-900: 30 58 138;
+--d4r-color-indigo-50: 238 242 255;
+--d4r-color-indigo-100: 224 231 255;
+--d4r-color-indigo-200: 199 210 254;
+--d4r-color-indigo-300: 165 180 252;
+--d4r-color-indigo-400: 129 140 248;
+--d4r-color-indigo-500: 99 102 241;
+--d4r-color-indigo-600: 79 70 229;
+--d4r-color-indigo-700: 67 56 202;
+--d4r-color-indigo-800: 55 48 163;
+--d4r-color-indigo-900: 49 46 129;
+--d4r-color-violet-50: 245 243 255;
+--d4r-color-violet-100: 237 233 254;
+--d4r-color-violet-200: 221 214 254;
+--d4r-color-violet-300: 196 181 253;
+--d4r-color-violet-400: 167 139 250;
+--d4r-color-violet-500: 139 92 246;
+--d4r-color-violet-600: 124 58 237;
+--d4r-color-violet-700: 109 40 217;
+--d4r-color-violet-800: 91 33 182;
+--d4r-color-violet-900: 76 29 149;
+--d4r-color-purple-50: 250 245 255;
+--d4r-color-purple-100: 243 232 255;
+--d4r-color-purple-200: 233 213 255;
+--d4r-color-purple-300: 216 180 254;
+--d4r-color-purple-400: 192 132 252;
+--d4r-color-purple-500: 168 85 247;
+--d4r-color-purple-600: 147 51 234;
+--d4r-color-purple-700: 126 34 206;
+--d4r-color-purple-800: 107 33 168;
+--d4r-color-purple-900: 88 28 135;
+--d4r-color-fuchsia-50: 253 244 255;
+--d4r-color-fuchsia-100: 250 232 255;
+--d4r-color-fuchsia-200: 245 208 254;
+--d4r-color-fuchsia-300: 240 171 252;
+--d4r-color-fuchsia-400: 232 121 249;
+--d4r-color-fuchsia-500: 217 70 239;
+--d4r-color-fuchsia-600: 192 38 211;
+--d4r-color-fuchsia-700: 162 28 175;
+--d4r-color-fuchsia-800: 134 25 143;
+--d4r-color-fuchsia-900: 112 26 117;
+--d4r-color-pink-50: 253 242 248;
+--d4r-color-pink-100: 252 231 243;
+--d4r-color-pink-200: 251 207 232;
+--d4r-color-pink-300: 249 168 212;
+--d4r-color-pink-400: 244 114 182;
+--d4r-color-pink-500: 236 72 153;
+--d4r-color-pink-600: 219 39 119;
+--d4r-color-pink-700: 190 24 93;
+--d4r-color-pink-800: 157 23 77;
+--d4r-color-pink-900: 131 24 67;
+--d4r-color-rose-50: 255 241 242;
+--d4r-color-rose-100: 255 228 230;
+--d4r-color-rose-200: 254 205 211;
+--d4r-color-rose-300: 253 164 175;
+--d4r-color-rose-400: 251 113 133;
+--d4r-color-rose-500: 244 63 94;
+--d4r-color-rose-600: 225 29 72;
+--d4r-color-rose-700: 190 18 60;
+--d4r-color-rose-800: 159 18 57;
+--d4r-color-rose-900: 136 19 55;
+--d4r-border-radius-none: 0px;
+--d4r-border-radius-sm: 0.125rem;
+--d4r-border-radius-base: 0.25rem;
+--d4r-border-radius-md: 0.375rem;
+--d4r-border-radius-lg: 0.5rem;
+--d4r-border-radius-xl: 0.75rem;
+--d4r-border-radius-2xl: 1rem;
+--d4r-border-radius-3xl: 1.5rem;
+--d4r-border-radius-full: 9999px;
+--d4r-border-radius-button: var(--d4r-border-radius-base);
+--d4r-border-radius-input: var(--d4r-border-radius-base);
+--d4r-border-radius-checkbox: var(--d4r-border-radius-base);
+--d4r-border-radius-slider-thumb: var(--d4r-border-radius-full);
+--d4r-border-radius-slider-track: var(--d4r-border-radius-full);
+
+	</style><!-- HTML_TAG_END --><!-- HEAD_svelte-14llyz1_END -->
+	</head>
+	<body class="d4r-h-full d4r-bg-neutral-100 dark:d4r-bg-dark-700">
+		<div class="d4r-h-full">
+
+
+
+
+<div class="d4r-flex d4r-h-full d4r-flex-col"><header class="d4r-flex d4r-justify-between d4r-px-8 svelte-1pp87gv"><div class="d4r-flex d4r-items-center d4r-gap-4"><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    !d4r-h-10 !d4r-w-10 
+    
+    
+    lg:!d4r-hidden svelte-1aqxd3a  size-base       subtle    d4r-justify-center  d4r-truncate d4r-button-icon-base" style=""  type="button">
+	<span class="d4r-truncate"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/menu-2
+    </desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg></span>
+	
+</button>
+				<span class="  contrast-higher          d4r-text-xl              d4r-font-medium      svelte-1ltnbjr" style="--d4r-color-neutral-50: var(--d4r-color-gray-50);--d4r-color-neutral-900: var(--d4r-color-gray-900);"><a href="/dapper-ui/">Dapper UI</a>
+</span></div>
+			<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    !d4r-h-10 !d4r-w-10 
+    
+    
+     svelte-1aqxd3a  size-base       subtle    d4r-justify-center  d4r-truncate d4r-button-icon-base" style=""  type="button">
+	<span class="d4r-truncate"><span class="dark:d4r-hidden"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/moon</desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path></svg></span>
+		<span class="d4r-hidden dark:d4r-inline"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/sun</desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="4"></circle><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path></svg></span></span>
+	
+</button></header>
+
+		<div class="d4r-h-full d4r-flex-grow d4r-pt-14"><div class="d4r-flex d4r-h-full d4r-flex-grow d4r-flex-col">
+<div style="width: 220px;" class="d4r-z-40 d4r-w-[220px] d4r-bg-white d4r-transition-transform dark:d4r-bg-dark-800 d4r-fixed d4r-h-full d4r-border-r d4r-border-neutral-200 dark:d4r-border-dark-600 
+		-d4r-translate-x-[220px] lg:d4r-translate-x-0"><div class="d4r-flex d4r-w-full d4r-flex-col d4r-items-start d4r-gap-2 d4r-p-4"><div class="d4r-my-2"><span class="    contrast-base      d4r-text-base               d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-200: var(--d4r-color-gray-200);--d4r-color-neutral-700: var(--d4r-color-gray-700);">Components
+</span></div>
+		<a href="/dapper-ui/docs/button" class="button  svelte-1aqxd3a d4r-w-full size-base       subtle icon-start icon-end d4r-justify-start   d4r-truncate d4r-button-icon-base" style="--d4r-color-primary-50: var(--d4r-color-neutral-50);--d4r-color-primary-100: var(--d4r-color-neutral-100);--d4r-color-primary-200: var(--d4r-color-neutral-200);--d4r-color-primary-300: var(--d4r-color-neutral-300);--d4r-color-primary-400: var(--d4r-color-neutral-400);--d4r-color-primary-500: var(--d4r-color-neutral-500);--d4r-color-primary-600: var(--d4r-color-neutral-600);--d4r-color-primary-700: var(--d4r-color-neutral-700);--d4r-color-primary-800: var(--d4r-color-neutral-800);"  type="button"><span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-click" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/click
+    </desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="3" y1="12" x2="6" y2="12"></line><line x1="12" y1="3" x2="12" y2="6"></line><line x1="7.8" y1="7.8" x2="5.6" y2="5.6"></line><line x1="16.2" y1="7.8" x2="18.4" y2="5.6"></line><line x1="7.8" y1="16.2" x2="5.6" y2="18.4"></line><path d="M12 12l9 3l-4 2l-2 4l-3 -9"></path></svg></span>
+	<span class="d4r-truncate">Button
+		</span>
+	<span></span>
+</a>
+		<a href="/dapper-ui/docs/text-field" class="button  svelte-1aqxd3a d4r-w-full size-base       subtle icon-start icon-end d4r-justify-start   d4r-truncate d4r-button-icon-base" style="--d4r-color-primary-50: var(--d4r-color-neutral-50);--d4r-color-primary-100: var(--d4r-color-neutral-100);--d4r-color-primary-200: var(--d4r-color-neutral-200);--d4r-color-primary-300: var(--d4r-color-neutral-300);--d4r-color-primary-400: var(--d4r-color-neutral-400);--d4r-color-primary-500: var(--d4r-color-neutral-500);--d4r-color-primary-600: var(--d4r-color-neutral-600);--d4r-color-primary-700: var(--d4r-color-neutral-700);--d4r-color-primary-800: var(--d4r-color-neutral-800);"  type="button"><span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cursor-text" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/cursor-text
+    </desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 12h4"></path><path d="M9 4a3 3 0 0 1 3 3v10a3 3 0 0 1 -3 3"></path><path d="M15 4a3 3 0 0 0 -3 3v10a3 3 0 0 0 3 3"></path></svg></span>
+	<span class="d4r-truncate">TextField
+		</span>
+	<span></span>
+</a>
+		<a href="/dapper-ui/docs/slider" class="button  svelte-1aqxd3a d4r-w-full size-base       subtle icon-start icon-end d4r-justify-start   d4r-truncate d4r-button-icon-base" style="--d4r-color-primary-50: var(--d4r-color-neutral-50);--d4r-color-primary-100: var(--d4r-color-neutral-100);--d4r-color-primary-200: var(--d4r-color-neutral-200);--d4r-color-primary-300: var(--d4r-color-neutral-300);--d4r-color-primary-400: var(--d4r-color-neutral-400);--d4r-color-primary-500: var(--d4r-color-neutral-500);--d4r-color-primary-600: var(--d4r-color-neutral-600);--d4r-color-primary-700: var(--d4r-color-neutral-700);--d4r-color-primary-800: var(--d4r-color-neutral-800);"  type="button"><span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-adjustments-horizontal" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from
+        https://tabler-icons.io/i/adjustments-horizontal
+    </desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="14" cy="6" r="2"></circle><line x1="4" y1="6" x2="12" y2="6"></line><line x1="16" y1="6" x2="20" y2="6"></line><circle cx="8" cy="12" r="2"></circle><line x1="4" y1="12" x2="6" y2="12"></line><line x1="10" y1="12" x2="20" y2="12"></line><circle cx="17" cy="18" r="2"></circle><line x1="4" y1="18" x2="15" y2="18"></line><line x1="19" y1="18" x2="20" y2="18"></line></svg></span>
+	<span class="d4r-truncate">Slider
+		</span>
+	<span></span>
+</a>
+		<a href="/dapper-ui/docs/select" class="button  svelte-1aqxd3a d4r-w-full size-base       subtle icon-start icon-end d4r-justify-start   d4r-truncate d4r-button-icon-base" style="--d4r-color-primary-50: var(--d4r-color-neutral-50);--d4r-color-primary-100: var(--d4r-color-neutral-100);--d4r-color-primary-200: var(--d4r-color-neutral-200);--d4r-color-primary-300: var(--d4r-color-neutral-300);--d4r-color-primary-400: var(--d4r-color-neutral-400);--d4r-color-primary-500: var(--d4r-color-neutral-500);--d4r-color-primary-600: var(--d4r-color-neutral-600);--d4r-color-primary-700: var(--d4r-color-neutral-700);--d4r-color-primary-800: var(--d4r-color-neutral-800);"  type="button"><span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-select" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/select
+    </desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M9 11l3 3l3 -3"></path></svg></span>
+	<span class="d4r-truncate">Select
+		</span>
+	<span></span>
+</a>
+		<a href="/dapper-ui/docs/checkbox" class="button  svelte-1aqxd3a d4r-w-full size-base       subtle icon-start icon-end d4r-justify-start   d4r-truncate d4r-button-icon-base" style="--d4r-color-primary-50: var(--d4r-color-neutral-50);--d4r-color-primary-100: var(--d4r-color-neutral-100);--d4r-color-primary-200: var(--d4r-color-neutral-200);--d4r-color-primary-300: var(--d4r-color-neutral-300);--d4r-color-primary-400: var(--d4r-color-neutral-400);--d4r-color-primary-500: var(--d4r-color-neutral-500);--d4r-color-primary-600: var(--d4r-color-neutral-600);--d4r-color-primary-700: var(--d4r-color-neutral-700);--d4r-color-primary-800: var(--d4r-color-neutral-800);"  type="button"><span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-checkbox" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/checkbox
+    </desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="9 11 12 14 20 6"></polyline><path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9"></path></svg></span>
+	<span class="d4r-truncate">Checkbox
+		</span>
+	<span></span>
+</a>
+		<a href="/dapper-ui/docs/text" class="button  svelte-1aqxd3a d4r-w-full size-base       subtle icon-start icon-end d4r-justify-start   d4r-truncate d4r-button-icon-base" style="--d4r-color-primary-50: var(--d4r-color-neutral-50);--d4r-color-primary-100: var(--d4r-color-neutral-100);--d4r-color-primary-200: var(--d4r-color-neutral-200);--d4r-color-primary-300: var(--d4r-color-neutral-300);--d4r-color-primary-400: var(--d4r-color-neutral-400);--d4r-color-primary-500: var(--d4r-color-neutral-500);--d4r-color-primary-600: var(--d4r-color-neutral-600);--d4r-color-primary-700: var(--d4r-color-neutral-700);--d4r-color-primary-800: var(--d4r-color-neutral-800);"  type="button"><span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-typography" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/typography
+    </desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="4" y1="20" x2="7" y2="20"></line><line x1="14" y1="20" x2="21" y2="20"></line><line x1="6.9" y1="15" x2="13.8" y2="15"></line><line x1="10.2" y1="6.3" x2="16" y2="20"></line><polyline points="5 20 11 4 13 4 20 20"></polyline></svg></span>
+	<span class="d4r-truncate">Text
+		</span>
+	<span></span>
+</a>
+		<div class="d4r-my-2"><span class="    contrast-base      d4r-text-base               d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-200: var(--d4r-color-gray-200);--d4r-color-neutral-700: var(--d4r-color-gray-700);">Concepts
+</span></div>
+		<a href="/dapper-ui/docs/theming" class="button  svelte-1aqxd3a d4r-w-full size-base       subtle icon-start icon-end d4r-justify-start   d4r-truncate d4r-button-icon-base" style="--d4r-color-primary-50: var(--d4r-color-neutral-50);--d4r-color-primary-100: var(--d4r-color-neutral-100);--d4r-color-primary-200: var(--d4r-color-neutral-200);--d4r-color-primary-300: var(--d4r-color-neutral-300);--d4r-color-primary-400: var(--d4r-color-neutral-400);--d4r-color-primary-500: var(--d4r-color-neutral-500);--d4r-color-primary-600: var(--d4r-color-neutral-600);--d4r-color-primary-700: var(--d4r-color-neutral-700);--d4r-color-primary-800: var(--d4r-color-neutral-800);"  type="button"><span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brush" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/brush
+    </desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 21v-4a4 4 0 1 1 4 4h-4"></path><path d="M21 3a16 16 0 0 0 -12.8 10.2"></path><path d="M21 3a16 16 0 0 1 -10.2 12.8"></path><path d="M10.6 9a9 9 0 0 1 4.4 4.4"></path></svg></span>
+	<span class="d4r-truncate">Theming
+		</span>
+	<span></span>
+</a>
+		<a href="/dapper-ui/docs/icons" class="button  svelte-1aqxd3a d4r-w-full size-base       subtle icon-start icon-end d4r-justify-start   d4r-truncate d4r-button-icon-base" style="--d4r-color-primary-50: var(--d4r-color-neutral-50);--d4r-color-primary-100: var(--d4r-color-neutral-100);--d4r-color-primary-200: var(--d4r-color-neutral-200);--d4r-color-primary-300: var(--d4r-color-neutral-300);--d4r-color-primary-400: var(--d4r-color-neutral-400);--d4r-color-primary-500: var(--d4r-color-neutral-500);--d4r-color-primary-600: var(--d4r-color-neutral-600);--d4r-color-primary-700: var(--d4r-color-neutral-700);--d4r-color-primary-800: var(--d4r-color-neutral-800);"  type="button"><span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-icons" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/icons
+    </desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="6.5" cy="6.5" r="3.5"></circle><path d="M2.5 21h8l-4 -7z"></path><path d="M14 3l7 7"></path><path d="M14 10l7 -7"></path><path d="M14 14h7v7h-7z"></path></svg></span>
+	<span class="d4r-truncate">Icons
+		</span>
+	<span></span>
+</a>
+		<a href="/dapper-ui/docs/styling" class="button  svelte-1aqxd3a d4r-w-full size-base       subtle icon-start icon-end d4r-justify-start   d4r-truncate d4r-button-icon-base" style="--d4r-color-primary-50: var(--d4r-color-neutral-50);--d4r-color-primary-100: var(--d4r-color-neutral-100);--d4r-color-primary-200: var(--d4r-color-neutral-200);--d4r-color-primary-300: var(--d4r-color-neutral-300);--d4r-color-primary-400: var(--d4r-color-neutral-400);--d4r-color-primary-500: var(--d4r-color-neutral-500);--d4r-color-primary-600: var(--d4r-color-neutral-600);--d4r-color-primary-700: var(--d4r-color-neutral-700);--d4r-color-primary-800: var(--d4r-color-neutral-800);"  type="button"><span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-css3" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/brand-css3
+    </desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path><path d="M8.5 8h7l-4.5 4h4l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"></path></svg></span>
+	<span class="d4r-truncate">Styling
+		</span>
+	<span></span>
+</a>
+		<a href="/dapper-ui/docs/dark-mode" class="button  svelte-1aqxd3a d4r-w-full size-base       subtle icon-start icon-end d4r-justify-start   d4r-truncate d4r-button-icon-base" style="--d4r-color-primary-50: var(--d4r-color-neutral-50);--d4r-color-primary-100: var(--d4r-color-neutral-100);--d4r-color-primary-200: var(--d4r-color-neutral-200);--d4r-color-primary-300: var(--d4r-color-neutral-300);--d4r-color-primary-400: var(--d4r-color-neutral-400);--d4r-color-primary-500: var(--d4r-color-neutral-500);--d4r-color-primary-600: var(--d4r-color-neutral-600);--d4r-color-primary-700: var(--d4r-color-neutral-700);--d4r-color-primary-800: var(--d4r-color-neutral-800);"  type="button"><span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/moon</desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path></svg></span>
+	<span class="d4r-truncate">Dark Mode
+		</span>
+	<span></span>
+</a></div></div>
+
+	<div class="d4r-flex d4r-grow"><div class="d4r-hidden d4r-w-[220px] d4r-shrink-0 lg:d4r-block"></div>
+		<div class="d4r-mx-auto d4r-w-full d4r-max-w-5xl d4r-py-8 d4r-px-4 sm:d4r-px-6 md:d4r-px-10 md:d4r-py-12"><div class="d4r-space-y-16"><article class="d4r-space-y-2"><h3 class="    contrast-base       d4r-text-lg               d4r-font-medium      svelte-1ltnbjr" style="--d4r-color-neutral-200: var(--d4r-color-gray-200);--d4r-color-neutral-700: var(--d4r-color-gray-700);">TextField
+</h3>
+	
+	<div class="d4r-border d4r-border-neutral-200 d4r-bg-white dark:d4r-border-dark-600 dark:d4r-bg-dark-800 "><div class="d4r-flex d4r-flex-col md:d4r-flex-row"><div class="d4r-flex d4r-w-full d4r-items-center d4r-justify-center d4r-overflow-hidden d4r-rounded d4r-border-neutral-200 d4r-p-8 dark:d4r-border-dark-600"><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="p9e21gvetll"><span class="d4r-input-icon-label-base      contrast-lower    d4r-text-base               d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-400: var(--d4r-color-gray-400);--d4r-color-neutral-500: var(--d4r-color-gray-500);"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bulb" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/bulb</desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"></path><path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"></path><line x1="9.7" y1="17" x2="14.3" y2="17"></line></svg>
+</span>
+		Example
+</label>
+	<div class="d4r-relative d4r-w-full">
+		<input style="--d4r-border-radius-input: var(--d4r-border-radius-base);" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="p9e21gvetll" type="text"    value=""></div>
+	
+</div></div>
+		<div class="d4r-shrink-0 d4r-space-y-1 d4r-border-t d4r-border-neutral-200 d4r-p-8 dark:d4r-border-dark-600 md:d4r-w-[450px] md:d4r-border-t-0 md:d4r-border-l"><div class="d4r-space-y-4"><div><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="jpvol9f50s">
+		Label
+</label>
+	<div class="d4r-relative d4r-w-full">
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="jpvol9f50s" type="text"    value="Example"></div>
+	
+</div></div>
+		<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="9z86sd1nomo">
+		Size
+</label>
+	
+	
+	<select style="" class="d4r-input-base size-base  svelte-1xkwxgj" id="9z86sd1nomo"><option value="base">Base</option>
+			<option value="sm">Small</option></select>
+	
+</div>
+		<div><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="5scn4pnbek">
+		Radius
+</label>
+	<div style=""><input id="5scn4pnbek"   min="0" max="8" type="range" class="d4r-group svelte-vami14" style="background: linear-gradient(90deg, rgb(var(--d4r-color-primary-600)) 25%, rgb(var(--d4r-color-neutral-300)) 25%, rgb(var(--d4r-color-neutral-300)) 100%);" value="2"></div>
+	
+</div></div>
+		<div class="d4r-space-y-1 d4r-text-sm d4r-font-medium d4r-text-neutral-700"><span class="      contrast-lower   d4r-text-sm                  d4r-font-semibold     svelte-1ltnbjr" style="--d4r-color-neutral-400: var(--d4r-color-gray-400);--d4r-color-neutral-500: var(--d4r-color-gray-500);">Color
+</span>
+	<div class="d4r-flex d4r-max-w-sm d4r-flex-wrap d4r-gap-1"><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-gray-50);--d4r-color-primary-100: var(--d4r-color-gray-100);--d4r-color-primary-200: var(--d4r-color-gray-200);--d4r-color-primary-300: var(--d4r-color-gray-300);--d4r-color-primary-400: var(--d4r-color-gray-400);--d4r-color-primary-500: var(--d4r-color-gray-500);--d4r-color-primary-600: var(--d4r-color-gray-600);--d4r-color-primary-700: var(--d4r-color-gray-700);--d4r-color-primary-800: var(--d4r-color-gray-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-red-50);--d4r-color-primary-100: var(--d4r-color-red-100);--d4r-color-primary-200: var(--d4r-color-red-200);--d4r-color-primary-300: var(--d4r-color-red-300);--d4r-color-primary-400: var(--d4r-color-red-400);--d4r-color-primary-500: var(--d4r-color-red-500);--d4r-color-primary-600: var(--d4r-color-red-600);--d4r-color-primary-700: var(--d4r-color-red-700);--d4r-color-primary-800: var(--d4r-color-red-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-orange-50);--d4r-color-primary-100: var(--d4r-color-orange-100);--d4r-color-primary-200: var(--d4r-color-orange-200);--d4r-color-primary-300: var(--d4r-color-orange-300);--d4r-color-primary-400: var(--d4r-color-orange-400);--d4r-color-primary-500: var(--d4r-color-orange-500);--d4r-color-primary-600: var(--d4r-color-orange-600);--d4r-color-primary-700: var(--d4r-color-orange-700);--d4r-color-primary-800: var(--d4r-color-orange-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-amber-50);--d4r-color-primary-100: var(--d4r-color-amber-100);--d4r-color-primary-200: var(--d4r-color-amber-200);--d4r-color-primary-300: var(--d4r-color-amber-300);--d4r-color-primary-400: var(--d4r-color-amber-400);--d4r-color-primary-500: var(--d4r-color-amber-500);--d4r-color-primary-600: var(--d4r-color-amber-600);--d4r-color-primary-700: var(--d4r-color-amber-700);--d4r-color-primary-800: var(--d4r-color-amber-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-yellow-50);--d4r-color-primary-100: var(--d4r-color-yellow-100);--d4r-color-primary-200: var(--d4r-color-yellow-200);--d4r-color-primary-300: var(--d4r-color-yellow-300);--d4r-color-primary-400: var(--d4r-color-yellow-400);--d4r-color-primary-500: var(--d4r-color-yellow-500);--d4r-color-primary-600: var(--d4r-color-yellow-600);--d4r-color-primary-700: var(--d4r-color-yellow-700);--d4r-color-primary-800: var(--d4r-color-yellow-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-lime-50);--d4r-color-primary-100: var(--d4r-color-lime-100);--d4r-color-primary-200: var(--d4r-color-lime-200);--d4r-color-primary-300: var(--d4r-color-lime-300);--d4r-color-primary-400: var(--d4r-color-lime-400);--d4r-color-primary-500: var(--d4r-color-lime-500);--d4r-color-primary-600: var(--d4r-color-lime-600);--d4r-color-primary-700: var(--d4r-color-lime-700);--d4r-color-primary-800: var(--d4r-color-lime-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-green-50);--d4r-color-primary-100: var(--d4r-color-green-100);--d4r-color-primary-200: var(--d4r-color-green-200);--d4r-color-primary-300: var(--d4r-color-green-300);--d4r-color-primary-400: var(--d4r-color-green-400);--d4r-color-primary-500: var(--d4r-color-green-500);--d4r-color-primary-600: var(--d4r-color-green-600);--d4r-color-primary-700: var(--d4r-color-green-700);--d4r-color-primary-800: var(--d4r-color-green-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-emerald-50);--d4r-color-primary-100: var(--d4r-color-emerald-100);--d4r-color-primary-200: var(--d4r-color-emerald-200);--d4r-color-primary-300: var(--d4r-color-emerald-300);--d4r-color-primary-400: var(--d4r-color-emerald-400);--d4r-color-primary-500: var(--d4r-color-emerald-500);--d4r-color-primary-600: var(--d4r-color-emerald-600);--d4r-color-primary-700: var(--d4r-color-emerald-700);--d4r-color-primary-800: var(--d4r-color-emerald-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-teal-50);--d4r-color-primary-100: var(--d4r-color-teal-100);--d4r-color-primary-200: var(--d4r-color-teal-200);--d4r-color-primary-300: var(--d4r-color-teal-300);--d4r-color-primary-400: var(--d4r-color-teal-400);--d4r-color-primary-500: var(--d4r-color-teal-500);--d4r-color-primary-600: var(--d4r-color-teal-600);--d4r-color-primary-700: var(--d4r-color-teal-700);--d4r-color-primary-800: var(--d4r-color-teal-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-cyan-50);--d4r-color-primary-100: var(--d4r-color-cyan-100);--d4r-color-primary-200: var(--d4r-color-cyan-200);--d4r-color-primary-300: var(--d4r-color-cyan-300);--d4r-color-primary-400: var(--d4r-color-cyan-400);--d4r-color-primary-500: var(--d4r-color-cyan-500);--d4r-color-primary-600: var(--d4r-color-cyan-600);--d4r-color-primary-700: var(--d4r-color-cyan-700);--d4r-color-primary-800: var(--d4r-color-cyan-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-sky-50);--d4r-color-primary-100: var(--d4r-color-sky-100);--d4r-color-primary-200: var(--d4r-color-sky-200);--d4r-color-primary-300: var(--d4r-color-sky-300);--d4r-color-primary-400: var(--d4r-color-sky-400);--d4r-color-primary-500: var(--d4r-color-sky-500);--d4r-color-primary-600: var(--d4r-color-sky-600);--d4r-color-primary-700: var(--d4r-color-sky-700);--d4r-color-primary-800: var(--d4r-color-sky-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-blue-50);--d4r-color-primary-100: var(--d4r-color-blue-100);--d4r-color-primary-200: var(--d4r-color-blue-200);--d4r-color-primary-300: var(--d4r-color-blue-300);--d4r-color-primary-400: var(--d4r-color-blue-400);--d4r-color-primary-500: var(--d4r-color-blue-500);--d4r-color-primary-600: var(--d4r-color-blue-600);--d4r-color-primary-700: var(--d4r-color-blue-700);--d4r-color-primary-800: var(--d4r-color-blue-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-indigo-50);--d4r-color-primary-100: var(--d4r-color-indigo-100);--d4r-color-primary-200: var(--d4r-color-indigo-200);--d4r-color-primary-300: var(--d4r-color-indigo-300);--d4r-color-primary-400: var(--d4r-color-indigo-400);--d4r-color-primary-500: var(--d4r-color-indigo-500);--d4r-color-primary-600: var(--d4r-color-indigo-600);--d4r-color-primary-700: var(--d4r-color-indigo-700);--d4r-color-primary-800: var(--d4r-color-indigo-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-violet-50);--d4r-color-primary-100: var(--d4r-color-violet-100);--d4r-color-primary-200: var(--d4r-color-violet-200);--d4r-color-primary-300: var(--d4r-color-violet-300);--d4r-color-primary-400: var(--d4r-color-violet-400);--d4r-color-primary-500: var(--d4r-color-violet-500);--d4r-color-primary-600: var(--d4r-color-violet-600);--d4r-color-primary-700: var(--d4r-color-violet-700);--d4r-color-primary-800: var(--d4r-color-violet-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-purple-50);--d4r-color-primary-100: var(--d4r-color-purple-100);--d4r-color-primary-200: var(--d4r-color-purple-200);--d4r-color-primary-300: var(--d4r-color-purple-300);--d4r-color-primary-400: var(--d4r-color-purple-400);--d4r-color-primary-500: var(--d4r-color-purple-500);--d4r-color-primary-600: var(--d4r-color-purple-600);--d4r-color-primary-700: var(--d4r-color-purple-700);--d4r-color-primary-800: var(--d4r-color-purple-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-fuchsia-50);--d4r-color-primary-100: var(--d4r-color-fuchsia-100);--d4r-color-primary-200: var(--d4r-color-fuchsia-200);--d4r-color-primary-300: var(--d4r-color-fuchsia-300);--d4r-color-primary-400: var(--d4r-color-fuchsia-400);--d4r-color-primary-500: var(--d4r-color-fuchsia-500);--d4r-color-primary-600: var(--d4r-color-fuchsia-600);--d4r-color-primary-700: var(--d4r-color-fuchsia-700);--d4r-color-primary-800: var(--d4r-color-fuchsia-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-pink-50);--d4r-color-primary-100: var(--d4r-color-pink-100);--d4r-color-primary-200: var(--d4r-color-pink-200);--d4r-color-primary-300: var(--d4r-color-pink-300);--d4r-color-primary-400: var(--d4r-color-pink-400);--d4r-color-primary-500: var(--d4r-color-pink-500);--d4r-color-primary-600: var(--d4r-color-pink-600);--d4r-color-primary-700: var(--d4r-color-pink-700);--d4r-color-primary-800: var(--d4r-color-pink-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button><button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1aqxd3a   size-sm    solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-50: var(--d4r-color-rose-50);--d4r-color-primary-100: var(--d4r-color-rose-100);--d4r-color-primary-200: var(--d4r-color-rose-200);--d4r-color-primary-300: var(--d4r-color-rose-300);--d4r-color-primary-400: var(--d4r-color-rose-400);--d4r-color-primary-500: var(--d4r-color-rose-500);--d4r-color-primary-600: var(--d4r-color-rose-600);--d4r-color-primary-700: var(--d4r-color-rose-700);--d4r-color-primary-800: var(--d4r-color-rose-800);"  type="button">
+	<span class="d4r-truncate">
+			</span>
+	
+</button></div></div>
+		<div class="d4r-space-y-1"><div class="d4r-flex d4r-items-center d4r-gap-2"><input style="" type="checkbox" class="d4r-input-base svelte-7pjx8w" id="qxs54bvjdl"  >
+	<div class="-d4r-mt-1"><label class="d4r-select-none      contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="qxs54bvjdl">Disabled
+</label></div>
+</div>
+			<div class="d4r-flex d4r-items-center d4r-gap-2"><input style="" type="checkbox" class="d4r-input-base svelte-7pjx8w" id="mdvarph8t1"  >
+	<div class="-d4r-mt-1"><label class="d4r-select-none      contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="mdvarph8t1">Required
+</label></div>
+</div></div>
+	</div></div></div>
+	<div class="d4r-border-t d4r-border-neutral-200 d4r-bg-neutral-50 d4r-p-4 dark:d4r-border-dark-600 dark:d4r-bg-dark-800"><div></div>
+		<div class="d4r-flex d4r-items-center d4r-gap-2"><div class="d4r-select-none d4r-border-r d4r-border-neutral-200 d4r-px-4 d4r-text-sm d4r-text-neutral-500 dark:d4r-border-dark-600"><pre>1
+2
+3</pre></div>
+			<div class="d4r-overflow-x-auto"><div class=""><pre class="d4r-overflow-x d4r-text-sm"><code class="hljs d4r-rounded-lg">&lt;TextField label="Example">
+    &lt;Bulb slot="icon-label"/>
+&lt;/TextField></code></pre></div></div></div></div></div></article>
+
+	<article class="d4r-space-y-2"><h3 class="    contrast-base       d4r-text-lg               d4r-font-medium      svelte-1ltnbjr" style="--d4r-color-neutral-200: var(--d4r-color-gray-200);--d4r-color-neutral-700: var(--d4r-color-gray-700);">Variants
+</h3>
+	
+	<div class="d4r-border d4r-border-neutral-200 d4r-bg-white dark:d4r-border-dark-600 dark:d4r-bg-dark-800 "><div class="d4r-grid d4r-grid-cols-1 d4r-gap-4 d4r-p-8 sm:d4r-grid-cols-2 lg:d4r-grid-cols-3"><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="hu0hx90v4p7">
+		Default
+</label>
+	<div class="d4r-relative d4r-w-full">
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="hu0hx90v4p7" type="text"    value=""></div>
+	
+</div>
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="qiwyaskz1m">
+		Number
+</label>
+	<div class="d4r-relative d4r-w-full">
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="qiwyaskz1m" type="number"    value=""></div>
+	
+</div>
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="qagajtsyobm">
+		Password
+</label>
+	<div class="d4r-relative d4r-w-full">
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="qagajtsyobm" type="password"    value=""></div>
+	
+</div>
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="5c90g1kqn7a">
+		Placeholder
+</label>
+	<div class="d4r-relative d4r-w-full">
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="5c90g1kqn7a" placeholder="Placeholder" type="text"    value=""></div>
+	
+</div>
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="emwll39255">
+		Start Icon
+</label>
+	<div class="d4r-relative d4r-w-full"><span class="d4r-input-icon-start      contrast-lower    d4r-text-base               d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-400: var(--d4r-color-gray-400);--d4r-color-neutral-500: var(--d4r-color-gray-500);"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/user</desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="7" r="4"></circle><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path></svg>
+</span>
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base  d4r-pl-9" id="emwll39255" placeholder="jane.doe@dapper-ui.dev" type="text"    value=""></div>
+	
+</div>
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5  d4r-input-required      contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="mwp5o7h4deq">
+		Required
+</label>
+	<div class="d4r-relative d4r-w-full">
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="mwp5o7h4deq" type="text"  required  value=""></div>
+	
+</div>
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block   d4r-opacity-50"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="wpk9i56eyke">
+		Disabled
+</label>
+	<div class="d4r-relative d4r-w-full">
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="wpk9i56eyke" type="text" disabled   value=""></div>
+	
+</div>
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="8abv5xkisaa">
+		Readonly
+</label>
+	<div class="d4r-relative d4r-w-full">
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="8abv5xkisaa" type="text"   readonly value="Readonly"></div>
+	
+</div>
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="rxrad09mpj">
+		Error
+</label>
+	<div class="d4r-relative d4r-w-full">
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="rxrad09mpj" type="text"    value=""></div>
+	<span class="      contrast-lower  d4r-text-xs                 d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-400: var(--d4r-color-red-400);--d4r-color-neutral-500: var(--d4r-color-red-500);">Something is wrong!
+</span>
+</div>
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="48xyxsvhgae">
+		Help Text
+</label>
+	<div class="d4r-relative d4r-w-full">
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="48xyxsvhgae" type="text"    value=""></div>
+	<span class="      contrast-lower  d4r-text-xs                 d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-400: var(--d4r-color-gray-400);--d4r-color-neutral-500: var(--d4r-color-gray-500);">Need Help?
+</span>
+</div>
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="a9fjis2bm08">
+		Round
+</label>
+	<div class="d4r-relative d4r-w-full">
+		<input style="--d4r-border-radius-input: var(--d4r-border-radius-full);" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="a9fjis2bm08" type="text"    value=""></div>
+	
+</div>
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="cdbur1tujs">
+		Square
+</label>
+	<div class="d4r-relative d4r-w-full">
+		<input style="--d4r-border-radius-input: var(--d4r-border-radius-none);" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="cdbur1tujs" type="text"    value=""></div>
+	
+</div>
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="5i5qar7x8a9">
+		Colored
+</label>
+	<div class="d4r-relative d4r-w-full">
+		<input style="--d4r-color-primary-400: var(--d4r-color-green-400);--d4r-color-primary-500: var(--d4r-color-green-500);--d4r-color-primary-700: var(--d4r-color-green-700);" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="5i5qar7x8a9" type="text"    value=""></div>
+	
+</div>
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1 d4r-self-end d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5 d4r-hidden       contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="hbs30899id">
+		Hidden Label
+</label>
+	<div class="d4r-relative d4r-w-full">
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="hbs30899id" placeholder="Hidden Label" type="text"    value=""></div>
+	
+</div>
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1 d4r-self-end d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low   d4r-text-xs                 d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="42eyvco0paf">
+		Small
+</label>
+	<div class="d4r-relative d4r-w-full">
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk  size-sm" id="42eyvco0paf" type="text"    value=""></div>
+	
+</div>
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1 d4r-col-span-1 sm:d4r-col-span-2 lg:d4r-col-span-3 d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="9c3xxhnnmvt">
+		Full Width
+</label>
+	<div class="d4r-relative d4r-w-full">
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="9c3xxhnnmvt" type="text"    value=""></div>
+	
+</div></div></div></article></div></div></div>
+	<div class="d4r-flex"><div class="d4r-hidden d4r-w-[220px] d4r-shrink-0 lg:d4r-block"></div>
+		<div class="d4r-flex-grow"><footer class="d4r-flex d4r-items-center d4r-justify-center d4r-bg-white d4r-px-8 d4r-py-4 dark:d4r-bg-dark-800"><span class="      contrast-lower    d4r-text-base               d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-400: var(--d4r-color-gray-400);--d4r-color-neutral-500: var(--d4r-color-gray-500);">© 2022 Bastian Oppermann
+</span></footer></div></div></div></div></div>
+
+
+		<script type="module" data-sveltekit-hydrate="1ky06hi">
+			import { start } from "/dapper-ui/_app/immutable/start-ae7db4d7.js";
+
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 2, 12],
+					params: {},
+					route: {"id":"/docs/text-field"},
+					data: [null,null,null],
+					form: null
+				},
+				paths: {"base":"/dapper-ui","assets":"/dapper-ui"},
+				target: document.querySelector('[data-sveltekit-hydrate="1ky06hi"]').parentNode,
+				version: "1670787113955"
+			});
+		</script>
+	</div>
+	</body>
+</html>
