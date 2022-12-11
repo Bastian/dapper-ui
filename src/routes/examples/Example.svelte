@@ -13,12 +13,12 @@
 	>
 		<div class="d4r-flex d4r-flex-col md:d4r-flex-row">
 			<div
-				class="d4r-flex d4r-w-full d4r-items-center d4r-justify-center d4r-overflow-hidden d4r-rounded d4r-border-neutral-200 d4r-p-8 dark:d4r-border-dark-600 md:d4r-w-96"
+				class="d4r-flex d4r-w-full d4r-items-center d4r-justify-center d4r-overflow-hidden d4r-rounded d4r-border-neutral-200 d4r-p-8 dark:d4r-border-dark-600"
 			>
 				<slot name="preview" />
 			</div>
 			<div
-				class="d4r-space-y-1 d4r-border-t d4r-border-neutral-200 d4r-p-8 dark:d4r-border-dark-600 md:d4r-border-t-0 md:d4r-border-l"
+				class="d4r-shrink-0 d4r-space-y-1 d4r-border-t d4r-border-neutral-200 d4r-p-8 dark:d4r-border-dark-600 md:d4r-w-[450px] md:d4r-border-t-0 md:d4r-border-l"
 			>
 				<div class="d4r-space-y-4">
 					<slot name="controls" />

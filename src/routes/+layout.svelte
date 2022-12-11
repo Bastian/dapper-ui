@@ -4,7 +4,7 @@
 
 <script lang="ts">
 	import { base } from '$app/paths';
-	import Button from '$lib/components/button/Button.svelte';
+	import IconButton from '$lib/components/icon-button/IconButton.svelte';
 	import Text from '$lib/components/text/Text.svelte';
 	import ThemeProvider from '$lib/theme/ThemeProvider.svelte';
 	import { writable } from 'svelte/store';
@@ -16,13 +16,13 @@
 	<div class="d4r-flex d4r-h-full d4r-flex-col">
 		<header class="d4r-flex d4r-justify-between d4r-px-8">
 			<div class="d4r-flex d4r-items-center d4r-gap-4">
-				<Button
+				<IconButton
 					on:click={() => ($drawerOpen = !$drawerOpen)}
 					variant="subtle"
-					class="d4r-w-10 !d4r-p-0 md:!d4r-hidden"
+					class="lg:!d4r-hidden"
 				>
-					<span><Menu2 /></span>
-				</Button>
+					<Menu2 />
+				</IconButton>
 				<Text size="xl" weight="medium" contrast="higher"><a href="{base}/">Dapper UI</a></Text>
 			</div>
 			<ToggleDarkModeButton icon />

@@ -12,7 +12,7 @@
 
 	export let href: string | undefined = undefined;
 
-	export let variant: 'solid' | 'outline' | 'light' | 'subtle' = 'solid';
+	export let variant: 'solid' | 'outline' | 'outline-dashed' | 'light' | 'subtle' = 'solid';
 
 	export let contentJustify: 'start' | 'center' | 'end' = 'center';
 
@@ -28,7 +28,8 @@
 	style="{overwriteColor(color, [50, 300, 500, 600, 700, 800])}{overwriteRadius(radius, 'button')}"
 	class:size-base={size === 'base'}
 	class:size-sm={size === 'sm'}
-	class:outline={variant === 'outline'}
+	class:outline={variant === 'outline' || variant === 'outline-dashed'}
+	class:outline-dashed={variant === 'outline-dashed'}
 	class:solid={variant === 'solid'}
 	class:light={variant === 'light'}
 	class:subtle={variant === 'subtle'}
@@ -99,6 +100,10 @@
 
 	:local(.outline.small) {
 		@apply !d4r-px-1;
+	}
+
+	:local(.outline-dashed) {
+		@apply d4r-border-dashed;
 	}
 
 	:local(.solid) {

@@ -10,6 +10,7 @@
 	import Example from '../Example.svelte';
 	import RadiusSlider from '../RadiusSlider.svelte';
 	import type { Radius } from '$lib/theme/DapperUiTheme';
+	import type { ComponentProps } from 'svelte';
 
 	const theme = getTheme();
 
@@ -18,8 +19,8 @@
 	let iconStart = false;
 	let iconEnd = false;
 	let color: string | undefined = undefined;
-	let variant: 'solid' | 'outline' = 'solid';
-	export let size: 'sm' | 'base' = 'base';
+	let variant: ComponentProps<Button>['variant'] = 'solid';
+	export let size: ComponentProps<Button>['size'] = 'base';
 
 	let radius: Radius = $theme.radiuses.button;
 
@@ -44,9 +45,9 @@
 	<svelte:fragment slot="preview">
 		<!-- Workaround until https://github.com/sveltejs/rfcs/pull/641 gets solved -->
 		{#if !iconStart && !iconEnd}
-			<Button class="d4r-transition-all" {variant} {disabled} {color} {size} {radius}
-				>{content}</Button
-			>
+			<Button class="d4r-transition-all" {variant} {disabled} {color} {size} {radius}>
+				{content}
+			</Button>
 		{/if}
 		{#if iconStart && !iconEnd}
 			<Button {variant} {disabled} {color} {size} {radius}>
@@ -71,11 +72,12 @@
 
 	<svelte:fragment slot="controls">
 		<div>
-			<TextField id="wefewf" label="Content" bind:value={content} />
+			<TextField id="button-content" label="Content" bind:value={content} />
 		</div>
 		<Select label="Variant" bind:value={variant}>
 			<option value="solid">Solid</option>
 			<option value="outline">Outline</option>
+			<option value="outline-dashed">Dashed</option>
 			<option value="light">Light</option>
 			<option value="subtle">Subtle</option>
 		</Select>

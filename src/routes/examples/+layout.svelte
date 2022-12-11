@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import Container from '$lib/components/container/Container.svelte';
 
 	import Drawer from '$lib/components/drawer/Drawer.svelte';
 	import DrawerLink from '$lib/components/drawer/DrawerLink.svelte';
@@ -15,12 +14,11 @@
 	import { drawerOpen } from '../+layout.svelte';
 </script>
 
-<div class="d4r-flex d4r-bg-neutral-100 dark:d4r-bg-dark-700">
+<div class="d4r-flex">
 	<Drawer
 		open
-		class="d4r-fixed d4r-h-full {$drawerOpen
-			? ''
-			: '-d4r-translate-x-[220px] md:d4r-translate-x-0'}"
+		class="d4r-fixed d4r-h-full d4r-border-r d4r-border-neutral-200 dark:d4r-border-dark-600 
+		{$drawerOpen ? '' : '-d4r-translate-x-[220px] lg:d4r-translate-x-0'}"
 	>
 		<DrawerLink href="{base}/examples/button" on:click={() => ($drawerOpen = false)}>
 			<Click slot="icon-start" /> Button
@@ -42,8 +40,10 @@
 		</DrawerLink>
 	</Drawer>
 
-	<div class="d4r-hidden d4r-w-[220px] d4r-shrink-0 md:d4r-block" />
-	<Container center class="d4r-py-8 md:d4r-py-12">
+	<div class="d4r-hidden d4r-w-[220px] d4r-shrink-0 lg:d4r-block" />
+	<div
+		class="d4r-mx-auto d4r-w-full d4r-max-w-5xl d4r-py-8 d4r-px-4 sm:d4r-px-6 md:d4r-px-10 md:d4r-py-12"
+	>
 		<slot />
-	</Container>
+	</div>
 </div>
