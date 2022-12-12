@@ -19,8 +19,8 @@
 		class="d4r-flex sm:d4r-p-6 md:d4r-p-8 lg:d4r-flex-row lg:d4r-p-16 xl:d4r-p-20 2xl:d4r-p-24"
 	>
 		<div class="background-blur d4r-space-y-8 d4r-p-6 sm:d4r-rounded-lg lg:d4r-p-16">
-			<Text tag="h1" size="6xl" weight="bold" contrast="high">Dapper UI</Text>
-			<Text tag="div" size="xl" contrast="high" weight="medium" prose>
+			<Text tag="h1" size="4xl" weight="bold" contrast="high">Dapper UI</Text>
+			<Text tag="div" size="lg" contrast="high" weight="medium" prose>
 				Dapper UI is a sleek and modern UI component library for Svelte, offering full TypeScript
 				support and extensive documentation. With its built-in dark mode and easy theming options,
 				you can create a unique and personalized look for your application. Built with TailwindCSS,
