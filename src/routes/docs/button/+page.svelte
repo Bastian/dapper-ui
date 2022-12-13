@@ -6,6 +6,7 @@
 	import ButtonExample from './ButtonExample.svelte';
 	import IconButtonExample from './IconButtonExample.svelte';
 
+	// For the icon button list, gradient is omitted
 	const variants: ComponentProps<IconButton>['variant'][] = [
 		'solid',
 		'outline',

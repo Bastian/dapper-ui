@@ -1,18 +1,18 @@
 <script lang="ts">
+	import type { Shades } from '$lib/colors/color';
 	import Button from '$lib/components/button/Button.svelte';
 	import Checkbox from '$lib/components/checkbox/Checkbox.svelte';
-	import { getTheme } from '$lib/getTheme';
-	import { createCode } from '../../../doc-components/helpers/createCode';
 	import Select from '$lib/components/select/Select.svelte';
 	import TextField from '$lib/components/text-field/TextField.svelte';
-	import { ClipboardCheck } from 'tabler-icons-svelte';
-	import ColorPicker from '../ColorPicker.svelte';
-	import Example from '../Example.svelte';
-	import RadiusSlider from '../RadiusSlider.svelte';
+	import { getTheme } from '$lib/getTheme';
 	import type { Radius } from '$lib/theme/DapperUiTheme';
 	import type { ComponentProps } from 'svelte';
-	import type { Shades } from '$lib/colors/color';
-	import Slider from '$lib/components/slider/Slider.svelte';
+	import { ClipboardCheck } from 'tabler-icons-svelte';
+	import { createCode } from '../../../doc-components/helpers/createCode';
+	import ColorPicker from '../ColorPicker.svelte';
+	import Example from '../Example.svelte';
+	import GradientPicker, { gradientToCodeProp } from '../GradientPicker.svelte';
+	import RadiusSlider from '../RadiusSlider.svelte';
 
 	const theme = getTheme();
 
@@ -44,18 +44,7 @@
 			variant: variant === 'solid' ? undefined : variant,
 			size: size === 'base' ? undefined : size,
 			radius: radius === $theme.radiuses.button ? undefined : radius,
-			gradient:
-				variant === 'gradient'
-					? `{{ from: ${
-							gradient.from[1] === 600
-								? `"${gradient.from[0]}"`
-								: `["${gradient.from[0]}", ${gradient.from[1]}]`
-					  }, to: ${
-							gradient.to[1] === 600
-								? `"${gradient.to[0]}"`
-								: `["${gradient.to[0]}", ${gradient.to[1]}]`
-					  } }}`
-					: undefined
+			gradient: variant === 'gradient' ? gradientToCodeProp(gradient) : undefined
 		}
 	});
 </script>
@@ -111,22 +100,7 @@
 		</div>
 		<ColorPicker bind:color />
 		{#if variant === 'gradient'}
-			<ColorPicker label="Gradient From" bind:color={gradient.from[0]} />
-			<Slider
-				label="Gradient From Shade"
-				bind:value={gradient.from[1]}
-				min={100}
-				max={900}
-				step={100}
-			/>
-			<ColorPicker label="Gradient To" bind:color={gradient.to[0]} />
-			<Slider
-				label="Gradient To Shade"
-				bind:value={gradient.to[1]}
-				min={100}
-				max={900}
-				step={100}
-			/>
+			<GradientPicker bind:gradient />
 		{/if}
 		<div class="d4r-space-y-2.5 lg:d4r-space-y-1.5">
 			<Checkbox label="Disabled" bind:checked={disabled} />
