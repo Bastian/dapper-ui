@@ -5,6 +5,14 @@
 	import TextFieldExample from './TextFieldExample.svelte';
 </script>
 
+<svelte:head>
+	<title>TextField - Dapper UI</title>
+	<meta
+		name="description"
+		content="Documentation for the TextField component of Dapper UI. A sleek and modern UI component library for Svelte."
+	/>
+</svelte:head>
+
 <div class="d4r-space-y-16">
 	<TextFieldExample />
 

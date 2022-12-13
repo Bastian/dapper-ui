@@ -9,6 +9,11 @@
 	import Footer from './Footer.svelte';
 </script>
 
+<svelte:head>
+	<title>Dapper UI</title>
+	<meta name="description" content="A sleek and modern UI component library for Svelte." />
+</svelte:head>
+
 <div
 	class="d4r-dark d4r-bg-cover d4r-bg-fixed d4r-bg-left-top"
 	style={`background-image: url("${heroImgSrc}");`}

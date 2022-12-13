@@ -2,6 +2,14 @@
 	import Text from '$lib/components/text/Text.svelte';
 </script>
 
+<svelte:head>
+	<title>Icons - Dapper UI</title>
+	<meta
+		name="description"
+		content="Documentation for Icons in Dapper UI. A sleek and modern UI component library for Svelte."
+	/>
+</svelte:head>
+
 <div class="d4r-space-y-4">
 	<Text class="d4r-mb-6" tag="h1" size="3xl" weight="medium">Icons</Text>
 	<Text tag="p" prose size="lg">
