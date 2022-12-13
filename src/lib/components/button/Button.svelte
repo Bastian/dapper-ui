@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { Shades } from '$lib/colors/color';
 	import type { Radius } from '$lib/theme/DapperUiTheme';
 	import { overwriteColor } from '$lib/util/createColorOverwrite';
 	import { overwriteRadius } from '$lib/util/createRadiusOverwrite';
@@ -18,6 +19,21 @@
 
 	let className = '';
 	export { className as class };
+
+	let usedColorShade: Shades[];
+	$: {
+		if (variant === 'solid') {
+			usedColorShade = [300, 600, 700];
+		} else if (variant === 'outline' || variant === 'outline-dashed') {
+			usedColorShade = [50, 300, 500, 700, 800];
+		} else if (variant === 'light') {
+			usedColorShade = [200, 300, 500, 600, 700];
+		} else if (variant === 'subtle') {
+			usedColorShade = [300, 600];
+		} else {
+			usedColorShade = [];
+		}
+	}
 </script>
 
 <svelte:element
@@ -25,10 +41,7 @@
 	{href}
 	class="button {className}"
 	class:d4r-w-full={fullWidth}
-	style="{overwriteColor(color, [50, 100, 200, 300, 400, 500, 600, 700, 800])}{overwriteRadius(
-		radius,
-		'button'
-	)}"
+	style="{overwriteColor(color, usedColorShade)}{overwriteRadius(radius, 'button')}"
 	class:size-base={size === 'base'}
 	class:size-sm={size === 'sm'}
 	class:size-xs={size === 'xs'}
