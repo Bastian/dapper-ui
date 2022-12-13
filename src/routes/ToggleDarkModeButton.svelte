@@ -16,5 +16,5 @@
 		<span class="d4r-hidden dark:d4r-inline"><Sun /></span>
 	</IconButton>
 {:else}
-	<Button color="neutral" on:click={toggleDarkMode}>Toogle Dark Mode</Button>
+	<Button color="neutral" on:click={toggleDarkMode}>Toggle Dark Mode</Button>
 {/if}
