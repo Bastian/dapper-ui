@@ -90,7 +90,7 @@
 			<RadiusSlider bind:radius />
 		</div>
 		<ColorPicker bind:color />
-		<div class="d4r-space-y-1">
+		<div class="d4r-space-y-2.5 lg:d4r-space-y-1.5">
 			<Checkbox label="Disabled" bind:checked={disabled} />
 			<Checkbox label="Icon Start" bind:checked={iconStart} />
 			<Checkbox label="Icon End" bind:checked={iconEnd} />
