@@ -18,6 +18,7 @@
 			<div class="d4r-flex d4r-items-center d4r-gap-4">
 				<IconButton
 					on:click={() => ($drawerOpen = !$drawerOpen)}
+					label="Toggle drawer"
 					variant="subtle"
 					class="lg:!d4r-hidden"
 				>

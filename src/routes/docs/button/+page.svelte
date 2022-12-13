@@ -2,7 +2,7 @@
 	import Button from '$lib/components/button/Button.svelte';
 	import IconButton from '$lib/components/icon-button/IconButton.svelte';
 	import type { ComponentProps } from 'svelte';
-	import { ColorSwatch, Paint, Palette, Sun } from 'tabler-icons-svelte';
+	import { Palette } from 'tabler-icons-svelte';
 	import DocSection from '../DocSection.svelte';
 	import ButtonExample from './ButtonExample.svelte';
 	import IconButtonExample from './IconButtonExample.svelte';
@@ -47,7 +47,7 @@
 		{#each variants as variant}
 			<div class="d4r-flex d4r-flex-wrap d4r-items-center d4r-justify-center d4r-gap-1">
 				{#each ['gray', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose'] as c}
-					<IconButton size="xs" {variant} color={c}><Palette /></IconButton>
+					<IconButton label="Example" size="xs" {variant} color={c}><Palette /></IconButton>
 				{/each}
 			</div>
 		{/each}

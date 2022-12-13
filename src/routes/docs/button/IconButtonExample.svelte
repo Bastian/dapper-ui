@@ -24,6 +24,7 @@
 		name: 'IconButton',
 		children: [createCode({ name: 'ClipboardCheck' })],
 		props: {
+			label: 'Example',
 			disabled,
 			color,
 			variant: variant === 'subtle' ? undefined : variant,
@@ -34,8 +35,12 @@
 </script>
 
 <Example title="IconButton" {code}>
+	<span slot="description">
+		A button that renders a centered icon with no text. It's a wrapper around the Button component
+		with an additional label property for accessibility.</span
+	>
 	<svelte:fragment slot="preview">
-		<IconButton {variant} {disabled} {color} {size} {radius}>
+		<IconButton label="Example" {variant} {disabled} {color} {size} {radius}>
 			<ClipboardCheck />
 		</IconButton>
 	</svelte:fragment>

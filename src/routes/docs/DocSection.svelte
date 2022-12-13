@@ -11,7 +11,7 @@
 <article class="d4r-space-y-2">
 	<Text tag="h3" size="lg" weight="medium">{title}</Text>
 	{#if $$slots['description']}
-		<Text tag="div" class="d4r-pb-1" contrast="lower">
+		<Text tag="div" class="d4r-pb-1" contrast="lower" prose>
 			<slot name="description" />
 		</Text>
 	{/if}

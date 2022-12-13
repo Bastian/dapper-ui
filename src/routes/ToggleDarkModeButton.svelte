@@ -11,7 +11,7 @@
 </script>
 
 {#if icon}
-	<IconButton on:click={toggleDarkMode}>
+	<IconButton label="Toggle Dark Mode" on:click={toggleDarkMode}>
 		<span class="dark:d4r-hidden"><Moon /></span>
 		<span class="d4r-hidden dark:d4r-inline"><Sun /></span>
 	</IconButton>

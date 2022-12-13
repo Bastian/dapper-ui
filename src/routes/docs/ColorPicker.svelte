@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Button from '$lib/components/button/Button.svelte';
 	import IconButton from '$lib/components/icon-button/IconButton.svelte';
 	import Text from '$lib/components/text/Text.svelte';
 	import { Check } from 'tabler-icons-svelte';
@@ -11,7 +10,13 @@
 	<Text contrast="lower" size="sm" weight="semibold">Color</Text>
 	<div class="d4r-flex d4r-max-w-sm d4r-flex-wrap d4r-gap-1">
 		{#each ['gray', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose'] as c}
-			<IconButton size="sm" variant="solid" color={c} on:click={() => (color = c)}>
+			<IconButton
+				label="Color {c}"
+				size="sm"
+				variant="solid"
+				color={c}
+				on:click={() => (color = c)}
+			>
 				{#if color === c}<Check />{/if}
 			</IconButton>
 		{/each}

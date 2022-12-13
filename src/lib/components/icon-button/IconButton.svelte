@@ -12,6 +12,8 @@
 
 	export let variant: ComponentProps<Button>['variant'] = 'subtle';
 
+	export let label: string | undefined;
+
 	let className = '';
 	export { className as class };
 </script>
@@ -34,4 +36,7 @@
 	on:keyup
 >
 	<slot />
+	{#if label}
+		<span class="d4r-sr-only">{label}</span>
+	{/if}
 </Button>
