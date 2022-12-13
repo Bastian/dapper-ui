@@ -72,7 +72,14 @@
 			<div class="d4r-flex d4r-flex-col d4r-gap-2 sm:d4r-flex-row">
 				<Button on:click={() => (themeName = 'default')}>Default</Button>
 				<ThemeProvider localStyle theme={themes.playful}>
-					<Button fullWidth on:click={() => (themeName = 'playful')}>Playful</Button>
+					<Button
+						fullWidth
+						on:click={() => (themeName = 'playful')}
+						variant="gradient"
+						gradient={{ from: ['violet', 500], to: 'pink' }}
+					>
+						Playful
+					</Button>
 				</ThemeProvider>
 				<ThemeProvider localStyle theme={themes.professional}>
 					<Button fullWidth on:click={() => (themeName = 'professional')}>Professional</Button>

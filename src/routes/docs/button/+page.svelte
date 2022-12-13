@@ -2,7 +2,6 @@
 	import Button from '$lib/components/button/Button.svelte';
 	import IconButton from '$lib/components/icon-button/IconButton.svelte';
 	import type { ComponentProps } from 'svelte';
-	import { Palette } from 'tabler-icons-svelte';
 	import DocSection from '../DocSection.svelte';
 	import ButtonExample from './ButtonExample.svelte';
 	import IconButtonExample from './IconButtonExample.svelte';
@@ -34,6 +33,7 @@
 			<Button variant="outline-dashed">Dashed</Button>
 			<Button variant="light">Light</Button>
 			<Button variant="subtle">Subtle</Button>
+			<Button variant="gradient" gradient={{ from: 'indigo', to: 'sky' }}>Gradient</Button>
 		</div>
 	</DocSection>
 

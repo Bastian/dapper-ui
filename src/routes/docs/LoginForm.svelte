@@ -67,7 +67,11 @@
 			: 'I agree to the Terms of Use'}
 		required
 	/>
-	<Button fullWidth>
+	<Button
+		fullWidth
+		gradient={{ from: ['violet', 500], to: 'pink' }}
+		variant={theme === 'playful' ? 'gradient' : 'solid'}
+	>
 		{#if theme === 'playful'}
 			Start Your Adventure
 		{:else if theme === 'professional'}

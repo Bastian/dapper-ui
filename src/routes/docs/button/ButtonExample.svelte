@@ -11,6 +11,8 @@
 	import RadiusSlider from '../RadiusSlider.svelte';
 	import type { Radius } from '$lib/theme/DapperUiTheme';
 	import type { ComponentProps } from 'svelte';
+	import type { Shades } from '$lib/colors/color';
+	import Slider from '$lib/components/slider/Slider.svelte';
 
 	const theme = getTheme();
 
@@ -21,6 +23,11 @@
 	let color: string | undefined = undefined;
 	let variant: ComponentProps<Button>['variant'] = 'solid';
 	export let size: ComponentProps<Button>['size'] = 'base';
+
+	let gradient: { from: [string, Shades]; to: [string, Shades] } = {
+		from: ['indigo', 600],
+		to: ['sky', 600]
+	};
 
 	let radius: Radius = $theme.radiuses.button;
 
@@ -36,7 +43,19 @@
 			color,
 			variant: variant === 'solid' ? undefined : variant,
 			size: size === 'base' ? undefined : size,
-			radius: radius === $theme.radiuses.button ? undefined : radius
+			radius: radius === $theme.radiuses.button ? undefined : radius,
+			gradient:
+				variant === 'gradient'
+					? `{{ from: ${
+							gradient.from[1] === 600
+								? `"${gradient.from[0]}"`
+								: `["${gradient.from[0]}", ${gradient.from[1]}]`
+					  }, to: ${
+							gradient.to[1] === 600
+								? `"${gradient.to[0]}"`
+								: `["${gradient.to[0]}", ${gradient.to[1]}]`
+					  } }}`
+					: undefined
 		}
 	});
 </script>
@@ -45,24 +64,24 @@
 	<svelte:fragment slot="preview">
 		<!-- Workaround until https://github.com/sveltejs/rfcs/pull/641 gets solved -->
 		{#if !iconStart && !iconEnd}
-			<Button class="d4r-transition-all" {variant} {disabled} {color} {size} {radius}>
+			<Button class="d4r-transition-all" {variant} {disabled} {color} {size} {radius} {gradient}>
 				{content}
 			</Button>
 		{/if}
 		{#if iconStart && !iconEnd}
-			<Button {variant} {disabled} {color} {size} {radius}>
+			<Button {variant} {disabled} {color} {size} {radius} {gradient}>
 				<ClipboardCheck slot="icon-start" />
 				{content}
 			</Button>
 		{/if}
 		{#if !iconStart && iconEnd}
-			<Button {variant} {disabled} {color} {size} {radius}>
+			<Button {variant} {disabled} {color} {size} {radius} {gradient}>
 				{content}
 				<ClipboardCheck slot="icon-end" />
 			</Button>
 		{/if}
 		{#if iconStart && iconEnd}
-			<Button {variant} {disabled} {color} {size} {radius}>
+			<Button {variant} {disabled} {color} {size} {radius} {gradient}>
 				<ClipboardCheck slot="icon-start" />
 				{content}
 				<ClipboardCheck slot="icon-end" />
@@ -80,6 +99,7 @@
 			<option value="outline-dashed">Dashed</option>
 			<option value="light">Light</option>
 			<option value="subtle">Subtle</option>
+			<option value="gradient">Gradient</option>
 		</Select>
 		<Select label="Size" bind:value={size}>
 			<option value="base">Base</option>
@@ -90,6 +110,24 @@
 			<RadiusSlider bind:radius />
 		</div>
 		<ColorPicker bind:color />
+		{#if variant === 'gradient'}
+			<ColorPicker label="Gradient From" bind:color={gradient.from[0]} />
+			<Slider
+				label="Gradient From Shade"
+				bind:value={gradient.from[1]}
+				min={100}
+				max={900}
+				step={100}
+			/>
+			<ColorPicker label="Gradient To" bind:color={gradient.to[0]} />
+			<Slider
+				label="Gradient To Shade"
+				bind:value={gradient.to[1]}
+				min={100}
+				max={900}
+				step={100}
+			/>
+		{/if}
 		<div class="d4r-space-y-2.5 lg:d4r-space-y-1.5">
 			<Checkbox label="Disabled" bind:checked={disabled} />
 			<Checkbox label="Icon Start" bind:checked={iconStart} />

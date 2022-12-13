@@ -12,6 +12,8 @@
 
 	export let variant: ComponentProps<Button>['variant'] = 'subtle';
 
+	export let gradient: ComponentProps<Button>['gradient'] = undefined;
+
 	export let label: string | undefined;
 
 	let className = '';

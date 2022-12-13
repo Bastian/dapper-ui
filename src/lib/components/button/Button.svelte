@@ -13,7 +13,13 @@
 
 	export let href: string | undefined = undefined;
 
-	export let variant: 'solid' | 'outline' | 'outline-dashed' | 'light' | 'subtle' = 'solid';
+	export let variant: 'solid' | 'outline' | 'outline-dashed' | 'light' | 'subtle' | 'gradient' =
+		'solid';
+
+	export let gradient:
+		| { from: string | [string, Shades]; to: string | [string, Shades] }
+		| string
+		| undefined = { from: 'primary', to: 'primary' };
 
 	export let contentJustify: 'start' | 'center' | 'end' = 'center';
 
@@ -30,8 +36,33 @@
 			usedColorShade = [200, 300, 500, 600, 700];
 		} else if (variant === 'subtle') {
 			usedColorShade = [300, 600];
+		} else if (variant === 'gradient') {
+			usedColorShade = [300, 600];
 		} else {
 			usedColorShade = [];
+		}
+	}
+
+	let gradientStyle: string;
+	$: {
+		if (variant === 'gradient') {
+			if (typeof gradient === 'string') {
+				gradientStyle = `background: ${gradient};`;
+			} else if (typeof gradient === 'object') {
+				const fromColorName =
+					typeof gradient.from === 'string'
+						? `${gradient.from}-600`
+						: `${gradient.from[0]}-${gradient.from[1]}`;
+				const toColorName =
+					typeof gradient.to === 'string'
+						? `${gradient.to}-600`
+						: `${gradient.to[0]}-${gradient.to[1]}`;
+				gradientStyle = `background: linear-gradient(90deg, rgb(var(--d4r-color-${fromColorName})) 0%, rgb(var(--d4r-color-${toColorName})) 100%);`;
+			} else {
+				gradientStyle = '';
+			}
+		} else {
+			gradientStyle = '';
 		}
 	}
 </script>
@@ -41,12 +72,13 @@
 	{href}
 	class="button {className}"
 	class:d4r-w-full={fullWidth}
-	style="{overwriteColor(color, usedColorShade)}{overwriteRadius(radius, 'button')}"
+	style="{overwriteColor(color, usedColorShade)}{overwriteRadius(radius, 'button')}{gradientStyle}"
 	class:size-base={size === 'base'}
 	class:size-sm={size === 'sm'}
 	class:size-xs={size === 'xs'}
 	class:outline={variant === 'outline' || variant === 'outline-dashed'}
 	class:outline-dashed={variant === 'outline-dashed'}
+	class:gradient={variant === 'gradient'}
 	class:solid={variant === 'solid'}
 	class:light={variant === 'light'}
 	class:subtle={variant === 'subtle'}
@@ -135,6 +167,11 @@
 
 	:local(.icon-end.size-xs) {
 		@apply d4r-pr-2;
+	}
+
+	:local(.gradient) {
+		@apply d4r-text-neutral-100;
+		@apply focus:d4r-ring-2 focus:d4r-ring-primary-600/50 focus:d4r-ring-offset-1 dark:focus:d4r-ring-primary-300/50 dark:focus:d4r-ring-offset-dark-800;
 	}
 
 	:local(.outline) {

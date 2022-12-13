@@ -31,6 +31,7 @@
 
 	export let min = 0;
 	export let max = 100;
+	export let step = 1;
 
 	let percentage: number;
 	$: percentage = ((value - min) / (max - min)) * 100;
@@ -63,6 +64,7 @@
 			bind:value
 			{min}
 			{max}
+			{step}
 			type="range"
 			class="d4r-group"
 			style="background: linear-gradient(90deg, rgb(var(--d4r-color-primary-600)) {percentage}%, rgb(var(--d4r-color-neutral-300)) {percentage}%, rgb(var(--d4r-color-neutral-300)) 100%);"
