@@ -44,9 +44,9 @@
 
 <Example title="IconButton" {code}>
 	<span slot="description">
-		A button that renders a centered icon with no text. It's a wrapper around the Button component
-		with an additional label property for accessibility.</span
-	>
+		The IconButton features a centered icon without any text. It's a modification of the Button
+		component, adding a label property for improved accessibility.
+	</span>
 	<svelte:fragment slot="preview">
 		<IconButton label="Example" {variant} {disabled} {color} {size} {radius} {gradient}>
 			<ClipboardCheck />
