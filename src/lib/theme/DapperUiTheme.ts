@@ -1,8 +1,9 @@
 import type { ColorPalette } from '$lib/colors/color';
 
 export interface DapperUiTheme {
-	font: {
+	font?: {
 		default?: string;
+		code?: string;
 	};
 	colors: {
 		// TODO Also allow to use stirng that reference other colors in the palette

@@ -18,8 +18,8 @@
 		...defaultDapperUiTheme,
 		font: {
 			...defaultDapperUiTheme.font,
-			// default: "'Rubik', sans-serif",
-			default: "'Open Sans', sans-serif"
+			default: "'Open Sans', sans-serif",
+			code: "'Fira Mono', monospace"
 		}
 	}}
 >

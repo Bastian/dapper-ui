@@ -25,11 +25,11 @@
 		];
 	}
 
-	function getFontStyle(theme: DapperUiTheme): string[] {
-		if (!theme.font?.default) {
+	function getFontStyle(theme: DapperUiTheme, type: 'default' | 'code'): string[] {
+		if (!theme.font?.[type]) {
 			return [];
 		}
-		return [`font-family: ${theme.font.default};`];
+		return [`font-family: ${theme.font[type]};`];
 	}
 </script>
 
@@ -70,7 +70,9 @@
 		{@html `<` +
 			`style type="text/css">:root {\n${colorsToCssVar(theme.colors).join(
 				'\n'
-			)}\n${getRadiusCssVars(theme).join('\n')}\n${getFontStyle(theme).join('\n')}
+			)}\n${getRadiusCssVars(theme).join('\n')}\n${getFontStyle(theme, 'default').join(
+				'\n'
+			)}\n}code {${getFontStyle(theme, 'code').join('\n')}}
 	</style>`}
 	{/if}
 </svelte:head>
@@ -79,7 +81,8 @@
 	<div
 		class={className}
 		style="{colorsToCssVar(theme.colors).join('')}{getRadiusCssVars(theme).join('')}{getFontStyle(
-			theme
+			theme,
+			'default'
 		).join('')}"
 	>
 		<slot />
