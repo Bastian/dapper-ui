@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { page } from '$app/stores';
 
 	import Drawer from '$lib/components/drawer/Drawer.svelte';
 	import DrawerLink from '$lib/components/drawer/DrawerLink.svelte';
@@ -18,6 +19,16 @@
 	} from 'tabler-icons-svelte';
 	import { drawerOpen } from '../+layout.svelte';
 	import Footer from '../Footer.svelte';
+
+	function getDrawerLinkProps(target: string, routeId: string | null) {
+		return {
+			active: routeId == target,
+			href: `${base}${target}`,
+			on: {
+				click: () => ($drawerOpen = false)
+			}
+		};
+	}
 </script>
 
 <div class="d4r-flex d4r-h-full d4r-flex-grow d4r-flex-col">
@@ -26,40 +37,40 @@
 		class="d4r-fixed d4r-h-full d4r-border-r d4r-border-neutral-200 dark:d4r-border-dark-600 
 		{$drawerOpen ? '' : '-d4r-translate-x-[220px] lg:d4r-translate-x-0'}"
 	>
-		<div class="d4r-my-2">
-			<Text>Components</Text>
+		<div class="d4r-mb-2">
+			<Text weight="medium" size="sm">Components</Text>
 		</div>
-		<DrawerLink href="{base}/docs/button" on:click={() => ($drawerOpen = false)}>
+		<DrawerLink {...getDrawerLinkProps('/docs/button', $page.route.id)}>
 			<Click slot="icon-start" /> Button
 		</DrawerLink>
-		<DrawerLink href="{base}/docs/text-field" on:click={() => ($drawerOpen = false)}>
+		<DrawerLink {...getDrawerLinkProps('/docs/text-field', $page.route.id)}>
 			<CursorText slot="icon-start" /> TextField
 		</DrawerLink>
-		<DrawerLink href="{base}/docs/slider" on:click={() => ($drawerOpen = false)}>
+		<DrawerLink {...getDrawerLinkProps('/docs/slider', $page.route.id)}>
 			<AdjustmentsHorizontal slot="icon-start" /> Slider
 		</DrawerLink>
-		<DrawerLink href="{base}/docs/select" on:click={() => ($drawerOpen = false)}>
+		<DrawerLink {...getDrawerLinkProps('/docs/select', $page.route.id)}>
 			<Select slot="icon-start" /> Select
 		</DrawerLink>
-		<DrawerLink href="{base}/docs/checkbox" on:click={() => ($drawerOpen = false)}>
+		<DrawerLink {...getDrawerLinkProps('/docs/checkbox', $page.route.id)}>
 			<Checkbox slot="icon-start" /> Checkbox
 		</DrawerLink>
-		<DrawerLink href="{base}/docs/text" on:click={() => ($drawerOpen = false)}>
+		<DrawerLink {...getDrawerLinkProps('/docs/text', $page.route.id)}>
 			<Typography slot="icon-start" /> Text
 		</DrawerLink>
-		<div class="d4r-my-2">
-			<Text>Concepts</Text>
+		<div class="d4r-mb-2 d4r-mt-4">
+			<Text weight="medium" size="sm">Concepts</Text>
 		</div>
-		<DrawerLink href="{base}/docs/theming" on:click={() => ($drawerOpen = false)}>
+		<DrawerLink {...getDrawerLinkProps('/docs/theming', $page.route.id)}>
 			<Brush slot="icon-start" /> Theming
 		</DrawerLink>
-		<DrawerLink href="{base}/docs/icons" on:click={() => ($drawerOpen = false)}>
+		<DrawerLink {...getDrawerLinkProps('/docs/icons', $page.route.id)}>
 			<Icons slot="icon-start" /> Icons
 		</DrawerLink>
-		<DrawerLink href="{base}/docs/styling" on:click={() => ($drawerOpen = false)}>
+		<DrawerLink {...getDrawerLinkProps('/docs/styling', $page.route.id)}>
 			<BrandCss3 slot="icon-start" /> Styling
 		</DrawerLink>
-		<DrawerLink href="{base}/docs/dark-mode" on:click={() => ($drawerOpen = false)}>
+		<DrawerLink {...getDrawerLinkProps('/docs/dark-mode', $page.route.id)}>
 			<Moon slot="icon-start" /> Dark Mode
 		</DrawerLink>
 	</Drawer>
