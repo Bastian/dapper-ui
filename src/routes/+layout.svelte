@@ -6,13 +6,23 @@
 	import { base } from '$app/paths';
 	import IconButton from '$lib/components/icon-button/IconButton.svelte';
 	import Text from '$lib/components/text/Text.svelte';
+	import { defaultDapperUiTheme } from '$lib/theme/default-theme';
 	import ThemeProvider from '$lib/theme/ThemeProvider.svelte';
 	import { writable } from 'svelte/store';
 	import { Menu2 } from 'tabler-icons-svelte';
 	import ToggleDarkModeButton from './ToggleDarkModeButton.svelte';
 </script>
 
-<ThemeProvider>
+<ThemeProvider
+	theme={{
+		...defaultDapperUiTheme,
+		font: {
+			...defaultDapperUiTheme.font,
+			// default: "'Rubik', sans-serif",
+			default: "'Open Sans', sans-serif"
+		}
+	}}
+>
 	<div class="d4r-flex d4r-h-full d4r-flex-col">
 		<header class="d4r-flex d4r-justify-between d4r-px-8">
 			<div class="d4r-flex d4r-items-center d4r-gap-4">

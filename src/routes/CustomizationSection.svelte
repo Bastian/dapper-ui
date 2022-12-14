@@ -13,7 +13,7 @@
 		playful: {
 			...defaultDapperUiTheme,
 			font: {
-				default: 'sans-serif'
+				default: "'Overlock', sans-serif"
 			},
 			colors: {
 				...defaultDapperUiTheme.colors,
@@ -33,7 +33,7 @@
 		professional: {
 			...defaultDapperUiTheme,
 			font: {
-				default: 'serif'
+				default: "'Tinos', serif"
 			},
 			colors: {
 				...defaultDapperUiTheme.colors,

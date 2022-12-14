@@ -38,7 +38,7 @@
 		{$drawerOpen ? '' : '-d4r-translate-x-[220px] lg:d4r-translate-x-0'}"
 	>
 		<div class="d4r-mb-2">
-			<Text weight="medium" size="sm">Components</Text>
+			<Text weight="semibold" size="sm">Components</Text>
 		</div>
 		<DrawerLink {...getDrawerLinkProps('/docs/button', $page.route.id)}>
 			<Click slot="icon-start" /> Button
@@ -59,7 +59,7 @@
 			<Typography slot="icon-start" /> Text
 		</DrawerLink>
 		<div class="d4r-mb-2 d4r-mt-4">
-			<Text weight="medium" size="sm">Concepts</Text>
+			<Text weight="semibold" size="sm">Concepts</Text>
 		</div>
 		<DrawerLink {...getDrawerLinkProps('/docs/theming', $page.route.id)}>
 			<Brush slot="icon-start" /> Theming
