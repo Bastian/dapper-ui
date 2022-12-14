@@ -4,6 +4,64 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="/dapper-ui/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<style>
+			/* open-sans-regular - latin */
+			@font-face {
+				font-family: 'Open Sans';
+				font-style: normal;
+				font-weight: 400;
+				src: local(''), url('../fonts/open-sans-v34-latin-regular.woff2') format('woff2'),
+					/* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/open-sans-v34-latin-regular.woff')
+						format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+			}
+			/* open-sans-500 - latin */
+			@font-face {
+				font-family: 'Open Sans';
+				font-style: normal;
+				font-weight: 500;
+				src: local(''), url('../fonts/open-sans-v34-latin-500.woff2') format('woff2'),
+					/* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/open-sans-v34-latin-500.woff')
+						format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+			}
+			/* open-sans-600 - latin */
+			@font-face {
+				font-family: 'Open Sans';
+				font-style: normal;
+				font-weight: 600;
+				src: local(''), url('../fonts/open-sans-v34-latin-600.woff2') format('woff2'),
+					/* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/open-sans-v34-latin-600.woff')
+						format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+			}
+			/* open-sans-700 - latin */
+			@font-face {
+				font-family: 'Open Sans';
+				font-style: normal;
+				font-weight: 700;
+				src: local(''), url('../fonts/open-sans-v34-latin-700.woff2') format('woff2'),
+					/* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/open-sans-v34-latin-700.woff')
+						format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+			}
+			/* overlock-700 - latin */
+			@font-face {
+				font-family: 'Overlock';
+				font-style: normal;
+				font-weight: 700;
+				src: local(''), url('../fonts/overlock-v15-latin-700.woff2') format('woff2'),
+					/* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/overlock-v15-latin-700.woff')
+						format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+			}
+			/* tinos-regular - latin */
+			@font-face {
+				font-family: 'Tinos';
+				font-style: normal;
+				font-weight: 400;
+				src: local(''), url('../fonts/tinos-v24-latin-regular.woff2') format('woff2'),
+					/* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/tinos-v24-latin-regular.woff')
+						format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+			}
+		</style>
+
 		<meta http-equiv="content-security-policy" content="">
 		<link href="/dapper-ui/_app/immutable/assets/_layout-0eda187a.css" rel="stylesheet">
 		<link href="/dapper-ui/_app/immutable/assets/IconButton-fce5b7ca.css" rel="stylesheet">
@@ -12,17 +70,17 @@
 		<link href="/dapper-ui/_app/immutable/assets/InputBase-e080cb50.css" rel="stylesheet">
 		<link href="/dapper-ui/_app/immutable/assets/Slider-bf9f187f.css" rel="stylesheet">
 		<link href="/dapper-ui/_app/immutable/assets/Select-775a58c1.css" rel="stylesheet">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/start-d1105eb3.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/start-af1905b1.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/index-5f858542.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/singletons-c87329b0.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/paths-2904247a.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/_layout.svelte-365136d4.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/_layout.svelte-213b0b8b.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/IconButton-4f25fd8f.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Text-7c72c0b5.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/ToggleDarkModeButton-91c5203a.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/ToggleDarkModeButton-33fea1c1.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/_layout-1daba58d.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/docs/_layout.svelte-82775beb.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/docs/_layout.svelte-b63910b5.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/stores-012d70e5.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Footer-cd48d839.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/docs/select/_page.svelte-d9b716c5.js">
@@ -295,7 +353,7 @@
 --d4r-border-radius-checkbox: var(--d4r-border-radius-base);
 --d4r-border-radius-slider-thumb: var(--d4r-border-radius-full);
 --d4r-border-radius-slider-track: var(--d4r-border-radius-full);
-
+font-family: 'Open Sans', sans-serif;
 	</style><!-- HTML_TAG_END --><!-- HEAD_svelte-14llyz1_END --><!-- HEAD_svelte-oacep1_START --><!-- HEAD_svelte-oacep1_END -->
 	</head>
 	<body class="d4r-h-full d4r-bg-neutral-100 dark:d4r-bg-dark-700">
@@ -329,7 +387,7 @@
 
 		<div class="d4r-h-full d4r-flex-grow d4r-pt-14"><div class="d4r-flex d4r-h-full d4r-flex-grow d4r-flex-col">
 <div style="width: 220px;" class="d4r-z-40 d4r-w-[220px] d4r-bg-white d4r-transition-transform dark:d4r-bg-dark-800 d4r-fixed d4r-h-full d4r-border-r d4r-border-neutral-200 dark:d4r-border-dark-600 
-		-d4r-translate-x-[220px] lg:d4r-translate-x-0"><div class="d4r-flex d4r-w-full d4r-flex-col d4r-items-start d4r-gap-2 d4r-p-4"><div class="d4r-mb-2"><span class="    contrast-base     d4r-text-sm                 d4r-font-medium      svelte-1ltnbjr" style="--d4r-color-neutral-200: var(--d4r-color-gray-200);--d4r-color-neutral-700: var(--d4r-color-gray-700);">Components
+		-d4r-translate-x-[220px] lg:d4r-translate-x-0"><div class="d4r-flex d4r-w-full d4r-flex-col d4r-items-start d4r-gap-2 d4r-p-4"><div class="d4r-mb-2"><span class="    contrast-base     d4r-text-sm                  d4r-font-semibold     svelte-1ltnbjr" style="--d4r-color-neutral-200: var(--d4r-color-gray-200);--d4r-color-neutral-700: var(--d4r-color-gray-700);">Components
 </span></div>
 		<a href="/dapper-ui/docs/button" class="button  svelte-inxa94 d4r-w-full   size-xs      subtle icon-start icon-end d4r-justify-start   d4r-truncate   d4r-button-icon-xs" style="--d4r-color-primary-300: var(--d4r-color-neutral-300);--d4r-color-primary-600: var(--d4r-color-neutral-600);"  type="button"><span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-click" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/click
     </desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="3" y1="12" x2="6" y2="12"></line><line x1="12" y1="3" x2="12" y2="6"></line><line x1="7.8" y1="7.8" x2="5.6" y2="5.6"></line><line x1="16.2" y1="7.8" x2="18.4" y2="5.6"></line><line x1="7.8" y1="16.2" x2="5.6" y2="18.4"></line><path d="M12 12l9 3l-4 2l-2 4l-3 -9"></path></svg></span>
@@ -368,7 +426,7 @@
 		</span></span>
 	<span></span>
 </a>
-		<div class="d4r-mb-2 d4r-mt-4"><span class="    contrast-base     d4r-text-sm                 d4r-font-medium      svelte-1ltnbjr" style="--d4r-color-neutral-200: var(--d4r-color-gray-200);--d4r-color-neutral-700: var(--d4r-color-gray-700);">Concepts
+		<div class="d4r-mb-2 d4r-mt-4"><span class="    contrast-base     d4r-text-sm                  d4r-font-semibold     svelte-1ltnbjr" style="--d4r-color-neutral-200: var(--d4r-color-gray-200);--d4r-color-neutral-700: var(--d4r-color-gray-700);">Concepts
 </span></div>
 		<a href="/dapper-ui/docs/theming" class="button  svelte-inxa94 d4r-w-full   size-xs      subtle icon-start icon-end d4r-justify-start   d4r-truncate   d4r-button-icon-xs" style="--d4r-color-primary-300: var(--d4r-color-neutral-300);--d4r-color-primary-600: var(--d4r-color-neutral-600);"  type="button"><span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brush" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/brush
     </desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 21v-4a4 4 0 1 1 4 4h-4"></path><path d="M21 3a16 16 0 0 0 -12.8 10.2"></path><path d="M21 3a16 16 0 0 1 -10.2 12.8"></path><path d="M10.6 9a9 9 0 0 1 4.4 4.4"></path></svg></span>
@@ -401,30 +459,30 @@
 </h3>
 	<div class="d4r-pb-1      contrast-lower    d4r-text-base           d4r-max-w-prose    d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-400: var(--d4r-color-gray-400);--d4r-color-neutral-500: var(--d4r-color-gray-500);">
 </div>
-	<div class="d4r-border d4r-border-neutral-200 d4r-bg-white dark:d4r-border-dark-600 dark:d4r-bg-dark-800 "><div class="d4r-flex d4r-flex-col md:d4r-flex-row"><div class="d4r-flex d4r-w-full d4r-items-center d4r-justify-center d4r-overflow-hidden d4r-rounded d4r-border-neutral-200 d4r-p-8 dark:d4r-border-dark-600"><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="s901p9q563">
+	<div class="d4r-border d4r-border-neutral-200 d4r-bg-white dark:d4r-border-dark-600 dark:d4r-bg-dark-800 "><div class="d4r-flex d4r-flex-col md:d4r-flex-row"><div class="d4r-flex d4r-w-full d4r-items-center d4r-justify-center d4r-overflow-hidden d4r-rounded d4r-border-neutral-200 d4r-p-8 dark:d4r-border-dark-600"><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="my6cntnczmg">
 		Favorite Fruit
 </label>
 	
 	
-	<select style="--d4r-border-radius-input: var(--d4r-border-radius-base);" class="d4r-input-base size-base  svelte-1xkwxgj" id="s901p9q563" slot="preview"><option value="apple">Apple</option>
+	<select style="--d4r-border-radius-input: var(--d4r-border-radius-base);" class="d4r-input-base size-base  svelte-1xkwxgj" id="my6cntnczmg" slot="preview"><option value="apple">Apple</option>
 		<option value="banana">Bananna</option>
 		<option value="orange">Orange</option></select>
 	
 </div></div>
-		<div class="d4r-shrink-0 d4r-space-y-1 d4r-border-t d4r-border-neutral-200 d4r-p-8 dark:d4r-border-dark-600 md:d4r-w-[450px] md:d4r-border-t-0 md:d4r-border-l"><div class="d4r-space-y-4"><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="l7j6gfzq9h">
+		<div class="d4r-shrink-0 d4r-space-y-1 d4r-border-t d4r-border-neutral-200 d4r-p-8 dark:d4r-border-dark-600 md:d4r-w-[450px] md:d4r-border-t-0 md:d4r-border-l"><div class="d4r-space-y-4"><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="ssad1q0ubl">
 		Size
 </label>
 	
 	
-	<select style="" class="d4r-input-base size-base  svelte-1xkwxgj" id="l7j6gfzq9h"><option value="base">Base</option>
+	<select style="" class="d4r-input-base size-base  svelte-1xkwxgj" id="ssad1q0ubl"><option value="base">Base</option>
 			<option value="sm">Small</option></select>
 	
 </div>
 
-		<div><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="ne95jh8is4a">
+		<div><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="f6i0u7c0x0s">
 		Radius
 </label>
-	<div style=""><input id="ne95jh8is4a"   min="0" max="8" step="1" type="range" class="d4r-group svelte-vami14" style="background: linear-gradient(90deg, rgb(var(--d4r-color-primary-600)) 25%, rgb(var(--d4r-color-neutral-300)) 25%, rgb(var(--d4r-color-neutral-300)) 100%);" value="2"></div>
+	<div style=""><input id="f6i0u7c0x0s"   min="0" max="8" step="1" type="range" class="d4r-group svelte-vami14" style="background: linear-gradient(90deg, rgb(var(--d4r-color-primary-600)) 25%, rgb(var(--d4r-color-neutral-300)) 25%, rgb(var(--d4r-color-neutral-300)) 100%);" value="2"></div>
 	
 </div></div>
 		<div class="d4r-space-y-1 d4r-text-sm d4r-font-medium d4r-text-neutral-700"><span class="     contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);">Color
@@ -592,12 +650,12 @@
 	<span class="d4r-sr-only">Color rose</span></span>
 	
 </button></div></div>
-		<div class="d4r-space-y-2.5 lg:d4r-space-y-1.5"><div class="d4r-flex d4r-items-center d4r-gap-2"><input style="" type="checkbox" class="d4r-input-base svelte-7pjx8w" id="r82ddmip729"  >
-	<div class="-d4r-mt-1"><label class="d4r-select-none      contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="r82ddmip729">Disabled
+		<div class="d4r-space-y-2.5 lg:d4r-space-y-1.5"><div class="d4r-flex d4r-items-center d4r-gap-2"><input style="" type="checkbox" class="d4r-input-base svelte-7pjx8w" id="z6vvik0nwos"  >
+	<div class="-d4r-mt-1"><label class="d4r-select-none      contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="z6vvik0nwos">Disabled
 </label></div>
 </div>
-			<div class="d4r-flex d4r-items-center d4r-gap-2"><input style="" type="checkbox" class="d4r-input-base svelte-7pjx8w" id="dr8pbakba6"  >
-	<div class="-d4r-mt-1"><label class="d4r-select-none      contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="dr8pbakba6">Required
+			<div class="d4r-flex d4r-items-center d4r-gap-2"><input style="" type="checkbox" class="d4r-input-base svelte-7pjx8w" id="cn6rpu3i079"  >
+	<div class="-d4r-mt-1"><label class="d4r-select-none      contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="cn6rpu3i079">Required
 </label></div>
 </div></div>
 	</div></div></div>
@@ -616,8 +674,8 @@
 </span></footer></div></div></div></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="1pv5mnp">
-			import { start } from "/dapper-ui/_app/immutable/start-d1105eb3.js";
+		<script type="module" data-sveltekit-hydrate="1i3npat">
+			import { start } from "/dapper-ui/_app/immutable/start-af1905b1.js";
 
 			start({
 				env: {},
@@ -631,8 +689,8 @@
 					form: null
 				},
 				paths: {"base":"/dapper-ui","assets":"/dapper-ui"},
-				target: document.querySelector('[data-sveltekit-hydrate="1pv5mnp"]').parentNode,
-				version: "1671040255457"
+				target: document.querySelector('[data-sveltekit-hydrate="1i3npat"]').parentNode,
+				version: "1671049232391"
 			});
 		</script>
 	</div>

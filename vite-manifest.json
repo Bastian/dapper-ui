@@ -4,7 +4,7 @@
     "src": "src/routes/hero-image.webp"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-d1105eb3.js",
+    "file": "_app/immutable/start-af1905b1.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -30,7 +30,7 @@
     ]
   },
   "src/routes/+layout.svelte": {
-    "file": "_app/immutable/components/pages/_layout.svelte-365136d4.js",
+    "file": "_app/immutable/components/pages/_layout.svelte-213b0b8b.js",
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
@@ -38,7 +38,7 @@
       "_paths-2904247a.js",
       "_IconButton-4f25fd8f.js",
       "_Text-7c72c0b5.js",
-      "_ToggleDarkModeButton-91c5203a.js"
+      "_ToggleDarkModeButton-33fea1c1.js"
     ],
     "css": [
       "_app/immutable/assets/_layout-0eda187a.css"
@@ -54,7 +54,7 @@
     ]
   },
   "src/routes/docs/+layout.svelte": {
-    "file": "_app/immutable/components/pages/docs/_layout.svelte-82775beb.js",
+    "file": "_app/immutable/components/pages/docs/_layout.svelte-b63910b5.js",
     "src": "src/routes/docs/+layout.svelte",
     "isEntry": true,
     "imports": [
@@ -63,13 +63,13 @@
       "_stores-012d70e5.js",
       "_IconButton-4f25fd8f.js",
       "_Text-7c72c0b5.js",
-      "_ToggleDarkModeButton-91c5203a.js",
+      "_ToggleDarkModeButton-33fea1c1.js",
       "src/routes/+layout.svelte",
       "_Footer-cd48d839.js"
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-88770785.js",
+    "file": "_app/immutable/components/pages/_page.svelte-07c6a32e.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -77,7 +77,7 @@
       "_paths-2904247a.js",
       "_IconButton-4f25fd8f.js",
       "_Text-7c72c0b5.js",
-      "_ToggleDarkModeButton-91c5203a.js",
+      "_ToggleDarkModeButton-33fea1c1.js",
       "_InputBase-ae7e5c3a.js",
       "_TextField-fc7f4adf.js",
       "_Footer-cd48d839.js"
@@ -240,8 +240,8 @@
       "_app/immutable/assets/Text-766c024b.css"
     ]
   },
-  "_ToggleDarkModeButton-91c5203a.js": {
-    "file": "_app/immutable/chunks/ToggleDarkModeButton-91c5203a.js",
+  "_ToggleDarkModeButton-33fea1c1.js": {
+    "file": "_app/immutable/chunks/ToggleDarkModeButton-33fea1c1.js",
     "imports": [
       "_index-5f858542.js",
       "_paths-2904247a.js",
@@ -323,7 +323,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "_app/immutable/chunks/0-d35f9676.js",
+    "file": "_app/immutable/chunks/0-445c60a2.js",
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
@@ -340,7 +340,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-f0da2b0a.js",
+    "file": "_app/immutable/chunks/2-88ac42ef.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -348,7 +348,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/3.js": {
-    "file": "_app/immutable/chunks/3-76ec594c.js",
+    "file": "_app/immutable/chunks/3-414f66ec.js",
     "src": ".svelte-kit/generated/nodes/3.js",
     "isDynamicEntry": true,
     "imports": [
@@ -439,6 +439,10 @@
     "file": "_app/immutable/assets/_layout-0eda187a.css",
     "src": "src/routes/+layout.css"
   },
+  "IconButton.css": {
+    "file": "_app/immutable/assets/IconButton-fce5b7ca.css",
+    "src": "IconButton.css"
+  },
   "ToggleDarkModeButton.css": {
     "file": "_app/immutable/assets/ToggleDarkModeButton-4be5234a.css",
     "src": "ToggleDarkModeButton.css"
@@ -446,14 +450,6 @@
   "src/routes/+page.css": {
     "file": "_app/immutable/assets/_page-3ae4930d.css",
     "src": "src/routes/+page.css"
-  },
-  "IconButton.css": {
-    "file": "_app/immutable/assets/IconButton-fce5b7ca.css",
-    "src": "IconButton.css"
-  },
-  "Text.css": {
-    "file": "_app/immutable/assets/Text-766c024b.css",
-    "src": "Text.css"
   },
   "TextField.css": {
     "file": "_app/immutable/assets/TextField-0aa27560.css",
@@ -463,12 +459,16 @@
     "file": "_app/immutable/assets/InputBase-e080cb50.css",
     "src": "InputBase.css"
   },
-  "Slider.css": {
-    "file": "_app/immutable/assets/Slider-bf9f187f.css",
-    "src": "Slider.css"
+  "Text.css": {
+    "file": "_app/immutable/assets/Text-766c024b.css",
+    "src": "Text.css"
   },
   "Select.css": {
     "file": "_app/immutable/assets/Select-775a58c1.css",
     "src": "Select.css"
+  },
+  "Slider.css": {
+    "file": "_app/immutable/assets/Slider-bf9f187f.css",
+    "src": "Slider.css"
   }
 }
