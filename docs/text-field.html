@@ -60,36 +60,45 @@
 					/* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/tinos-v24-latin-regular.woff')
 						format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 			}
+			/* fira-mono-regular - latin */
+			@font-face {
+				font-family: 'Fira Mono';
+				font-style: normal;
+				font-weight: 400;
+				src: local(''), url('../fonts/fira-mono-v14-latin-regular.woff2') format('woff2'),
+					/* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/fira-mono-v14-latin-regular.woff')
+						format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+			}
 		</style>
 
 		<meta http-equiv="content-security-policy" content="">
 		<link href="/dapper-ui/_app/immutable/assets/_layout-0eda187a.css" rel="stylesheet">
 		<link href="/dapper-ui/_app/immutable/assets/IconButton-fce5b7ca.css" rel="stylesheet">
 		<link href="/dapper-ui/_app/immutable/assets/Text-766c024b.css" rel="stylesheet">
-		<link href="/dapper-ui/_app/immutable/assets/ToggleDarkModeButton-4be5234a.css" rel="stylesheet">
+		<link href="/dapper-ui/_app/immutable/assets/ToggleDarkModeButton-55b3d1cc.css" rel="stylesheet">
 		<link href="/dapper-ui/_app/immutable/assets/TextField-0aa27560.css" rel="stylesheet">
 		<link href="/dapper-ui/_app/immutable/assets/InputBase-e080cb50.css" rel="stylesheet">
-		<link href="/dapper-ui/_app/immutable/assets/Slider-bf9f187f.css" rel="stylesheet">
+		<link href="/dapper-ui/_app/immutable/assets/Slider-84c9fc28.css" rel="stylesheet">
 		<link href="/dapper-ui/_app/immutable/assets/Select-775a58c1.css" rel="stylesheet">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/start-af1905b1.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/start-1860cee8.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/index-5f858542.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/singletons-c87329b0.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/paths-2904247a.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/_layout.svelte-213b0b8b.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/_layout.svelte-81f2ed1c.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/IconButton-4f25fd8f.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Text-7c72c0b5.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/ToggleDarkModeButton-33fea1c1.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/ToggleDarkModeButton-d6c8dc2d.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/_layout-1daba58d.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/docs/_layout.svelte-b63910b5.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/docs/_layout.svelte-9b69c86e.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/stores-012d70e5.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Footer-cd48d839.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/docs/text-field/_page.svelte-3cb1a972.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/docs/text-field/_page.svelte-85c54794.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/TextField-fc7f4adf.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/InputBase-ae7e5c3a.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Slider-8ff85f8b.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/RadiusSlider-c641667a.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Select-4db42734.js"><title>TextField - Dapper UI</title><!-- HEAD_svelte-14llyz1_START -->
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Slider-3337b7a8.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/RadiusSlider-c7c6c0b3.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Select-4db42734.js"><title>TextField - Dapper UI</title><!-- HEAD_svelte-2jhqr1_START -->
 		<!-- HTML_TAG_START --><style type="text/css">:root {
 --d4r-color-primary-50: 239 246 255;
 --d4r-color-primary-100: 219 234 254;
@@ -356,7 +365,8 @@
 --d4r-border-radius-slider-thumb: var(--d4r-border-radius-full);
 --d4r-border-radius-slider-track: var(--d4r-border-radius-full);
 font-family: 'Open Sans', sans-serif;
-	</style><!-- HTML_TAG_END --><!-- HEAD_svelte-14llyz1_END --><!-- HEAD_svelte-1cj1t8y_START --><meta name="description" content="Documentation for the TextField component of Dapper UI. A sleek and modern UI component library for Svelte."><!-- HEAD_svelte-1cj1t8y_END -->
+}code {font-family: 'Fira Mono', monospace;}
+	</style><!-- HTML_TAG_END --><!-- HEAD_svelte-2jhqr1_END --><!-- HEAD_svelte-1cj1t8y_START --><meta name="description" content="Documentation for the TextField component of Dapper UI. A sleek and modern UI component library for Svelte."><!-- HEAD_svelte-1cj1t8y_END -->
 	</head>
 	<body class="d4r-h-full d4r-bg-neutral-100 dark:d4r-bg-dark-700">
 		<div class="d4r-h-full">
@@ -461,34 +471,34 @@ font-family: 'Open Sans', sans-serif;
 </h3>
 	<div class="d4r-pb-1      contrast-lower    d4r-text-base           d4r-max-w-prose    d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-400: var(--d4r-color-gray-400);--d4r-color-neutral-500: var(--d4r-color-gray-500);">
 </div>
-	<div class="d4r-border d4r-border-neutral-200 d4r-bg-white dark:d4r-border-dark-600 dark:d4r-bg-dark-800 "><div class="d4r-flex d4r-flex-col md:d4r-flex-row"><div class="d4r-flex d4r-w-full d4r-items-center d4r-justify-center d4r-overflow-hidden d4r-rounded d4r-border-neutral-200 d4r-p-8 dark:d4r-border-dark-600"><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="4q2tfbbrbks"><span class="d4r-input-icon-label-base      contrast-lower    d4r-text-base               d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-400: var(--d4r-color-gray-400);--d4r-color-neutral-500: var(--d4r-color-gray-500);"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bulb" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/bulb</desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"></path><path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"></path><line x1="9.7" y1="17" x2="14.3" y2="17"></line></svg>
+	<div class="d4r-border d4r-border-neutral-200 d4r-bg-white dark:d4r-border-dark-600 dark:d4r-bg-dark-800 "><div class="d4r-flex d4r-flex-col md:d4r-flex-row"><div class="d4r-flex d4r-w-full d4r-items-center d4r-justify-center d4r-overflow-hidden d4r-rounded d4r-border-neutral-200 d4r-p-8 dark:d4r-border-dark-600"><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="xhojuot0hl"><span class="d4r-input-icon-label-base      contrast-lower    d4r-text-base               d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-400: var(--d4r-color-gray-400);--d4r-color-neutral-500: var(--d4r-color-gray-500);"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bulb" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/bulb</desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"></path><path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"></path><line x1="9.7" y1="17" x2="14.3" y2="17"></line></svg>
 </span>
 		Example
 </label>
 	<div class="d4r-relative d4r-w-full">
-		<input style="--d4r-border-radius-input: var(--d4r-border-radius-base);" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="4q2tfbbrbks" type="text"    value=""></div>
+		<input style="--d4r-border-radius-input: var(--d4r-border-radius-base);" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="xhojuot0hl" type="text"    value=""></div>
 	
 </div></div>
-		<div class="d4r-shrink-0 d4r-space-y-1 d4r-border-t d4r-border-neutral-200 d4r-p-8 dark:d4r-border-dark-600 md:d4r-w-[450px] md:d4r-border-t-0 md:d4r-border-l"><div class="d4r-space-y-4"><div><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="tedw4hhadkd">
+		<div class="d4r-shrink-0 d4r-space-y-1 d4r-border-t d4r-border-neutral-200 d4r-p-8 dark:d4r-border-dark-600 md:d4r-w-[450px] md:d4r-border-t-0 md:d4r-border-l"><div class="d4r-space-y-4"><div><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="kzr9jt6ywgq">
 		Label
 </label>
 	<div class="d4r-relative d4r-w-full">
-		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="tedw4hhadkd" type="text"    value="Example"></div>
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="kzr9jt6ywgq" type="text"    value="Example"></div>
 	
 </div></div>
-		<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="bm14kp1e10n">
+		<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="gp0q508cexh">
 		Size
 </label>
 	
 	
-	<select style="" class="d4r-input-base size-base  svelte-1xkwxgj" id="bm14kp1e10n"><option value="base">Base</option>
+	<select style="" class="d4r-input-base size-base  svelte-1xkwxgj" id="gp0q508cexh"><option value="base">Base</option>
 			<option value="sm">Small</option></select>
 	
 </div>
-		<div><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="x9xfxly2sb7">
+		<div><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="6rl5mhglpci">
 		Radius
 </label>
-	<div style=""><input id="x9xfxly2sb7"   min="0" max="8" step="1" type="range" class="d4r-group svelte-vami14" style="background: linear-gradient(90deg, rgb(var(--d4r-color-primary-600)) 25%, rgb(var(--d4r-color-neutral-300)) 25%, rgb(var(--d4r-color-neutral-300)) 100%);" value="2"></div>
+	<div style=""><input id="6rl5mhglpci"   min="0" max="8" step="1" type="range" class="d4r-group svelte-vami14" style="background: linear-gradient(90deg, rgb(var(--d4r-color-primary-600)) 25%, rgb(var(--d4r-color-neutral-300)) 25%, rgb(var(--d4r-color-neutral-300)) 100%);" value="2"></div>
 	
 </div></div>
 		<div class="d4r-space-y-1 d4r-text-sm d4r-font-medium d4r-text-neutral-700"><span class="     contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);">Color
@@ -656,138 +666,138 @@ font-family: 'Open Sans', sans-serif;
 	<span class="d4r-sr-only">Color rose</span></span>
 	
 </button></div></div>
-		<div class="d4r-space-y-2.5 lg:d4r-space-y-1.5"><div class="d4r-flex d4r-items-center d4r-gap-2"><input style="" type="checkbox" class="d4r-input-base svelte-7pjx8w" id="ag52luh17jj"  >
-	<div class="-d4r-mt-1"><label class="d4r-select-none      contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="ag52luh17jj">Disabled
+		<div class="d4r-space-y-2.5 lg:d4r-space-y-1.5"><div class="d4r-flex d4r-items-center d4r-gap-2"><input style="" type="checkbox" class="d4r-input-base svelte-7pjx8w" id="o112f8ehr5"  >
+	<div class="-d4r-mt-1"><label class="d4r-select-none      contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="o112f8ehr5">Disabled
 </label></div>
 </div>
-			<div class="d4r-flex d4r-items-center d4r-gap-2"><input style="" type="checkbox" class="d4r-input-base svelte-7pjx8w" id="h8qoxe7q7fg"  >
-	<div class="-d4r-mt-1"><label class="d4r-select-none      contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="h8qoxe7q7fg">Required
+			<div class="d4r-flex d4r-items-center d4r-gap-2"><input style="" type="checkbox" class="d4r-input-base svelte-7pjx8w" id="qa1j2ymk39k"  >
+	<div class="-d4r-mt-1"><label class="d4r-select-none      contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="qa1j2ymk39k">Required
 </label></div>
 </div></div>
 	</div></div></div>
-	<div class="d4r-border-t d4r-border-neutral-200 d4r-bg-neutral-50 d4r-p-4 dark:d4r-border-dark-600 dark:d4r-bg-dark-800"><div class="d4r-flex d4r-items-start d4r-gap-2 "><div class="d4r-mt-[7px] d4r-select-none d4r-border-r d4r-border-neutral-200 d4r-px-4 d4r-text-sm d4r-text-neutral-500 dark:d4r-border-dark-600"><pre>1
+	<div class="d4r-border-t d4r-border-neutral-200 d4r-bg-neutral-50 d4r-p-4 dark:d4r-border-dark-600 dark:d4r-bg-dark-800"><div class="d4r-flex d4r-items-start d4r-gap-2 "><div class="d4r-mt-2 d4r-select-none d4r-border-r d4r-border-neutral-200 d4r-px-4 d4r-text-sm d4r-text-neutral-500 dark:d4r-border-dark-600"><pre>1
 2
 3</pre></div>
-	<div class="d4r-overflow-x-auto"><div class=""><pre class="d4r-overflow-x d4r-text-sm"><code class="hljs d4r-rounded-lg">&lt;TextField label="Example">
+	<div class="d4r-overflow-x-auto d4r-py-2"><div class=""><pre class="d4r-overflow-x d4r-text-sm"><code class="hljs d4r-rounded-lg">&lt;TextField label="Example">
     &lt;Bulb slot="icon-label"/>
 &lt;/TextField></code></pre></div></div></div></div></div></article>
 
 	<article class="d4r-space-y-2"><h3 class="    contrast-base       d4r-text-lg               d4r-font-medium      svelte-1ltnbjr" style="--d4r-color-neutral-200: var(--d4r-color-gray-200);--d4r-color-neutral-700: var(--d4r-color-gray-700);">Variants
 </h3>
 	
-	<div class="d4r-border d4r-border-neutral-200 d4r-bg-white dark:d4r-border-dark-600 dark:d4r-bg-dark-800 "><div class="d4r-grid d4r-grid-cols-1 d4r-gap-4 d4r-p-8 sm:d4r-grid-cols-2 lg:d4r-grid-cols-3"><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="r4dosg69xin">
+	<div class="d4r-border d4r-border-neutral-200 d4r-bg-white dark:d4r-border-dark-600 dark:d4r-bg-dark-800 "><div class="d4r-grid d4r-grid-cols-1 d4r-gap-4 d4r-p-8 sm:d4r-grid-cols-2 lg:d4r-grid-cols-3"><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="3owz3f6vlis">
 		Default
 </label>
 	<div class="d4r-relative d4r-w-full">
-		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="r4dosg69xin" type="text"    value=""></div>
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="3owz3f6vlis" type="text"    value=""></div>
 	
 </div>
-			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="w5yaopqv3m">
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="wgilibfegan">
 		Number
 </label>
 	<div class="d4r-relative d4r-w-full">
-		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="w5yaopqv3m" type="number"    value=""></div>
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="wgilibfegan" type="number"    value=""></div>
 	
 </div>
-			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="mmdbowd7w3g">
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="sd2ss2phtpe">
 		Password
 </label>
 	<div class="d4r-relative d4r-w-full">
-		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="mmdbowd7w3g" type="password"    value=""></div>
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="sd2ss2phtpe" type="password"    value=""></div>
 	
 </div>
-			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="hqzoodr2wko">
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="6m7rt28n2dq">
 		Placeholder
 </label>
 	<div class="d4r-relative d4r-w-full">
-		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="hqzoodr2wko" placeholder="Placeholder" type="text"    value=""></div>
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="6m7rt28n2dq" placeholder="Placeholder" type="text"    value=""></div>
 	
 </div>
-			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="7j2g7mirbdp">
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="3x50i6sbn5c">
 		Start Icon
 </label>
 	<div class="d4r-relative d4r-w-full"><span class="d4r-input-icon-start      contrast-lower    d4r-text-base               d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-400: var(--d4r-color-gray-400);--d4r-color-neutral-500: var(--d4r-color-gray-500);"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/user</desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="7" r="4"></circle><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path></svg>
 </span>
-		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base  d4r-pl-9" id="7j2g7mirbdp" placeholder="jane.doe@dapper-ui.dev" type="text"    value=""></div>
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base  d4r-pl-9" id="3x50i6sbn5c" placeholder="jane.doe@dapper-ui.dev" type="text"    value=""></div>
 	
 </div>
-			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5  d4r-input-required      contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="tpiuo7opnxe">
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5  d4r-input-required      contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="m2nqwomvjx">
 		Required
 </label>
 	<div class="d4r-relative d4r-w-full">
-		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="tpiuo7opnxe" type="text"  required  value=""></div>
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="m2nqwomvjx" type="text"  required  value=""></div>
 	
 </div>
-			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block   d4r-opacity-50"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="lew84z579o">
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block   d4r-opacity-50"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="h0nsxxwsko7">
 		Disabled
 </label>
 	<div class="d4r-relative d4r-w-full">
-		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="lew84z579o" type="text" disabled   value=""></div>
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="h0nsxxwsko7" type="text" disabled   value=""></div>
 	
 </div>
-			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="pvujare8nng">
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="ja39nnuel7e">
 		Readonly
 </label>
 	<div class="d4r-relative d4r-w-full">
-		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="pvujare8nng" type="text"   readonly value="Readonly"></div>
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="ja39nnuel7e" type="text"   readonly value="Readonly"></div>
 	
 </div>
-			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="n8vylu8fyr">
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="7ysiywdnlp5">
 		Error
 </label>
 	<div class="d4r-relative d4r-w-full">
-		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="n8vylu8fyr" type="text"    value=""></div>
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="7ysiywdnlp5" type="text"    value=""></div>
 	<span class="      contrast-lower  d4r-text-xs                 d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-400: var(--d4r-color-red-400);--d4r-color-neutral-500: var(--d4r-color-red-500);">Something is wrong!
 </span>
 </div>
-			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="8uzfp13z465">
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="q26gyydn91j">
 		Help Text
 </label>
 	<div class="d4r-relative d4r-w-full">
-		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="8uzfp13z465" type="text"    value=""></div>
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="q26gyydn91j" type="text"    value=""></div>
 	<span class="      contrast-lower  d4r-text-xs                 d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-400: var(--d4r-color-gray-400);--d4r-color-neutral-500: var(--d4r-color-gray-500);">Need Help?
 </span>
 </div>
-			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="muleuqvhea">
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="id5mu0rhj1j">
 		Round
 </label>
 	<div class="d4r-relative d4r-w-full">
-		<input style="--d4r-border-radius-input: var(--d4r-border-radius-full);" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="muleuqvhea" type="text"    value=""></div>
+		<input style="--d4r-border-radius-input: var(--d4r-border-radius-full);" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="id5mu0rhj1j" type="text"    value=""></div>
 	
 </div>
-			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="xtpcfs9uuse">
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="0d1m427v92ea">
 		Square
 </label>
 	<div class="d4r-relative d4r-w-full">
-		<input style="--d4r-border-radius-input: var(--d4r-border-radius-none);" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="xtpcfs9uuse" type="text"    value=""></div>
+		<input style="--d4r-border-radius-input: var(--d4r-border-radius-none);" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="0d1m427v92ea" type="text"    value=""></div>
 	
 </div>
-			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="x9j8f2kwc1e">
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="l36kjaewii">
 		Colored
 </label>
 	<div class="d4r-relative d4r-w-full">
-		<input style="--d4r-color-primary-400: var(--d4r-color-green-400);--d4r-color-primary-500: var(--d4r-color-green-500);--d4r-color-primary-700: var(--d4r-color-green-700);" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="x9j8f2kwc1e" type="text"    value=""></div>
+		<input style="--d4r-color-primary-400: var(--d4r-color-green-400);--d4r-color-primary-500: var(--d4r-color-green-500);--d4r-color-primary-700: var(--d4r-color-green-700);" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="l36kjaewii" type="text"    value=""></div>
 	
 </div>
-			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1 d4r-self-end d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5 d4r-hidden       contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="tampccto2i">
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1 d4r-self-end d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5 d4r-hidden       contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="2sxfu12qj91">
 		Hidden Label
 </label>
 	<div class="d4r-relative d4r-w-full">
-		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="tampccto2i" placeholder="Hidden Label" type="text"    value=""></div>
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="2sxfu12qj91" placeholder="Hidden Label" type="text"    value=""></div>
 	
 </div>
-			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1 d4r-self-end d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low   d4r-text-xs                 d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="kjapdzjzgf">
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1 d4r-self-end d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low   d4r-text-xs                 d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="p9ibaoiznqn">
 		Small
 </label>
 	<div class="d4r-relative d4r-w-full">
-		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk  size-sm" id="kjapdzjzgf" type="text"    value=""></div>
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk  size-sm" id="p9ibaoiznqn" type="text"    value=""></div>
 	
 </div>
-			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1 d4r-col-span-1 sm:d4r-col-span-2 lg:d4r-col-span-3 d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="qnkn8hfago">
+			<div class="d4r-inline-flex d4r-flex-col d4r-gap-1 d4r-col-span-1 sm:d4r-col-span-2 lg:d4r-col-span-3 d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                d4r-font-normal       svelte-1ltnbjr" style="--d4r-color-neutral-300: var(--d4r-color-gray-300);--d4r-color-neutral-600: var(--d4r-color-gray-600);" for="5fmbncxcwfl">
 		Full Width
 </label>
 	<div class="d4r-relative d4r-w-full">
-		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="qnkn8hfago" type="text"    value=""></div>
+		<input style="" class="d4r-input-base d4r-w-full svelte-1x2duyk size-base" id="5fmbncxcwfl" type="text"    value=""></div>
 	
 </div></div></div></article></div></div></div>
 	<div class="d4r-flex"><div class="d4r-hidden d4r-w-[220px] d4r-shrink-0 lg:d4r-block"></div>
@@ -795,8 +805,8 @@ font-family: 'Open Sans', sans-serif;
 </span></footer></div></div></div></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="13duvi9">
-			import { start } from "/dapper-ui/_app/immutable/start-af1905b1.js";
+		<script type="module" data-sveltekit-hydrate="1rtbker">
+			import { start } from "/dapper-ui/_app/immutable/start-1860cee8.js";
 
 			start({
 				env: {},
@@ -810,8 +820,8 @@ font-family: 'Open Sans', sans-serif;
 					form: null
 				},
 				paths: {"base":"/dapper-ui","assets":"/dapper-ui"},
-				target: document.querySelector('[data-sveltekit-hydrate="13duvi9"]').parentNode,
-				version: "1671049232391"
+				target: document.querySelector('[data-sveltekit-hydrate="1rtbker"]').parentNode,
+				version: "1671051817960"
 			});
 		</script>
 	</div>
