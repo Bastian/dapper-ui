@@ -121,6 +121,7 @@
 		@apply d4r-font-medium d4r-text-neutral-100;
 		@apply d4r-outline-none focus:d4r-outline-none;
 		@apply disabled:d4r-opacity-50;
+		-webkit-tap-highlight-color: transparent;
 	}
 
 	.d4r-button-icon-base svg {
