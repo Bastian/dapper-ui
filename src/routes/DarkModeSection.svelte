@@ -19,7 +19,7 @@
 				user's system preference. The default dark color theme is beautiful and can be easily
 				customized to your taste. Components like <code>Text</code> use the <code>contrast</code> prop
 				to automatically adjust the text color based on the active mode (dark or light), reducing the
-				overhead of specifying the background color explicitly.
+				overhead of specifying the text color explicitly.
 			</Text>
 			<ToggleDarkModeButton />
 		</div>
