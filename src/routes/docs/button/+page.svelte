@@ -1,15 +1,16 @@
 <script lang="ts">
 	import Button from '$lib/components/button/Button.svelte';
 	import IconButton from '$lib/components/icon-button/IconButton.svelte';
-	import Text from '$lib/components/text/Text.svelte';
 	import type { ComponentProps } from 'svelte';
 	import StyledCodeBlock from '../../../doc-components/code-highlight/StyledCodeBlock.svelte';
+	import DocBox from '../DocBox.svelte';
 	import DocContent from '../DocContent.svelte';
 	import DocIntoText from '../DocIntoText.svelte';
 	import DocSection from '../DocSection.svelte';
 	import DocSectionText from '../DocSectionText.svelte';
 	import DocSectionTitle from '../DocSectionTitle.svelte';
 	import DocTitle from '../DocTitle.svelte';
+	import Example from '../Example.svelte';
 	import ButtonExample from './ButtonExample.svelte';
 	import IconButtonExample from './IconButtonExample.svelte';
 
@@ -34,14 +35,14 @@
 	<ButtonExample />
 
 	<DocSection title="Variants">
-		<div class="d4r-flex d4r-flex-wrap d4r-items-center d4r-justify-center d4r-gap-4 d4r-p-8">
+		<DocBox class="d4r-flex d4r-flex-wrap d4r-items-center d4r-justify-center d4r-gap-4 d4r-p-8">
 			<Button>Solid</Button>
 			<Button variant="outline">Outline</Button>
 			<Button variant="outline-dashed">Dashed</Button>
 			<Button variant="light">Light</Button>
 			<Button variant="subtle">Subtle</Button>
 			<Button variant="gradient" gradient={{ from: 'indigo', to: 'sky' }}>Gradient</Button>
-		</div>
+		</DocBox>
 	</DocSection>
 
 	<div class="d4r-space-y-2">
@@ -54,19 +55,27 @@
 			recommended setting the <code>color</code> prop as well, as it will be used for the outline color
 			when the button is selected.
 		</DocSectionText>
-		<div class="d4r-flex d4r-gap-2">
-			<Button variant="gradient" gradient="radial-gradient(#f71600, #ffc135)">CSS Gradient</Button>
-			<Button variant="gradient" gradient={{ from: 'cyan', to: 'violet' }}>Object Gradient</Button>
-			<Button variant="gradient" gradient={{ from: ['cyan', 100], to: ['violet', 900] }}>
-				Object Gradient With Shades
-			</Button>
-		</div>
-		<StyledCodeBlock
-			class="d4r-bg-neutral-50 dark:d4r-bg-dark-800"
-			code={`<Button variant="gradient" gradient="radial-gradient(#f71600, #ffc135)">Gradient</Button>
-<Button variant="gradient" gradient={{ from: "cyan", to: "violet" }}>Object Gradient</Button>
-<Button variant="gradient" gradient={{ from: ["cyan", 100], to: ["violet", 900] }}>Object Gradient With Shades</Button>`}
-		/>
+		<Example
+			code={`<Button variant="gradient" gradient="radial-gradient(#f71600, #ffc135)">
+    Gradient
+</Button>
+<Button variant="gradient" gradient={{ from: "cyan", to: "violet" }}>
+    Object Gradient
+</Button>
+<Button variant="gradient" gradient={{ from: ["cyan", 100], to: ["violet", 900] }}>
+    Object Gradient With Shades
+</Button>`}
+		>
+			<div slot="preview" class="d4r-flex d4r-flex-wrap d4r-gap-2">
+				<Button variant="gradient" gradient="radial-gradient(#f71600, #ffc135)">CSS Gradient</Button
+				>
+				<Button variant="gradient" gradient={{ from: 'cyan', to: 'violet' }}>Object Gradient</Button
+				>
+				<Button variant="gradient" gradient={{ from: ['cyan', 100], to: ['violet', 900] }}>
+					Object Gradient With Shades
+				</Button>
+			</div>
+		</Example>
 	</div>
 
 	<div class="d4r-space-y-2">
@@ -79,15 +88,15 @@
 			you to have the best of both worlds: a visually appealing button design and the functionality of
 			a link.
 		</DocSectionText>
-		<div class="d4r-flex d4r-gap-2">
-			<Button href="https://google.com" target="_blank">I am a link in disguise!</Button>
-		</div>
-		<StyledCodeBlock
-			class="d4r-bg-neutral-50 dark:d4r-bg-dark-800"
+		<Example
 			code={`<Button href="https://google.com" target="_blank">
     I am a link in disguise!
 </Button>`}
-		/>
+		>
+			<div slot="preview">
+				<Button href="https://google.com" target="_blank">I am a link in disguise!</Button>
+			</div>
+		</Example>
 	</div>
 
 	<IconButtonExample />
@@ -97,12 +106,14 @@
 			The default color palette of Dapper UI is a replica of TailwindCSS's color palette. You can
 			see it in action below.
 		</span>
-		{#each variants as variant}
-			<div class="d4r-flex d4r-flex-wrap d4r-items-center d4r-justify-center d4r-gap-1">
-				{#each ['gray', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose'] as c}
-					<IconButton label="Example" size="xs" {variant} color={c}>✓</IconButton>
-				{/each}
-			</div>
-		{/each}
+		<DocBox class="d4r-space-y-2 d4r-p-8">
+			{#each variants as variant}
+				<div class="d4r-flex d4r-flex-wrap d4r-items-center d4r-justify-center d4r-gap-1">
+					{#each ['gray', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose'] as c}
+						<IconButton label="Example" size="xs" {variant} color={c}>✓</IconButton>
+					{/each}
+				</div>
+			{/each}
+		</DocBox>
 	</DocSection>
 </DocContent>

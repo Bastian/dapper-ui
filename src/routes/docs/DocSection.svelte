@@ -1,21 +1,19 @@
 <script lang="ts">
-	import Text from '$lib/components/text/Text.svelte';
 	import DocSectionText from './DocSectionText.svelte';
 	import DocSectionTitle from './DocSectionTitle.svelte';
-	import ElementBox from './ElementBox.svelte';
 
 	let className = '';
 	export { className as class };
 
-	export let title: string;
+	export let title: string | undefined;
 </script>
 
 <article class="d4r-space-y-2">
-	<DocSectionTitle>{title}</DocSectionTitle>
+	{#if title}
+		<DocSectionTitle>{title}</DocSectionTitle>
+	{/if}
 	<DocSectionText>
 		<slot name="description" />
 	</DocSectionText>
-	<ElementBox class={className}>
-		<slot />
-	</ElementBox>
+	<slot />
 </article>

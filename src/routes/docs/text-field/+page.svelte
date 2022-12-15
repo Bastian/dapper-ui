@@ -1,6 +1,7 @@
 <script>
 	import TextField from '$lib/components/text-field/TextField.svelte';
 	import { User } from 'tabler-icons-svelte';
+	import DocBox from '../DocBox.svelte';
 	import DocContent from '../DocContent.svelte';
 	import DocIntoText from '../DocIntoText.svelte';
 	import DocSection from '../DocSection.svelte';
@@ -18,7 +19,9 @@
 	<TextFieldExample />
 
 	<DocSection title="Variants">
-		<div class="d4r-grid d4r-grid-cols-1 d4r-gap-4 d4r-p-8 sm:d4r-grid-cols-2 lg:d4r-grid-cols-3">
+		<DocBox
+			class="d4r-grid d4r-grid-cols-1 d4r-gap-4 d4r-p-8 sm:d4r-grid-cols-2 lg:d4r-grid-cols-3"
+		>
 			<TextField label="Default" />
 			<TextField label="Number" type="number" />
 			<TextField label="Password" type="password" />
@@ -37,6 +40,6 @@
 			<TextField class="d4r-self-end" label="Hidden Label" placeholder="Hidden Label" hideLabel />
 			<TextField class="d4r-self-end" label="Small" size="sm" />
 			<TextField class="d4r-col-span-1 sm:d4r-col-span-2 lg:d4r-col-span-3" label="Full Width" />
-		</div>
+		</DocBox>
 	</DocSection>
 </DocContent>
