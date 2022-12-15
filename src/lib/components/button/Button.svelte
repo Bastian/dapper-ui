@@ -166,15 +166,15 @@ needs of any design. Additionally, the Button can function as a link.
 	on:keyup
 >
 	{#if $$slots['icon-start']}
-		<span>
+		<div class="d4r-flex">
 			<slot name="icon-start" />
-		</span>
+		</div>
 	{/if}
 	<span class:d4r-truncate={!noTruncate}><slot /></span>
 	{#if $$slots['icon-end']}
-		<span>
+		<div class="d4r-flex">
 			<slot name="icon-end" />
-		</span>
+		</div>
 	{/if}
 </svelte:element>
 
