@@ -101,7 +101,7 @@
 
 	<IconButtonExample />
 
-	<DocSection title="Colors" class="d4r-space-y-2 d4r-p-8">
+	<DocSection title="Colors" class="d4r-space-y-2">
 		<span slot="description">
 			The default color palette of Dapper UI is a replica of TailwindCSS's color palette. You can
 			see it in action below.
