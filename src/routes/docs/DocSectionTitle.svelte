@@ -1,0 +1,5 @@
+<script lang="ts">
+	import Text from '$lib/components/text/Text.svelte';
+</script>
+
+<Text tag="h3" size="xl" weight="bold" contrast="high"><slot /></Text>

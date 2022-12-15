@@ -27,7 +27,7 @@
 	});
 </script>
 
-<Example title="Slider" {code}>
+<Example title="Demo" {code}>
 	<Slider label="Example" slot="preview" {color} {radius} {disabled} {required} />
 	<svelte:fragment slot="controls">
 		<div>

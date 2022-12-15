@@ -39,7 +39,7 @@
 	});
 </script>
 
-<Example title="Select" {code}>
+<Example title="Demo" {code}>
 	<Select label="Favorite Fruit" slot="preview" {disabled} {color} {size} {radius} {required}>
 		<option value="apple">Apple</option>
 		<option value="banana">Bananna</option>

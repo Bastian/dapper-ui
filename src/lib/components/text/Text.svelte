@@ -42,6 +42,9 @@
 		| 'extrabold'
 		| 'black' = 'normal';
 
+	export let lineHeight: 'none' | 'tight' | 'snug' | 'normal' | 'relaxed' | 'loose' | undefined =
+		undefined;
+
 	export let tag: 'span' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | string = 'span';
 
 	export let prose = false;
@@ -88,6 +91,12 @@
 	class:d4r-text-7xl={size === '7xl'}
 	class:d4r-text-8xl={size === '8xl'}
 	class:d4r-text-9xl={size === '9xl'}
+	class:d4r-leading-none={lineHeight === 'none'}
+	class:d4r-leading-tight={lineHeight === 'tight'}
+	class:d4r-leading-snug={lineHeight === 'snug'}
+	class:d4r-leading-normal={lineHeight === 'normal'}
+	class:d4r-leading-relaxed={lineHeight === 'relaxed'}
+	class:d4r-leading-loose={lineHeight === 'loose'}
 	class:d4r-max-w-prose={prose}
 	class:d4r-font-thin={weight === 'thin'}
 	class:d4r-font-extralight={weight === 'extralight'}

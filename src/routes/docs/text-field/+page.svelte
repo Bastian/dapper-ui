@@ -1,19 +1,20 @@
 <script>
 	import TextField from '$lib/components/text-field/TextField.svelte';
 	import { User } from 'tabler-icons-svelte';
+	import DocContent from '../DocContent.svelte';
+	import DocIntoText from '../DocIntoText.svelte';
 	import DocSection from '../DocSection.svelte';
+	import DocTitle from '../DocTitle.svelte';
 	import TextFieldExample from './TextFieldExample.svelte';
 </script>
 
-<svelte:head>
-	<title>TextField - Dapper UI</title>
-	<meta
-		name="description"
-		content="Documentation for the TextField component of Dapper UI. A sleek and modern UI component library for Svelte."
-	/>
-</svelte:head>
+<DocTitle title="TextField" />
+<DocIntoText
+	text="The TextField component is a versatile input field that allows users to enter text,
+	numbers, and passwords. It can be customized in size and color."
+/>
 
-<div class="d4r-space-y-16">
+<DocContent>
 	<TextFieldExample />
 
 	<DocSection title="Variants">
@@ -38,4 +39,4 @@
 			<TextField class="d4r-col-span-1 sm:d4r-col-span-2 lg:d4r-col-span-3" label="Full Width" />
 		</div>
 	</DocSection>
-</div>
+</DocContent>

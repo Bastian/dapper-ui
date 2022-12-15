@@ -1,13 +1,7 @@
-<script>
-	import Text from '$lib/components/text/Text.svelte';
+<script lang="ts">
+	import DocIntoText from '../DocIntoText.svelte';
+	import DocTitle from '../DocTitle.svelte';
 </script>
 
-<svelte:head>
-	<title>Checkbox - Dapper UI</title>
-	<meta
-		name="description"
-		content="Documentation for the Checkbox component of Dapper UI. A sleek and modern UI component library for Svelte."
-	/>
-</svelte:head>
-
-<Text>tbd</Text>
+<DocTitle title="Checkbox" />
+<DocIntoText text="Tbd" />

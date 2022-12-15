@@ -29,7 +29,7 @@
 		on:click
 		on:change
 	/>
-	<div class="-d4r-mt-1">
+	<div class="-d4r-mt-0.5">
 		<Text
 			tag="label"
 			size="sm"

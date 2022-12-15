@@ -62,7 +62,7 @@
 	>
 		<div class="d4r-max-w-xl d4r-space-y-8">
 			<Text tag="h2" size="4xl" weight="bold" contrast="higher" color="primary">Customization</Text>
-			<Text tag="p" prose size="lg">
+			<Text tag="p" prose size="lg" lineHeight="relaxed">
 				Dapper UI offers a high level of customizability. You can easily modify the global theme to
 				change fonts, colors, border radiuses and more. Additionally, you can adjust the style of
 				individual components to suit your specific needs. Give it a try by selecting another theme

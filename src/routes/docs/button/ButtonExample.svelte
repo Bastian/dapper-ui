@@ -49,7 +49,7 @@
 	});
 </script>
 
-<Example title="Button" {code}>
+<Example title="Demo" {code}>
 	<svelte:fragment slot="preview">
 		<!-- Workaround until https://github.com/sveltejs/rfcs/pull/641 gets solved -->
 		{#if !iconStart && !iconEnd}

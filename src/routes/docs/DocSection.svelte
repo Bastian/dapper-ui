@@ -1,5 +1,7 @@
 <script lang="ts">
 	import Text from '$lib/components/text/Text.svelte';
+	import DocSectionText from './DocSectionText.svelte';
+	import DocSectionTitle from './DocSectionTitle.svelte';
 	import ElementBox from './ElementBox.svelte';
 
 	let className = '';
@@ -9,12 +11,10 @@
 </script>
 
 <article class="d4r-space-y-2">
-	<Text tag="h3" size="lg" weight="medium">{title}</Text>
-	{#if $$slots['description']}
-		<Text tag="div" class="d4r-pb-1" contrast="lower" prose>
-			<slot name="description" />
-		</Text>
-	{/if}
+	<DocSectionTitle>{title}</DocSectionTitle>
+	<DocSectionText>
+		<slot name="description" />
+	</DocSectionText>
 	<ElementBox class={className}>
 		<slot />
 	</ElementBox>

@@ -1,13 +1,7 @@
-<script>
-	import Text from '$lib/components/text/Text.svelte';
+<script lang="ts">
+	import DocIntoText from '../DocIntoText.svelte';
+	import DocTitle from '../DocTitle.svelte';
 </script>
 
-<svelte:head>
-	<title>Theming - Dapper UI</title>
-	<meta
-		name="description"
-		content="Documentation for the theming of Dapper UI. A sleek and modern UI component library for Svelte."
-	/>
-</svelte:head>
-
-<Text>tbd</Text>
+<DocTitle title="Theming" />
+<DocIntoText text="Tbd" />

@@ -12,6 +12,7 @@
 	export let noTruncate = false;
 
 	export let href: string | undefined = undefined;
+	export let target: string | undefined = undefined;
 
 	export let variant: 'solid' | 'outline' | 'outline-dashed' | 'light' | 'subtle' | 'gradient' =
 		'solid';
@@ -70,6 +71,7 @@
 <svelte:element
 	this={href ? 'a' : 'button'}
 	{href}
+	{target}
 	class="button {className}"
 	class:d4r-w-full={fullWidth}
 	style="{overwriteColor(color, usedColorShade)}{overwriteRadius(radius, 'button')}{gradientStyle}"

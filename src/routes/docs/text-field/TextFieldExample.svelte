@@ -38,7 +38,7 @@
 	});
 </script>
 
-<Example title="TextField" {code}>
+<Example title="Demo" {code}>
 	<svelte:fragment slot="preview">
 		<TextField {label} {color} {size} {disabled} {radius} {required}>
 			<Bulb slot="icon-label" />
