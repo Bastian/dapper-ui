@@ -13,7 +13,16 @@
 
 	export let label: string;
 
+	/**
+	 * The name of a color in the theme. Does not support arbitrary colors.
+	 *
+	 * When set to `undefined`, the primary color of the theme will be used.
+	 */
 	export let color: string | undefined = undefined;
+	/**
+	 * The border radius of the checkbox. When set to `undefined`, the checkbox will have the
+	 * default border radius defined in the theme.
+	 */
 	export let radius: Radius | undefined = undefined;
 </script>
 

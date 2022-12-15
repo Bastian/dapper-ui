@@ -1,30 +1,96 @@
+<!--
+@component
+The versatile Button component comes in a variety of styles, including solid, outline, light, and 
+subtle, as well as a gradient style. It can also be customized in terms of size and color to fit the
+needs of any design. Additionally, the Button can function as a link.
+-->
 <script lang="ts">
 	import type { Shades } from '$lib/colors/color';
 	import type { Radius } from '$lib/theme/DapperUiTheme';
 	import { overwriteColor } from '$lib/util/createColorOverwrite';
 	import { overwriteRadius } from '$lib/util/createRadiusOverwrite';
 
+	/**
+	 * Whether the button should fill the width of its parent.
+	 */
 	export let fullWidth = false;
+	/**
+	 * Changes the style of the button to look disabled and prevent the user from clicking it.
+	 */
 	export let disabled = false;
+	/**
+	 * The name of a color in the theme. Does not support arbitrary colors.
+	 *
+	 * When set to `undefined`, the primary color of the theme will be used.
+	 */
 	export let color: string | undefined = undefined;
+	/**
+	 * The size of the button.
+	 */
 	export let size: 'xs' | 'sm' | 'base' = 'base';
+	/**
+	 * The border radius of the button. When set to `undefined`, the button will have the default
+	 * border radius defined in the theme.
+	 */
 	export let radius: Radius | undefined = undefined;
+	/**
+	 * When set to `true`, the text of the button will not be truncated when the button is too small
+	 * to fit its content. Therefore the button might overflow its parent.
+	 */
 	export let noTruncate = false;
 
+	/**
+	 * When set, the button will be rendered as a link with the given href.
+	 */
 	export let href: string | undefined = undefined;
+	/**
+	 * The target of the link. Only works when the `href` prop is set.
+	 */
 	export let target: string | undefined = undefined;
 
+	/**
+	 * The appearance of the button.
+	 *
+	 * - `solid` - A button with a background color.
+	 * - `outline` - A button with a border and no background color.
+	 * - `outline-dashed` - A button with a dashed border and no background color.
+	 * - `light` - A button with a light background color.
+	 * - `subtle` - A button without a background color.
+	 * - `gradient` - A button with a gradient background color. The gradient can be customized with
+	 *   the `gradient` prop.
+	 *
+	 * Defaults to `solid`.
+	 */
 	export let variant: 'solid' | 'outline' | 'outline-dashed' | 'light' | 'subtle' | 'gradient' =
 		'solid';
 
+	/**
+	 * Defines the gradient background of the button when the variant is set to `gradient`.
+	 *
+	 * Can either be a raw CSS gradient string or an object with from and to fields. These fields
+	 * can take a color name, in which case the 600 shade will be used, or an array tuple with a
+	 * color name and shade. It's recommended setting the color prop as well, as it will be used for
+	 * the outline color when the button is selected.
+	 *
+	 * Only works when the variant is set to `gradient`.
+	 */
 	export let gradient:
 		| { from: string | [string, Shades]; to: string | [string, Shades] }
 		| string
 		| undefined = { from: 'primary', to: 'primary' };
 
+	/**
+	 * Where the button content should be placed when the button is wider than its content.
+	 */
 	export let contentJustify: 'start' | 'center' | 'end' = 'center';
 
 	let className = '';
+	/**
+	 * Additional CSS classes to add to the button.
+	 * Be careful when using this prop, as it can conflict with the default styles of the button.
+	 *
+	 * Especially useful for positioning styles like margings.
+	 */
 	export { className as class };
 
 	let usedColorShade: Shades[];

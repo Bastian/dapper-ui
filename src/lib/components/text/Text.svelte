@@ -5,6 +5,12 @@
 	let className = '';
 	export { className as class };
 
+	/**
+	 * The contrast of the text.
+	 *
+	 * Uses different shades of the color to achieve the desired contrast. The
+	 * used shade depends on whether or not dark mode is enabled.
+	 */
 	export let contrast:
 		| 'highest'
 		| 'higher'
@@ -14,8 +20,17 @@
 		| 'lower'
 		| 'lowest'
 		| undefined = 'base';
-	export let color: string | undefined = 'gray';
 
+	/**
+	 * The color of the text.
+	 *
+	 * Default to the neutral color shade.
+	 */
+	export let color: string | undefined = 'neutral';
+
+	/**
+	 * The size of the text.
+	 */
 	export let size:
 		| 'xs'
 		| 'sm'
@@ -31,6 +46,12 @@
 		| '8xl'
 		| '9xl' = 'base';
 
+	/**
+	 * The font weight of the text.
+	 *
+	 * Please note that not all fonts support all weights, in which case the
+	 * closest weight will be used by the browser.
+	 */
 	export let weight:
 		| 'thin'
 		| 'extralight'
@@ -42,13 +63,35 @@
 		| 'extrabold'
 		| 'black' = 'normal';
 
+	/**
+	 * The line height of the text.
+	 */
 	export let lineHeight: 'none' | 'tight' | 'snug' | 'normal' | 'relaxed' | 'loose' | undefined =
 		undefined;
 
+	/**
+	 * The HTML tag to use for the text.
+	 *
+	 * This does not affect the styling of the text, but should be set for semantic reasons to
+	 * improve accessibility and SEO.
+	 *
+	 * Defaults to `span`.
+	 */
 	export let tag: 'span' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | string = 'span';
 
+	/**
+	 * Whether or not to use the width of the text should be limited to about 65 characters. This
+	 * improves readability of longer texts that span multiple lines.
+	 *
+	 * Requires a non-inline style (e.g., by setting the tag to `div`).
+	 *
+	 * Defaults to `false`.
+	 */
 	export let prose = false;
 
+	/**
+	 * Whether or not to truncate the text to a single line (using the ellipsis overflow style).
+	 */
 	export let truncate = false;
 
 	let usedShades: Shades[];
