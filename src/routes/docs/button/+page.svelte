@@ -26,9 +26,7 @@
 
 <DocTitle title="Button" />
 <DocIntoText
-	text="The versatile Button component comes in a variety of styles, including solid, outline, light, and
-	subtle, as well as a gradient style. It can also be customized in terms of size and color to fit
-	the needs of any design. Additionally, the Button can function as a link."
+	text="The versatile Button component comes in a variety of styles, including solid, outline, light, and subtle, as well as a gradient style. It can also be customized in terms of size and color to fit the needs of any design. Additionally, the Button can function as a link."
 />
 
 <DocContent>

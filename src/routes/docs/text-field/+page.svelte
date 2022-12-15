@@ -11,8 +11,7 @@
 
 <DocTitle title="TextField" />
 <DocIntoText
-	text="The TextField component is a versatile input field that allows users to enter text,
-	numbers, and passwords. It can be customized in size and color."
+	text="The TextField component is a versatile input field that allows users to enter text, numbers, and passwords. It can be customized in size and color."
 />
 
 <DocContent>
