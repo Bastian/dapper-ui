@@ -24,18 +24,17 @@
 	}}
 >
 	<div class="d4r-flex d4r-h-full d4r-flex-col">
-		<header class="d4r-flex d4r-justify-between d4r-px-8">
-			<div class="d4r-flex d4r-items-center d4r-gap-4">
+		<header class="d4r-flex d4r-w-full d4r-justify-between d4r-px-8">
+			<div class="d4r-flex d4r-items-center d4r-gap-4 lg:d4r-hidden">
 				<IconButton
 					on:click={() => ($drawerOpen = !$drawerOpen)}
 					label="Toggle drawer"
 					variant="subtle"
-					class="lg:!d4r-hidden"
 				>
 					<Menu2 />
 				</IconButton>
-				<Text size="xl" weight="medium" contrast="higher"><a href="{base}/">Dapper UI</a></Text>
 			</div>
+			<Text size="lg" weight="bold" contrast="higher"><a href="{base}/">Dapper UI</a></Text>
 			<ToggleDarkModeButton icon />
 		</header>
 

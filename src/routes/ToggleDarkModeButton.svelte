@@ -2,6 +2,8 @@
 	import Button from '$lib/components/button/Button.svelte';
 	import IconButton from '$lib/components/icon-button/IconButton.svelte';
 	import { Moon, Sun } from 'tabler-icons-svelte';
+	let className = '';
+	export { className as class };
 
 	function toggleDarkMode() {
 		document.documentElement.classList.toggle('d4r-dark');
@@ -11,10 +13,10 @@
 </script>
 
 {#if icon}
-	<IconButton label="Toggle Dark Mode" on:click={toggleDarkMode}>
+	<IconButton class={className} label="Toggle Dark Mode" on:click={toggleDarkMode}>
 		<span class="dark:d4r-hidden"><Moon /></span>
 		<span class="d4r-hidden dark:d4r-inline"><Sun /></span>
 	</IconButton>
 {:else}
-	<Button color="neutral" on:click={toggleDarkMode}>Toggle Dark Mode</Button>
+	<Button class={className} color="neutral" on:click={toggleDarkMode}>Toggle Dark Mode</Button>
 {/if}
