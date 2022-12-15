@@ -7,6 +7,8 @@
 
   Outdated base version: https://github.com/primer/github-syntax-light
   Current colors taken from GitHub's CSS
+
+  Updated by Bastian Oppermann to increase contrast
 */
 
 .hljs {
@@ -71,7 +73,7 @@
 .hljs-selector-tag,
 .hljs-selector-pseudo {
 	/* prettylights-syntax-entity-tag */
-	color: #22863a;
+	color: #006718;
 }
 
 .hljs-subst {
