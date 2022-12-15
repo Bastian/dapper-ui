@@ -1,6 +1,6 @@
 # 🤵 Dapper UI
 
-![Component Examples](.github/component-example.png)
+![Example UI](.github/theming-example.jpg)
 
 Dapper UI is a UI library for Svelte. It is built on top of [TailwindCSS](https://tailwindcss.com/), but can also be used without it.
 
