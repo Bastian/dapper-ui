@@ -3,16 +3,23 @@
 	import DocBox from './DocBox.svelte';
 	import DocSection from './DocSection.svelte';
 
+	let className = '';
+	export { className as class };
+
 	export let title: string | undefined = undefined;
 	export let code = '';
+
+	export let disablePreviewPadding = false;
 </script>
 
-<DocSection {title}>
+<DocSection {title} class={className}>
 	<slot slot="description" name="description" />
 	<div>
 		<div class="d4r-flex d4r-flex-col md:d4r-flex-row">
 			<DocBox
-				class="d4r-flex d4r-w-full d4r-items-center d4r-justify-center d4r-rounded-b-none d4r-p-8 md:d4r-rounded-tr-none"
+				class="d4r-flex d4r-w-full d4r-items-center d4r-justify-center d4r-rounded-b-none md:d4r-rounded-tr-none{disablePreviewPadding
+					? ''
+					: ' d4r-p-8'}"
 			>
 				<slot name="preview" />
 			</DocBox>

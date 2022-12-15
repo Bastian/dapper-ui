@@ -7,6 +7,7 @@
 	import ToggleDarkModeButton from './ToggleDarkModeButton.svelte';
 	import heroImgSrc from './hero-image.webp';
 	import Footer from './Footer.svelte';
+	import DarkModeSection from './DarkModeSection.svelte';
 </script>
 
 <svelte:head>
@@ -41,6 +42,7 @@
 </div>
 
 <CustomizationSection />
+<DarkModeSection />
 
 <Footer />
 

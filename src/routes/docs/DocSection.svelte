@@ -8,7 +8,7 @@
 	export let title: string | undefined;
 </script>
 
-<article class="d4r-space-y-2">
+<article class="d4r-space-y-2 {className}">
 	{#if title}
 		<DocSectionTitle>{title}</DocSectionTitle>
 	{/if}

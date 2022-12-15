@@ -11,7 +11,7 @@
 </script>
 
 <div
-	class="d4r-mx-auto d4r-w-full d4r-max-w-lg d4r-space-y-4 d4r-bg-white d4r-p-8 d4r-shadow dark:d4r-bg-dark-700"
+	class="d4r-w-full d4r-space-y-4 d4r-bg-white d4r-p-8 d4r-shadow dark:d4r-bg-dark-700"
 	class:d4r-rounded={theme === 'default'}
 	class:d4r-rounded-[20px]={theme === 'playful'}
 >

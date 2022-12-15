@@ -55,14 +55,14 @@
 	let themeName: 'default' | 'playful' | 'professional' = 'default';
 </script>
 
-<div class="d4r-bg-neutral-100 d4r-py-16 dark:d4r-bg-dark-900">
+<div class="d4r-bg-neutral-100 d4r-py-16 dark:d4r-bg-dark-900 sm:d4r-py-24 md:d4r-py-32">
 	<Container
 		center
-		class="d4r-flex d4r-flex-col d4r-items-center d4r-justify-center d4r-gap-16 xl:d4r-flex-row-reverse"
+		class="d4r-flex d4r-flex-col d4r-items-center d4r-justify-center d4r-gap-16 lg:d4r-flex-row-reverse xl:d4r-gap-32"
 	>
-		<div class="d4r-max-w-xl d4r-space-y-8">
+		<div class="d4r-w-full d4r-max-w-xl d4r-space-y-8">
 			<Text tag="h2" size="4xl" weight="bold" contrast="higher" color="primary">Customization</Text>
-			<Text tag="p" prose size="lg" lineHeight="relaxed">
+			<Text tag="p" size="lg" lineHeight="relaxed">
 				Dapper UI offers a high level of customizability. You can easily modify the global theme to
 				change fonts, colors, border radiuses and more. Additionally, you can adjust the style of
 				individual components to suit your specific needs. Give it a try by selecting another theme
@@ -86,11 +86,11 @@
 				</ThemeProvider>
 			</div>
 		</div>
-		<div class="d4r-w-full d4r-max-w-xl 2xl:d4r-max-w-2xl">
+		<div class="d4r-w-full  lg:d4r-max-w-lg">
 			<ThemeProvider localStyle theme={themes[themeName]} class="d4r-w-full">
 				<div class="d4r-flex d4r-w-full d4r-items-center d4r-justify-center">
 					<div class="d4r-w-full d4r-max-w-xl 2xl:d4r-max-w-2xl">
-						<div class="d4r-w-full d4r-space-y-2 d4r-rounded lg:d4r-p-8">
+						<div class="d4r-w-full d4r-space-y-2 d4r-rounded">
 							<LoginForm theme={themeName} />
 						</div>
 					</div>
