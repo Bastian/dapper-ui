@@ -34,7 +34,7 @@
 </script>
 
 <script lang="ts">
-	import '$lib/base.css';
+	import '../base.css';
 	import type { ColorPalette } from '$lib/colors/color';
 	import { setContext } from 'svelte';
 	import { derived, writable } from 'svelte/store';

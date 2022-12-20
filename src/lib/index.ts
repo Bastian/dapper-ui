@@ -8,4 +8,5 @@ export { default as Text } from '$lib/components/text/Text.svelte';
 export { default as TextField } from '$lib/components/text-field/TextField.svelte';
 
 // Theme
+export { default as ThemeProvider } from '$lib/theme/ThemeProvider.svelte';
 export { getTheme } from '$lib/getTheme';
