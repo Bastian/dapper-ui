@@ -6,8 +6,8 @@
 	.d4r-input-base {
 		@apply d4r-transition-colors;
 		@apply d4r-text-neutral-700 placeholder:d4r-text-neutral-400 dark:d4r-text-neutral-200 dark:placeholder:d4r-text-neutral-500;
-		@apply d4r-border-neutral-300 hover:d4r-border-primary-500/75 focus:d4r-border-primary-500/75 disabled:hover:d4r-border-neutral-300 dark:d4r-border-dark-400 dark:hover:d4r-border-dark-400;
-		@apply focus:d4r-outline-none focus:d4r-ring-2 focus:d4r-ring-primary-700/20 dark:focus:d4r-ring-primary-400/20;
+		@apply d4r-border-neutral-300 hover:d4r-border-primary-500/75 focus:d4r-border-primary-500/75 disabled:hover:d4r-border-neutral-300 dark:d4r-border-dark-400 dark:disabled:d4r-border-dark-400 dark:focus:d4r-border-primary-500/50 dark:hover:d4r-border-primary-500/50;
+		@apply focus:d4r-outline-none focus:d4r-ring-2 focus:d4r-ring-primary-700/20 dark:focus:d4r-ring-primary-500/20;
 		@apply d4r-bg-white dark:d4r-bg-dark-600;
 	}
 }
