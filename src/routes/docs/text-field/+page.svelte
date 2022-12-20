@@ -3,6 +3,7 @@
 	import { User } from 'tabler-icons-svelte';
 	import DocBox from '../DocBox.svelte';
 	import DocContent from '../DocContent.svelte';
+	import DocImport from '../DocImport.svelte';
 	import DocIntoText from '../DocIntoText.svelte';
 	import DocSection from '../DocSection.svelte';
 	import DocTitle from '../DocTitle.svelte';
@@ -10,6 +11,7 @@
 </script>
 
 <DocTitle title="TextField" />
+<DocImport what="TextField" from="core" />
 <DocIntoText
 	text="The TextField component is a versatile input field that allows users to enter text, numbers, and passwords. It can be customized in size and color."
 />

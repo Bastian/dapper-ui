@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { colorTailwindPink, colorTailwindSlate } from '$lib/colors/tailwind';
-	import Button from '$lib/components/button/Button.svelte';
+	import { Button, Text } from '$lib';
 	import Container from '$lib/components/container/Container.svelte';
-	import Text from '$lib/components/text/Text.svelte';
 	import type { DapperUiTheme } from '$lib/theme/DapperUiTheme';
 	import { defaultDapperUiTheme } from '$lib/theme/default-theme';
 	import ThemeProvider from '$lib/theme/ThemeProvider.svelte';

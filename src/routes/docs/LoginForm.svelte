@@ -1,7 +1,5 @@
 <script lang="ts">
-	import Button from '$lib/components/button/Button.svelte';
-	import Checkbox from '$lib/components/checkbox/Checkbox.svelte';
-	import TextField from '$lib/components/text-field/TextField.svelte';
+	import { Button, Checkbox, TextField } from '$lib';
 	import { BrandGithub, BrandGoogle, BrandTwitter, Key, Mail } from 'tabler-icons-svelte';
 	import GitHubIcon from './brand-icons/GitHubIcon.svelte';
 	import GoogleIcon from './brand-icons/GoogleIcon.svelte';

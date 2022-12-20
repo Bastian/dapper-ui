@@ -14,7 +14,7 @@
 
 <script lang="ts">
 	import type { Shades } from '$lib/colors/color';
-	import Slider from '$lib/components/slider/Slider.svelte';
+	import { Slider } from '$lib';
 	import ColorPicker from './ColorPicker.svelte';
 
 	export let gradient: { from: [string, Shades]; to: [string, Shades] } = {

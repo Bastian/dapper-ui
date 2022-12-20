@@ -1,9 +1,6 @@
 <script lang="ts">
 	import type { Shades } from '$lib/colors/color';
-	import Checkbox from '$lib/components/checkbox/Checkbox.svelte';
-	import IconButton from '$lib/components/icon-button/IconButton.svelte';
-	import Select from '$lib/components/select/Select.svelte';
-	import { getTheme } from '$lib/getTheme';
+	import { Checkbox, IconButton, Select, getTheme } from '$lib';
 	import type { Radius } from '$lib/theme/DapperUiTheme';
 	import type { ComponentProps } from 'svelte';
 	import { ClipboardCheck } from 'tabler-icons-svelte';

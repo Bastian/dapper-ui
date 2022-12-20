@@ -1,6 +1,5 @@
 <script lang="ts">
-	import IconButton from '$lib/components/icon-button/IconButton.svelte';
-	import Text from '$lib/components/text/Text.svelte';
+	import { Text, IconButton } from '$lib';
 	import { Check } from 'tabler-icons-svelte';
 
 	export let color: string | undefined = undefined;

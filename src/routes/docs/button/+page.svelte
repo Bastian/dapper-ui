@@ -1,10 +1,9 @@
 <script lang="ts">
-	import Button from '$lib/components/button/Button.svelte';
-	import IconButton from '$lib/components/icon-button/IconButton.svelte';
+	import { Button, IconButton } from '$lib';
 	import type { ComponentProps } from 'svelte';
-	import StyledCodeBlock from '../../../doc-components/code-highlight/StyledCodeBlock.svelte';
 	import DocBox from '../DocBox.svelte';
 	import DocContent from '../DocContent.svelte';
+	import DocImport from '../DocImport.svelte';
 	import DocIntoText from '../DocIntoText.svelte';
 	import DocSection from '../DocSection.svelte';
 	import DocSectionText from '../DocSectionText.svelte';
@@ -25,6 +24,7 @@
 </script>
 
 <DocTitle title="Button" />
+<DocImport what={['Button', 'IconButton']} from="core" />
 <DocIntoText
 	text="The versatile Button component comes in a variety of styles, including solid, outline, light, and subtle, as well as a gradient style. It can also be customized in terms of size and color to fit the needs of any design. Additionally, the Button can function as a link."
 />
@@ -54,22 +54,28 @@
 			when the button is selected.
 		</DocSectionText>
 		<Example
-			code={`<Button variant="gradient" gradient="radial-gradient(#f71600, #ffc135)">
+			code={`<Button variant="gradient" gradient="radial-gradient(#f71600, #ffc135)" color="orange">
     Gradient
 </Button>
-<Button variant="gradient" gradient={{ from: "cyan", to: "violet" }}>
+<Button variant="gradient" gradient={{ from: "cyan", to: "violet" }} color="blue">
     Object Gradient
 </Button>
-<Button variant="gradient" gradient={{ from: ["cyan", 100], to: ["violet", 900] }}>
+<Button variant="gradient" gradient={{ from: ["cyan", 100], to: ["violet", 900] }} color="blue">
     Object Gradient With Shades
 </Button>`}
 		>
 			<div slot="preview" class="d4r-flex d4r-flex-wrap d4r-gap-2">
-				<Button variant="gradient" gradient="radial-gradient(#f71600, #ffc135)">CSS Gradient</Button
+				<Button variant="gradient" gradient="radial-gradient(#f71600, #ffc135)" color="orange">
+					CSS Gradient
+				</Button>
+				<Button variant="gradient" gradient={{ from: 'cyan', to: 'violet' }} color="blue">
+					Object Gradient
+				</Button>
+				<Button
+					variant="gradient"
+					gradient={{ from: ['cyan', 100], to: ['violet', 900] }}
+					color="blue"
 				>
-				<Button variant="gradient" gradient={{ from: 'cyan', to: 'violet' }}>Object Gradient</Button
-				>
-				<Button variant="gradient" gradient={{ from: ['cyan', 100], to: ['violet', 900] }}>
 					Object Gradient With Shades
 				</Button>
 			</div>

@@ -69,10 +69,25 @@ needs of any design. Additionally, the Button can function as a link.
 	 *
 	 * Can either be a raw CSS gradient string or an object with from and to fields. These fields
 	 * can take a color name, in which case the 600 shade will be used, or an array tuple with a
-	 * color name and shade. It's recommended setting the color prop as well, as it will be used for
+	 * color name and shade. It's recommended setting the `color` prop as well, as it will be used for
 	 * the outline color when the button is selected.
 	 *
 	 * Only works when the variant is set to `gradient`.
+	 *
+	 * Example:
+	 * ```jsx
+	 * <Button variant="gradient" gradient="radial-gradient(#f71600, #ffc135)" color="orange">
+	 *     Gradient
+	 * </Button>
+	 *
+	 * <Button variant="gradient" gradient={{ from: "cyan", to: "violet" }} color="blue">
+	 *     Object Gradient
+	 * </Button>
+	 *
+	 * <Button variant="gradient" gradient={{ from: ["cyan", 100], to: ["violet", 900] }} color="blue">
+	 *     Object Gradient With Shades
+	 * </Button>
+	 * ```
 	 */
 	export let gradient:
 		| { from: string | [string, Shades]; to: string | [string, Shades] }

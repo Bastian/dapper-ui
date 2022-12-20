@@ -1,10 +1,6 @@
 <script lang="ts">
 	import type { Shades } from '$lib/colors/color';
-	import Button from '$lib/components/button/Button.svelte';
-	import Checkbox from '$lib/components/checkbox/Checkbox.svelte';
-	import Select from '$lib/components/select/Select.svelte';
-	import TextField from '$lib/components/text-field/TextField.svelte';
-	import { getTheme } from '$lib/getTheme';
+	import { Button, Checkbox, Select, TextField, getTheme } from '$lib';
 	import type { Radius } from '$lib/theme/DapperUiTheme';
 	import type { ComponentProps } from 'svelte';
 	import { ClipboardCheck } from 'tabler-icons-svelte';

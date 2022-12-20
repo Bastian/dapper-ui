@@ -1,6 +1,6 @@
 import { getContext } from 'svelte';
 import type { Readable } from 'svelte/store';
-import type { DapperUiTheme } from './theme/ThemeProvider.svelte';
+import type { DapperUiTheme } from './theme/DapperUiTheme';
 
 /**
  * Gets the current theme from the context.

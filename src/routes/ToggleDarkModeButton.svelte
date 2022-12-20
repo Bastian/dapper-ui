@@ -1,6 +1,5 @@
 <script lang="ts">
-	import Button from '$lib/components/button/Button.svelte';
-	import IconButton from '$lib/components/icon-button/IconButton.svelte';
+	import { Button, IconButton } from '$lib';
 	import { Moon, Sun } from 'tabler-icons-svelte';
 	let className = '';
 	export { className as class };

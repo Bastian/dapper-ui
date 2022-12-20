@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Container from '$lib/components/container/Container.svelte';
-	import Text from '$lib/components/text/Text.svelte';
+	import { Text } from '$lib';
 	import Example from './docs/Example.svelte';
 	import ToggleDarkModeButton from './ToggleDarkModeButton.svelte';
 </script>
