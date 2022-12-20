@@ -44,10 +44,7 @@
 	<slot name="icon-start" />
 	<slot slot="icon-label" name="icon-label" />
 	<select
-		style="{overwriteColor(color, [200, 300, 600, 700], 'primary')}{overwriteRadius(
-			radius,
-			'input'
-		)}"
+		style="{overwriteColor(color, [400, 500, 700], 'primary')}{overwriteRadius(radius, 'input')}"
 		class="d4r-input-base"
 		class:size-base={size === 'base' || size === undefined}
 		class:size-sm={size === 'sm'}
