@@ -6,6 +6,7 @@
 
 	function toggleDarkMode() {
 		document.documentElement.classList.toggle('d4r-dark');
+		document.documentElement.classList.toggle('d4r-light');
 	}
 
 	export let icon = false;

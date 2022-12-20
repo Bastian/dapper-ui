@@ -1,0 +1,417 @@
+/**
+ * Copied from https://github.com/PrismJS/prism-themes/blob/447479fc7b2be2051fe27e561aceed7cc87a589f/themes/prism-one-dark.css
+ * and modified to use be only active when the .d4r-dark class is present.
+ * 
+ * Original license: MIT License
+ */
+
+/**
+ * One Dark theme for prism.js
+ * Based on Atom's One Dark theme: https://github.com/atom/atom/tree/master/packages/one-dark-syntax
+ */
+
+/**
+ * One Dark colours (accurate as of commit 8ae45ca on 6 Sep 2018)
+ * From colors.less
+ * --mono-1: hsl(220, 14%, 71%);
+ * --mono-2: hsl(220, 9%, 55%);
+ * --mono-3: hsl(220, 10%, 40%);
+ * --hue-1: hsl(187, 47%, 55%);
+ * --hue-2: hsl(207, 82%, 66%);
+ * --hue-3: hsl(286, 60%, 67%);
+ * --hue-4: hsl(95, 38%, 62%);
+ * --hue-5: hsl(355, 65%, 65%);
+ * --hue-5-2: hsl(5, 48%, 51%);
+ * --hue-6: hsl(29, 54%, 61%);
+ * --hue-6-2: hsl(39, 67%, 69%);
+ * --syntax-fg: hsl(220, 14%, 71%);
+ * --syntax-bg: hsl(220, 13%, 18%);
+ * --syntax-gutter: hsl(220, 14%, 45%);
+ * --syntax-guide: hsla(220, 14%, 71%, 0.15);
+ * --syntax-accent: hsl(220, 100%, 66%);
+ * From syntax-variables.less
+ * --syntax-selection-color: hsl(220, 13%, 28%);
+ * --syntax-gutter-background-color-selected: hsl(220, 13%, 26%);
+ * --syntax-cursor-line: hsla(220, 100%, 80%, 0.04);
+ */
+
+.d4r-dark code[class*="language-"],
+.d4r-dark pre[class*="language-"] {
+	color: hsl(220, 14%, 71%);
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Selection */
+.d4r-dark code[class*="language-"]::-moz-selection,
+.d4r-dark code[class*="language-"] *::-moz-selection,
+.d4r-dark pre[class*="language-"] *::-moz-selection {
+	background: hsl(220, 13%, 28%);
+	color: inherit;
+	text-shadow: none;
+}
+
+.d4r-dark code[class*="language-"]::selection,
+.d4r-dark code[class*="language-"] *::selection,
+.d4r-dark pre[class*="language-"] *::selection {
+	background: hsl(220, 13%, 28%);
+	color: inherit;
+	text-shadow: none;
+}
+
+/* Code blocks */
+.d4r-dark pre[class*="language-"] {
+	padding: 1em;
+	margin: 0.5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+/* Inline code */
+.d4r-dark :not(pre) > code[class*="language-"] {
+	padding: 0.2em 0.3em;
+	border-radius: 0.3em;
+	white-space: normal;
+}
+
+/* Print */
+@media print {
+	.d4r-dark code[class*="language-"],
+	.d4r-dark pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+.d4r-dark .token.comment,
+.d4r-dark .token.prolog,
+.d4r-dark .token.cdata {
+	color: hsl(220, 10%, 40%);
+}
+
+.d4r-dark .token.doctype,
+.d4r-dark .token.punctuation,
+.d4r-dark .token.entity {
+	color: hsl(220, 14%, 71%);
+}
+
+.d4r-dark .token.attr-name,
+.d4r-dark .token.class-name,
+.d4r-dark .token.boolean,
+.d4r-dark .token.constant,
+.d4r-dark .token.number,
+.d4r-dark .token.atrule {
+	color: hsl(29, 54%, 61%);
+}
+
+.d4r-dark .token.keyword {
+	color: hsl(286, 60%, 67%);
+}
+
+.d4r-dark .token.property,
+.d4r-dark .token.tag,
+.d4r-dark .token.symbol,
+.d4r-dark .token.deleted,
+.d4r-dark .token.important {
+	color: hsl(355, 65%, 65%);
+}
+
+.d4r-dark .token.selector,
+.d4r-dark .token.string,
+.d4r-dark .token.char,
+.d4r-dark .token.builtin,
+.d4r-dark .token.inserted,
+.d4r-dark .token.regex,
+.d4r-dark .token.attr-value,
+.d4r-dark .token.attr-value > .token.punctuation {
+	color: hsl(95, 38%, 62%);
+}
+
+.d4r-dark .token.variable,
+.d4r-dark .token.operator,
+.d4r-dark .token.function {
+	color: hsl(207, 82%, 66%);
+}
+
+.d4r-dark .token.url {
+	color: hsl(187, 47%, 55%);
+}
+
+/* HTML overrides */
+.d4r-dark .token.attr-value > .token.punctuation.attr-equals,
+.d4r-dark .token.special-attr > .token.attr-value > .token.value.css {
+	color: hsl(220, 14%, 71%);
+}
+
+/* CSS overrides */
+.d4r-dark .language-css .token.selector {
+	color: hsl(355, 65%, 65%);
+}
+
+.d4r-dark .language-css .token.property {
+	color: hsl(220, 14%, 71%);
+}
+
+.d4r-dark .language-css .token.function,
+.d4r-dark .language-css .token.url > .token.function {
+	color: hsl(187, 47%, 55%);
+}
+
+.d4r-dark .language-css .token.url > .token.string.url {
+	color: hsl(95, 38%, 62%);
+}
+
+.d4r-dark .language-css .token.important,
+.d4r-dark .language-css .token.atrule .token.rule {
+	color: hsl(286, 60%, 67%);
+}
+
+/* JS overrides */
+.d4r-dark .language-javascript .token.operator {
+	color: hsl(286, 60%, 67%);
+}
+
+.d4r-dark .language-javascript .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation {
+	color: hsl(5, 48%, 51%);
+}
+
+/* JSON overrides */
+.d4r-dark .language-json .token.operator {
+	color: hsl(220, 14%, 71%);
+}
+
+.d4r-dark .language-json .token.null.keyword {
+	color: hsl(29, 54%, 61%);
+}
+
+/* MD overrides */
+.d4r-dark .language-markdown .token.url,
+.d4r-dark .language-markdown .token.url > .token.operator,
+.d4r-dark .language-markdown .token.url-reference.url > .token.string {
+	color: hsl(220, 14%, 71%);
+}
+
+.d4r-dark .language-markdown .token.url > .token.content {
+	color: hsl(207, 82%, 66%);
+}
+
+.d4r-dark .language-markdown .token.url > .token.url,
+.d4r-dark .language-markdown .token.url-reference.url {
+	color: hsl(187, 47%, 55%);
+}
+
+.d4r-dark .language-markdown .token.blockquote.punctuation,
+.d4r-dark .language-markdown .token.hr.punctuation {
+	color: hsl(220, 10%, 40%);
+	font-style: italic;
+}
+
+.d4r-dark .language-markdown .token.code-snippet {
+	color: hsl(95, 38%, 62%);
+}
+
+.d4r-dark .language-markdown .token.bold .token.content {
+	color: hsl(29, 54%, 61%);
+}
+
+.d4r-dark .language-markdown .token.italic .token.content {
+	color: hsl(286, 60%, 67%);
+}
+
+.d4r-dark .language-markdown .token.strike .token.content,
+.d4r-dark .language-markdown .token.strike .token.punctuation,
+.d4r-dark .language-markdown .token.list.punctuation,
+.d4r-dark .language-markdown .token.title.important > .token.punctuation {
+	color: hsl(355, 65%, 65%);
+}
+
+/* General */
+.d4r-dark .token.bold {
+	font-weight: bold;
+}
+
+.d4r-dark .token.comment,
+.d4r-dark .token.italic {
+	font-style: italic;
+}
+
+.d4r-dark .token.entity {
+	cursor: help;
+}
+
+.d4r-dark .token.namespace {
+	opacity: 0.8;
+}
+
+/* Plugin overrides */
+/* Selectors should have higher specificity than those in the plugins' default stylesheets */
+
+/* Show Invisibles plugin overrides */
+.d4r-dark .token.token.tab:not(:empty):before,
+.d4r-dark .token.token.cr:before,
+.d4r-dark .token.token.lf:before,
+.d4r-dark .token.token.space:before {
+	color: hsla(220, 14%, 71%, 0.15);
+	text-shadow: none;
+}
+
+/* Toolbar plugin overrides */
+/* Space out all buttons and move them away from the right edge of the code block */
+.d4r-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item {
+	margin-right: 0.4em;
+}
+
+/* Styling the buttons */
+.d4r-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > button,
+.d4r-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > a,
+.d4r-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > span {
+	color: hsl(220, 9%, 55%);
+	padding: 0.1em 0.4em;
+	border-radius: 0.3em;
+}
+
+.d4r-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:hover,
+.d4r-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:focus,
+.d4r-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:hover,
+.d4r-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:focus,
+.d4r-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:hover,
+.d4r-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
+	color: hsl(220, 14%, 71%);
+}
+
+/* Line Highlight plugin overrides */
+/* The highlighted line itself */
+.d4r-dark .line-highlight.line-highlight {
+	background: hsla(220, 100%, 80%, 0.04);
+}
+
+/* Default line numbers in Line Highlight plugin */
+.d4r-dark .line-highlight.line-highlight:before,
+.d4r-dark .line-highlight.line-highlight[data-end]:after {
+	background: hsl(220, 13%, 26%);
+	color: hsl(220, 14%, 71%);
+	padding: 0.1em 0.6em;
+	border-radius: 0.3em;
+	box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2); /* same as Toolbar plugin default */
+}
+
+/* Hovering over a linkable line number (in the gutter area) */
+/* Requires Line Numbers plugin as well */
+.d4r-dark pre[id].linkable-line-numbers.linkable-line-numbers span.line-numbers-rows > span:hover:before {
+	background-color: hsla(220, 100%, 80%, 0.04);
+}
+
+/* Line Numbers and Command Line plugins overrides */
+/* Line separating gutter from coding area */
+.d4r-dark .line-numbers.line-numbers .line-numbers-rows,
+.d4r-dark .command-line .command-line-prompt {
+	border-right-color: hsla(220, 14%, 71%, 0.15);
+}
+
+/* Stuff in the gutter */
+.d4r-dark .line-numbers .line-numbers-rows > span:before,
+.d4r-dark .command-line .command-line-prompt > span:before {
+	color: hsl(220, 14%, 45%);
+}
+
+/* Diff Highlight plugin overrides */
+/* Taken from https://github.com/atom/github/blob/master/styles/variables.less */
+.d4r-dark pre.diff-highlight > code .token.token.deleted:not(.prefix),
+.d4r-dark pre > code.diff-highlight .token.token.deleted:not(.prefix) {
+	background-color: hsla(353, 100%, 66%, 0.15);
+}
+
+.d4r-dark pre.diff-highlight > code .token.token.deleted:not(.prefix)::-moz-selection,
+.d4r-dark pre.diff-highlight > code .token.token.deleted:not(.prefix) *::-moz-selection,
+.d4r-dark pre > code.diff-highlight .token.token.deleted:not(.prefix)::-moz-selection,
+.d4r-dark pre > code.diff-highlight .token.token.deleted:not(.prefix) *::-moz-selection {
+	background-color: hsla(353, 95%, 66%, 0.25);
+}
+
+.d4r-dark pre.diff-highlight > code .token.token.deleted:not(.prefix)::selection,
+.d4r-dark pre.diff-highlight > code .token.token.deleted:not(.prefix) *::selection,
+.d4r-dark pre > code.diff-highlight .token.token.deleted:not(.prefix)::selection,
+.d4r-dark pre > code.diff-highlight .token.token.deleted:not(.prefix) *::selection {
+	background-color: hsla(353, 95%, 66%, 0.25);
+}
+
+.d4r-dark pre.diff-highlight > code .token.token.inserted:not(.prefix),
+.d4r-dark pre > code.diff-highlight .token.token.inserted:not(.prefix) {
+	background-color: hsla(137, 100%, 55%, 0.15);
+}
+
+.d4r-dark pre.diff-highlight > code .token.token.inserted:not(.prefix)::-moz-selection,
+.d4r-dark pre.diff-highlight > code .token.token.inserted:not(.prefix) *::-moz-selection,
+.d4r-dark pre > code.diff-highlight .token.token.inserted:not(.prefix)::-moz-selection,
+.d4r-dark pre > code.diff-highlight .token.token.inserted:not(.prefix) *::-moz-selection {
+	background-color: hsla(135, 73%, 55%, 0.25);
+}
+
+.d4r-dark pre.diff-highlight > code .token.token.inserted:not(.prefix)::selection,
+.d4r-dark pre.diff-highlight > code .token.token.inserted:not(.prefix) *::selection,
+.d4r-dark pre > code.diff-highlight .token.token.inserted:not(.prefix)::selection,
+.d4r-dark pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
+	background-color: hsla(135, 73%, 55%, 0.25);
+}
+
+/* Previewers plugin overrides */
+/* Based on https://github.com/atom-community/atom-ide-datatip/blob/master/styles/atom-ide-datatips.less and https://github.com/atom/atom/blob/master/packages/one-dark-ui */
+/* Border around popup */
+.d4r-dark .prism-previewer.prism-previewer:before,
+.d4r-dark .prism-previewer-gradient.prism-previewer-gradient div {
+	border-color: hsl(224, 13%, 17%);
+}
+
+/* Angle and time should remain as circles and are hence not included */
+.d4r-dark .prism-previewer-color.prism-previewer-color:before,
+.d4r-dark .prism-previewer-gradient.prism-previewer-gradient div,
+.d4r-dark .prism-previewer-easing.prism-previewer-easing:before {
+	border-radius: 0.3em;
+}
+
+/* Triangles pointing to the code */
+.d4r-dark .prism-previewer.prism-previewer:after {
+	border-top-color: hsl(224, 13%, 17%);
+}
+
+.d4r-dark .prism-previewer-flipped.prism-previewer-flipped.after {
+	border-bottom-color: hsl(224, 13%, 17%);
+}
+
+/* Background colour within the popup */
+.d4r-dark .prism-previewer-angle.prism-previewer-angle:before,
+.d4r-dark .prism-previewer-time.prism-previewer-time:before,
+.d4r-dark .prism-previewer-easing.prism-previewer-easing {
+	background: hsl(219, 13%, 22%);
+}
+
+/* For angle, this is the positive area (eg. 90deg will display one quadrant in this colour) */
+/* For time, this is the alternate colour */
+.d4r-dark .prism-previewer-angle.prism-previewer-angle circle,
+.d4r-dark .prism-previewer-time.prism-previewer-time circle {
+	stroke: hsl(220, 14%, 71%);
+	stroke-opacity: 1;
+}
+
+/* Stroke colours of the handle, direction point, and vector itself */
+.d4r-dark .prism-previewer-easing.prism-previewer-easing circle,
+.d4r-dark .prism-previewer-easing.prism-previewer-easing path,
+.d4r-dark .prism-previewer-easing.prism-previewer-easing line {
+	stroke: hsl(220, 14%, 71%);
+}
+
+/* Fill colour of the handle */
+.d4r-dark .prism-previewer-easing.prism-previewer-easing circle {
+	fill: transparent;
+}

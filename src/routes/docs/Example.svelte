@@ -36,7 +36,7 @@
 		<DocBox
 			class="d4r-rounded-t-none d4r-border-t-0 !d4r-bg-neutral-50 d4r-p-4 dark:!d4r-bg-dark-800"
 		>
-			<StyledCodeBlock language="xml" {code} />
+			<StyledCodeBlock language="svelte" {code} />
 		</DocBox>
 	</div>
 </DocSection>

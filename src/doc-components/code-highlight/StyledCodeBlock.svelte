@@ -1,6 +1,5 @@
 <script lang="ts">
 	import CodeBlock from './CodeBlock.svelte';
-	import './highlight.css';
 
 	let className = '';
 	export { className as class };

@@ -7,6 +7,7 @@
 
 <div class="d4r-my-4">
 	<CodeBlock
+		language="typescript"
 		code={`import { ${Array.isArray(what) ? what.join(', ') : what} } from "@dapper-ui/${from}";`}
 	/>
 </div>

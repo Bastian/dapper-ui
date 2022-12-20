@@ -1,5 +1,6 @@
 <script lang="ts">
-	import './highlight.css';
+	import './code-dark-theme.css';
+	import './code-light-theme.css';
 	import CodeHighlightWorker from './CodeHighlightWorker?worker&inline';
 	import dedentFunction from 'dedent';
 	import { onDestroy } from 'svelte';
@@ -7,6 +8,7 @@
 	export { className as class };
 	export let code: string;
 	export let language: string | undefined = undefined;
+
 	/**
 	 * Whether or not auto-dedent should be enabled
 	 * (i.e., if trailing spaces should be removed).
@@ -34,7 +36,7 @@
 </script>
 
 <div class={className}>
-	<pre class="d4r-overflow-x d4r-text-sm"><code class="hljs d4r-rounded-lg"
+	<pre class="d4r-overflow-x d4r-text-sm"><code class="hljs d4r-rounded-lg language-{language}"
 			>{#if highlighted}{@html highlighted}{:else}{noDedent
 					? code
 					: dedentFunction(code)}{/if}</code
