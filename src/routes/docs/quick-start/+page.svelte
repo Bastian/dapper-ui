@@ -94,8 +94,12 @@
 			missing or incomplete. If you have any questions or ideas for the project, don't hesitate to
 			create an issue on GitHub (<DocLink href="https://github.com/Bastian/dapper-ui"
 				>Bastian/dapper-ui</DocLink
-			>). Additionally, giving the repository a start will help others discover the project and
-			contribute to its growth. <Text weight="semibold">Thank you for using Dapper UI!</Text>
+			>). And if you enjoy using Dapper UI, we would greatly appreciate it if you could give the
+			repository a star. It helps others discover the project and supports its continued
+			development.
+		</DocSectionText>
+		<DocSectionText>
+			<Text weight="semibold">Thank you for using Dapper UI!</Text>
 		</DocSectionText>
 	</DocSection>
 </DocContent>
