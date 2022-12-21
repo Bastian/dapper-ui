@@ -20,13 +20,13 @@
 			Install the <code>@dapper-ui/core</code> package with your prefered package manager:
 		</DocSectionText>
 		<DocBox>
-			<CodeBlock class="d4r-p-4" code="npm install @dapper-ui/core" />
+			<CodeBlock class="d4r-p-4" language="bash" code="npm install @dapper-ui/core" />
 		</DocBox>
 		<DocBox>
-			<CodeBlock class="d4r-p-4" code="yarn add @dapper-ui/core" />
+			<CodeBlock class="d4r-p-4" language="bash" code="yarn add @dapper-ui/core" />
 		</DocBox>
 		<DocBox>
-			<CodeBlock class="d4r-p-4" code="pnpm add @dapper-ui/core" />
+			<CodeBlock class="d4r-p-4" language="bash" code="pnpm add @dapper-ui/core" />
 		</DocBox>
 	</DocSection>
 
@@ -40,13 +40,25 @@
 			do this, first use your preferred package manager to install the fonts:
 		</DocSectionText>
 		<DocBox>
-			<CodeBlock class="d4r-p-4" code="npm install @fontsource/open-sans @fontsource/fira-mono" />
+			<CodeBlock
+				class="d4r-p-4"
+				language="bash"
+				code="npm install @fontsource/open-sans @fontsource/fira-mono"
+			/>
 		</DocBox>
 		<DocBox>
-			<CodeBlock class="d4r-p-4" code="yarn add @fontsource/open-sans @fontsource/fira-mono" />
+			<CodeBlock
+				class="d4r-p-4"
+				language="bash"
+				code="yarn add @fontsource/open-sans @fontsource/fira-mono"
+			/>
 		</DocBox>
 		<DocBox>
-			<CodeBlock class="d4r-p-4" code="pnpm add @fontsource/open-sans @fontsource/fira-mono" />
+			<CodeBlock
+				class="d4r-p-4"
+				language="bash"
+				code="pnpm add @fontsource/open-sans @fontsource/fira-mono"
+			/>
 		</DocBox>
 
 		<DocSectionText>

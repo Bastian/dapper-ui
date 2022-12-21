@@ -1,6 +1,7 @@
 import Prism from 'prismjs';
 import 'prism-svelte';
 import 'prismjs/components/prism-typescript';
+import 'prismjs/components/prism-bash';
 
 addEventListener('message', (message: MessageEvent<{ code: string; language?: string }>) => {
 	// TODO Support other languages

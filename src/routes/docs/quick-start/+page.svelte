@@ -17,49 +17,20 @@
 />
 
 <DocContent>
-	<DocSection title="1. Installation">
-		<DocSectionText>
-			Install Dapper UI and the default fonts with your favorite package manager:
-		</DocSectionText>
-
+	<DocSection title="1. Install Dapper UI">
+		<DocSectionText>Install Dapper UI with your favorite package manager:</DocSectionText>
 		<DocBox>
-			<CodeBlock
-				class="d4r-p-4"
-				code="npm install @dapper-ui/core @fontsource/open-sans @fontsource/fira-mono"
-			/>
+			<CodeBlock class="d4r-p-4" language="bash" code="npm install @dapper-ui/core" />
 		</DocBox>
 		<DocBox>
-			<CodeBlock
-				class="d4r-p-4"
-				code="yarn add @dapper-ui/core @fontsource/open-sans @fontsource/fira-mono"
-			/>
+			<CodeBlock class="d4r-p-4" language="bash" code="yarn add @dapper-ui/core" />
 		</DocBox>
 		<DocBox>
-			<CodeBlock
-				class="d4r-p-4"
-				code="pnpm add @dapper-ui/core @fontsource/open-sans @fontsource/fira-mono"
-			/>
+			<CodeBlock class="d4r-p-4" language="bash" code="pnpm add @dapper-ui/core" />
 		</DocBox>
 	</DocSection>
 
-	<DocSection title="2. Imports">
-		<DocSectionText>
-			Import the default fonts (for example in the <code>+layout.svelte</code> file):
-		</DocSectionText>
-		<DocBox>
-			<StyledCodeBlock
-				code={`${'<'}script>
-    import "@fontsource/open-sans/400.css";
-    import "@fontsource/open-sans/500.css";
-    import "@fontsource/open-sans/600.css";
-    import "@fontsource/open-sans/700.css";
-    import "@fontsource/fira-mono/400.css";
-</script>`}
-			/>
-		</DocBox>
-	</DocSection>
-
-	<DocSection title="3. Wrap Code">
+	<DocSection title="2. Wrap Code">
 		<DocSectionText>
 			Wrap your code in the <code>ThemeProvider</code> component as high as possible in your component
 			tree:
@@ -74,6 +45,44 @@
 	<!-- Your app here -->
 	<Button>Example</Button>
 </ThemeProvider>`}
+			/>
+		</DocBox>
+	</DocSection>
+
+	<DocSection title="3. Install Default Fonts (optional)">
+		<DocSectionText>
+			Install and import the default fonts (for example in the <code>+layout.svelte</code> file):
+		</DocSectionText>
+		<DocBox>
+			<CodeBlock
+				class="d4r-p-4"
+				language="bash"
+				code="npm install @fontsource/open-sans @fontsource/fira-mono"
+			/>
+		</DocBox>
+		<DocBox>
+			<CodeBlock
+				class="d4r-p-4"
+				language="bash"
+				code="yarn add @fontsource/open-sans @fontsource/fira-mono"
+			/>
+		</DocBox>
+		<DocBox>
+			<CodeBlock
+				class="d4r-p-4"
+				language="bash"
+				code="pnpm add @fontsource/open-sans @fontsource/fira-mono"
+			/>
+		</DocBox>
+		<DocBox>
+			<StyledCodeBlock
+				code={`${'<'}script>
+    import "@fontsource/open-sans/400.css";
+    import "@fontsource/open-sans/500.css";
+    import "@fontsource/open-sans/600.css";
+    import "@fontsource/open-sans/700.css";
+    import "@fontsource/fira-mono/400.css";
+</script>`}
 			/>
 		</DocBox>
 	</DocSection>
