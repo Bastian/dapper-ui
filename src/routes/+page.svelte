@@ -34,8 +34,8 @@
 				user-friendly component for your next project.
 			</Text>
 			<div class="d4r-flex d4r-flex-col d4r-gap-4 md:d4r-flex-row">
-				<Button href="{base}/docs/button">To Component List</Button>
-				<ToggleDarkModeButton />
+				<Button href="{base}/docs/quick-start">Quick Start</Button>
+				<Button color="neutral" href="{base}/docs/button">Browse Components</Button>
 			</div>
 		</div>
 	</Container>

@@ -6,6 +6,8 @@
 	import { defaultDapperUiTheme } from '$lib/theme/default-theme';
 	import ThemeProvider from '$lib/theme/ThemeProvider.svelte';
 	import LoginForm from './docs/LoginForm.svelte';
+	import '@fontsource/overlock/700.css';
+	import '@fontsource/tinos';
 
 	const themes: Record<string, DapperUiTheme> = {
 		default: defaultDapperUiTheme,

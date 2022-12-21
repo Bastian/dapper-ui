@@ -30,6 +30,9 @@
 			<Text contrast="lower"><Notebook /></Text>
 			<Text weight="semibold" size="sm">Getting Started</Text>
 		</div>
+		<DrawerLink {...getDrawerLinkProps('/docs/quick-start', $page.route.id)}>
+			Quick Start (tl;dr)
+		</DrawerLink>
 		<DrawerLink {...getDrawerLinkProps('/docs/installation', $page.route.id)}>
 			Installation
 		</DrawerLink>

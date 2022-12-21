@@ -48,7 +48,12 @@
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.3",
 		"vite": "^3.2.4",
-		"vitest": "^0.25.3"
+		"vitest": "^0.25.3",
+		"@fontsource/fira-mono": "^4.5.10",
+		"@fontsource/open-sans": "^4.5.13",
+		"@fontsource/overlock": "^4.5.9",
+		"@fontsource/tinos": "^4.5.9"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {}
 }

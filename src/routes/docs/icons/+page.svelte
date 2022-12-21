@@ -1,6 +1,7 @@
 <script lang="ts">
-	import Text from '$lib/components/text/Text.svelte';
 	import DocContent from '../DocContent.svelte';
+	import DocLink from '../DocLink.svelte';
+	import DocSectionText from '../DocSectionText.svelte';
 	import DocTitle from '../DocTitle.svelte';
 </script>
 
@@ -8,20 +9,18 @@
 
 <DocContent>
 	<div class="d4r-space-y-4">
-		<Text tag="p" size="lg" lineHeight="relaxed">
+		<DocSectionText>
 			Dapper UI doesn't come with a built-in icon library, but it is designed to work with any SVG
 			icons. This means that you can use any icon library of your choice, as long as the icons are
 			in SVG format. Non-SVG icons can be used as well, but you may need to do some additional work
 			to ensure sizing and color are correct (e.g. for buttons) as they are applied automatically.
-		</Text>
-		<Text tag="p" size="lg" lineHeight="relaxed">
+		</DocSectionText>
+		<DocSectionText>
 			One great option for an SVG icon library is
-			<a class="d4r-font-medium" href="https://tabler-icons.io/">Tabler Icons</a>, which is the one
-			we use on this website and in our examples. You can use the
-			<a class="d4r-font-medium" href="https://github.com/benflap/tabler-icons-svelte">
-				tabler-icons-svelte
-			</a>
+			<DocLink href="https://tabler-icons.io/">Tabler Icons</DocLink>, which is the one we use on
+			this website and in our examples. You can use the
+			<DocLink href="https://github.com/benflap/tabler-icons-svelte">tabler-icons-svelte</DocLink>
 			npm package to easily incorporate Tabler Icons into your Svelte project.
-		</Text>
+		</DocSectionText>
 	</div>
 </DocContent>

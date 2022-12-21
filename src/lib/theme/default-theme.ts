@@ -62,5 +62,9 @@ export const defaultDapperUiTheme: DapperUiTheme = {
 			thumb: 'full',
 			track: 'full'
 		}
+	},
+	font: {
+		default: "'Open Sans', sans-serif",
+		code: "'Fira Mono', monospace"
 	}
 };
