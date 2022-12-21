@@ -18,7 +18,7 @@
 	>
 		<pre>{[...Array(code.split('\n').length)].map((_, i) => `${i + 1}`).join('\n')}</pre>
 	</div>
-	<div class="d4r-overflow-x-auto d4r-py-2">
-		<CodeBlock {language} {code} {noDedent} />
+	<div class="d4r-overflow-x-auto">
+		<CodeBlock class="d4r-py-2" {language} {code} {noDedent} />
 	</div>
 </div>

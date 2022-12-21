@@ -5,8 +5,9 @@
 	export let what: string | string[];
 </script>
 
-<div class="d4r-my-4">
+<div class="d4r-my-2">
 	<CodeBlock
+		class="d4r-py-2"
 		language="typescript"
 		code={`import { ${Array.isArray(what) ? what.join(', ') : what} } from "@dapper-ui/${from}";`}
 	/>

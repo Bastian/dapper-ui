@@ -35,8 +35,8 @@
 	}
 </script>
 
-<div class={className}>
-	<pre class="d4r-overflow-x d4r-text-sm"><code class="hljs d4r-rounded-lg language-{language}"
+<div class="d4r-overflow-x-auto {className}">
+	<pre class="d4r-text-sm"><code class="hljs d4r-rounded-lg language-{language}"
 			>{#if highlighted}{@html highlighted}{:else}{noDedent
 					? code
 					: dedentFunction(code)}{/if}</code

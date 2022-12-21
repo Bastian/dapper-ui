@@ -22,14 +22,23 @@
 			Install Dapper UI and the default fonts with your favorite package manager:
 		</DocSectionText>
 
-		<DocBox class="d4r-p-4">
-			<CodeBlock code="npm install @dapper-ui/core @fontsource/open-sans @fontsource/fira-mono" />
+		<DocBox>
+			<CodeBlock
+				class="d4r-p-4"
+				code="npm install @dapper-ui/core @fontsource/open-sans @fontsource/fira-mono"
+			/>
 		</DocBox>
-		<DocBox class="d4r-p-4">
-			<CodeBlock code="yarn add @dapper-ui/core @fontsource/open-sans @fontsource/fira-mono" />
+		<DocBox>
+			<CodeBlock
+				class="d4r-p-4"
+				code="yarn add @dapper-ui/core @fontsource/open-sans @fontsource/fira-mono"
+			/>
 		</DocBox>
-		<DocBox class="d4r-p-4">
-			<CodeBlock code="pnpm add @dapper-ui/core @fontsource/open-sans @fontsource/fira-mono" />
+		<DocBox>
+			<CodeBlock
+				class="d4r-p-4"
+				code="pnpm add @dapper-ui/core @fontsource/open-sans @fontsource/fira-mono"
+			/>
 		</DocBox>
 	</DocSection>
 
