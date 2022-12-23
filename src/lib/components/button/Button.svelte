@@ -5,10 +5,16 @@ subtle, as well as a gradient style. It can also be customized in terms of size 
 needs of any design. Additionally, the Button can function as a link.
 -->
 <script lang="ts">
+	import { focusOnMount } from '$lib/actions/focusOnMount';
 	import type { Shades } from '$lib/colors/color';
 	import type { Radius } from '$lib/theme/DapperUiTheme';
 	import { overwriteColor } from '$lib/util/createColorOverwrite';
 	import { overwriteRadius } from '$lib/util/createRadiusOverwrite';
+
+	/**
+	 * The id of the element.
+	 */
+	export let id: string | undefined = undefined;
 
 	/**
 	 * Whether the button should fill the width of its parent.
@@ -47,6 +53,14 @@ needs of any design. Additionally, the Button can function as a link.
 	 * The target of the link. Only works when the `href` prop is set.
 	 */
 	export let target: string | undefined = undefined;
+
+	/**
+	 * When set to `true`, automatically focuses the element when the component is mounted.
+	 *
+	 * This is useful for usability and accessibility reasons, for example to focus an element
+	 * when a modal is opened.
+	 */
+	export let autoFocus = false;
 
 	/**
 	 * The appearance of the button.
@@ -151,6 +165,7 @@ needs of any design. Additionally, the Button can function as a link.
 
 <svelte:element
 	this={href ? 'a' : 'button'}
+	{id}
 	{href}
 	{target}
 	class="button {className}"
@@ -176,6 +191,7 @@ needs of any design. Additionally, the Button can function as a link.
 	class:d4r-button-icon-xs={size === 'xs'}
 	{disabled}
 	type="button"
+	use:focusOnMount={autoFocus}
 	on:click
 	on:keydown
 	on:keyup

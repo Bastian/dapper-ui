@@ -4,6 +4,7 @@
 	import { generateRandomId } from '$lib/helpers/generateRandomId';
 	import Text from '$lib/components/text/Text.svelte';
 	import type { Radius } from '$lib/theme/DapperUiTheme';
+	import { focusOnMount } from '$lib/actions/focusOnMount';
 
 	export let id: string = generateRandomId();
 	export let required = false;
@@ -24,6 +25,14 @@
 	 * default border radius defined in the theme.
 	 */
 	export let radius: Radius | undefined = undefined;
+
+	/**
+	 * When set to `true`, automatically focuses the element when the component is mounted.
+	 *
+	 * This is useful for usability and accessibility reasons, for example to focus an element
+	 * when a modal is opened.
+	 */
+	export let autoFocus = false;
 </script>
 
 <div class="d4r-flex d4r-items-center d4r-gap-2" class:d4r-opacity-50={disabled}>
@@ -35,6 +44,7 @@
 		bind:checked
 		{required}
 		{disabled}
+		use:focusOnMount={autoFocus}
 		on:click
 		on:change
 	/>

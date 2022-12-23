@@ -4,6 +4,7 @@
 	import { generateRandomId } from '$lib/helpers/generateRandomId';
 	import InputBase from '$lib/InputBase.svelte';
 	import type { Radius } from '$lib/theme/DapperUiTheme';
+	import { focusOnMount } from '$lib/actions/focusOnMount';
 
 	let className = '';
 	export { className as class };
@@ -19,6 +20,14 @@
 
 	export let label: string;
 	export let hideLabel = false;
+
+	/**
+	 * When set to `true`, automatically focuses the element when the component is mounted.
+	 *
+	 * This is useful for usability and accessibility reasons, for example to focus an element
+	 * when a modal is opened.
+	 */
+	export let autoFocus = false;
 
 	export let color: string | undefined = undefined;
 	export let radius: Radius | undefined = undefined;
@@ -68,6 +77,7 @@
 			type="range"
 			class="d4r-group"
 			style="background: linear-gradient(90deg, rgb(var(--d4r-color-primary-600)) {percentage}%, rgb(var(--d4r-color-neutral-300)) {percentage}%, rgb(var(--d4r-color-neutral-300)) 100%);"
+			use:focusOnMount={autoFocus}
 			on:change
 			on:input
 		/>

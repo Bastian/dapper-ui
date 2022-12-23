@@ -61,7 +61,8 @@ export const defaultDapperUiTheme: DapperUiTheme = {
 		slider: {
 			thumb: 'full',
 			track: 'full'
-		}
+		},
+		dialog: 'lg'
 	},
 	font: {
 		default: "'Open Sans', sans-serif",

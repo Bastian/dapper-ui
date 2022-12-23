@@ -50,6 +50,10 @@ export interface DapperUiTheme {
 			 */
 			track: Radius;
 		};
+		/**
+		 * The default radius for dialogs.
+		 */
+		dialog: Radius;
 	};
 	// TODO: Instead of overwriting, also allow extending the default theme similar to Tailwind's "extend"
 }

@@ -6,6 +6,7 @@
 	import { createEventDispatcher } from 'svelte';
 	import type { Radius } from '$lib/theme/DapperUiTheme';
 	import Text from '../text/Text.svelte';
+	import { focusOnMount } from '$lib/actions/focusOnMount';
 
 	let className = '';
 	export { className as class };
@@ -25,6 +26,14 @@
 
 	export let label: string;
 	export let hideLabel = false;
+
+	/**
+	 * When set to `true`, automatically focuses the element when the component is mounted.
+	 *
+	 * This is useful for usability and accessibility reasons, for example to focus an element
+	 * when a modal is opened.
+	 */
+	export let autoFocus = false;
 
 	export let color: string | undefined = undefined;
 	export let size: 'sm' | 'base' | undefined = 'base';
@@ -95,6 +104,7 @@
 			{min}
 			{max}
 			{step}
+			use:focusOnMount={autoFocus}
 			on:change
 			on:input={handleInput}
 		/>

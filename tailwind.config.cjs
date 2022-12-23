@@ -60,7 +60,8 @@ module.exports = {
 			input: 'var(--d4r-border-radius-input)',
 			checkbox: 'var(--d4r-border-radius-checkbox)',
 			'slider-thumb': 'var(--d4r-border-radius-slider-thumb)',
-			'slider-track': 'var(--d4r-border-radius-slider-track)'
+			'slider-track': 'var(--d4r-border-radius-slider-track)',
+			dialog: 'var(--d4r-border-radius-dialog)'
 		}
 	},
 	plugins: [require('@tailwindcss/forms')]

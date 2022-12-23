@@ -21,7 +21,8 @@
 			mapBorderRadius('input', theme.radiuses.input),
 			mapBorderRadius('checkbox', theme.radiuses.checkbox),
 			mapBorderRadius('slider-thumb', theme.radiuses.slider.thumb),
-			mapBorderRadius('slider-track', theme.radiuses.slider.track)
+			mapBorderRadius('slider-track', theme.radiuses.slider.track),
+			mapBorderRadius('dialog', theme.radiuses.dialog)
 		];
 	}
 

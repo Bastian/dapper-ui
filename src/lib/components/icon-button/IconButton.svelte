@@ -48,6 +48,11 @@ component, adding a label property for improved accessibility.
 	export let gradient: ComponentProps<Button>['gradient'] = undefined;
 
 	/**
+	 * @see Button#autoFocus
+	 */
+	export let autoFocus: ComponentProps<Button>['autoFocus'] = false;
+
+	/**
 	 * A label for the button. This is used for accessibility purposes and can be read by
 	 * screen readers. It's not visible to the user.
 	 *
@@ -73,6 +78,7 @@ component, adding a label property for improved accessibility.
 	{target}
 	{variant}
 	{gradient}
+	{autoFocus}
 	class="d4r-h-10 d4r-w-10 !d4r-p-0 
     {size === 'base' || size === undefined ? '!d4r-h-10 !d4r-w-10 ' : ''}
     {size === 'sm' ? '!d4r-h-9 !d4r-w-9 ' : ''}

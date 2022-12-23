@@ -47,6 +47,8 @@
 		<DrawerLink {...getDrawerLinkProps('/docs/select', $page.route.id)}>Select</DrawerLink>
 		<DrawerLink {...getDrawerLinkProps('/docs/checkbox', $page.route.id)}>Checkbox</DrawerLink>
 		<DrawerLink {...getDrawerLinkProps('/docs/text', $page.route.id)}>Text</DrawerLink>
+		<DrawerLink {...getDrawerLinkProps('/docs/dialog', $page.route.id)}>Dialog</DrawerLink>
+		<DrawerLink {...getDrawerLinkProps('/docs/modal', $page.route.id)}>Modal</DrawerLink>
 
 		<div class="svg-container d4r-mb-2 d4r-mt-6 d4r-flex d4r-items-center d4r-gap-2">
 			<Text contrast="lower"><Bulb /></Text>
