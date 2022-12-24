@@ -4,6 +4,12 @@
 	import { getContext } from 'svelte';
 	import IconButton from '../icon-button/IconButton.svelte';
 
+	/**
+	 * When set to `true`, a close button will be displayed that closes the
+	 * dialog when clicked.
+	 */
+	export let withCloseButton = false;
+
 	const close = getContext<undefined | (() => void)>('d4r-modal-close-function');
 </script>
 
@@ -13,7 +19,9 @@
 			<slot />
 		</Text>
 	</div>
-	<IconButton size="xs" label="Close Dialog" on:click={close}>
-		<CloseIcon />
-	</IconButton>
+	{#if withCloseButton}
+		<IconButton size="xs" label="Close Dialog" on:click={close}>
+			<CloseIcon />
+		</IconButton>
+	{/if}
 </div>

@@ -17,7 +17,7 @@
 <DocTitle title="Modal" />
 <DocImport what="Modal" from="core" />
 <DocIntoText
-	text="An unstyled modal that can display any content. It automatically handles the background overlay, focus trapping, and closing the modal when the user clicks outside of it or presses the Esc key. If you want a modal with pre-designed styling, consider using the Dialog component instead."
+	text="An unstyled modal that can display any content. It automatically handles the background overlay, focus trapping, and closing of the modal when the user clicks outside of it or presses the Esc key. If you want a modal with pre-designed styling, consider using the Dialog component instead."
 />
 
 <DocContent>

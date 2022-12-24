@@ -13,6 +13,7 @@
 
 	let dialogOpen = false;
 	let dialogOpen2 = false;
+	let fullscreenDialogOpen = false;
 </script>
 
 <DocTitle title="Dialog" />
@@ -84,6 +85,34 @@
 					</DialogContent>
 					<DialogActions>
 						<Button autoFocus on:click={() => (dialogOpen2 = false)}>Okay</Button>
+					</DialogActions>
+				</Dialog>
+			</div>
+		</Example>
+	</DocSection>
+
+	<DocSection title="Fullscreen">
+		<DocSectionText>
+			You can use the <code>fullscreen</code> prop to display the dialog in fullscreen.
+		</DocSectionText>
+		<Example
+			code={`<Button on:click={() => (open = true)}>Open Fullscreen Dialog</Button>
+
+<Dialog fullscreen bind:open title="Fullscreen Dialog">
+    <DialogContent>
+        This dialog fills the whole screen.
+    </DialogContent>
+    <DialogActions>
+        <Button autoFocus on:click={() => (open = false)}>Okay</Button>
+    </DialogActions>
+</Dialog>`}
+		>
+			<div slot="preview">
+				<Button on:click={() => (fullscreenDialogOpen = true)}>Open Fullscreen Dialog</Button>
+				<Dialog fullscreen title="Fullscreen Dialog" bind:open={fullscreenDialogOpen}>
+					<DialogContent>This dialog fills the whole screen.</DialogContent>
+					<DialogActions>
+						<Button autoFocus on:click={() => (fullscreenDialogOpen = false)}>Okay</Button>
 					</DialogActions>
 				</Dialog>
 			</div>

@@ -18,6 +18,19 @@
 	export let disableCloseOnEscape = false;
 
 	/**
+	 * When set to `true`, a close button will be displayed that closes the
+	 * dialog when clicked.
+	 *
+	 * Only works if a title is set.
+	 */
+	export let withCloseButton = false;
+
+	/**
+	 * When set to `true`, the dialog will be fullscreen.
+	 */
+	export let fullscreen = false;
+
+	/**
 	 * The id of the element that should automatically be focused when the dialog is opened.
 	 */
 	export let autoFocusElement: string | undefined = undefined;
@@ -45,12 +58,28 @@
 	{ariaDescribedby}
 >
 	<div
-		class="d4r-flex d4r-max-w-[min(42rem,calc(100vw-4rem))] d4r-flex-col d4r-rounded-dialog d4r-bg-white d4r-p-4 dark:d4r-bg-dark-700 {className}"
+		class="d4r-flex d4r-flex-col d4r-bg-white d4r-p-4 dark:d4r-bg-dark-700 {className}"
+		class:max-w-lg={!fullscreen}
+		class:fullscreen
 	>
 		{#if title}
 			<!-- TODO Automatically set aria-laballedby attribute  -->
-			<DialogHeader>{title}</DialogHeader>
+			<DialogHeader {withCloseButton}>{title}</DialogHeader>
 		{/if}
 		<slot />
 	</div>
 </Modal>
+
+<style lang="postcss">
+	:not(.fullscreen) {
+		@apply d4r-rounded-dialog;
+	}
+
+	.max-w-lg {
+		@apply d4r-max-w-[min(42rem,calc(100vw-4rem))];
+	}
+
+	.fullscreen {
+		@apply d4r-h-screen d4r-w-screen;
+	}
+</style>
