@@ -9,8 +9,8 @@
 		<link href="/dapper-ui/_app/immutable/assets/_layout-7f3d7124.css" rel="stylesheet">
 		<link href="/dapper-ui/_app/immutable/assets/Dialog-0ba7ea7c.css" rel="stylesheet">
 		<link href="/dapper-ui/_app/immutable/assets/_layout-d26e45f3.css" rel="stylesheet">
-		<link href="/dapper-ui/_app/immutable/assets/CodeBlock-1881cc6e.css" rel="stylesheet">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/start-95c66af3.js">
+		<link href="/dapper-ui/_app/immutable/assets/DocSection-1881cc6e.css" rel="stylesheet">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/start-057d0c6a.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/index-9ef34302.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/singletons-1fe70416.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/index-ceefd529.js">
@@ -26,11 +26,17 @@
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/stores-d0f55709.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Bulb-97fe24f4.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Footer-caddcb6f.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/docs/checkbox/_page.svelte-73befd41.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocImport-e99cec86.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/CodeBlock-fbc219d2.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/docs/checkbox/_page.svelte-60a3373e.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocContent-2d6aa00a.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocImport-ecda4852.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocSection-05ba0458.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocSectionText-2692d69e.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocIntoText-4170de79.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocTitle-c10cf865.js"><title>Checkbox - Dapper UI</title><!-- HEAD_svelte-2jhqr1_START -->
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocTitle-c10cf865.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/InputBase-724cd643.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Example-7d928227.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/RadiusSlider-a4170795.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/ColorPicker-d3221817.js"><title>Checkbox - Dapper UI</title><!-- HEAD_svelte-2jhqr1_START -->
 		<!-- HTML_TAG_START --><style type="text/css">:root {
 --d4r-color-primary-50: 239 246 255;
 --d4r-color-primary-100: 219 234 254;
@@ -472,18 +478,317 @@ font-family: 'Open Sans', sans-serif;
 <h1 class="d4r-mb-4   contrast-high           d4r-text-3xl                    d4r-font-bold    svelte-1ltnbjr" style="">Checkbox
 </h1>
 <div class="d4r-my-2"><div class="d4r-overflow-x-auto d4r-py-2"><pre class="d4r-text-sm"><code class="hljs d4r-rounded-lg language-typescript">import { Checkbox } from "@dapper-ui/core";</code></pre></div></div>
-<div class="    contrast-base       d4r-text-lg              d4r-leading-relaxed      d4r-font-normal       svelte-1ltnbjr" style="">Tbd
+<div class="    contrast-base       d4r-text-lg              d4r-leading-relaxed      d4r-font-normal       svelte-1ltnbjr" style="">The Checkbox component allows users to select a boolean value.
 </div>
 
-<meta name="description" content="Tbd"></div></div>
+<meta name="description" content="The Checkbox component allows users to select a boolean value.">
+
+<div class="d4r-mt-8 d4r-space-y-16"><article class="d4r-space-y-2 "><h2 class="   contrast-high         d4r-text-xl                      d4r-font-bold    svelte-1ltnbjr" style="">Demo
+</h2>
+	<div class="d4r-mb-1    contrast-base      d4r-text-base               d4r-leading-relaxed      d4r-font-normal       svelte-1ltnbjr" style="">
+</div>
+	<div><div class="d4r-flex d4r-flex-col md:d4r-flex-row"><div class="d4r-w-full d4r-overflow-hidden d4r-rounded d4r-border d4r-border-neutral-200 d4r-bg-white dark:d4r-border-dark-600 dark:d4r-bg-dark-800 d4r-flex d4r-w-full d4r-items-center d4r-justify-center d4r-rounded-b-none md:d4r-rounded-tr-none d4r-p-8"><div class="d4r-flex d4r-items-center d4r-gap-2"><input style="--d4r-border-radius-checkbox: var(--d4r-border-radius-base);" type="checkbox" class="d4r-input-base svelte-7pjx8w" id="ugjsj0zjn4k"  >
+	<div class="-d4r-mt-0.5"><label class="d4r-select-none      contrast-low    d4r-text-sm                      d4r-font-normal       svelte-1ltnbjr" style="" for="ugjsj0zjn4k">Click Me
+</label></div>
+</div></div>
+			<div class="d4r-w-full d4r-overflow-hidden d4r-rounded d4r-border d4r-border-neutral-200 d4r-bg-white dark:d4r-border-dark-600 dark:d4r-bg-dark-800 d4r-shrink-0 d4r-space-y-1 d4r-rounded-t-none d4r-rounded-b-none d4r-border-t-0 d4r-p-8 md:d4r-w-[450px] md:d4r-rounded-tl-none md:d4r-rounded-tr md:d4r-border-l-0 md:d4r-border-t"><div class="d4r-space-y-4"><div><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                      d4r-font-normal       svelte-1ltnbjr" style="" for="em7pi9y9f9b">
+		Radius
+</label>
+	<div style=""><input id="em7pi9y9f9b"   min="0" max="8" step="1" type="range" class="d4r-group svelte-vami14" style="background: linear-gradient(90deg, rgb(var(--d4r-color-primary-600)) 25%, rgb(var(--d4r-color-neutral-300)) 25%, rgb(var(--d4r-color-neutral-300)) 100%);" value="2"></div>
+	
+</div></div>
+		<div class="d4r-space-y-1 d4r-text-sm d4r-font-medium d4r-text-neutral-700"><span class="     contrast-low    d4r-text-sm                      d4r-font-normal       svelte-1ltnbjr" style="">Color
+</span>
+	<div class="d4r-flex d4r-max-w-sm d4r-flex-wrap d4r-gap-1">
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-gray-300);--d4r-color-primary-600: var(--d4r-color-gray-600);--d4r-color-primary-700: var(--d4r-color-gray-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color gray</span></span>
+	
+</button>
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-red-300);--d4r-color-primary-600: var(--d4r-color-red-600);--d4r-color-primary-700: var(--d4r-color-red-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color red</span></span>
+	
+</button>
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-orange-300);--d4r-color-primary-600: var(--d4r-color-orange-600);--d4r-color-primary-700: var(--d4r-color-orange-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color orange</span></span>
+	
+</button>
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-amber-300);--d4r-color-primary-600: var(--d4r-color-amber-600);--d4r-color-primary-700: var(--d4r-color-amber-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color amber</span></span>
+	
+</button>
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-yellow-300);--d4r-color-primary-600: var(--d4r-color-yellow-600);--d4r-color-primary-700: var(--d4r-color-yellow-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color yellow</span></span>
+	
+</button>
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-lime-300);--d4r-color-primary-600: var(--d4r-color-lime-600);--d4r-color-primary-700: var(--d4r-color-lime-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color lime</span></span>
+	
+</button>
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-green-300);--d4r-color-primary-600: var(--d4r-color-green-600);--d4r-color-primary-700: var(--d4r-color-green-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color green</span></span>
+	
+</button>
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-emerald-300);--d4r-color-primary-600: var(--d4r-color-emerald-600);--d4r-color-primary-700: var(--d4r-color-emerald-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color emerald</span></span>
+	
+</button>
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-teal-300);--d4r-color-primary-600: var(--d4r-color-teal-600);--d4r-color-primary-700: var(--d4r-color-teal-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color teal</span></span>
+	
+</button>
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-cyan-300);--d4r-color-primary-600: var(--d4r-color-cyan-600);--d4r-color-primary-700: var(--d4r-color-cyan-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color cyan</span></span>
+	
+</button>
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-sky-300);--d4r-color-primary-600: var(--d4r-color-sky-600);--d4r-color-primary-700: var(--d4r-color-sky-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color sky</span></span>
+	
+</button>
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-blue-300);--d4r-color-primary-600: var(--d4r-color-blue-600);--d4r-color-primary-700: var(--d4r-color-blue-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color blue</span></span>
+	
+</button>
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-indigo-300);--d4r-color-primary-600: var(--d4r-color-indigo-600);--d4r-color-primary-700: var(--d4r-color-indigo-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color indigo</span></span>
+	
+</button>
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-violet-300);--d4r-color-primary-600: var(--d4r-color-violet-600);--d4r-color-primary-700: var(--d4r-color-violet-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color violet</span></span>
+	
+</button>
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-purple-300);--d4r-color-primary-600: var(--d4r-color-purple-600);--d4r-color-primary-700: var(--d4r-color-purple-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color purple</span></span>
+	
+</button>
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-fuchsia-300);--d4r-color-primary-600: var(--d4r-color-fuchsia-600);--d4r-color-primary-700: var(--d4r-color-fuchsia-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color fuchsia</span></span>
+	
+</button>
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-pink-300);--d4r-color-primary-600: var(--d4r-color-pink-600);--d4r-color-primary-700: var(--d4r-color-pink-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color pink</span></span>
+	
+</button>
+
+
+
+
+
+<button class="button d4r-h-10 d4r-w-10 !d4r-p-0 
+    
+    !d4r-h-9 !d4r-w-9 
+    
+     svelte-1uqjh66   size-sm     solid      d4r-justify-center  d4r-truncate  d4r-button-icon-sm" style="--d4r-color-primary-300: var(--d4r-color-rose-300);--d4r-color-primary-600: var(--d4r-color-rose-600);--d4r-color-primary-700: var(--d4r-color-rose-700);" >
+	<span class="d4r-truncate">
+			
+	<span class="d4r-sr-only">Color rose</span></span>
+	
+</button></div></div>
+		<div class="d4r-space-y-2.5 lg:d4r-space-y-1.5"><div class="d4r-flex d4r-items-center d4r-gap-2"><input style="" type="checkbox" class="d4r-input-base svelte-7pjx8w" id="vzipvqatq3n"  >
+	<div class="-d4r-mt-0.5"><label class="d4r-select-none      contrast-low    d4r-text-sm                      d4r-font-normal       svelte-1ltnbjr" style="" for="vzipvqatq3n">Disabled
+</label></div>
+</div>
+			<div class="d4r-flex d4r-items-center d4r-gap-2"><input style="" type="checkbox" class="d4r-input-base svelte-7pjx8w" id="lfe5znhjp2b"  >
+	<div class="-d4r-mt-0.5"><label class="d4r-select-none      contrast-low    d4r-text-sm                      d4r-font-normal       svelte-1ltnbjr" style="" for="lfe5znhjp2b">Required
+</label></div>
+</div></div>
+	</div></div></div>
+		<div class="d4r-w-full d4r-overflow-hidden d4r-rounded d4r-border d4r-border-neutral-200 d4r-bg-white dark:d4r-border-dark-600 dark:d4r-bg-dark-800 d4r-rounded-t-none d4r-border-t-0 !d4r-bg-neutral-50 d4r-p-4 dark:!d4r-bg-dark-800"><div class="d4r-flex d4r-items-start d4r-gap-2 "><div class="d4r-mt-2 d4r-select-none d4r-border-r d4r-border-neutral-200 d4r-px-4 d4r-text-right d4r-text-sm d4r-text-neutral-500 dark:d4r-border-dark-600"><pre><code class="language-svelte">1</code></pre></div>
+	<div class="d4r-overflow-x-auto"><div class="d4r-overflow-x-auto d4r-py-2"><pre class="d4r-text-sm"><code class="hljs d4r-rounded-lg language-svelte">&lt;Checkbox label="Click Me"/></code></pre></div></div></div></div></div></article></div></div></div>
 	<div class="d4r-flex"><div class="d4r-hidden d4r-w-[220px] d4r-shrink-0 lg:d4r-block"></div>
 		<div class="d4r-flex-grow"><footer class="d4r-flex d4r-items-center d4r-justify-center d4r-border-t d4r-border-t-neutral-200 d4r-bg-white d4r-px-8 d4r-py-4 dark:d4r-border-t-dark-600 dark:d4r-bg-dark-800"><span class="      contrast-lower    d4r-text-base                     d4r-font-normal       svelte-1ltnbjr" style="">© 2022 Bastian Oppermann
 </span></footer></div></div>
 </div></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="rlzrbs">
-			import { start } from "/dapper-ui/_app/immutable/start-95c66af3.js";
+		<script type="module" data-sveltekit-hydrate="1vmu9sw">
+			import { start } from "/dapper-ui/_app/immutable/start-057d0c6a.js";
 
 			start({
 				env: {},
@@ -497,8 +802,8 @@ font-family: 'Open Sans', sans-serif;
 					form: null
 				},
 				paths: {"base":"/dapper-ui","assets":"/dapper-ui"},
-				target: document.querySelector('[data-sveltekit-hydrate="rlzrbs"]').parentNode,
-				version: "1671879737357"
+				target: document.querySelector('[data-sveltekit-hydrate="1vmu9sw"]').parentNode,
+				version: "1671880400938"
 			});
 		</script>
 	</div>

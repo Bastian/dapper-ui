@@ -9,8 +9,8 @@
 		<link href="/dapper-ui/_app/immutable/assets/_layout-7f3d7124.css" rel="stylesheet">
 		<link href="/dapper-ui/_app/immutable/assets/Dialog-0ba7ea7c.css" rel="stylesheet">
 		<link href="/dapper-ui/_app/immutable/assets/_layout-d26e45f3.css" rel="stylesheet">
-		<link href="/dapper-ui/_app/immutable/assets/CodeBlock-1881cc6e.css" rel="stylesheet">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/start-95c66af3.js">
+		<link href="/dapper-ui/_app/immutable/assets/DocSection-1881cc6e.css" rel="stylesheet">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/start-057d0c6a.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/index-9ef34302.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/singletons-1fe70416.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/index-ceefd529.js">
@@ -26,19 +26,18 @@
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/stores-d0f55709.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Bulb-97fe24f4.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Footer-caddcb6f.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/docs/select/_page.svelte-d2560419.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/docs/select/_page.svelte-321686c3.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocContent-2d6aa00a.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocImport-e99cec86.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/CodeBlock-fbc219d2.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocImport-ecda4852.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocSection-05ba0458.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocSectionText-2692d69e.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocIntoText-4170de79.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocTitle-c10cf865.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/ColorPicker-0a5eede8.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Example-72670a6a.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocSection-3b46e098.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocSectionText-2692d69e.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/InputBase-e529dd9b.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Select-caa7cd7e.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/RadiusSlider-f3f3b710.js"><title>Select - Dapper UI</title><!-- HEAD_svelte-2jhqr1_START -->
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/ColorPicker-d3221817.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Example-7d928227.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/InputBase-724cd643.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Select-19ec86aa.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/RadiusSlider-a4170795.js"><title>Select - Dapper UI</title><!-- HEAD_svelte-2jhqr1_START -->
 		<!-- HTML_TAG_START --><style type="text/css">:root {
 --d4r-color-primary-50: 239 246 255;
 --d4r-color-primary-100: 219 234 254;
@@ -307,7 +306,7 @@
 --d4r-border-radius-dialog: var(--d4r-border-radius-lg);
 font-family: 'Open Sans', sans-serif;
 }code {font-family: 'Fira Mono', monospace;}
-	</style><!-- HTML_TAG_END --><!-- HEAD_svelte-2jhqr1_END --><!-- HEAD_svelte-oacep1_START --><!-- HEAD_svelte-oacep1_END --><!-- HEAD_svelte-1rbra6v_START --><!-- HEAD_svelte-1rbra6v_END -->
+	</style><!-- HTML_TAG_END --><!-- HEAD_svelte-2jhqr1_END --><!-- HEAD_svelte-1rbra6v_START --><!-- HEAD_svelte-1rbra6v_END -->
 	</head>
 	<body class="d4r-h-full d4r-bg-neutral-100 dark:d4r-bg-dark-700">
 		<div class="d4r-h-full">
@@ -477,8 +476,6 @@ font-family: 'Open Sans', sans-serif;
 
 	<div class="d4r-flex d4r-grow"><div class="d4r-hidden d4r-w-[220px] d4r-shrink-0 lg:d4r-block"></div>
 		<div class="d4r-mx-auto d4r-w-full d4r-max-w-4xl d4r-overflow-hidden d4r-py-8 d4r-px-4 sm:d4r-px-6 md:d4r-px-10 md:d4r-py-12">
-
-
 <h1 class="d4r-mb-4   contrast-high           d4r-text-3xl                    d4r-font-bold    svelte-1ltnbjr" style="">Select
 </h1>
 <div class="d4r-my-2"><div class="d4r-overflow-x-auto d4r-py-2"><pre class="d4r-text-sm"><code class="hljs d4r-rounded-lg language-typescript">import { Select } from "@dapper-ui/core";</code></pre></div></div>
@@ -491,30 +488,30 @@ font-family: 'Open Sans', sans-serif;
 </h2>
 	<div class="d4r-mb-1    contrast-base      d4r-text-base               d4r-leading-relaxed      d4r-font-normal       svelte-1ltnbjr" style="">
 </div>
-	<div><div class="d4r-flex d4r-flex-col md:d4r-flex-row"><div class="d4r-w-full d4r-overflow-hidden d4r-rounded d4r-border d4r-border-neutral-200 d4r-bg-white dark:d4r-border-dark-600 dark:d4r-bg-dark-800 d4r-flex d4r-w-full d4r-items-center d4r-justify-center d4r-rounded-b-none md:d4r-rounded-tr-none d4r-p-8"><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                      d4r-font-normal       svelte-1ltnbjr" style="" for="5k4ok1csfdh">
+	<div><div class="d4r-flex d4r-flex-col md:d4r-flex-row"><div class="d4r-w-full d4r-overflow-hidden d4r-rounded d4r-border d4r-border-neutral-200 d4r-bg-white dark:d4r-border-dark-600 dark:d4r-bg-dark-800 d4r-flex d4r-w-full d4r-items-center d4r-justify-center d4r-rounded-b-none md:d4r-rounded-tr-none d4r-p-8"><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                      d4r-font-normal       svelte-1ltnbjr" style="" for="injss5irjin">
 		Favorite Fruit
 </label>
 	
 	
-	<select style="--d4r-border-radius-input: var(--d4r-border-radius-base);" class="d4r-input-base size-base  svelte-qqh8ab" id="5k4ok1csfdh" slot="preview"><option value="apple">Apple</option>
+	<select style="--d4r-border-radius-input: var(--d4r-border-radius-base);" class="d4r-input-base size-base  svelte-qqh8ab" id="injss5irjin" slot="preview"><option value="apple">Apple</option>
 		<option value="banana">Bananna</option>
 		<option value="orange">Orange</option></select>
 	
 </div></div>
-			<div class="d4r-w-full d4r-overflow-hidden d4r-rounded d4r-border d4r-border-neutral-200 d4r-bg-white dark:d4r-border-dark-600 dark:d4r-bg-dark-800 d4r-shrink-0 d4r-space-y-1 d4r-rounded-t-none d4r-rounded-b-none d4r-border-t-0 d4r-p-8 md:d4r-w-[450px] md:d4r-rounded-tl-none md:d4r-rounded-tr md:d4r-border-l-0 md:d4r-border-t"><div class="d4r-space-y-4"><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                      d4r-font-normal       svelte-1ltnbjr" style="" for="pndgqk6l2o9">
+			<div class="d4r-w-full d4r-overflow-hidden d4r-rounded d4r-border d4r-border-neutral-200 d4r-bg-white dark:d4r-border-dark-600 dark:d4r-bg-dark-800 d4r-shrink-0 d4r-space-y-1 d4r-rounded-t-none d4r-rounded-b-none d4r-border-t-0 d4r-p-8 md:d4r-w-[450px] md:d4r-rounded-tl-none md:d4r-rounded-tr md:d4r-border-l-0 md:d4r-border-t"><div class="d4r-space-y-4"><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                      d4r-font-normal       svelte-1ltnbjr" style="" for="tquakcc32e">
 		Size
 </label>
 	
 	
-	<select style="" class="d4r-input-base size-base  svelte-qqh8ab" id="pndgqk6l2o9"><option value="base">Base</option>
+	<select style="" class="d4r-input-base size-base  svelte-qqh8ab" id="tquakcc32e"><option value="base">Base</option>
 			<option value="sm">Small</option></select>
 	
 </div>
 
-		<div><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                      d4r-font-normal       svelte-1ltnbjr" style="" for="eet7crh5pzl">
+		<div><div class="d4r-inline-flex d4r-flex-col d4r-gap-1  d4r-inline-block"><label class="d4r-flex d4r-items-center d4r-gap-1.5        contrast-low    d4r-text-sm                      d4r-font-normal       svelte-1ltnbjr" style="" for="4q62fl45ja7">
 		Radius
 </label>
-	<div style=""><input id="eet7crh5pzl"   min="0" max="8" step="1" type="range" class="d4r-group svelte-vami14" style="background: linear-gradient(90deg, rgb(var(--d4r-color-primary-600)) 25%, rgb(var(--d4r-color-neutral-300)) 25%, rgb(var(--d4r-color-neutral-300)) 100%);" value="2"></div>
+	<div style=""><input id="4q62fl45ja7"   min="0" max="8" step="1" type="range" class="d4r-group svelte-vami14" style="background: linear-gradient(90deg, rgb(var(--d4r-color-primary-600)) 25%, rgb(var(--d4r-color-neutral-300)) 25%, rgb(var(--d4r-color-neutral-300)) 100%);" value="2"></div>
 	
 </div></div>
 		<div class="d4r-space-y-1 d4r-text-sm d4r-font-medium d4r-text-neutral-700"><span class="     contrast-low    d4r-text-sm                      d4r-font-normal       svelte-1ltnbjr" style="">Color
@@ -790,12 +787,12 @@ font-family: 'Open Sans', sans-serif;
 	<span class="d4r-sr-only">Color rose</span></span>
 	
 </button></div></div>
-		<div class="d4r-space-y-2.5 lg:d4r-space-y-1.5"><div class="d4r-flex d4r-items-center d4r-gap-2"><input style="" type="checkbox" class="d4r-input-base svelte-7pjx8w" id="u3xptpyt397"  >
-	<div class="-d4r-mt-0.5"><label class="d4r-select-none      contrast-low    d4r-text-sm                      d4r-font-normal       svelte-1ltnbjr" style="" for="u3xptpyt397">Disabled
+		<div class="d4r-space-y-2.5 lg:d4r-space-y-1.5"><div class="d4r-flex d4r-items-center d4r-gap-2"><input style="" type="checkbox" class="d4r-input-base svelte-7pjx8w" id="khelyqk6j2f"  >
+	<div class="-d4r-mt-0.5"><label class="d4r-select-none      contrast-low    d4r-text-sm                      d4r-font-normal       svelte-1ltnbjr" style="" for="khelyqk6j2f">Disabled
 </label></div>
 </div>
-			<div class="d4r-flex d4r-items-center d4r-gap-2"><input style="" type="checkbox" class="d4r-input-base svelte-7pjx8w" id="zmkufxjvt2q"  >
-	<div class="-d4r-mt-0.5"><label class="d4r-select-none      contrast-low    d4r-text-sm                      d4r-font-normal       svelte-1ltnbjr" style="" for="zmkufxjvt2q">Required
+			<div class="d4r-flex d4r-items-center d4r-gap-2"><input style="" type="checkbox" class="d4r-input-base svelte-7pjx8w" id="rou2zsj3yrg"  >
+	<div class="-d4r-mt-0.5"><label class="d4r-select-none      contrast-low    d4r-text-sm                      d4r-font-normal       svelte-1ltnbjr" style="" for="rou2zsj3yrg">Required
 </label></div>
 </div></div>
 	</div></div></div>
@@ -815,8 +812,8 @@ font-family: 'Open Sans', sans-serif;
 </div></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="mwankj">
-			import { start } from "/dapper-ui/_app/immutable/start-95c66af3.js";
+		<script type="module" data-sveltekit-hydrate="1wk3tf">
+			import { start } from "/dapper-ui/_app/immutable/start-057d0c6a.js";
 
 			start({
 				env: {},
@@ -830,8 +827,8 @@ font-family: 'Open Sans', sans-serif;
 					form: null
 				},
 				paths: {"base":"/dapper-ui","assets":"/dapper-ui"},
-				target: document.querySelector('[data-sveltekit-hydrate="mwankj"]').parentNode,
-				version: "1671879737357"
+				target: document.querySelector('[data-sveltekit-hydrate="1wk3tf"]').parentNode,
+				version: "1671880400938"
 			});
 		</script>
 	</div>
