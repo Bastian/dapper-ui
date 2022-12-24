@@ -165,6 +165,7 @@ needs of any design. Additionally, the Button can function as a link.
 
 <svelte:element
 	this={href ? 'a' : 'button'}
+	type={href ? 'button' : undefined}
 	{id}
 	{href}
 	{target}
@@ -190,7 +191,6 @@ needs of any design. Additionally, the Button can function as a link.
 	class:d4r-button-icon-sm={size === 'sm'}
 	class:d4r-button-icon-xs={size === 'xs'}
 	{disabled}
-	type="button"
 	use:focusOnMount={autoFocus}
 	on:click
 	on:keydown

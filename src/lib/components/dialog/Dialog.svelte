@@ -1,10 +1,48 @@
+<!--
+@component
+A dialog with a header, content and actions.
+
+Should be used in combination with the `DialogHeader`, `DialogContent` and `DialogActions` components.
+
+Example:
+```svelte
+<Dialog bind:open>
+    <DialogHeader>
+        <DialogTitle>Dialog Title</DialogTitle>
+    </DialogHeader>
+    <DialogContent>
+        Dialog Content
+    </DialogContent>
+    <DialogActions>
+        <Button autoFocus on:click={() => (open = false)}>
+            Okay
+		</Button>
+    </DialogActions>
+</Dialog>
+```
+-->
 <script lang="ts">
-	import { DialogHeader } from '$lib';
+	import { generateRandomId } from '$lib/helpers/generateRandomId';
 	import Modal from '../modal/Modal.svelte';
 
 	let className = '';
 	export { className as class };
 
+	/**
+	 * The id of the dialog.
+	 *
+	 * When not set, it is automatically generated.
+	 *
+	 * Can be accessed via the `d4r-modal-id` context.
+	 */
+	export let id = `d4r-dialog-${generateRandomId()}`;
+
+	/**
+	 * Whether the dialog is open.
+	 *
+	 * This value can be bound to and will be set to `false` when the user
+	 * clicks outside of the dialog or presses the Esc key.
+	 */
 	export let open = false;
 
 	/**
@@ -16,14 +54,6 @@
 	 * Whether the dialog should be closed when the user presses the Esc key.
 	 */
 	export let disableCloseOnEscape = false;
-
-	/**
-	 * When set to `true`, a close button will be displayed that closes the
-	 * dialog when clicked.
-	 *
-	 * Only works if a title is set.
-	 */
-	export let withCloseButton = false;
 
 	/**
 	 * When set to `true`, the dialog will be fullscreen.
@@ -44,11 +74,10 @@
 	 * The aria-describedby attribute.
 	 */
 	export let ariaDescribedby: string | undefined = undefined;
-
-	export let title: string | undefined = undefined;
 </script>
 
 <Modal
+	{id}
 	bind:open
 	on:close
 	{disableCloseOnOutsideClick}
@@ -58,14 +87,10 @@
 	{ariaDescribedby}
 >
 	<div
-		class="d4r-flex d4r-flex-col d4r-bg-white d4r-p-4 dark:d4r-bg-dark-700 {className}"
+		class="d4r-flex d4r-flex-col d4r-overflow-y-auto d4r-bg-white d4r-p-4 dark:d4r-bg-dark-700 {className}"
 		class:max-w-lg={!fullscreen}
 		class:fullscreen
 	>
-		{#if title}
-			<!-- TODO Automatically set aria-laballedby attribute  -->
-			<DialogHeader {withCloseButton}>{title}</DialogHeader>
-		{/if}
 		<slot />
 	</div>
 </Modal>
@@ -76,7 +101,7 @@
 	}
 
 	.max-w-lg {
-		@apply d4r-max-w-[min(42rem,calc(100vw-4rem))];
+		@apply d4r-max-h-[calc(100vh-4rem)] d4r-max-w-[min(42rem,calc(100vw-4rem))];
 	}
 
 	.fullscreen {

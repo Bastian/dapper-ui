@@ -1,10 +1,26 @@
 <script lang="ts">
 	import { BackgroundScrollBlocker } from '$lib';
 	import { clickOutside } from '$lib/actions/clickOutside';
+	import { generateRandomId } from '$lib/helpers/generateRandomId';
 	import { createEventDispatcher, setContext } from 'svelte';
 	import { cubicInOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 
+	/**
+	 * The id of the modal.
+	 *
+	 * When not set, it is automatically generated.
+	 *
+	 * Can be accessed via the `d4r-modal-id` context.
+	 */
+	export let id = `d4r-modal-${generateRandomId()}`;
+
+	/**
+	 * Whether the modal is open.
+	 *
+	 * This value can be bound to and will be set to `false` when the user
+	 * clicks outside of the modal or presses the Esc key.
+	 */
 	export let open = false;
 
 	/**
@@ -32,7 +48,7 @@
 	 */
 	export let ariaDescribedby: string | undefined = undefined;
 
-	let dialogElement: HTMLElement;
+	let modalElement: HTMLElement;
 
 	const dispatch = createEventDispatcher();
 
@@ -52,6 +68,20 @@
 	}
 
 	setContext('d4r-modal-close-function', close);
+
+	setContext('d4r-modal-set-aria-labelledby-function', (labelledBy: string) => {
+		if (!ariaLabelledby) {
+			ariaLabelledby = labelledBy;
+		}
+	});
+
+	setContext('d4r-modal-set-aria-describedby-function', (describedBy: string) => {
+		if (!ariaDescribedby) {
+			ariaDescribedby = describedBy;
+		}
+	});
+
+	$: setContext('d4r-modal-id', id);
 
 	function close() {
 		open = false;
@@ -93,7 +123,7 @@
 		// Trap focus to prevent the user from tabbing out of the modal
 		// while it is open
 		if (open && event.key === 'Tab') {
-			const tabbable = getTabbableNodes(dialogElement);
+			const tabbable = getTabbableNodes(modalElement);
 			let index =
 				document.activeElement instanceof HTMLElement
 					? tabbable.indexOf(document.activeElement)
@@ -135,7 +165,8 @@
 {#if open}
 	<BackgroundScrollBlocker />
 	<div
-		bind:this={dialogElement}
+		{id}
+		bind:this={modalElement}
 		use:handleDialogOpen
 		class="d4r-fixed d4r-inset-0 d4r-z-50 d4r-flex d4r-items-center d4r-justify-center d4r-overflow-y-auto"
 		aria-labelledby={ariaLabelledby}

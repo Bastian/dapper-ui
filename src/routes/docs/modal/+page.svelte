@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Button } from '$lib';
-	import { focusOnMount } from '$lib/actions/focusOnMount';
 	import Modal from '$lib/components/modal/Modal.svelte';
 	import DocContent from '../DocContent.svelte';
 	import DocImport from '../DocImport.svelte';

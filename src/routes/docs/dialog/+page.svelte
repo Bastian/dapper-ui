@@ -3,6 +3,7 @@
 	import Dialog from '$lib/components/dialog/Dialog.svelte';
 	import DialogActions from '$lib/components/dialog/DialogActions.svelte';
 	import DialogContent from '$lib/components/dialog/DialogContent.svelte';
+	import DialogHeader from '$lib/components/dialog/DialogHeader.svelte';
 	import DocContent from '../DocContent.svelte';
 	import DocImport from '../DocImport.svelte';
 	import DocIntoText from '../DocIntoText.svelte';
@@ -17,29 +18,37 @@
 </script>
 
 <DocTitle title="Dialog" />
-<DocImport what="Dialog" from="core" />
-<DocIntoText text="A versatile modal dialog." />
+<DocImport what={['Dialog', 'DialogHeader', 'DialogContent', 'DialogActions']} from="core" />
+<DocIntoText text="A versatile and accessible modal dialog." />
 
 <DocContent>
 	<DocSection title="Example">
-		<DocSectionText>A very simple dialog with a title, content and a button.</DocSectionText>
+		<DocSectionText>A very simple dialog with a title, content and buttons.</DocSectionText>
 		<Example
 			code={`<Button on:click={() => (open = true)}>Open Dialog</Button>
 
-<Dialog bind:open title="Dialog Title">
+<Dialog bind:open>
+    <DialogHeader>Dialog Title</DialogHeader>
     <DialogContent>
-        A very simple dialog with a title, content and a button.
+        A very simple dialog with a title, content and buttons.
     </DialogContent>
     <DialogActions>
+        <Button variant="outline" color="gray" on:click={() => (open = false)}>
+            Cancel
+        </Button>
         <Button autoFocus on:click={() => (open = false)}>Okay</Button>
     </DialogActions>
 </Dialog>`}
 		>
 			<div slot="preview">
 				<Button on:click={() => (dialogOpen = true)}>Open Dialog</Button>
-				<Dialog title="Dialog Title" bind:open={dialogOpen}>
-					<DialogContent>A very simple dialog with a title, content and a button.</DialogContent>
+				<Dialog bind:open={dialogOpen}>
+					<DialogHeader>Dialog Title</DialogHeader>
+					<DialogContent>A very simple dialog with a title, content and buttons.</DialogContent>
 					<DialogActions>
+						<Button variant="outline" color="gray" on:click={() => (dialogOpen = false)}>
+							Cancel
+						</Button>
 						<Button autoFocus on:click={() => (dialogOpen = false)}>Okay</Button>
 					</DialogActions>
 				</Dialog>
@@ -58,10 +67,10 @@
 
 <Dialog 
     bind:open
-    title="Close With Button Only"
     disableCloseOnEscape
     disableCloseOnOutsideClick
 >
+    <DialogHeader>Close With Button Only</DialogHeader>
     <DialogContent>
         A dialog that can only be closed with the button but not by clicking outside
         or by pressing the Esc key.
@@ -73,12 +82,8 @@
 		>
 			<div slot="preview">
 				<Button on:click={() => (dialogOpen2 = true)}>Open Dialog</Button>
-				<Dialog
-					bind:open={dialogOpen2}
-					title="Close With Button Only"
-					disableCloseOnEscape
-					disableCloseOnOutsideClick
-				>
+				<Dialog bind:open={dialogOpen2} disableCloseOnEscape disableCloseOnOutsideClick>
+					<DialogHeader>Close With Button Only</DialogHeader>
 					<DialogContent>
 						A dialog that can only be closed with the button but not by clicking outside or by
 						pressing the Esc key.
@@ -98,7 +103,8 @@
 		<Example
 			code={`<Button on:click={() => (open = true)}>Open Fullscreen Dialog</Button>
 
-<Dialog fullscreen bind:open title="Fullscreen Dialog">
+<Dialog fullscreen bind:open>
+    <DialogHeader>Fullscreen Dialog</DialogHeader>
     <DialogContent>
         This dialog fills the whole screen.
     </DialogContent>
@@ -109,7 +115,8 @@
 		>
 			<div slot="preview">
 				<Button on:click={() => (fullscreenDialogOpen = true)}>Open Fullscreen Dialog</Button>
-				<Dialog fullscreen title="Fullscreen Dialog" bind:open={fullscreenDialogOpen}>
+				<Dialog fullscreen bind:open={fullscreenDialogOpen}>
+					<DialogHeader>Fullscreen Dialog</DialogHeader>
 					<DialogContent>This dialog fills the whole screen.</DialogContent>
 					<DialogActions>
 						<Button autoFocus on:click={() => (fullscreenDialogOpen = false)}>Okay</Button>
@@ -125,6 +132,11 @@
 			<code>autoFocusElement</code> prop can be utilized to automatically focus the element with the
 			specified id when the modal opens. As an alternative, most focusable Dapper UI components
 			offer an <code>autoFocus</code> prop that will automatically focus the element when it is mounted.
+		</DocSectionText>
+		<DocSectionText>
+			When using the <code>DialogHeader</code> and <code>DialogContent</code> components, the
+			relevant ARIA attributes, specifically <code>aria-labelledby</code> and
+			<code>aria-describedby</code>, will be set automatically.
 		</DocSectionText>
 	</DocSection>
 </DocContent>
