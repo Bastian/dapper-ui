@@ -10,8 +10,14 @@
 	export let required = false;
 	export let disabled = false;
 
+	/**
+	 * Whether or not the checkbox is checked.
+	 */
 	export let checked = false;
 
+	/**
+	 * The label of the checkbox.
+	 */
 	export let label: string;
 
 	/**
