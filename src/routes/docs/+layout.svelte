@@ -52,6 +52,7 @@
 		<DrawerLink {...getDrawerLinkProps('/docs/progress-bar', $page.route.id)}>
 			ProgressBar
 		</DrawerLink>
+		<DrawerLink {...getDrawerLinkProps('/docs/meter', $page.route.id)}>Meter</DrawerLink>
 
 		<div class="svg-container d4r-mb-2 d4r-mt-6 d4r-flex d4r-items-center d4r-gap-2">
 			<Text contrast="lower"><Bulb /></Text>

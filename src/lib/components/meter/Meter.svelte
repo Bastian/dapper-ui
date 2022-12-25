@@ -6,7 +6,7 @@
 	/**
 	 * The id of the label element.
 	 */
-	export let labelId = `d4r-pb-label-${generateRandomId()}`;
+	export let labelId = `d4r-meter-label-${generateRandomId()}`;
 
 	/**
 	 * The name of a color in the theme. Does not support arbitrary colors.
@@ -22,9 +22,9 @@
 	export let radius: Radius | undefined = undefined;
 
 	/**
-	 * A label for the progress bar.
+	 * A label for the meter.
 	 *
-	 * It is highly recommended to label the progress bar for accessibility
+	 * It is highly recommended to label the meter for accessibility
 	 * purposes. Even if you do not want to display the label for aesthetic
 	 * reasons, you should still set a label and hide it with the `hideLabel`
 	 * prop. This ensures that the label is still accessible to users who rely
@@ -40,38 +40,33 @@
 	/**
 	 * The aria-valuetext attibute.
 	 *
-	 * Screen readers usually read the value of a progress bar as a percentage.
-	 * However, if this doesn't accurately reflect the progress bar's current
+	 * Screen readers usually read the value of a meter as a percentage.
+	 * However, if this doesn't accurately reflect the meter's current
 	 * status, you should use the `ariaValuetext` prop to provide a more accurate
 	 * text description of the current value.
 	 */
 	export let ariaValuetext: string | undefined = undefined;
 
 	/**
-	 * Whether the progress bar is indeterminate.
-	 */
-	export let indeterminate = false;
-
-	/**
-	 * The current value of the progress bar.
+	 * The current value of the meter.
 	 *
 	 * Should be between the `min` and `max` values.
 	 */
 	export let value = 0;
 
 	/**
-	 * The minimum value of the progress bar.
+	 * The minimum value of the meter.
 	 */
 	export let min = 0;
 
 	/**
-	 * The maximum value of the progress bar.
+	 * The maximum value of the meter.
 	 */
 	export let max = 100;
 </script>
 
 <ProgressBarMeterBase
-	role="progressbar"
+	role="meter"
 	{label}
 	{labelId}
 	{hideLabel}
@@ -79,7 +74,6 @@
 	{value}
 	{min}
 	{max}
-	{indeterminate}
 	{color}
 	{radius}
 	hasIconLabel={$$slots['icon-label']}

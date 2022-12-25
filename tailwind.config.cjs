@@ -62,7 +62,8 @@ module.exports = {
 			'slider-thumb': 'var(--d4r-border-radius-slider-thumb)',
 			'slider-track': 'var(--d4r-border-radius-slider-track)',
 			dialog: 'var(--d4r-border-radius-dialog)',
-			'progress-bar': 'var(--d4r-border-radius-progress-bar)'
+			progressbar: 'var(--d4r-border-radius-progressbar)',
+			meter: 'var(--d4r-border-radius-meter)'
 		}
 	},
 	plugins: [require('@tailwindcss/forms')]

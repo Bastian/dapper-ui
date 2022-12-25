@@ -23,7 +23,8 @@
 			mapBorderRadius('slider-thumb', theme.radiuses.slider.thumb),
 			mapBorderRadius('slider-track', theme.radiuses.slider.track),
 			mapBorderRadius('dialog', theme.radiuses.dialog),
-			mapBorderRadius('progress-bar', theme.radiuses.progressBar)
+			mapBorderRadius('progressbar', theme.radiuses.progressBar),
+			mapBorderRadius('meter', theme.radiuses.meter)
 		];
 	}
 

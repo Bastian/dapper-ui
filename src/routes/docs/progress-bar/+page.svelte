@@ -1,7 +1,9 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import DocContent from '../DocContent.svelte';
 	import DocImport from '../DocImport.svelte';
 	import DocIntoText from '../DocIntoText.svelte';
+	import DocLink from '../DocLink.svelte';
 	import DocSection from '../DocSection.svelte';
 	import DocSectionText from '../DocSectionText.svelte';
 	import DocTitle from '../DocTitle.svelte';
@@ -28,8 +30,8 @@
 			<code>ariaValuetext</code> prop to provide a more accurate text description of the current value.
 		</DocSectionText>
 		<DocSectionText>
-			Avoid using the progress bar as a meter, such as for displaying used file storage. Instead,
-			use the Meter component for this purpose.
+			Avoid using the progress bar as a meter, such as for displaying remaining battery percentage.
+			Instead, use the <DocLink href="{base}/docs/meter">Meter</DocLink> component for this purpose.
 		</DocSectionText>
 	</DocSection>
 </DocContent>
