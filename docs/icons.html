@@ -7,29 +7,29 @@
 
 		<meta http-equiv="content-security-policy" content="">
 		<link href="/dapper-ui/_app/immutable/assets/_layout-7f3d7124.css" rel="stylesheet">
-		<link href="/dapper-ui/_app/immutable/assets/ProgressBar-88ed72d1.css" rel="stylesheet">
+		<link href="/dapper-ui/_app/immutable/assets/ProgressBarMeterBase-41f3fd86.css" rel="stylesheet">
 		<link href="/dapper-ui/_app/immutable/assets/_layout-d26e45f3.css" rel="stylesheet">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/start-fcdd6da1.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/start-70a2712a.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/index-9ef34302.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/singletons-1fe70416.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/index-ceefd529.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/paths-6cd3a76e.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/_layout.svelte-b1e24ff3.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/IconButton-4075e13d.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Button-c5dafa51.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang-ecb85f69.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/ToggleDarkModeButton-6f535fe4.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/_layout.svelte-c5addbe3.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/IconButton-15fab820.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Button-3fbb5004.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/ProgressBarMeterBase.svelte_svelte_type_style_lang-3bd27480.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/ToggleDarkModeButton-76d6d03c.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/_layout-1daba58d.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/docs/_layout.svelte-f7ffce17.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/docs/_layout.svelte-6545c4e2.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/stores-d0f55709.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Bulb-97fe24f4.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Footer-ebc0c76a.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/docs/icons/_page.svelte-b72203b5.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/Footer-638a3bf0.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/components/pages/docs/icons/_page.svelte-1dd3380c.js">
 		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocContent-2d6aa00a.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocLink-6e570f17.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocSectionText-1149c55f.js">
-		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocTitle-bd528411.js"><title>Icons - Dapper UI</title><!-- HEAD_svelte-2jhqr1_START -->
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocLink-5fc18e32.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocSectionText-a34d2f94.js">
+		<link rel="modulepreload" href="/dapper-ui/_app/immutable/chunks/DocTitle-e1b8d2fe.js"><title>Icons - Dapper UI</title><!-- HEAD_svelte-2jhqr1_START -->
 		<!-- HTML_TAG_START --><style type="text/css">:root {
 --d4r-color-primary-50: 239 246 255;
 --d4r-color-primary-100: 219 234 254;
@@ -296,7 +296,8 @@
 --d4r-border-radius-slider-thumb: var(--d4r-border-radius-full);
 --d4r-border-radius-slider-track: var(--d4r-border-radius-full);
 --d4r-border-radius-dialog: var(--d4r-border-radius-lg);
---d4r-border-radius-progress-bar: var(--d4r-border-radius-full);
+--d4r-border-radius-progressbar: var(--d4r-border-radius-base);
+--d4r-border-radius-meter: var(--d4r-border-radius-base);
 font-family: 'Open Sans', sans-serif;
 }code {font-family: 'Fira Mono', monospace;}
 	</style><!-- HTML_TAG_END --><!-- HEAD_svelte-2jhqr1_END --><!-- HEAD_svelte-1rbra6v_START --><!-- HEAD_svelte-1rbra6v_END -->
@@ -441,6 +442,13 @@ font-family: 'Open Sans', sans-serif;
 		</span></span>
 	<div class="d4r-flex"></div>
 </a>
+		
+
+
+<a type="button" href="/dapper-ui/docs/meter" class="button  svelte-1uqjh66 d4r-w-full   size-xs      subtle icon-start icon-end d4r-justify-start   d4r-truncate   d4r-button-icon-xs" style="--d4r-color-primary-300: var(--d4r-color-neutral-300);--d4r-color-primary-600: var(--d4r-color-neutral-600);" ><div class="d4r-flex"></div>
+	<span class="d4r-truncate"><span class="d4r-font-normal">Meter</span></span>
+	<div class="d4r-flex"></div>
+</a>
 
 		<div class="svg-container d4r-mb-2 d4r-mt-6 d4r-flex d4r-items-center d4r-gap-2 svelte-186u10c"><span class="      contrast-lower    d4r-text-base                     d4r-font-normal       svelte-1ltnbjr" style=""><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bulb" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><desc>Download more icon variants from https://tabler-icons.io/i/bulb</desc><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"></path><path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"></path><line x1="9.7" y1="17" x2="14.3" y2="17"></line></svg>
 </span>
@@ -501,8 +509,8 @@ font-family: 'Open Sans', sans-serif;
 </div></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="ylz7jg">
-			import { start } from "/dapper-ui/_app/immutable/start-fcdd6da1.js";
+		<script type="module" data-sveltekit-hydrate="4xmnc5">
+			import { start } from "/dapper-ui/_app/immutable/start-70a2712a.js";
 
 			start({
 				env: {},
@@ -516,8 +524,8 @@ font-family: 'Open Sans', sans-serif;
 					form: null
 				},
 				paths: {"base":"/dapper-ui","assets":"/dapper-ui"},
-				target: document.querySelector('[data-sveltekit-hydrate="ylz7jg"]').parentNode,
-				version: "1671986636486"
+				target: document.querySelector('[data-sveltekit-hydrate="4xmnc5"]').parentNode,
+				version: "1671994525448"
 			});
 		</script>
 	</div>
