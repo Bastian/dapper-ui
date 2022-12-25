@@ -54,6 +54,10 @@ export interface DapperUiTheme {
 		 * The default radius for dialogs.
 		 */
 		dialog: Radius;
+		/**
+		 * The default radius for progress bars.
+		 */
+		progressBar: Radius;
 	};
 	// TODO: Instead of overwriting, also allow extending the default theme similar to Tailwind's "extend"
 }

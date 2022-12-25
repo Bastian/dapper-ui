@@ -62,7 +62,8 @@ export const defaultDapperUiTheme: DapperUiTheme = {
 			thumb: 'full',
 			track: 'full'
 		},
-		dialog: 'lg'
+		dialog: 'lg',
+		progressBar: 'full'
 	},
 	font: {
 		default: "'Open Sans', sans-serif",

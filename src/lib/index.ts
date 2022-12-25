@@ -12,6 +12,7 @@ export { default as Dialog } from '$lib/components/dialog/Dialog.svelte';
 export { default as DialogHeader } from '$lib/components/dialog/DialogHeader.svelte';
 export { default as DialogContent } from '$lib/components/dialog/DialogContent.svelte';
 export { default as DialogActions } from '$lib/components/dialog/DialogActions.svelte';
+export { default as ProgressBar } from '$lib/components/progress-bar/ProgressBar.svelte';
 
 // Theme
 export { default as ThemeProvider } from '$lib/theme/ThemeProvider.svelte';

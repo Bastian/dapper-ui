@@ -2,7 +2,7 @@ export function createCode(options: {
 	name: string;
 	children?: string | (string | undefined)[];
 	props?: {
-		[key: string]: string | boolean | undefined;
+		[key: string]: string | boolean | number | undefined;
 	};
 	compact?: boolean;
 }) {
@@ -30,6 +30,7 @@ function renderProps(props?: { [key: string]: string | boolean | undefined }) {
 		.map(([key, value]) => {
 			if (value === undefined) return '';
 			if (typeof value === 'boolean') return value ? key : '';
+			if (typeof value === 'number') return `${key}={${value}}`;
 			return `${key}="${value}"`;
 		})
 		.filter(Boolean)

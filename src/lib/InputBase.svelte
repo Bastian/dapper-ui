@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Text from './components/text/Text.svelte';
+	import Label from './Label.svelte';
 
 	export let fullWidth = false;
 	export let label: string;
@@ -26,25 +27,17 @@
 	class:d4r-w-full={fullWidth}
 	class:d4r-opacity-50={disabled}
 >
-	<Text
-		tag="label"
-		for={id}
-		contrast="low"
-		size={size === 'sm' ? 'xs' : 'sm'}
-		class="d4r-flex d4r-items-center d4r-gap-1.5 {hideLabel ? 'd4r-hidden' : ''} {required
-			? 'd4r-input-required'
-			: ''} {classLabel}"
+	<Label
+		additionalProps={{ for: id }}
+		hidden={hideLabel}
+		{required}
+		{size}
+		class={classLabel}
+		hasIcon={hasIconLabel}
 	>
-		{#if hasIconLabel}
-			<Text
-				class={size === 'sm' ? 'd4r-input-icon-label-sm' : 'd4r-input-icon-label-base'}
-				contrast="lower"
-			>
-				<slot name="icon-label" />
-			</Text>
-		{/if}
+		<slot name="icon-label" slot="icon" />
 		{label}
-	</Text>
+	</Label>
 	<slot />
 	{#if error}
 		<Text size="xs" color="red" contrast="lower">{error}</Text>
@@ -52,17 +45,3 @@
 		<Text size="xs" contrast="lower">{helpText}</Text>
 	{/if}
 </div>
-
-<style lang="postcss" global>
-	.d4r-input-icon-label-base > svg {
-		@apply d4r-h-4 d4r-w-4;
-	}
-	.d4r-input-icon-label-sm > svg {
-		@apply d4r-h-3.5 d4r-w-3.5;
-	}
-
-	.d4r-input-required::after {
-		color: #dc2626;
-		content: '*';
-	}
-</style>
