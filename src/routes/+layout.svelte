@@ -15,11 +15,12 @@
 	import { writable } from 'svelte/store';
 	import { Menu2 } from 'tabler-icons-svelte';
 	import ToggleDarkModeButton from './ToggleDarkModeButton.svelte';
+	import PageDrawer from './PageDrawer.svelte';
 </script>
 
 <ThemeProvider>
 	<div class="d4r-flex d4r-h-full d4r-flex-col">
-		<header class="d4r-flex d4r-w-full d4r-justify-between d4r-px-8">
+		<header class="dd4r-flex d4r-w-full d4r-justify-between d4r-px-8">
 			<div class="d4r-flex d4r-items-center d4r-gap-4 lg:d4r-hidden">
 				<IconButton
 					on:click={() => ($drawerOpen = !$drawerOpen)}
@@ -34,6 +35,7 @@
 		</header>
 
 		<div class="d4r-h-full d4r-flex-grow d4r-pt-14">
+			<PageDrawer bind:open={$drawerOpen} class="lg:d4r-hidden" />
 			<slot />
 		</div>
 	</div>
@@ -41,6 +43,6 @@
 
 <style lang="postcss" global>
 	:local(header) {
-		@apply d4r-fixed d4r-top-0 d4r-left-0 d4r-right-0 d4r-z-10 d4r-flex d4r-h-14 d4r-items-center d4r-border-b d4r-border-neutral-200 d4r-bg-white d4r-bg-opacity-75 d4r-backdrop-blur-2xl d4r-backdrop-filter dark:d4r-border-dark-600 dark:d4r-bg-dark-800;
+		@apply d4r-fixed d4r-top-0 d4r-left-0 d4r-right-0 d4r-z-40 d4r-flex d4r-h-14 d4r-items-center d4r-border-b d4r-border-neutral-200 d4r-bg-white d4r-backdrop-blur-2xl d4r-backdrop-filter dark:d4r-border-dark-600 dark:d4r-bg-dark-800;
 	}
 </style>
