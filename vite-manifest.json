@@ -203,14 +203,40 @@
     "file": "_app/immutable/assets/tinos-all-400-normal-1bc49c3c.woff",
     "src": "node_modules/@fontsource/tinos/files/tinos-all-400-normal.woff"
   },
+  "_layout.css": {
+    "file": "_app/immutable/assets/_layout-56a653b3.css",
+    "src": "_layout.css"
+  },
+  "ProgressBarMeterBase.css": {
+    "file": "_app/immutable/assets/ProgressBarMeterBase-1cd7bde0.css",
+    "src": "ProgressBarMeterBase.css"
+  },
+  "src/routes/+page.css": {
+    "file": "_app/immutable/assets/_page-5384235e.css",
+    "src": "src/routes/+page.css"
+  },
+  "DocSection.css": {
+    "file": "_app/immutable/assets/DocSection-1881cc6e.css",
+    "src": "DocSection.css"
+  },
+  "_paths-b4419565.js": {
+    "file": "_app/immutable/chunks/paths-b4419565.js"
+  },
+  "_singletons-30481a22.js": {
+    "file": "_app/immutable/chunks/singletons-30481a22.js",
+    "imports": [
+      "_index-4de92fe2.js",
+      "_paths-b4419565.js"
+    ]
+  },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-f4830185.js",
+    "file": "_app/immutable/start-5bb68343.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_singletons-7174a142.js",
-      "_paths-6cd3a76e.js"
+      "_index-be153a96.js",
+      "_singletons-30481a22.js",
+      "_paths-b4419565.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -236,401 +262,577 @@
       ".svelte-kit/generated/nodes/20.js"
     ]
   },
-  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-bca3f8e0.js",
-    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
-    "isEntry": true,
+  "_DocSectionText-14b597b7.js": {
+    "file": "_app/immutable/chunks/DocSectionText-14b597b7.js",
     "imports": [
-      "_index-93bd300e.js",
-      "_stores-f6e29146.js"
+      "_index-be153a96.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js"
     ]
   },
-  "src/routes/docs/+layout.svelte": {
-    "file": "_app/immutable/components/pages/docs/_layout.svelte-887fa29c.js",
-    "src": "src/routes/docs/+layout.svelte",
-    "isEntry": true,
+  "_ToggleDarkModeButton-e6ccd5a1.js": {
+    "file": "_app/immutable/chunks/ToggleDarkModeButton-e6ccd5a1.js",
     "imports": [
-      "_index-93bd300e.js",
-      "_Footer-71ebcf59.js",
-      "__layout-5645bdd9.js"
+      "_index-be153a96.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_index-4de92fe2.js",
+      "_Button-d6e1b2f4.js",
+      "_IconButton-0396b416.js"
     ]
   },
-  "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-93305b79.js",
-    "src": "src/routes/+page.svelte",
-    "isEntry": true,
+  "_Button-d6e1b2f4.js": {
+    "file": "_app/immutable/chunks/Button-d6e1b2f4.js",
     "imports": [
-      "_index-93bd300e.js",
-      "_paths-6cd3a76e.js",
-      "_Button-3c0867b2.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_ToggleDarkModeButton-1cff0b9d.js",
-      "_InputBase-c91271e4.js",
-      "_TextField-8ac8766e.js",
-      "_Footer-71ebcf59.js",
-      "_Example-ffc97b82.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page-5384235e.css"
-    ],
-    "assets": [
-      "_app/immutable/assets/hero-image-5231d39f.webp",
-      "_app/immutable/assets/overlock-all-700-normal-abeb3085.woff",
-      "_app/immutable/assets/overlock-latin-700-normal-6df7eace.woff2",
-      "_app/immutable/assets/tinos-cyrillic-ext-400-normal-030fdfc5.woff2",
-      "_app/immutable/assets/tinos-all-400-normal-1bc49c3c.woff",
-      "_app/immutable/assets/tinos-cyrillic-400-normal-4f2288e5.woff2",
-      "_app/immutable/assets/tinos-greek-ext-400-normal-3277ca6c.woff2",
-      "_app/immutable/assets/tinos-greek-400-normal-3ff98a5c.woff2",
-      "_app/immutable/assets/tinos-hebrew-400-normal-7ca05fcd.woff2",
-      "_app/immutable/assets/tinos-vietnamese-400-normal-827de746.woff2",
-      "_app/immutable/assets/tinos-latin-ext-400-normal-5695ec60.woff2",
-      "_app/immutable/assets/tinos-latin-400-normal-c8e3b03a.woff2"
+      "_index-be153a96.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js"
     ]
   },
-  "src/routes/docs/button/+page.svelte": {
-    "file": "_app/immutable/components/pages/docs/button/_page.svelte-478f269a.js",
-    "src": "src/routes/docs/button/+page.svelte",
-    "isEntry": true,
+  "_stores-33054ee7.js": {
+    "file": "_app/immutable/chunks/stores-33054ee7.js",
     "imports": [
-      "_index-93bd300e.js",
-      "_Button-3c0867b2.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_IconButton-8bc9e742.js",
-      "_DocSection-2caa1287.js",
-      "_DocContent-05ac9a33.js",
-      "_DocImport-70800526.js",
-      "_DocIntoText-b6d3af16.js",
-      "_DocSectionText-5dc63941.js",
-      "_DocTitle-15379d96.js",
-      "_Example-ffc97b82.js",
-      "_InputBase-c91271e4.js",
-      "_Select-5f793715.js",
-      "_TextField-8ac8766e.js",
-      "_RadiusSlider-895e6d68.js",
-      "_ColorPicker-77e65a71.js"
+      "_index-be153a96.js",
+      "_singletons-30481a22.js"
+    ]
+  },
+  "_index-d1c26883.js": {
+    "file": "_app/immutable/chunks/index-d1c26883.js",
+    "imports": [
+      "_index-be153a96.js"
+    ]
+  },
+  "_IconButton-0396b416.js": {
+    "file": "_app/immutable/chunks/IconButton-0396b416.js",
+    "imports": [
+      "_index-be153a96.js",
+      "_Button-d6e1b2f4.js"
+    ]
+  },
+  "_Footer-061be38a.js": {
+    "file": "_app/immutable/chunks/Footer-061be38a.js",
+    "imports": [
+      "_index-be153a96.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js"
+    ]
+  },
+  "_Example-05595231.js": {
+    "file": "_app/immutable/chunks/Example-05595231.js",
+    "imports": [
+      "_index-be153a96.js",
+      "_DocSection-abb8d504.js"
+    ]
+  },
+  "_InputBase-30312b3b.js": {
+    "file": "_app/immutable/chunks/InputBase-30312b3b.js",
+    "imports": [
+      "_index-be153a96.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_Button-d6e1b2f4.js",
+      "_Example-05595231.js"
+    ]
+  },
+  "_TextField-55d13445.js": {
+    "file": "_app/immutable/chunks/TextField-55d13445.js",
+    "imports": [
+      "_index-be153a96.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_Button-d6e1b2f4.js",
+      "_Example-05595231.js",
+      "_InputBase-30312b3b.js"
+    ]
+  },
+  "_Select-d651ebed.js": {
+    "file": "_app/immutable/chunks/Select-d651ebed.js",
+    "imports": [
+      "_index-be153a96.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_Button-d6e1b2f4.js",
+      "_Example-05595231.js",
+      "_InputBase-30312b3b.js"
+    ]
+  },
+  "_RadiusSlider-2a65a323.js": {
+    "file": "_app/immutable/chunks/RadiusSlider-2a65a323.js",
+    "imports": [
+      "_index-be153a96.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_ColorPicker-2ed7f9e0.js"
     ]
   },
   "src/routes/docs/checkbox/+page.svelte": {
-    "file": "_app/immutable/components/pages/docs/checkbox/_page.svelte-3caaf073.js",
+    "file": "_app/immutable/components/pages/docs/checkbox/_page.svelte-476f57b5.js",
     "src": "src/routes/docs/checkbox/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_DocContent-05ac9a33.js",
-      "_DocImport-70800526.js",
-      "_DocIntoText-b6d3af16.js",
-      "_DocTitle-15379d96.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_InputBase-c91271e4.js",
-      "_RadiusSlider-895e6d68.js",
-      "_ColorPicker-77e65a71.js",
-      "_Example-ffc97b82.js"
+      "_index-be153a96.js",
+      "_DocContent-d112f228.js",
+      "_DocImport-426f0676.js",
+      "_DocIntoText-d6b0c0e6.js",
+      "_DocTitle-7d81791e.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_InputBase-30312b3b.js",
+      "_RadiusSlider-2a65a323.js",
+      "_ColorPicker-2ed7f9e0.js",
+      "_Example-05595231.js"
     ]
   },
-  "src/routes/docs/dark-mode/+page.svelte": {
-    "file": "_app/immutable/components/pages/docs/dark-mode/_page.svelte-a00ab900.js",
-    "src": "src/routes/docs/dark-mode/+page.svelte",
-    "isEntry": true,
+  "_ColorPicker-2ed7f9e0.js": {
+    "file": "_app/immutable/chunks/ColorPicker-2ed7f9e0.js",
     "imports": [
-      "_index-93bd300e.js",
-      "_DocIntoText-b6d3af16.js",
-      "_DocTitle-15379d96.js"
+      "_index-be153a96.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_Button-d6e1b2f4.js",
+      "_Example-05595231.js",
+      "_InputBase-30312b3b.js",
+      "_IconButton-0396b416.js"
+    ]
+  },
+  "_DocLink-29b1db69.js": {
+    "file": "_app/immutable/chunks/DocLink-29b1db69.js",
+    "imports": [
+      "_index-be153a96.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js"
+    ]
+  },
+  "_Modal-575b8a1b.js": {
+    "file": "_app/immutable/chunks/Modal-575b8a1b.js",
+    "imports": [
+      "_index-be153a96.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_Example-05595231.js",
+      "_index-d1c26883.js"
     ]
   },
   "src/routes/docs/dialog/+page.svelte": {
-    "file": "_app/immutable/components/pages/docs/dialog/_page.svelte-6a52df89.js",
+    "file": "_app/immutable/components/pages/docs/dialog/_page.svelte-cfd05e8b.js",
     "src": "src/routes/docs/dialog/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_Button-3c0867b2.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_Example-ffc97b82.js",
-      "_Modal-b7de12ec.js",
-      "_IconButton-8bc9e742.js",
-      "_DocContent-05ac9a33.js",
-      "_DocImport-70800526.js",
-      "_DocIntoText-b6d3af16.js",
-      "_DocSection-2caa1287.js",
-      "_DocSectionText-5dc63941.js",
-      "_DocTitle-15379d96.js"
+      "_index-be153a96.js",
+      "_Button-d6e1b2f4.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_Example-05595231.js",
+      "_Modal-575b8a1b.js",
+      "_IconButton-0396b416.js",
+      "_DocContent-d112f228.js",
+      "_DocImport-426f0676.js",
+      "_DocIntoText-d6b0c0e6.js",
+      "_DocSection-abb8d504.js",
+      "_DocSectionText-14b597b7.js",
+      "_DocTitle-7d81791e.js"
     ]
   },
   "src/routes/docs/icons/+page.svelte": {
-    "file": "_app/immutable/components/pages/docs/icons/_page.svelte-067cf6e8.js",
+    "file": "_app/immutable/components/pages/docs/icons/_page.svelte-1a79aca5.js",
     "src": "src/routes/docs/icons/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_DocContent-05ac9a33.js",
-      "_DocLink-99f50733.js",
-      "_DocSectionText-5dc63941.js",
-      "_DocTitle-15379d96.js"
+      "_index-be153a96.js",
+      "_DocContent-d112f228.js",
+      "_DocLink-29b1db69.js",
+      "_DocSectionText-14b597b7.js",
+      "_DocTitle-7d81791e.js"
     ]
   },
-  "src/routes/docs/installation/+page.svelte": {
-    "file": "_app/immutable/components/pages/docs/installation/_page.svelte-00f7200f.js",
-    "src": "src/routes/docs/installation/+page.svelte",
+  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+    "file": "_app/immutable/components/error.svelte-ed515a2f.js",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_paths-6cd3a76e.js",
-      "_DocSection-2caa1287.js",
-      "_DocContent-05ac9a33.js",
-      "_DocIntoText-b6d3af16.js",
-      "_DocLink-99f50733.js",
-      "_DocSectionText-5dc63941.js",
-      "_DocTitle-15379d96.js"
+      "_index-be153a96.js",
+      "_stores-33054ee7.js"
     ]
   },
-  "src/routes/docs/meter/+page.svelte": {
-    "file": "_app/immutable/components/pages/docs/meter/_page.svelte-137207e9.js",
-    "src": "src/routes/docs/meter/+page.svelte",
+  "src/routes/docs/+layout.svelte": {
+    "file": "_app/immutable/components/pages/docs/_layout.svelte-c67797a3.js",
+    "src": "src/routes/docs/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_paths-6cd3a76e.js",
-      "_DocContent-05ac9a33.js",
-      "_DocImport-70800526.js",
-      "_DocIntoText-b6d3af16.js",
-      "_DocLink-99f50733.js",
-      "_DocSection-2caa1287.js",
-      "_DocSectionText-5dc63941.js",
-      "_DocTitle-15379d96.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_InputBase-c91271e4.js",
-      "_ColorPicker-77e65a71.js",
-      "_TextField-8ac8766e.js",
-      "_Example-ffc97b82.js",
-      "_ProgressBarMeterBase-7f084f00.js",
-      "_RadiusSlider-895e6d68.js"
+      "_index-be153a96.js",
+      "_Footer-061be38a.js",
+      "__layout-a997a2f5.js"
     ]
   },
-  "src/routes/docs/modal/+page.svelte": {
-    "file": "_app/immutable/components/pages/docs/modal/_page.svelte-8e44e675.js",
-    "src": "src/routes/docs/modal/+page.svelte",
+  "src/routes/docs/dark-mode/+page.svelte": {
+    "file": "_app/immutable/components/pages/docs/dark-mode/_page.svelte-bea175a7.js",
+    "src": "src/routes/docs/dark-mode/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_Button-3c0867b2.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_Modal-b7de12ec.js",
-      "_DocContent-05ac9a33.js",
-      "_DocImport-70800526.js",
-      "_DocIntoText-b6d3af16.js",
-      "_DocSection-2caa1287.js",
-      "_DocSectionText-5dc63941.js",
-      "_DocTitle-15379d96.js",
-      "_Example-ffc97b82.js"
+      "_index-be153a96.js",
+      "_DocIntoText-d6b0c0e6.js",
+      "_DocTitle-7d81791e.js"
     ]
   },
-  "src/routes/docs/progress-bar/+page.svelte": {
-    "file": "_app/immutable/components/pages/docs/progress-bar/_page.svelte-b04a9004.js",
-    "src": "src/routes/docs/progress-bar/+page.svelte",
-    "isEntry": true,
+  "_index-4de92fe2.js": {
+    "file": "_app/immutable/chunks/index-4de92fe2.js",
     "imports": [
-      "_index-93bd300e.js",
-      "_paths-6cd3a76e.js",
-      "_DocContent-05ac9a33.js",
-      "_DocImport-70800526.js",
-      "_DocIntoText-b6d3af16.js",
-      "_DocLink-99f50733.js",
-      "_DocSection-2caa1287.js",
-      "_DocSectionText-5dc63941.js",
-      "_DocTitle-15379d96.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_InputBase-c91271e4.js",
-      "_ColorPicker-77e65a71.js",
-      "_TextField-8ac8766e.js",
-      "_Example-ffc97b82.js",
-      "_ProgressBarMeterBase-7f084f00.js",
-      "_RadiusSlider-895e6d68.js"
+      "_index-be153a96.js"
     ]
   },
-  "src/routes/docs/quick-start/+page.svelte": {
-    "file": "_app/immutable/components/pages/docs/quick-start/_page.svelte-11f22193.js",
-    "src": "src/routes/docs/quick-start/+page.svelte",
+  "src/routes/docs/button/+page.svelte": {
+    "file": "_app/immutable/components/pages/docs/button/_page.svelte-9b74d24f.js",
+    "src": "src/routes/docs/button/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_DocSection-2caa1287.js",
-      "_DocContent-05ac9a33.js",
-      "_DocIntoText-b6d3af16.js",
-      "_DocLink-99f50733.js",
-      "_DocSectionText-5dc63941.js",
-      "_DocTitle-15379d96.js"
+      "_index-be153a96.js",
+      "_Button-d6e1b2f4.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_IconButton-0396b416.js",
+      "_DocSection-abb8d504.js",
+      "_DocContent-d112f228.js",
+      "_DocImport-426f0676.js",
+      "_DocIntoText-d6b0c0e6.js",
+      "_DocSectionText-14b597b7.js",
+      "_DocTitle-7d81791e.js",
+      "_Example-05595231.js",
+      "_InputBase-30312b3b.js",
+      "_Select-d651ebed.js",
+      "_TextField-55d13445.js",
+      "_RadiusSlider-2a65a323.js",
+      "_ColorPicker-2ed7f9e0.js"
     ]
   },
-  "src/routes/docs/select/+page.svelte": {
-    "file": "_app/immutable/components/pages/docs/select/_page.svelte-06c738e0.js",
-    "src": "src/routes/docs/select/+page.svelte",
-    "isEntry": true,
+  "_DocImport-426f0676.js": {
+    "file": "_app/immutable/chunks/DocImport-426f0676.js",
     "imports": [
-      "_index-93bd300e.js",
-      "_DocContent-05ac9a33.js",
-      "_DocImport-70800526.js",
-      "_DocIntoText-b6d3af16.js",
-      "_DocTitle-15379d96.js",
-      "_ColorPicker-77e65a71.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_InputBase-c91271e4.js",
-      "_Select-5f793715.js",
-      "_RadiusSlider-895e6d68.js",
-      "_Example-ffc97b82.js"
+      "_index-be153a96.js",
+      "_DocSection-abb8d504.js"
     ]
   },
-  "src/routes/docs/slider/+page.svelte": {
-    "file": "_app/immutable/components/pages/docs/slider/_page.svelte-e39225af.js",
-    "src": "src/routes/docs/slider/+page.svelte",
-    "isEntry": true,
+  "_DocIntoText-d6b0c0e6.js": {
+    "file": "_app/immutable/chunks/DocIntoText-d6b0c0e6.js",
     "imports": [
-      "_index-93bd300e.js",
-      "_DocContent-05ac9a33.js",
-      "_DocImport-70800526.js",
-      "_DocIntoText-b6d3af16.js",
-      "_DocTitle-15379d96.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_InputBase-c91271e4.js",
-      "_ColorPicker-77e65a71.js",
-      "_RadiusSlider-895e6d68.js",
-      "_Example-ffc97b82.js"
-    ]
-  },
-  "src/routes/docs/styling/+page.svelte": {
-    "file": "_app/immutable/components/pages/docs/styling/_page.svelte-35a0a3ca.js",
-    "src": "src/routes/docs/styling/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-93bd300e.js",
-      "_DocIntoText-b6d3af16.js",
-      "_DocTitle-15379d96.js"
+      "_index-be153a96.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js"
     ]
   },
   "src/routes/docs/text/+page.svelte": {
-    "file": "_app/immutable/components/pages/docs/text/_page.svelte-ebd5cafe.js",
+    "file": "_app/immutable/components/pages/docs/text/_page.svelte-22922cfc.js",
     "src": "src/routes/docs/text/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_DocContent-05ac9a33.js",
-      "_DocImport-70800526.js",
-      "_DocIntoText-b6d3af16.js",
-      "_DocTitle-15379d96.js",
-      "_ColorPicker-77e65a71.js",
-      "_Example-ffc97b82.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_InputBase-c91271e4.js",
-      "_Select-5f793715.js",
-      "_TextField-8ac8766e.js"
-    ]
-  },
-  "src/routes/docs/text-field/+page.svelte": {
-    "file": "_app/immutable/components/pages/docs/text-field/_page.svelte-c16ad4c4.js",
-    "src": "src/routes/docs/text-field/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-93bd300e.js",
-      "_TextField-8ac8766e.js",
-      "_DocSection-2caa1287.js",
-      "_DocContent-05ac9a33.js",
-      "_DocImport-70800526.js",
-      "_DocIntoText-b6d3af16.js",
-      "_DocTitle-15379d96.js",
-      "_ColorPicker-77e65a71.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_InputBase-c91271e4.js",
-      "_Select-5f793715.js",
-      "_RadiusSlider-895e6d68.js",
-      "_Bulb-901b5cf8.js",
-      "_Example-ffc97b82.js"
-    ]
-  },
-  "src/routes/docs/theming/+page.svelte": {
-    "file": "_app/immutable/components/pages/docs/theming/_page.svelte-11fc4b12.js",
-    "src": "src/routes/docs/theming/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-93bd300e.js",
-      "_DocSection-2caa1287.js",
-      "_DocContent-05ac9a33.js",
-      "_DocImport-70800526.js",
-      "_DocIntoText-b6d3af16.js",
-      "_DocSectionText-5dc63941.js",
-      "_DocTitle-15379d96.js"
+      "_index-be153a96.js",
+      "_DocContent-d112f228.js",
+      "_DocImport-426f0676.js",
+      "_DocIntoText-d6b0c0e6.js",
+      "_DocTitle-7d81791e.js",
+      "_ColorPicker-2ed7f9e0.js",
+      "_Example-05595231.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_InputBase-30312b3b.js",
+      "_Select-d651ebed.js",
+      "_TextField-55d13445.js"
     ]
   },
   "src/routes/docs/usage/+page.svelte": {
-    "file": "_app/immutable/components/pages/docs/usage/_page.svelte-8a11d1ed.js",
+    "file": "_app/immutable/components/pages/docs/usage/_page.svelte-5f19808f.js",
     "src": "src/routes/docs/usage/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_paths-6cd3a76e.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_DocSection-2caa1287.js",
-      "_DocContent-05ac9a33.js",
-      "_DocIntoText-b6d3af16.js",
-      "_DocLink-99f50733.js",
-      "_DocSectionText-5dc63941.js",
-      "_DocTitle-15379d96.js"
+      "_index-be153a96.js",
+      "_paths-b4419565.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_DocSection-abb8d504.js",
+      "_DocContent-d112f228.js",
+      "_DocIntoText-d6b0c0e6.js",
+      "_DocLink-29b1db69.js",
+      "_DocSectionText-14b597b7.js",
+      "_DocTitle-7d81791e.js"
+    ]
+  },
+  ".svelte-kit/generated/nodes/0.js": {
+    "file": "_app/immutable/chunks/0-b02d72c5.js",
+    "src": ".svelte-kit/generated/nodes/0.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__layout-da46b06b.js",
+      "__layout-a997a2f5.js"
+    ]
+  },
+  ".svelte-kit/generated/nodes/1.js": {
+    "file": "_app/immutable/chunks/1-68a2437b.js",
+    "src": ".svelte-kit/generated/nodes/1.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
+    ]
+  },
+  "_DocContent-d112f228.js": {
+    "file": "_app/immutable/chunks/DocContent-d112f228.js",
+    "imports": [
+      "_index-be153a96.js"
+    ]
+  },
+  "_Bulb-6a568d28.js": {
+    "file": "_app/immutable/chunks/Bulb-6a568d28.js",
+    "imports": [
+      "_index-be153a96.js"
+    ]
+  },
+  ".svelte-kit/generated/nodes/3.js": {
+    "file": "_app/immutable/chunks/3-53df9e89.js",
+    "src": ".svelte-kit/generated/nodes/3.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/4.js": {
+    "file": "_app/immutable/chunks/4-36c1c2b0.js",
+    "src": ".svelte-kit/generated/nodes/4.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/docs/button/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/5.js": {
+    "file": "_app/immutable/chunks/5-a95fc5c4.js",
+    "src": ".svelte-kit/generated/nodes/5.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/docs/checkbox/+page.svelte"
+    ]
+  },
+  "_DocTitle-7d81791e.js": {
+    "file": "_app/immutable/chunks/DocTitle-7d81791e.js",
+    "imports": [
+      "_index-be153a96.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js"
+    ]
+  },
+  "__layout-da46b06b.js": {
+    "file": "_app/immutable/chunks/_layout-da46b06b.js"
+  },
+  ".svelte-kit/generated/nodes/6.js": {
+    "file": "_app/immutable/chunks/6-c1e25c95.js",
+    "src": ".svelte-kit/generated/nodes/6.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/docs/dark-mode/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/7.js": {
+    "file": "_app/immutable/chunks/7-cb12422f.js",
+    "src": ".svelte-kit/generated/nodes/7.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/docs/dialog/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/8.js": {
+    "file": "_app/immutable/chunks/8-4417b4e7.js",
+    "src": ".svelte-kit/generated/nodes/8.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/docs/icons/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/9.js": {
+    "file": "_app/immutable/chunks/9-1d981604.js",
+    "src": ".svelte-kit/generated/nodes/9.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/docs/installation/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/10.js": {
+    "file": "_app/immutable/chunks/10-b805b2cd.js",
+    "src": ".svelte-kit/generated/nodes/10.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/docs/meter/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/11.js": {
+    "file": "_app/immutable/chunks/11-0d6b6631.js",
+    "src": ".svelte-kit/generated/nodes/11.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/docs/modal/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/12.js": {
+    "file": "_app/immutable/chunks/12-0c37cb65.js",
+    "src": ".svelte-kit/generated/nodes/12.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/docs/progress-bar/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/13.js": {
+    "file": "_app/immutable/chunks/13-21be78fa.js",
+    "src": ".svelte-kit/generated/nodes/13.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/docs/quick-start/+page.svelte"
+    ]
+  },
+  "src/routes/docs/meter/+page.svelte": {
+    "file": "_app/immutable/components/pages/docs/meter/_page.svelte-0381ccc9.js",
+    "src": "src/routes/docs/meter/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-be153a96.js",
+      "_paths-b4419565.js",
+      "_DocContent-d112f228.js",
+      "_DocImport-426f0676.js",
+      "_DocIntoText-d6b0c0e6.js",
+      "_DocLink-29b1db69.js",
+      "_DocSection-abb8d504.js",
+      "_DocSectionText-14b597b7.js",
+      "_DocTitle-7d81791e.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_InputBase-30312b3b.js",
+      "_ColorPicker-2ed7f9e0.js",
+      "_TextField-55d13445.js",
+      "_Example-05595231.js",
+      "_ProgressBarMeterBase-da9cbaa1.js",
+      "_RadiusSlider-2a65a323.js"
+    ]
+  },
+  ".svelte-kit/generated/nodes/14.js": {
+    "file": "_app/immutable/chunks/14-deaa1484.js",
+    "src": ".svelte-kit/generated/nodes/14.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/docs/select/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/15.js": {
+    "file": "_app/immutable/chunks/15-81c3099a.js",
+    "src": ".svelte-kit/generated/nodes/15.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/docs/slider/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/16.js": {
+    "file": "_app/immutable/chunks/16-c7b9ba36.js",
+    "src": ".svelte-kit/generated/nodes/16.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/docs/styling/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/18.js": {
+    "file": "_app/immutable/chunks/18-2cacc2ff.js",
+    "src": ".svelte-kit/generated/nodes/18.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/docs/text-field/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/19.js": {
+    "file": "_app/immutable/chunks/19-e58ea356.js",
+    "src": ".svelte-kit/generated/nodes/19.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/docs/theming/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/20.js": {
+    "file": "_app/immutable/chunks/20-4d511eac.js",
+    "src": ".svelte-kit/generated/nodes/20.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/docs/usage/+page.svelte"
     ]
   },
   "src/routes/+layout.svelte": {
-    "file": "_app/immutable/components/pages/_layout.svelte-53a12df2.js",
+    "file": "_app/immutable/components/pages/_layout.svelte-b68aa668.js",
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_paths-6cd3a76e.js",
-      "_IconButton-8bc9e742.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_ToggleDarkModeButton-1cff0b9d.js",
-      "__layout-5645bdd9.js",
-      "_index-d6378a8e.js"
+      "_index-be153a96.js",
+      "_paths-b4419565.js",
+      "_IconButton-0396b416.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_ToggleDarkModeButton-e6ccd5a1.js",
+      "__layout-a997a2f5.js",
+      "_index-4de92fe2.js"
     ]
   },
   "src/routes/+layout.ts": {
-    "file": "_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js",
+    "file": "_app/immutable/modules/pages/_layout.ts-9cbb603b.js",
     "src": "src/routes/+layout.ts",
     "isEntry": true,
     "imports": [
-      "__layout-1daba58d.js"
+      "__layout-da46b06b.js"
     ]
   },
-  "_singletons-7174a142.js": {
-    "file": "_app/immutable/chunks/singletons-7174a142.js",
+  "src/routes/docs/installation/+page.svelte": {
+    "file": "_app/immutable/components/pages/docs/installation/_page.svelte-8df2d45f.js",
+    "src": "src/routes/docs/installation/+page.svelte",
+    "isEntry": true,
     "imports": [
-      "_index-d6378a8e.js",
-      "_paths-6cd3a76e.js"
+      "_index-be153a96.js",
+      "_paths-b4419565.js",
+      "_DocSection-abb8d504.js",
+      "_DocContent-d112f228.js",
+      "_DocIntoText-d6b0c0e6.js",
+      "_DocLink-29b1db69.js",
+      "_DocSectionText-14b597b7.js",
+      "_DocTitle-7d81791e.js"
     ]
   },
-  "_paths-6cd3a76e.js": {
-    "file": "_app/immutable/chunks/paths-6cd3a76e.js"
-  },
-  "_index-93bd300e.js": {
-    "file": "_app/immutable/chunks/index-93bd300e.js"
-  },
-  "_index-d6378a8e.js": {
-    "file": "_app/immutable/chunks/index-d6378a8e.js",
+  "src/routes/docs/modal/+page.svelte": {
+    "file": "_app/immutable/components/pages/docs/modal/_page.svelte-00e5d125.js",
+    "src": "src/routes/docs/modal/+page.svelte",
+    "isEntry": true,
     "imports": [
-      "_index-93bd300e.js"
+      "_index-be153a96.js",
+      "_Button-d6e1b2f4.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_Modal-575b8a1b.js",
+      "_DocContent-d112f228.js",
+      "_DocImport-426f0676.js",
+      "_DocIntoText-d6b0c0e6.js",
+      "_DocSection-abb8d504.js",
+      "_DocSectionText-14b597b7.js",
+      "_DocTitle-7d81791e.js",
+      "_Example-05595231.js"
     ]
   },
-  "__layout-5645bdd9.js": {
-    "file": "_app/immutable/chunks/_layout-5645bdd9.js",
+  ".svelte-kit/generated/nodes/2.js": {
+    "file": "_app/immutable/chunks/2-ca9fffdb.js",
+    "src": ".svelte-kit/generated/nodes/2.js",
+    "isDynamicEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_paths-6cd3a76e.js",
-      "_IconButton-8bc9e742.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_ToggleDarkModeButton-1cff0b9d.js",
-      "_index-d6378a8e.js",
-      "_stores-f6e29146.js",
-      "_index-ef43ef96.js",
-      "_Button-3c0867b2.js",
-      "_Bulb-901b5cf8.js"
+      "src/routes/docs/+layout.svelte"
+    ]
+  },
+  "_ProgressBarMeterBase-da9cbaa1.js": {
+    "file": "_app/immutable/chunks/ProgressBarMeterBase-da9cbaa1.js",
+    "imports": [
+      "_index-be153a96.js",
+      "_Example-05595231.js",
+      "_InputBase-30312b3b.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_Button-d6e1b2f4.js"
+    ]
+  },
+  "_index-be153a96.js": {
+    "file": "_app/immutable/chunks/index-be153a96.js"
+  },
+  ".svelte-kit/generated/nodes/17.js": {
+    "file": "_app/immutable/chunks/17-9a07d4d7.js",
+    "src": ".svelte-kit/generated/nodes/17.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/docs/text/+page.svelte"
+    ]
+  },
+  "__layout-a997a2f5.js": {
+    "file": "_app/immutable/chunks/_layout-a997a2f5.js",
+    "imports": [
+      "_index-be153a96.js",
+      "_paths-b4419565.js",
+      "_IconButton-0396b416.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_ToggleDarkModeButton-e6ccd5a1.js",
+      "_index-4de92fe2.js",
+      "_stores-33054ee7.js",
+      "_index-d1c26883.js",
+      "_Button-d6e1b2f4.js",
+      "_Bulb-6a568d28.js"
     ],
     "css": [
       "_app/immutable/assets/_layout-56a653b3.css"
@@ -677,377 +879,175 @@
       "_app/immutable/assets/fira-mono-latin-400-normal-e43b3538.woff2"
     ]
   },
-  "_IconButton-8bc9e742.js": {
-    "file": "_app/immutable/chunks/IconButton-8bc9e742.js",
+  "src/routes/docs/theming/+page.svelte": {
+    "file": "_app/immutable/components/pages/docs/theming/_page.svelte-def892ff.js",
+    "src": "src/routes/docs/theming/+page.svelte",
+    "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_Button-3c0867b2.js"
+      "_index-be153a96.js",
+      "_DocSection-abb8d504.js",
+      "_DocContent-d112f228.js",
+      "_DocImport-426f0676.js",
+      "_DocIntoText-d6b0c0e6.js",
+      "_DocSectionText-14b597b7.js",
+      "_DocTitle-7d81791e.js"
     ]
   },
-  "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js": {
-    "file": "_app/immutable/chunks/ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
+  "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js": {
+    "file": "_app/immutable/chunks/ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
     "imports": [
-      "_index-93bd300e.js"
+      "_index-be153a96.js"
     ],
     "css": [
       "_app/immutable/assets/ProgressBarMeterBase-1cd7bde0.css"
     ]
   },
-  "_ToggleDarkModeButton-1cff0b9d.js": {
-    "file": "_app/immutable/chunks/ToggleDarkModeButton-1cff0b9d.js",
+  "_DocSection-abb8d504.js": {
+    "file": "_app/immutable/chunks/DocSection-abb8d504.js",
     "imports": [
-      "_index-93bd300e.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_index-d6378a8e.js",
-      "_Button-3c0867b2.js",
-      "_IconButton-8bc9e742.js"
-    ]
-  },
-  "_Button-3c0867b2.js": {
-    "file": "_app/immutable/chunks/Button-3c0867b2.js",
-    "imports": [
-      "_index-93bd300e.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js"
-    ]
-  },
-  "_stores-f6e29146.js": {
-    "file": "_app/immutable/chunks/stores-f6e29146.js",
-    "imports": [
-      "_index-93bd300e.js",
-      "_singletons-7174a142.js"
-    ]
-  },
-  "_Bulb-901b5cf8.js": {
-    "file": "_app/immutable/chunks/Bulb-901b5cf8.js",
-    "imports": [
-      "_index-93bd300e.js"
-    ]
-  },
-  "_index-ef43ef96.js": {
-    "file": "_app/immutable/chunks/index-ef43ef96.js",
-    "imports": [
-      "_index-93bd300e.js"
-    ]
-  },
-  "__layout-1daba58d.js": {
-    "file": "_app/immutable/chunks/_layout-1daba58d.js"
-  },
-  "_Footer-71ebcf59.js": {
-    "file": "_app/immutable/chunks/Footer-71ebcf59.js",
-    "imports": [
-      "_index-93bd300e.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js"
-    ]
-  },
-  "_Example-ffc97b82.js": {
-    "file": "_app/immutable/chunks/Example-ffc97b82.js",
-    "imports": [
-      "_index-93bd300e.js",
-      "_DocSection-2caa1287.js"
-    ]
-  },
-  "_InputBase-c91271e4.js": {
-    "file": "_app/immutable/chunks/InputBase-c91271e4.js",
-    "imports": [
-      "_index-93bd300e.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_Button-3c0867b2.js",
-      "_Example-ffc97b82.js"
-    ]
-  },
-  "_TextField-8ac8766e.js": {
-    "file": "_app/immutable/chunks/TextField-8ac8766e.js",
-    "imports": [
-      "_index-93bd300e.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_Button-3c0867b2.js",
-      "_Example-ffc97b82.js",
-      "_InputBase-c91271e4.js"
-    ]
-  },
-  "_DocSection-2caa1287.js": {
-    "file": "_app/immutable/chunks/DocSection-2caa1287.js",
-    "imports": [
-      "_index-93bd300e.js",
-      "_DocSectionText-5dc63941.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js"
+      "_index-be153a96.js",
+      "_DocSectionText-14b597b7.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js"
     ],
     "css": [
       "_app/immutable/assets/DocSection-1881cc6e.css"
     ]
   },
-  "_DocSectionText-5dc63941.js": {
-    "file": "_app/immutable/chunks/DocSectionText-5dc63941.js",
+  "src/routes/docs/text-field/+page.svelte": {
+    "file": "_app/immutable/components/pages/docs/text-field/_page.svelte-4d2ebd6f.js",
+    "src": "src/routes/docs/text-field/+page.svelte",
+    "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js"
+      "_index-be153a96.js",
+      "_TextField-55d13445.js",
+      "_DocSection-abb8d504.js",
+      "_DocContent-d112f228.js",
+      "_DocImport-426f0676.js",
+      "_DocIntoText-d6b0c0e6.js",
+      "_DocTitle-7d81791e.js",
+      "_ColorPicker-2ed7f9e0.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_InputBase-30312b3b.js",
+      "_Select-d651ebed.js",
+      "_RadiusSlider-2a65a323.js",
+      "_Bulb-6a568d28.js",
+      "_Example-05595231.js"
     ]
   },
-  "_DocContent-05ac9a33.js": {
-    "file": "_app/immutable/chunks/DocContent-05ac9a33.js",
+  "src/routes/docs/quick-start/+page.svelte": {
+    "file": "_app/immutable/components/pages/docs/quick-start/_page.svelte-1ca8f3fd.js",
+    "src": "src/routes/docs/quick-start/+page.svelte",
+    "isEntry": true,
     "imports": [
-      "_index-93bd300e.js"
+      "_index-be153a96.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_DocSection-abb8d504.js",
+      "_DocContent-d112f228.js",
+      "_DocIntoText-d6b0c0e6.js",
+      "_DocLink-29b1db69.js",
+      "_DocSectionText-14b597b7.js",
+      "_DocTitle-7d81791e.js"
     ]
   },
-  "_DocImport-70800526.js": {
-    "file": "_app/immutable/chunks/DocImport-70800526.js",
+  "src/routes/docs/select/+page.svelte": {
+    "file": "_app/immutable/components/pages/docs/select/_page.svelte-22c470ff.js",
+    "src": "src/routes/docs/select/+page.svelte",
+    "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_DocSection-2caa1287.js"
+      "_index-be153a96.js",
+      "_DocContent-d112f228.js",
+      "_DocImport-426f0676.js",
+      "_DocIntoText-d6b0c0e6.js",
+      "_DocTitle-7d81791e.js",
+      "_ColorPicker-2ed7f9e0.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_InputBase-30312b3b.js",
+      "_Select-d651ebed.js",
+      "_RadiusSlider-2a65a323.js",
+      "_Example-05595231.js"
     ]
   },
-  "_DocIntoText-b6d3af16.js": {
-    "file": "_app/immutable/chunks/DocIntoText-b6d3af16.js",
+  "src/routes/docs/slider/+page.svelte": {
+    "file": "_app/immutable/components/pages/docs/slider/_page.svelte-4182d37f.js",
+    "src": "src/routes/docs/slider/+page.svelte",
+    "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js"
+      "_index-be153a96.js",
+      "_DocContent-d112f228.js",
+      "_DocImport-426f0676.js",
+      "_DocIntoText-d6b0c0e6.js",
+      "_DocTitle-7d81791e.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_InputBase-30312b3b.js",
+      "_ColorPicker-2ed7f9e0.js",
+      "_RadiusSlider-2a65a323.js",
+      "_Example-05595231.js"
     ]
   },
-  "_DocTitle-15379d96.js": {
-    "file": "_app/immutable/chunks/DocTitle-15379d96.js",
+  "src/routes/+page.svelte": {
+    "file": "_app/immutable/components/pages/_page.svelte-b4e36591.js",
+    "src": "src/routes/+page.svelte",
+    "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js"
+      "_index-be153a96.js",
+      "_paths-b4419565.js",
+      "_Button-d6e1b2f4.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_ToggleDarkModeButton-e6ccd5a1.js",
+      "_InputBase-30312b3b.js",
+      "_TextField-55d13445.js",
+      "_Footer-061be38a.js",
+      "_Example-05595231.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-5384235e.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/hero-image-5231d39f.webp",
+      "_app/immutable/assets/overlock-all-700-normal-abeb3085.woff",
+      "_app/immutable/assets/overlock-latin-700-normal-6df7eace.woff2",
+      "_app/immutable/assets/tinos-cyrillic-ext-400-normal-030fdfc5.woff2",
+      "_app/immutable/assets/tinos-all-400-normal-1bc49c3c.woff",
+      "_app/immutable/assets/tinos-cyrillic-400-normal-4f2288e5.woff2",
+      "_app/immutable/assets/tinos-greek-ext-400-normal-3277ca6c.woff2",
+      "_app/immutable/assets/tinos-greek-400-normal-3ff98a5c.woff2",
+      "_app/immutable/assets/tinos-hebrew-400-normal-7ca05fcd.woff2",
+      "_app/immutable/assets/tinos-vietnamese-400-normal-827de746.woff2",
+      "_app/immutable/assets/tinos-latin-ext-400-normal-5695ec60.woff2",
+      "_app/immutable/assets/tinos-latin-400-normal-c8e3b03a.woff2"
     ]
   },
-  "_Select-5f793715.js": {
-    "file": "_app/immutable/chunks/Select-5f793715.js",
+  "src/routes/docs/styling/+page.svelte": {
+    "file": "_app/immutable/components/pages/docs/styling/_page.svelte-732d76f2.js",
+    "src": "src/routes/docs/styling/+page.svelte",
+    "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_Button-3c0867b2.js",
-      "_Example-ffc97b82.js",
-      "_InputBase-c91271e4.js"
+      "_index-be153a96.js",
+      "_DocIntoText-d6b0c0e6.js",
+      "_DocTitle-7d81791e.js"
     ]
   },
-  "_RadiusSlider-895e6d68.js": {
-    "file": "_app/immutable/chunks/RadiusSlider-895e6d68.js",
+  "src/routes/docs/progress-bar/+page.svelte": {
+    "file": "_app/immutable/components/pages/docs/progress-bar/_page.svelte-bf844201.js",
+    "src": "src/routes/docs/progress-bar/+page.svelte",
+    "isEntry": true,
     "imports": [
-      "_index-93bd300e.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_ColorPicker-77e65a71.js"
+      "_index-be153a96.js",
+      "_paths-b4419565.js",
+      "_DocContent-d112f228.js",
+      "_DocImport-426f0676.js",
+      "_DocIntoText-d6b0c0e6.js",
+      "_DocLink-29b1db69.js",
+      "_DocSection-abb8d504.js",
+      "_DocSectionText-14b597b7.js",
+      "_DocTitle-7d81791e.js",
+      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-4604d585.js",
+      "_InputBase-30312b3b.js",
+      "_ColorPicker-2ed7f9e0.js",
+      "_TextField-55d13445.js",
+      "_Example-05595231.js",
+      "_ProgressBarMeterBase-da9cbaa1.js",
+      "_RadiusSlider-2a65a323.js"
     ]
-  },
-  "_ColorPicker-77e65a71.js": {
-    "file": "_app/immutable/chunks/ColorPicker-77e65a71.js",
-    "imports": [
-      "_index-93bd300e.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_Button-3c0867b2.js",
-      "_Example-ffc97b82.js",
-      "_InputBase-c91271e4.js",
-      "_IconButton-8bc9e742.js"
-    ]
-  },
-  "_Modal-b7de12ec.js": {
-    "file": "_app/immutable/chunks/Modal-b7de12ec.js",
-    "imports": [
-      "_index-93bd300e.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_Example-ffc97b82.js",
-      "_index-ef43ef96.js"
-    ]
-  },
-  "_DocLink-99f50733.js": {
-    "file": "_app/immutable/chunks/DocLink-99f50733.js",
-    "imports": [
-      "_index-93bd300e.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js"
-    ]
-  },
-  "_ProgressBarMeterBase-7f084f00.js": {
-    "file": "_app/immutable/chunks/ProgressBarMeterBase-7f084f00.js",
-    "imports": [
-      "_index-93bd300e.js",
-      "_Example-ffc97b82.js",
-      "_InputBase-c91271e4.js",
-      "_ProgressBarMeterBase.svelte_svelte_type_style_lang-c62afc4d.js",
-      "_Button-3c0867b2.js"
-    ]
-  },
-  ".svelte-kit/generated/nodes/0.js": {
-    "file": "_app/immutable/chunks/0-a663ccf5.js",
-    "src": ".svelte-kit/generated/nodes/0.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "__layout-1daba58d.js",
-      "__layout-5645bdd9.js"
-    ]
-  },
-  ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-1ee5c4ad.js",
-    "src": ".svelte-kit/generated/nodes/1.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-6f4457a8.js",
-    "src": ".svelte-kit/generated/nodes/2.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/+layout.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/3.js": {
-    "file": "_app/immutable/chunks/3-b09b4b91.js",
-    "src": ".svelte-kit/generated/nodes/3.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/4.js": {
-    "file": "_app/immutable/chunks/4-fcfcb076.js",
-    "src": ".svelte-kit/generated/nodes/4.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/button/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/5.js": {
-    "file": "_app/immutable/chunks/5-1318e9df.js",
-    "src": ".svelte-kit/generated/nodes/5.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/checkbox/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/6.js": {
-    "file": "_app/immutable/chunks/6-e3d44828.js",
-    "src": ".svelte-kit/generated/nodes/6.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/dark-mode/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/7.js": {
-    "file": "_app/immutable/chunks/7-63d603f2.js",
-    "src": ".svelte-kit/generated/nodes/7.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/dialog/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/8.js": {
-    "file": "_app/immutable/chunks/8-b8e0ce12.js",
-    "src": ".svelte-kit/generated/nodes/8.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/icons/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/9.js": {
-    "file": "_app/immutable/chunks/9-b3109a56.js",
-    "src": ".svelte-kit/generated/nodes/9.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/installation/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/10.js": {
-    "file": "_app/immutable/chunks/10-e7377cd6.js",
-    "src": ".svelte-kit/generated/nodes/10.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/meter/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/11.js": {
-    "file": "_app/immutable/chunks/11-d9e4070a.js",
-    "src": ".svelte-kit/generated/nodes/11.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/modal/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/12.js": {
-    "file": "_app/immutable/chunks/12-665f1dd7.js",
-    "src": ".svelte-kit/generated/nodes/12.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/progress-bar/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/13.js": {
-    "file": "_app/immutable/chunks/13-6e769eab.js",
-    "src": ".svelte-kit/generated/nodes/13.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/quick-start/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/14.js": {
-    "file": "_app/immutable/chunks/14-c26eeb2e.js",
-    "src": ".svelte-kit/generated/nodes/14.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/select/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/15.js": {
-    "file": "_app/immutable/chunks/15-2e552692.js",
-    "src": ".svelte-kit/generated/nodes/15.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/slider/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/16.js": {
-    "file": "_app/immutable/chunks/16-85e58f63.js",
-    "src": ".svelte-kit/generated/nodes/16.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/styling/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/17.js": {
-    "file": "_app/immutable/chunks/17-85eb59c1.js",
-    "src": ".svelte-kit/generated/nodes/17.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/text/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/18.js": {
-    "file": "_app/immutable/chunks/18-7e29bcc8.js",
-    "src": ".svelte-kit/generated/nodes/18.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/text-field/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/19.js": {
-    "file": "_app/immutable/chunks/19-886b23be.js",
-    "src": ".svelte-kit/generated/nodes/19.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/theming/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/20.js": {
-    "file": "_app/immutable/chunks/20-0b8a2294.js",
-    "src": ".svelte-kit/generated/nodes/20.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/docs/usage/+page.svelte"
-    ]
-  },
-  "_layout.css": {
-    "file": "_app/immutable/assets/_layout-56a653b3.css",
-    "src": "_layout.css"
-  },
-  "DocSection.css": {
-    "file": "_app/immutable/assets/DocSection-1881cc6e.css",
-    "src": "DocSection.css"
-  },
-  "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-5384235e.css",
-    "src": "src/routes/+page.css"
-  },
-  "ProgressBarMeterBase.css": {
-    "file": "_app/immutable/assets/ProgressBarMeterBase-1cd7bde0.css",
-    "src": "ProgressBarMeterBase.css"
   }
 }
