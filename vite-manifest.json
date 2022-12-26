@@ -1038,13 +1038,13 @@
     "file": "_app/immutable/assets/_layout-56a653b3.css",
     "src": "_layout.css"
   },
-  "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-5384235e.css",
-    "src": "src/routes/+page.css"
-  },
   "DocSection.css": {
     "file": "_app/immutable/assets/DocSection-1881cc6e.css",
     "src": "DocSection.css"
+  },
+  "src/routes/+page.css": {
+    "file": "_app/immutable/assets/_page-5384235e.css",
+    "src": "src/routes/+page.css"
   },
   "ProgressBarMeterBase.css": {
     "file": "_app/immutable/assets/ProgressBarMeterBase-1cd7bde0.css",
