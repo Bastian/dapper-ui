@@ -14,6 +14,10 @@ const config = {
 		paths: {
 			base: dev ? '' : '/dapper-ui'
 		}
+	},
+
+	package: {
+		files: (filePath) => !filePath.includes('stories')
 	}
 };
 
