@@ -1,7 +1,5 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-cloudflare';
 import preprocess from 'svelte-preprocess';
-
-const dev = process.argv.includes('dev');
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -10,10 +8,7 @@ const config = {
 	}),
 
 	kit: {
-		adapter: adapter(),
-		paths: {
-			base: dev ? '' : '/dapper-ui'
-		}
+		adapter: adapter()
 	},
 
 	package: {
