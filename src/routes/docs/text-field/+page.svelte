@@ -8,6 +8,8 @@
 	import DocSection from '../DocSection.svelte';
 	import DocTitle from '../DocTitle.svelte';
 	import TextFieldExample from './TextFieldExample.svelte';
+	import PropTable from '../../../doc-components/prop-table/PropTable.svelte';
+	import TextFieldSrc from '$lib/components/text-field/TextField.svelte?raw';
 </script>
 
 <DocTitle title="TextField" />
@@ -42,5 +44,9 @@
 			<TextField class="d4r-self-end" label="Small" size="sm" />
 			<TextField class="d4r-col-span-1 sm:d4r-col-span-2 lg:d4r-col-span-3" label="Full Width" />
 		</DocBox>
+	</DocSection>
+
+	<DocSection title="Props">
+		<PropTable componentSrc={TextFieldSrc} />
 	</DocSection>
 </DocContent>

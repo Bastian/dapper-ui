@@ -11,6 +11,12 @@
 	import DocSectionText from '../DocSectionText.svelte';
 	import DocTitle from '../DocTitle.svelte';
 	import Example from '../Example.svelte';
+	import PropTable from '../../../doc-components/prop-table/PropTable.svelte';
+	import DialogSrc from '$lib/components/dialog/Dialog.svelte?raw';
+	import DialogActionsSrc from '$lib/components/dialog/DialogActions.svelte?raw';
+	import DialogContentSrc from '$lib/components/dialog/DialogContent.svelte?raw';
+	import DialogHeaderSrc from '$lib/components/dialog/DialogHeader.svelte?raw';
+	import Text from '$lib/components/text/Text.svelte';
 
 	let dialogOpen = false;
 	let dialogOpen2 = false;
@@ -138,5 +144,24 @@
 			relevant ARIA attributes, specifically <code>aria-labelledby</code> and
 			<code>aria-describedby</code>, will be set automatically.
 		</DocSectionText>
+	</DocSection>
+
+	<DocSection title="Props">
+		<div class="d4r-space-y-2">
+			<Text tag="h3" weight="medium">Dialog</Text>
+			<PropTable componentSrc={DialogSrc} />
+		</div>
+		<div class="!d4r-mt-8 d4r-space-y-2">
+			<Text tag="h3" weight="medium">DialogHeader</Text>
+			<PropTable componentSrc={DialogHeaderSrc} />
+		</div>
+		<div class="!d4r-mt-8 d4r-space-y-2">
+			<Text tag="h3" weight="medium">DialogContent</Text>
+			<PropTable componentSrc={DialogContentSrc} />
+		</div>
+		<div class="!d4r-mt-8 d4r-space-y-2">
+			<Text tag="h3" weight="medium">DialogActions</Text>
+			<PropTable componentSrc={DialogActionsSrc} />
+		</div>
 	</DocSection>
 </DocContent>

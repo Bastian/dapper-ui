@@ -21,9 +21,3 @@
 		</div>
 	</div>
 </div>
-
-<style lang="postcss" global>
-	:local(.svg-container) svg {
-		@apply d4r-h-5 d4r-w-5;
-	}
-</style>

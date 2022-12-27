@@ -8,6 +8,8 @@
 	import DocSectionText from '../DocSectionText.svelte';
 	import DocTitle from '../DocTitle.svelte';
 	import Example from '../Example.svelte';
+	import PropTable from '../../../doc-components/prop-table/PropTable.svelte';
+	import ModalSrc from '$lib/components/modal/Modal.svelte?raw';
 
 	let modalOpen = false;
 	let modalOpen2 = false;
@@ -113,5 +115,9 @@ ${'<'}style>
 			UI components offer an <code>autoFocus</code> prop that will automatically focus the element when
 			it is mounted.
 		</DocSectionText>
+	</DocSection>
+
+	<DocSection title="Props">
+		<PropTable componentSrc={ModalSrc} />
 	</DocSection>
 </DocContent>

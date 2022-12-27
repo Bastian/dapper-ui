@@ -8,6 +8,8 @@
 	import DocSectionText from '../DocSectionText.svelte';
 	import DocTitle from '../DocTitle.svelte';
 	import ProgressBarExample from './ProgressBarExample.svelte';
+	import PropTable from '../../../doc-components/prop-table/PropTable.svelte';
+	import ProgressBarSrc from '$lib/components/progress-bar/ProgressBar.svelte?raw';
 </script>
 
 <DocTitle title="ProgressBar" />
@@ -33,5 +35,9 @@
 			Avoid using the progress bar as a meter, such as for displaying remaining battery percentage.
 			Instead, use the <DocLink href="{base}/docs/meter">Meter</DocLink> component for this purpose.
 		</DocSectionText>
+	</DocSection>
+
+	<DocSection title="Props">
+		<PropTable componentSrc={ProgressBarSrc} />
 	</DocSection>
 </DocContent>

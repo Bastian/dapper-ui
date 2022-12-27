@@ -13,6 +13,9 @@
 	import ButtonExample from './ButtonExample.svelte';
 	import IconButtonExample from './IconButtonExample.svelte';
 
+	import ButtonSrc from '$lib/components/button/Button.svelte?raw';
+	import PropTable from '../../../doc-components/prop-table/PropTable.svelte';
+
 	// For the icon button list, gradient is omitted
 	const variants: ComponentProps<IconButton>['variant'][] = [
 		'solid',
@@ -119,5 +122,9 @@
 				</div>
 			{/each}
 		</DocBox>
+	</DocSection>
+
+	<DocSection title="Props">
+		<PropTable componentSrc={ButtonSrc} />
 	</DocSection>
 </DocContent>

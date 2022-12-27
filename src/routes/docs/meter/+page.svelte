@@ -8,6 +8,8 @@
 	import DocSectionText from '../DocSectionText.svelte';
 	import DocTitle from '../DocTitle.svelte';
 	import MeterExample from './MeterExample.svelte';
+	import PropTable from '../../../doc-components/prop-table/PropTable.svelte';
+	import MeterSrc from '$lib/components/meter/Meter.svelte?raw';
 </script>
 
 <DocTitle title="Meter" />
@@ -36,5 +38,9 @@
 			Instead, use the <DocLink href="{base}/docs/progress-bar">ProgressBar</DocLink> component for this
 			purpose.
 		</DocSectionText>
+	</DocSection>
+
+	<DocSection title="Props">
+		<PropTable componentSrc={MeterSrc} />
 	</DocSection>
 </DocContent>

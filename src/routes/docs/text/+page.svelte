@@ -4,6 +4,9 @@
 	import DocIntoText from '../DocIntoText.svelte';
 	import DocTitle from '../DocTitle.svelte';
 	import TextExample from './TextExample.svelte';
+	import PropTable from '../../../doc-components/prop-table/PropTable.svelte';
+	import TextSrc from '$lib/components/text/Text.svelte?raw';
+	import DocSection from '../DocSection.svelte';
 </script>
 
 <svelte:head>
@@ -19,4 +22,8 @@
 
 <DocContent>
 	<TextExample />
+
+	<DocSection title="Props">
+		<PropTable componentSrc={TextSrc} />
+	</DocSection>
 </DocContent>
