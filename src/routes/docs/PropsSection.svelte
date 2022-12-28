@@ -12,9 +12,11 @@
 
 <DocSection title="Props">
 	{#each data as doc}
-		<Text weight="bold" tag="h3">{doc.name}</Text>
-		{#if doc.docs.props}
-			<PropTable parsed={doc.docs.props} />
-		{/if}
+		<div class="!d4r-mt-2 d4r-mb-10 d4r-space-y-2">
+			<Text weight="bold" tag="h3">{doc.name}</Text>
+			{#if doc.docs.props}
+				<PropTable parsed={doc.docs.props} />
+			{/if}
+		</div>
 	{/each}
 </DocSection>

@@ -66,5 +66,5 @@ module.exports = {
 			meter: 'var(--d4r-border-radius-meter)'
 		}
 	},
-	plugins: [require('@tailwindcss/forms')]
+	plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')]
 };

@@ -1,11 +1,8 @@
 <script lang="ts">
-	import Table from '$lib/components/table/Table.svelte';
-	import TBody from '$lib/components/table/TBody.svelte';
-	import Td from '$lib/components/table/Td.svelte';
-	import Th from '$lib/components/table/Th.svelte';
-	import THead from '$lib/components/table/THead.svelte';
-	import Tr from '$lib/components/table/Tr.svelte';
+	import Text from '$lib/components/text/Text.svelte';
+	import SvelteMarkdown from 'svelte-markdown';
 	import type { ParsedComponentProp } from '../../util/parse-component-src';
+	import CodeBlock from '../code-highlight/CodeBlock.svelte';
 
 	export let parsed: Array<ParsedComponentProp>;
 
@@ -29,21 +26,23 @@
 	}
 </script>
 
-<Table>
-	<THead>
-		<Tr>
-			<Th class="d4r-min-w-[150px]">Name</Th>
-			<Th class="d4r-min-w-[300px]">Type</Th>
-			<Th class="d4r-min-w-[150px]">Default Value</Th>
-		</Tr>
-	</THead>
-	<TBody>
-		{#each parsed as { comment, name, type, defaultValue }}
-			<Tr>
-				<Td>{name}</Td>
-				<Td><code>{type ?? guessTypeFromValue(defaultValue)}</code></Td>
-				<Td>{defaultValue ? mapValue(defaultValue) : 'None'}</Td>
-			</Tr>
-		{/each}
-	</TBody>
-</Table>
+<div class="d4r-space-y-4">
+	{#each parsed as { comment, name, type, defaultValue }}
+		<div class="d4r-space-y-4 d4r-rounded d4r-bg-white d4r-p-4 dark:d4r-bg-dark-800">
+			<Text tag="h4" weight="semibold">{name}</Text>
+			<div>
+				<Text>Type</Text>
+				<CodeBlock language="ts" code={type ?? guessTypeFromValue(defaultValue)} />
+			</div>
+			<div>
+				<Text>Default Value</Text>
+				<CodeBlock language="ts" code={defaultValue ? mapValue(defaultValue) : 'None'} />
+			</div>
+			{#if comment}
+				<Text tag="div" contrast="low" class="d4r-prose d4r-max-w-full dark:d4r-prose-invert">
+					<SvelteMarkdown source={comment} />
+				</Text>
+			{/if}
+		</div>
+	{/each}
+</div>
