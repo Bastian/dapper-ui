@@ -1,8 +1,10 @@
-<script>
+<script lang="ts">
 	import Text from '../text/Text.svelte';
+
+	export let colspan: number | undefined = undefined;
 </script>
 
-<Text tag="td" class="d4r-td">
+<Text tag="td" class="d4r-td" {colspan}>
 	<slot />
 </Text>
 

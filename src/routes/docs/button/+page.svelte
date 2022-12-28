@@ -10,11 +10,12 @@
 	import DocSectionTitle from '../DocSectionTitle.svelte';
 	import DocTitle from '../DocTitle.svelte';
 	import Example from '../Example.svelte';
+	import PropsSection from '../PropsSection.svelte';
 	import ButtonExample from './ButtonExample.svelte';
 	import IconButtonExample from './IconButtonExample.svelte';
+	import type { PageData } from './$types';
 
-	import ButtonSrc from '$lib/components/button/Button.svelte?raw';
-	import PropTable from '../../../doc-components/prop-table/PropTable.svelte';
+	export let data: PageData;
 
 	// For the icon button list, gradient is omitted
 	const variants: ComponentProps<IconButton>['variant'][] = [
@@ -124,7 +125,5 @@
 		</DocBox>
 	</DocSection>
 
-	<DocSection title="Props">
-		<PropTable componentSrc={ButtonSrc} />
-	</DocSection>
+	<PropsSection data={data.docs} />
 </DocContent>

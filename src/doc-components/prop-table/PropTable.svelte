@@ -5,39 +5,19 @@
 	import Th from '$lib/components/table/Th.svelte';
 	import THead from '$lib/components/table/THead.svelte';
 	import Tr from '$lib/components/table/Tr.svelte';
-	import Text from '$lib/components/text/Text.svelte';
+	import type { ParsedComponentProp } from '../../util/parse-component-src';
 
-	export let componentSrc: string;
+	export let parsed: Array<ParsedComponentProp>;
 
-	let props: [string, string, string][] = [];
-
-	// TODO: Maybe use https://typescript-eslint.io/architecture/typescript-estree/
-	//  instead of a complex regex. The current solition kinda works, but it's not
-	//  perfect and sometimes has parsing errors.
-	const regex = /export let (\S+)(:\s([^=;]+))?(\s=\s([^;]+))?;/gm;
-
-	$: {
-		let m;
-		while ((m = regex.exec(componentSrc)) !== null) {
-			if (m.index === regex.lastIndex) {
-				regex.lastIndex++;
-			}
-
-			const name = m[1];
-			const type = m[3];
-			const value = m[5];
-
-			props.push([name, type, value]);
-		}
-	}
-
-	function guessTypeFromValue(value: string) {
+	function guessTypeFromValue(value: string | undefined) {
+		if (!value) return 'unknown';
 		if (value === 'true' || value === 'false') return 'boolean';
 		if (value === 'undefined') return 'unknown';
 		if (value === 'null') return 'unknown';
 		if (value.startsWith('"') && value.endsWith('"')) return 'string';
 		if (value.startsWith("'") && value.endsWith("'")) return 'string';
 		if (value.startsWith('[') && value.endsWith(']')) return 'Array';
+		if (/^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?$/.test(value)) return 'number';
 		if (value.includes('generateRandomId')) return 'string';
 		return 'unknown';
 	}
@@ -49,11 +29,6 @@
 	}
 </script>
 
-<Text contrast="low" size="sm">
-	Caution: This table has been automatically generated using a (bad) regular expression. There may
-	be instances where the type and default value are incomplete or wrong. This will be fixed in the
-	future.
-</Text>
 <Table>
 	<THead>
 		<Tr>
@@ -63,11 +38,11 @@
 		</Tr>
 	</THead>
 	<TBody>
-		{#each props as [name, type, value]}
+		{#each parsed as { comment, name, type, defaultValue }}
 			<Tr>
 				<Td>{name}</Td>
-				<Td><code>{type ?? guessTypeFromValue(value)}</code></Td>
-				<Td>{value ? mapValue(value) : 'None'}</Td>
+				<Td><code>{type ?? guessTypeFromValue(defaultValue)}</code></Td>
+				<Td>{defaultValue ? mapValue(defaultValue) : 'None'}</Td>
 			</Tr>
 		{/each}
 	</TBody>

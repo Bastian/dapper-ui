@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import TextField from '$lib/components/text-field/TextField.svelte';
 	import { User } from 'tabler-icons-svelte';
 	import DocBox from '../DocBox.svelte';
@@ -7,9 +7,11 @@
 	import DocIntoText from '../DocIntoText.svelte';
 	import DocSection from '../DocSection.svelte';
 	import DocTitle from '../DocTitle.svelte';
+	import PropsSection from '../PropsSection.svelte';
+	import type { PageData } from './$types';
 	import TextFieldExample from './TextFieldExample.svelte';
-	import PropTable from '../../../doc-components/prop-table/PropTable.svelte';
-	import TextFieldSrc from '$lib/components/text-field/TextField.svelte?raw';
+
+	export let data: PageData;
 </script>
 
 <DocTitle title="TextField" />
@@ -46,7 +48,5 @@
 		</DocBox>
 	</DocSection>
 
-	<DocSection title="Props">
-		<PropTable componentSrc={TextFieldSrc} />
-	</DocSection>
+	<PropsSection data={data.docs} />
 </DocContent>

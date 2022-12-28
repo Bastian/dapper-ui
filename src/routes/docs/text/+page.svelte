@@ -1,12 +1,13 @@
-<script>
+<script lang="ts">
 	import DocContent from '../DocContent.svelte';
 	import DocImport from '../DocImport.svelte';
 	import DocIntoText from '../DocIntoText.svelte';
 	import DocTitle from '../DocTitle.svelte';
+	import PropsSection from '../PropsSection.svelte';
+	import type { PageData } from './$types';
 	import TextExample from './TextExample.svelte';
-	import PropTable from '../../../doc-components/prop-table/PropTable.svelte';
-	import TextSrc from '$lib/components/text/Text.svelte?raw';
-	import DocSection from '../DocSection.svelte';
+
+	export let data: PageData;
 </script>
 
 <svelte:head>
@@ -23,7 +24,5 @@
 <DocContent>
 	<TextExample />
 
-	<DocSection title="Props">
-		<PropTable componentSrc={TextSrc} />
-	</DocSection>
+	<PropsSection data={data.docs} />
 </DocContent>

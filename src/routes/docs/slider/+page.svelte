@@ -1,12 +1,13 @@
-<script>
+<script lang="ts">
 	import DocContent from '../DocContent.svelte';
 	import DocImport from '../DocImport.svelte';
 	import DocIntoText from '../DocIntoText.svelte';
 	import DocTitle from '../DocTitle.svelte';
+	import PropsSection from '../PropsSection.svelte';
+	import type { PageData } from './$types';
 	import SliderExample from './SliderExample.svelte';
-	import PropTable from '../../../doc-components/prop-table/PropTable.svelte';
-	import SliderSrc from '$lib/components/slider/Slider.svelte?raw';
-	import DocSection from '../DocSection.svelte';
+
+	export let data: PageData;
 </script>
 
 <DocTitle title="Slider" />
@@ -18,7 +19,5 @@
 <DocContent>
 	<SliderExample />
 
-	<DocSection title="Props">
-		<PropTable componentSrc={SliderSrc} />
-	</DocSection>
+	<PropsSection data={data.docs} />
 </DocContent>

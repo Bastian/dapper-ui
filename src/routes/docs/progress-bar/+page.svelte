@@ -7,9 +7,11 @@
 	import DocSection from '../DocSection.svelte';
 	import DocSectionText from '../DocSectionText.svelte';
 	import DocTitle from '../DocTitle.svelte';
+	import PropsSection from '../PropsSection.svelte';
+	import type { PageData } from './$types';
 	import ProgressBarExample from './ProgressBarExample.svelte';
-	import PropTable from '../../../doc-components/prop-table/PropTable.svelte';
-	import ProgressBarSrc from '$lib/components/progress-bar/ProgressBar.svelte?raw';
+
+	export let data: PageData;
 </script>
 
 <DocTitle title="ProgressBar" />
@@ -37,7 +39,5 @@
 		</DocSectionText>
 	</DocSection>
 
-	<DocSection title="Props">
-		<PropTable componentSrc={ProgressBarSrc} />
-	</DocSection>
+	<PropsSection data={data.docs} />
 </DocContent>

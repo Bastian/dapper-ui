@@ -122,6 +122,7 @@ needs of any design. Additionally, the Button can function as a link.
 	 */
 	export { className as class };
 
+
 	let usedColorShade: Shades[];
 	$: {
 		if (variant === 'solid') {

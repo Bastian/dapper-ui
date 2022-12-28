@@ -8,8 +8,10 @@
 	import DocSectionText from '../DocSectionText.svelte';
 	import DocTitle from '../DocTitle.svelte';
 	import Example from '../Example.svelte';
-	import PropTable from '../../../doc-components/prop-table/PropTable.svelte';
-	import ModalSrc from '$lib/components/modal/Modal.svelte?raw';
+	import PropsSection from '../PropsSection.svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 
 	let modalOpen = false;
 	let modalOpen2 = false;
@@ -117,7 +119,5 @@ ${'<'}style>
 		</DocSectionText>
 	</DocSection>
 
-	<DocSection title="Props">
-		<PropTable componentSrc={ModalSrc} />
-	</DocSection>
+	<PropsSection data={data.docs} />
 </DocContent>

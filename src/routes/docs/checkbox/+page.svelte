@@ -1,12 +1,13 @@
-<script>
+<script lang="ts">
 	import DocContent from '../DocContent.svelte';
 	import DocImport from '../DocImport.svelte';
 	import DocIntoText from '../DocIntoText.svelte';
 	import DocTitle from '../DocTitle.svelte';
+	import PropsSection from '../PropsSection.svelte';
+	import type { PageData } from './$types';
 	import CheckboxExample from './CheckboxExample.svelte';
-	import CheckboxSrc from '$lib/components/checkbox/Checkbox.svelte?raw';
-	import DocSection from '../DocSection.svelte';
-	import PropTable from '../../../doc-components/prop-table/PropTable.svelte';
+
+	export let data: PageData;
 </script>
 
 <DocTitle title="Checkbox" />
@@ -16,7 +17,5 @@
 <DocContent>
 	<CheckboxExample />
 
-	<DocSection title="Props">
-		<PropTable componentSrc={CheckboxSrc} />
-	</DocSection>
+	<PropsSection data={data.docs} />
 </DocContent>

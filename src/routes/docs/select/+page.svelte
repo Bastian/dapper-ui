@@ -1,12 +1,13 @@
-<script>
+<script lang="ts">
 	import DocContent from '../DocContent.svelte';
 	import DocImport from '../DocImport.svelte';
 	import DocIntoText from '../DocIntoText.svelte';
 	import DocTitle from '../DocTitle.svelte';
+	import PropsSection from '../PropsSection.svelte';
+	import type { PageData } from './$types';
 	import SelectExample from './SelectExample.svelte';
-	import PropTable from '../../../doc-components/prop-table/PropTable.svelte';
-	import SelectSrc from '$lib/components/select/Select.svelte?raw';
-	import DocSection from '../DocSection.svelte';
+
+	export let data: PageData;
 </script>
 
 <DocTitle title="Select" />
@@ -16,7 +17,5 @@
 <DocContent>
 	<SelectExample />
 
-	<DocSection title="Props">
-		<PropTable componentSrc={SelectSrc} />
-	</DocSection>
+	<PropsSection data={data.docs} />
 </DocContent>
