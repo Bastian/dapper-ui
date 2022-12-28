@@ -1,7 +1,3 @@
-<script lang="ts" context="module">
-	export let drawerOpen = writable(false);
-</script>
-
 <script lang="ts">
 	import { base } from '$app/paths';
 	import IconButton from '$lib/components/icon-button/IconButton.svelte';
@@ -12,10 +8,9 @@
 	import '@fontsource/open-sans/600.css';
 	import '@fontsource/open-sans/700.css';
 	import '@fontsource/fira-mono/400.css';
-	import { writable } from 'svelte/store';
 	import { Menu2 } from 'tabler-icons-svelte';
 	import ToggleDarkModeButton from './ToggleDarkModeButton.svelte';
-	import PageDrawer from './PageDrawer.svelte';
+	import PageDrawer, { drawerOpen } from './PageDrawer.svelte';
 </script>
 
 <ThemeProvider>

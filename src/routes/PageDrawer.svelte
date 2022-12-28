@@ -1,3 +1,7 @@
+<script lang="ts" context="module">
+	export let drawerOpen = writable(false);
+</script>
+
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
@@ -5,8 +9,8 @@
 	import Drawer from '$lib/components/drawer/Drawer.svelte';
 	import DrawerLink from '$lib/components/drawer/DrawerLink.svelte';
 	import Text from '$lib/components/text/Text.svelte';
+	import { writable } from 'svelte/store';
 	import { Bulb, Components, Notebook } from 'tabler-icons-svelte';
-	import { drawerOpen } from './+layout.svelte';
 
 	let className = '';
 	export { className as class };
