@@ -38,6 +38,7 @@
 		if (value.startsWith('"') && value.endsWith('"')) return 'string';
 		if (value.startsWith("'") && value.endsWith("'")) return 'string';
 		if (value.startsWith('[') && value.endsWith(']')) return 'Array';
+		if (value.includes('generateRandomId')) return 'string';
 		return 'unknown';
 	}
 
@@ -56,9 +57,9 @@
 <Table>
 	<THead>
 		<Tr>
-			<Th>Name</Th>
-			<Th>Type</Th>
-			<Th>Default Value</Th>
+			<Th class="d4r-min-w-[150px]">Name</Th>
+			<Th class="d4r-min-w-[300px]">Type</Th>
+			<Th class="d4r-min-w-[150px]">Default Value</Th>
 		</Tr>
 	</THead>
 	<TBody>
@@ -66,7 +67,7 @@
 			<Tr>
 				<Td>{name}</Td>
 				<Td><code>{type ?? guessTypeFromValue(value)}</code></Td>
-				<Td>{mapValue(value)}</Td>
+				<Td>{value ? mapValue(value) : 'None'}</Td>
 			</Tr>
 		{/each}
 	</TBody>
