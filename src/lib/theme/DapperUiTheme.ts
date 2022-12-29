@@ -2,7 +2,13 @@ import type { ColorPalette } from '$lib/colors/color';
 
 export interface DapperUiTheme {
 	font?: {
+		/**
+		 * That default font family for text.
+		 */
 		default?: string;
+		/**
+		 * The default font family for code.
+		 */
 		code?: string;
 	};
 	colors: {
@@ -16,7 +22,7 @@ export interface DapperUiTheme {
 		 */
 		neutral: ColorPalette;
 		/**
-		 * The dark color palette used by in the dark mode.
+		 * The dark color palette used in the dark mode.
 		 */
 		dark: ColorPalette;
 		/**

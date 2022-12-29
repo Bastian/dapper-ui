@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" class="d4r-light d4r-h-full">
+<html lang="en" class="d4r-h-full">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		%sveltekit.head%
+
+		<script>
+			if (typeof window !== 'undefined') {
+				if (
+					localStorage['d4r-theme'] === 'dark' ||
+					(!('d4r-theme' in localStorage) &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches)
+				) {
+					document.documentElement.classList.add('d4r-dark');
+					document.documentElement.classList.remove('d4r-light');
+				} else {
+					document.documentElement.classList.remove('d4r-dark');
+					document.documentElement.classList.add('d4r-light');
+				}
+			}
+		</script>
 	</head>
 	<body class="d4r-h-full d4r-bg-neutral-100 dark:d4r-bg-dark-700">
 		<div class="d4r-h-full">%sveltekit.body%</div>

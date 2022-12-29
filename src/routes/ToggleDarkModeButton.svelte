@@ -7,6 +7,11 @@
 	function toggleDarkMode() {
 		document.documentElement.classList.toggle('d4r-dark');
 		document.documentElement.classList.toggle('d4r-light');
+		if (document.documentElement.classList.contains('d4r-dark')) {
+			localStorage.setItem('d4r-theme', 'dark');
+		} else {
+			localStorage.setItem('d4r-theme', 'light');
+		}
 	}
 
 	export let icon = false;

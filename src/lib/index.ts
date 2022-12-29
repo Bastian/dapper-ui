@@ -17,4 +17,5 @@ export { default as Meter } from '$lib/components/meter/Meter.svelte';
 
 // Theme
 export { default as ThemeProvider } from '$lib/theme/ThemeProvider.svelte';
+export { defaultDapperUiTheme as defaultTheme } from '$lib/theme/default-theme';
 export { getTheme } from '$lib/getTheme';

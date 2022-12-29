@@ -131,6 +131,12 @@
 		Theming
 	</DrawerLink>
 	<DrawerLink
+		{...getDrawerLinkProps('/docs/colors', $page.route.id)}
+		on:click={handleDrawerLinkClick}
+	>
+		Colors
+	</DrawerLink>
+	<DrawerLink
 		{...getDrawerLinkProps('/docs/icons', $page.route.id)}
 		on:click={handleDrawerLinkClick}
 	>

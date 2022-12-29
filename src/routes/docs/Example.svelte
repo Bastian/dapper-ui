@@ -8,6 +8,7 @@
 
 	export let title: string | undefined = undefined;
 	export let code = '';
+	export let codeLanguage = 'svelte';
 
 	export let disablePreviewPadding = false;
 </script>
@@ -36,7 +37,7 @@
 		<DocBox
 			class="d4r-rounded-t-none d4r-border-t-0 !d4r-bg-neutral-50 d4r-p-4 dark:!d4r-bg-dark-800"
 		>
-			<StyledCodeBlock language="svelte" {code} />
+			<StyledCodeBlock language={codeLanguage} {code} />
 		</DocBox>
 	</div>
 </DocSection>
