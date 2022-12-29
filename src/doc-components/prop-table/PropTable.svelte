@@ -28,18 +28,22 @@
 
 <div class="d4r-space-y-4">
 	{#each parsed as { comment, name, type, defaultValue }}
-		<div class="d4r-space-y-4 d4r-rounded d4r-bg-white d4r-p-4 dark:d4r-bg-dark-800">
+		<div class="d4r-space-y-2 d4r-rounded d4r-bg-white d4r-p-4 dark:d4r-bg-dark-800">
 			<Text tag="h4" weight="semibold">{name}</Text>
 			<div>
-				<Text>Type</Text>
-				<CodeBlock language="ts" code={type ?? guessTypeFromValue(defaultValue)} />
+				<Text contrast="low" size="sm" weight="medium">Type</Text>
+				<CodeBlock allowWrap language="ts" code={type ?? guessTypeFromValue(defaultValue)} />
 			</div>
 			<div>
-				<Text>Default Value</Text>
-				<CodeBlock language="ts" code={defaultValue ? mapValue(defaultValue) : 'None'} />
+				<Text contrast="low" size="sm" weight="medium">Default Value</Text>
+				<CodeBlock allowWrap language="ts" code={defaultValue ? mapValue(defaultValue) : 'None'} />
 			</div>
 			{#if comment}
-				<Text tag="div" contrast="low" class="d4r-prose d4r-max-w-full dark:d4r-prose-invert">
+				<Text
+					tag="div"
+					contrast="low"
+					class="d4r-prose !d4r-mt-4 d4r-max-w-full dark:d4r-prose-invert"
+				>
 					<SvelteMarkdown source={comment} />
 				</Text>
 			{/if}

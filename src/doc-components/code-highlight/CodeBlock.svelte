@@ -9,6 +9,8 @@
 	export let code: string;
 	export let language: string | undefined = undefined;
 
+	export let allowWrap = false;
+
 	/**
 	 * Whether or not auto-dedent should be enabled
 	 * (i.e., if trailing spaces should be removed).
@@ -35,10 +37,12 @@
 	}
 </script>
 
-<div class="d4r-overflow-x-auto {className}">
-	<pre class="d4r-text-sm"><code class="hljs d4r-rounded-lg language-{language}"
+<div class="d4r-overflow-x-auto d4r-overflow-y-hidden {className}">
+	<svelte:element this={allowWrap ? 'span' : 'pre'}
+		><code class="hljs d4r-rounded-lg language-{language} !d4r-p-0"
 			>{#if highlighted}{@html highlighted}{:else}{noDedent
 					? code
 					: dedentFunction(code)}{/if}</code
-		></pre>
+		></svelte:element
+	>
 </div>
