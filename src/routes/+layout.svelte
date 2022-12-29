@@ -1,8 +1,5 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import IconButton from '$lib/components/icon-button/IconButton.svelte';
-	import Text from '$lib/components/text/Text.svelte';
-	import ThemeProvider from '$lib/theme/ThemeProvider.svelte';
 	import '@fontsource/open-sans/400.css';
 	import '@fontsource/open-sans/500.css';
 	import '@fontsource/open-sans/600.css';
@@ -11,6 +8,18 @@
 	import { Menu2 } from 'tabler-icons-svelte';
 	import ToggleDarkModeButton from './ToggleDarkModeButton.svelte';
 	import PageDrawer, { drawerOpen } from './PageDrawer.svelte';
+	import {
+		ThemeProvider,
+		Text,
+		Button,
+		Dialog,
+		DialogHeader,
+		DialogContent,
+		DialogActions,
+		IconButton
+	} from '$lib';
+	import Checkbox from '$lib/components/checkbox/Checkbox.svelte';
+	import WorkInProgressWarning from './WorkInProgressWarning.svelte';
 </script>
 
 <ThemeProvider>
@@ -34,6 +43,8 @@
 			<slot />
 		</div>
 	</div>
+
+	<WorkInProgressWarning />
 </ThemeProvider>
 
 <style lang="postcss" global>
