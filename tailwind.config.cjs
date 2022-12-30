@@ -5,6 +5,14 @@ module.exports = {
 			? './src/lib/**/*.{html,js,svelte,ts}'
 			: './src/**/*.{html,js,svelte,ts}'
 	],
+	safelist: [
+		{
+			// We mention these utilities in the docs and explicitly allow users
+			// to use them.
+			pattern: /^d4r-bg-(dark|neutral)-\d{2,3}$/,
+			variants: ['dark']
+		}
+	],
 	darkMode: 'class',
 	prefix: 'd4r-',
 	theme: {
