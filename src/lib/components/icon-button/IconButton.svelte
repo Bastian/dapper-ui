@@ -6,6 +6,7 @@ component, adding a label property for improved accessibility.
 <script lang="ts">
 	import Button from '$lib/components/button/Button.svelte';
 	import type { ComponentProps } from 'svelte';
+	import classNames from 'classnames';
 
 	/**
 	 * @see Button#fullWidth
@@ -66,6 +67,11 @@ component, adding a label property for improved accessibility.
 	 * @see Button#class
 	 */
 	export { className as class };
+
+	/**
+	 * @see Button#style
+	 */
+	export let style: string | undefined = undefined;
 </script>
 
 <Button
@@ -79,11 +85,12 @@ component, adding a label property for improved accessibility.
 	{variant}
 	{gradient}
 	{autoFocus}
-	class="d4r-h-10 d4r-w-10 !d4r-p-0 
-    {size === 'base' || size === undefined ? '!d4r-h-10 !d4r-w-10 ' : ''}
-    {size === 'sm' ? '!d4r-h-9 !d4r-w-9 ' : ''}
-    {size === 'xs' ? '!d4r-h-8 !d4r-w-8 ' : ''}
-    {className}"
+	class={classNames('d4r-h-10 d4r-w-10 !d4r-p-0', className, {
+		'!d4r-h-10 !d4r-w-10': size === 'base' || size === undefined,
+		'!d4r-h-9 !d4r-w-9': size === 'sm',
+		'!d4r-h-8 !d4r-w-8': size === 'xs'
+	})}
+	{style}
 	on:click
 	on:keydown
 	on:keyup

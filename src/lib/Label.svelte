@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Text } from '$lib';
+	import classNames from 'classnames';
 
 	let className = '';
 	export { className as class };
@@ -22,9 +23,14 @@
 	{id}
 	contrast="low"
 	size={size === 'sm' ? 'xs' : 'sm'}
-	class="d4r-flex d4r-items-center d4r-gap-1.5 {hidden ? 'd4r-hidden' : ''} {required
-		? 'd4r-input-required'
-		: ''} {className}"
+	class={classNames(
+		'd4r-flex d4r-items-center d4r-gap-1.5',
+		{
+			'd4r-hidden': hidden,
+			'd4r-input-required': required
+		},
+		className
+	)}
 	{...additionalProps}
 >
 	{#if hasIcon}

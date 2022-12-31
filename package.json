@@ -23,6 +23,9 @@
 		"build-storybook": "storybook build",
 		"chromatic": "chromatic --exit-zero-on-changes"
 	},
+	"dependencies": {
+		"classnames": "^2.3.2"
+	},
 	"devDependencies": {
 		"@fontsource/fira-mono": "^4.5.10",
 		"@fontsource/open-sans": "^4.5.13",

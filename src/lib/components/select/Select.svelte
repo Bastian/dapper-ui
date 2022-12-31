@@ -5,10 +5,7 @@
 	import InputBase from '$lib/InputBase.svelte';
 	import type { Radius } from '$lib/theme/DapperUiTheme';
 	import { focusOnMount } from '$lib/actions/focusOnMount';
-
-	let className = '';
-	export { className as class };
-	export let classLabel = '';
+	import classNames from 'classnames';
 
 	export let id: string = generateRandomId();
 	export let helpText: string | undefined = undefined;
@@ -34,6 +31,27 @@
 	export let radius: Radius | undefined = undefined;
 
 	export let fullWidth = false;
+
+	let className = '';
+	/**
+	 * Additional CSS classes to add.
+	 * Be careful when using this prop, as it can conflict with the default styles.
+	 *
+	 * Especially useful for positioning styles like margings.
+	 */
+	export { className as class };
+
+	/**
+	 * Additional CSS classes to add to the label.
+	 */
+	export let classLabel = '';
+
+	/**
+	 * Custom CSS styles to apply.
+	 *
+	 * Especially useful for positioning styles like margings.
+	 */
+	export let style: string | undefined = undefined;
 </script>
 
 <InputBase
@@ -48,12 +66,16 @@
 	{size}
 	{classLabel}
 	class={className}
+	{style}
 	hasIconLabel={$$slots['icon-label']}
 >
 	<slot name="icon-start" />
 	<slot slot="icon-label" name="icon-label" />
 	<select
-		style="{overwriteColor(color, [400, 500, 700], 'primary')}{overwriteRadius(radius, 'input')}"
+		style={classNames(
+			overwriteColor(color, [400, 500, 700], 'primary'),
+			overwriteRadius(radius, 'input')
+		) || undefined}
 		class="d4r-input-base"
 		class:size-base={size === 'base' || size === undefined}
 		class:size-sm={size === 'sm'}

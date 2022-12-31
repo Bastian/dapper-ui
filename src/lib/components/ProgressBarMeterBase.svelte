@@ -4,6 +4,7 @@
 	import type { Radius } from '$lib/theme/DapperUiTheme';
 	import { overwriteColor } from '$lib/util/createColorOverwrite';
 	import { overwriteRadius } from '$lib/util/createRadiusOverwrite';
+	import classNames from 'classnames';
 
 	export let role: 'progressbar' | 'meter';
 
@@ -28,6 +29,10 @@
 
 	export let hasIconLabel = false;
 
+	let className = '';
+	export { className as class };
+	export let style: string | undefined = undefined;
+
 	let percentage: number;
 	$: percentage = ((value - min) / (max - min)) * 100;
 </script>
@@ -41,10 +46,14 @@
 	{/if}
 	<div
 		{role}
-		class="d4r-flex d4r-h-1.5 d4r-w-full d4r-overflow-hidden d4r-bg-neutral-200 dark:d4r-bg-dark-500"
+		class={classNames(
+			'd4r-flex d4r-h-1.5 d4r-w-full d4r-overflow-hidden d4r-bg-neutral-200 dark:d4r-bg-dark-500',
+			className
+		)}
 		class:d4r-rounded-progressbar={role === 'progressbar'}
 		class:d4r-rounded-meter={role === 'meter'}
-		style="{overwriteColor(color, [500])}{overwriteRadius(radius, role)}"
+		style={classNames(overwriteColor(color, [500]), overwriteRadius(radius, role), style) ||
+			undefined}
 		aria-labelledby={!hideLabel && label ? labelId : undefined}
 		aria-label={hideLabel ? label : undefined}
 		aria-valuemin={min}
@@ -53,7 +62,6 @@
 		aria-valuetext={ariaValuetext}
 	>
 		<div
-			id="test"
 			class:indeterminate
 			class="d4r-w-full d4r-bg-primary-500 d4r-transition-all dark:d4r-bg-primary-500"
 			class:d4r-rounded-progressbar={role === 'progressbar'}

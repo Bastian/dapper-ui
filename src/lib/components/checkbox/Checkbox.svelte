@@ -5,6 +5,7 @@
 	import Text from '$lib/components/text/Text.svelte';
 	import type { Radius } from '$lib/theme/DapperUiTheme';
 	import { focusOnMount } from '$lib/actions/focusOnMount';
+	import classNames from 'classnames';
 
 	export let id: string = generateRandomId();
 	export let required = false;
@@ -39,13 +40,33 @@
 	 * when a modal is opened.
 	 */
 	export let autoFocus = false;
+
+	let className = '';
+	/**
+	 * Additional CSS classes to add.
+	 * Be careful when using this prop, as it can conflict with the default styles.
+	 *
+	 * Especially useful for positioning styles like margings.
+	 */
+	export { className as class };
+
+	/**
+	 * Custom CSS styles to apply.
+	 *
+	 * Especially useful for positioning styles like margings.
+	 */
+	export let style: string | undefined = undefined;
 </script>
 
 <div class="d4r-flex d4r-items-center d4r-gap-2" class:d4r-opacity-50={disabled}>
 	<input
-		style="{overwriteColor(color, [300, 600, 700])}{overwriteRadius(radius, 'checkbox')}"
+		style={classNames(
+			overwriteColor(color, [300, 600, 700]),
+			overwriteRadius(radius, 'checkbox'),
+			style
+		) || undefined}
 		type="checkbox"
-		class="d4r-input-base"
+		class={classNames('d4r-input-base', className)}
 		{id}
 		bind:checked
 		{required}

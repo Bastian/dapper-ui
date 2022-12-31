@@ -10,57 +10,12 @@ needs of any design. Additionally, the Button can function as a link.
 	import type { Radius } from '$lib/theme/DapperUiTheme';
 	import { overwriteColor } from '$lib/util/createColorOverwrite';
 	import { overwriteRadius } from '$lib/util/createRadiusOverwrite';
+	import classNames from 'classnames';
 
 	/**
 	 * The id of the element.
 	 */
 	export let id: string | undefined = undefined;
-
-	/**
-	 * Whether the button should fill the width of its parent.
-	 */
-	export let fullWidth = false;
-	/**
-	 * Changes the style of the button to look disabled and prevent the user from clicking it.
-	 */
-	export let disabled = false;
-	/**
-	 * The name of a color in the theme. Does not support arbitrary colors.
-	 *
-	 * When set to `undefined`, the primary color of the theme will be used.
-	 */
-	export let color: string | undefined = undefined;
-	/**
-	 * The size of the button.
-	 */
-	export let size: 'xs' | 'sm' | 'base' = 'base';
-	/**
-	 * The border radius of the button. When set to `undefined`, the button will have the default
-	 * border radius defined in the theme.
-	 */
-	export let radius: Radius | undefined = undefined;
-	/**
-	 * When set to `true`, the text of the button will not be truncated when the button is too small
-	 * to fit its content. Therefore the button might overflow its parent.
-	 */
-	export let noTruncate = false;
-
-	/**
-	 * When set, the button will be rendered as a link with the given href.
-	 */
-	export let href: string | undefined = undefined;
-	/**
-	 * The target of the link. Only works when the `href` prop is set.
-	 */
-	export let target: string | undefined = undefined;
-
-	/**
-	 * When set to `true`, automatically focuses the element when the component is mounted.
-	 *
-	 * This is useful for usability and accessibility reasons, for example to focus an element
-	 * when a modal is opened.
-	 */
-	export let autoFocus = false;
 
 	/**
 	 * The appearance of the button.
@@ -109,19 +64,71 @@ needs of any design. Additionally, the Button can function as a link.
 		| undefined = { from: 'primary', to: 'primary' };
 
 	/**
+	 * Whether the button should fill the width of its parent.
+	 */
+	export let fullWidth = false;
+	/**
+	 * Changes the style of the button to look disabled and prevent the user from clicking it.
+	 */
+	export let disabled = false;
+	/**
+	 * The name of a color in the theme. Does not support arbitrary colors.
+	 *
+	 * When set to `undefined`, the primary color of the theme will be used.
+	 */
+	export let color: string | undefined = undefined;
+	/**
+	 * The size of the button.
+	 */
+	export let size: 'xs' | 'sm' | 'base' = 'base';
+	/**
+	 * The border radius of the button. When set to `undefined`, the button will have the default
+	 * border radius defined in the theme.
+	 */
+	export let radius: Radius | undefined = undefined;
+	/**
+	 * When set to `true`, the text of the button will not be truncated when the button is too small
+	 * to fit its content. Therefore the button might overflow its parent.
+	 */
+	export let noTruncate = false;
+
+	/**
+	 * When set, the button will be rendered as a link with the given href.
+	 */
+	export let href: string | undefined = undefined;
+	/**
+	 * The target of the link. Only works when the `href` prop is set.
+	 */
+	export let target: string | undefined = undefined;
+
+	/**
+	 * When set to `true`, automatically focuses the element when the component is mounted.
+	 *
+	 * This is useful for usability and accessibility reasons, for example to focus an element
+	 * when a modal is opened.
+	 */
+	export let autoFocus = false;
+
+	/**
 	 * Where the button content should be placed when the button is wider than its content.
 	 */
 	export let contentJustify: 'start' | 'center' | 'end' = 'center';
 
 	let className = '';
 	/**
-	 * Additional CSS classes to add to the button.
-	 * Be careful when using this prop, as it can conflict with the default styles of the button.
+	 * Additional CSS classes to add.
+	 * Be careful when using this prop, as it can conflict with the default styles.
 	 *
 	 * Especially useful for positioning styles like margings.
 	 */
 	export { className as class };
 
+	/**
+	 * Custom CSS styles to apply.
+	 *
+	 * Especially useful for positioning styles like margings.
+	 */
+	export let style: string | undefined = undefined;
 
 	let usedColorShade: Shades[];
 	$: {
@@ -170,9 +177,14 @@ needs of any design. Additionally, the Button can function as a link.
 	{id}
 	{href}
 	{target}
-	class="button {className}"
+	class={classNames('button', className)}
 	class:d4r-w-full={fullWidth}
-	style="{overwriteColor(color, usedColorShade)}{overwriteRadius(radius, 'button')}{gradientStyle}"
+	style={classNames(
+		overwriteColor(color, usedColorShade),
+		overwriteRadius(radius, 'button'),
+		gradientStyle,
+		style
+	) || undefined}
 	class:size-base={size === 'base'}
 	class:size-sm={size === 'sm'}
 	class:size-xs={size === 'xs'}

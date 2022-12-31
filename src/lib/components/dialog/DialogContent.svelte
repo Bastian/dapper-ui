@@ -10,6 +10,7 @@ Automatically sets the `aria-describedby` attribute when used inside a `Dialog` 
 	import { Text } from '$lib';
 	import { generateRandomId } from '$lib/helpers/generateRandomId';
 	import { getContext } from 'svelte';
+	import classNames from 'classnames';
 
 	/**
 	 * The id of the dialog content.
@@ -27,8 +28,24 @@ Automatically sets the `aria-describedby` attribute when used inside a `Dialog` 
 	$: if (setAriaDescribedBy) {
 		setAriaDescribedBy(id);
 	}
+
+	let className = '';
+	/**
+	 * Additional CSS classes to add.
+	 * Be careful when using this prop, as it can conflict with the default styles.
+	 *
+	 * Especially useful for positioning styles like margings.
+	 */
+	export { className as class };
+
+	/**
+	 * Custom CSS styles to apply.
+	 *
+	 * Especially useful for positioning styles like margings.
+	 */
+	export let style: string | undefined = undefined;
 </script>
 
-<Text {id} tag="div" class="d4r-overflow-y-auto d4r-p-2 d4r-px-3">
+<Text {id} tag="div" class={classNames('d4r-overflow-y-auto d4r-p-2 d4r-px-3', className)} {style}>
 	<slot />
 </Text>

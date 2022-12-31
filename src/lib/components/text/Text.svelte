@@ -1,9 +1,7 @@
 <script lang="ts">
 	import type { Shades } from '$lib/colors/color';
 	import { overwriteColor } from '../../util/createColorOverwrite';
-
-	let className = '';
-	export { className as class };
+	import classNames from 'classnames';
 
 	/**
 	 * The contrast of the text.
@@ -109,6 +107,22 @@
 			: contrast === 'lowest'
 			? [500, 400]
 			: [200, 700];
+
+	let className = '';
+	/**
+	 * Additional CSS classes to add.
+	 * Be careful when using this prop, as it can conflict with the default styles.
+	 *
+	 * Especially useful for positioning styles like margings.
+	 */
+	export { className as class };
+
+	/**
+	 * Custom CSS styles to apply.
+	 *
+	 * Especially useful for positioning styles like margings.
+	 */
+	export let style: string | undefined = undefined;
 </script>
 
 <svelte:element
@@ -151,7 +165,7 @@
 	class:d4r-font-extrabold={weight === 'extrabold'}
 	class:d4r-font-black={weight === 'black'}
 	class:d4r-truncate={truncate}
-	style={overwriteColor(color, usedShades, 'neutral')}
+	style={classNames(overwriteColor(color, usedShades, 'neutral'), style)}
 	{...$$restProps}
 >
 	<slot />

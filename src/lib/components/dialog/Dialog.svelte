@@ -24,9 +24,7 @@ Example:
 <script lang="ts">
 	import { generateRandomId } from '$lib/helpers/generateRandomId';
 	import Modal from '../modal/Modal.svelte';
-
-	let className = '';
-	export { className as class };
+	import classNames from 'classnames';
 
 	/**
 	 * The id of the dialog.
@@ -74,6 +72,22 @@ Example:
 	 * The aria-describedby attribute.
 	 */
 	export let ariaDescribedby: string | undefined = undefined;
+
+	let className = '';
+	/**
+	 * Additional CSS classes to add.
+	 * Be careful when using this prop, as it can conflict with the default styles.
+	 *
+	 * Especially useful for positioning styles like margings.
+	 */
+	export { className as class };
+
+	/**
+	 * Custom CSS styles to apply.
+	 *
+	 * Especially useful for positioning styles like margings.
+	 */
+	export let style: string | undefined = undefined;
 </script>
 
 <Modal
@@ -87,7 +101,11 @@ Example:
 	{ariaDescribedby}
 >
 	<div
-		class="d4r-flex d4r-flex-col d4r-overflow-y-auto d4r-bg-white d4r-p-4 dark:d4r-bg-dark-700 {className}"
+		class={classNames(
+			'd4r-flex d4r-flex-col d4r-overflow-y-auto d4r-bg-white d4r-p-4 dark:d4r-bg-dark-700',
+			className
+		)}
+		style={style || undefined}
 		class:max-w-lg={!fullscreen}
 		class:fullscreen
 	>

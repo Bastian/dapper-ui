@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Text from './components/text/Text.svelte';
 	import Label from './Label.svelte';
+	import classNames from 'classnames';
 
 	export let fullWidth = false;
 	export let label: string;
@@ -18,14 +19,16 @@
 	let className = '';
 	export { className as class };
 	export let classLabel = '';
+	export let style: string | undefined = undefined;
 </script>
 
 <div
-	class="d4r-inline-flex d4r-flex-col d4r-gap-1 {className}"
+	class={classNames('d4r-inline-flex d4r-flex-col d4r-gap-1', className)}
 	class:d4r-inline-block={!fullWidth}
 	class:d4r-block={fullWidth}
 	class:d4r-w-full={fullWidth}
 	class:d4r-opacity-50={disabled}
+	{style}
 >
 	<Label
 		additionalProps={{ for: id }}

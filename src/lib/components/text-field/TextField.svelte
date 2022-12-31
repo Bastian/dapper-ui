@@ -8,10 +8,6 @@
 	import Text from '../text/Text.svelte';
 	import { focusOnMount } from '$lib/actions/focusOnMount';
 
-	let className = '';
-	export { className as class };
-	export let classLabel = '';
-
 	export let id: string = generateRandomId();
 	export let name: string | undefined = undefined;
 	export let placeholder: string | undefined = undefined;
@@ -64,6 +60,27 @@
 			}
 		});
 	};
+
+	let className = '';
+	/**
+	 * Additional CSS classes to add.
+	 * Be careful when using this prop, as it can conflict with the default styles.
+	 *
+	 * Especially useful for positioning styles like margings.
+	 */
+	export { className as class };
+
+	/**
+	 * Additional CSS classes to add to the label.
+	 */
+	export let classLabel = '';
+
+	/**
+	 * Custom CSS styles to apply.
+	 *
+	 * Especially useful for positioning styles like margings.
+	 */
+	export let style: string | undefined = undefined;
 </script>
 
 <InputBase
@@ -78,6 +95,7 @@
 	{size}
 	{classLabel}
 	class={className}
+	{style}
 	hasIconLabel={$$slots['icon-label']}
 >
 	<slot name="icon-label" slot="icon-label" />

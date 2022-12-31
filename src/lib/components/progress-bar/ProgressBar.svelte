@@ -68,6 +68,22 @@
 	 * The maximum value of the progress bar.
 	 */
 	export let max = 100;
+
+	let className = '';
+	/**
+	 * Additional CSS classes to add.
+	 * Be careful when using this prop, as it can conflict with the default styles.
+	 *
+	 * Especially useful for positioning styles like margings.
+	 */
+	export { className as class };
+
+	/**
+	 * Custom CSS styles to apply.
+	 *
+	 * Especially useful for positioning styles like margings.
+	 */
+	export let style: string | undefined = undefined;
 </script>
 
 <ProgressBarMeterBase
@@ -82,6 +98,8 @@
 	{indeterminate}
 	{color}
 	{radius}
+	class={className}
+	{style}
 	hasIconLabel={$$slots['icon-label']}
 >
 	<slot name="icon-label" slot="icon-label" />
