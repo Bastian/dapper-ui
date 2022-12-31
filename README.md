@@ -1,41 +1,32 @@
-# 🤵 Dapper UI
+# Dapper UI [![npm](https://img.shields.io/npm/v/@dapper-ui/core?color=green)](https://www.npmjs.com/package/@dapper-ui/core)
 
-![Example UI](.github/theming-example.jpg)
+![Example UI](.github/theming-example.png)
 
-Dapper UI is a UI library for Svelte. It is built on top of [TailwindCSS](https://tailwindcss.com/), but can also be used without it.
+Dapper UI is a sleek and modern UI component library for Svelte, offering full
+TypeScript support and extensive documentation. With its built-in dark mode and
+easy theming options, you can create a unique and personalized look for your
+application. Built with [TailwindCSS](https://tailwindcss.com/), but compatible
+with any styling solution, Dapper UI offers sleek, accessible and user-friendly
+component for your next project.
 
-A small demo of the components is available at [https://bastian.github.io/dapper-ui/](https://bastian.github.io/dapper-ui/).
-
-This is a project that is still under development and is very experimental. It is not recommended to use it in production or for serious projects.
-
-## Install
-
-```bash
-npm i @dapper-ui/core
-```
-
-(not tested, might not work yet)
-
-## Usage
-
-Any component that is used must be a child of the `ThemeProvider` component. It is recommended to use it as high up in the component tree as possible.
-
-```svelte
-<ThemeProvider>
-	<Button>Click me!</Button>
-</ThemeProvider>
-```
+- [Quick Start](https://dapper-ui.dev/docs/quick-start)
+- [Browse Components](https://dapper-ui.dev/docs/button)
 
 ## Current State of Development
 
-Components and structure are still experimental and can change at any time.
-Hell, not even the name is final and can change.
+Please note that Dapper UI is still in the early stages of development and, as
+such, it is not yet recommended for use in production environments. While the
+majority of documented components are stable, there may be occasional breaking
+changes or minor UI updates.
 
-Do not use this in production, but if you like it, feel free to star this repository to show your interest.
+Despite this, you are welcome to try out Dapper UI on non-critical projects and
+provide feedback. Your input is greatly appreciated as the functionality and
+documentation are constantly being improved.
 
 ## Contributing
 
-At this stage of development, I am not looking for contributions.
+At this stage, I'm are not looking for code contributions. However, this will
+change in the future.
 
 ## License
 
