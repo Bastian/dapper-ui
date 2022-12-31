@@ -1,24 +1,14 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { IconButton, Text, ThemeProvider } from '$lib';
+	import '@fontsource/fira-mono/400.css';
 	import '@fontsource/open-sans/400.css';
 	import '@fontsource/open-sans/500.css';
 	import '@fontsource/open-sans/600.css';
 	import '@fontsource/open-sans/700.css';
-	import '@fontsource/fira-mono/400.css';
-	import { Menu2 } from 'tabler-icons-svelte';
-	import ToggleDarkModeButton from './ToggleDarkModeButton.svelte';
+	import { BrandGithub, Menu2 } from 'tabler-icons-svelte';
 	import PageDrawer, { drawerOpen } from './PageDrawer.svelte';
-	import {
-		ThemeProvider,
-		Text,
-		Button,
-		Dialog,
-		DialogHeader,
-		DialogContent,
-		DialogActions,
-		IconButton
-	} from '$lib';
-	import Checkbox from '$lib/components/checkbox/Checkbox.svelte';
+	import ToggleDarkModeButton from './ToggleDarkModeButton.svelte';
 	import WorkInProgressWarning from './WorkInProgressWarning.svelte';
 </script>
 
@@ -35,7 +25,16 @@
 				</IconButton>
 			</div>
 			<Text size="lg" weight="bold" contrast="higher"><a href="{base}/">Dapper UI</a></Text>
-			<ToggleDarkModeButton icon />
+			<div>
+				<IconButton
+					href="https://github.com/Bastian/dapper-ui"
+					label="View on GitHub"
+					color="neutral"
+				>
+					<BrandGithub />
+				</IconButton>
+				<ToggleDarkModeButton icon />
+			</div>
 		</header>
 
 		<div class="d4r-h-full d4r-flex-grow d4r-pt-14">

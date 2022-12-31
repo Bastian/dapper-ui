@@ -10,6 +10,9 @@
 		<Text>© {new Date().getFullYear()} Dapper UI</Text>
 	</div>
 	<div class="d4r-flex d4r-gap-3">
+		<Text contrast="lower" size="sm" tag="a" href="https://github.com/Bastian/dapper-ui">
+			GitHub
+		</Text>
 		<Text contrast="lower" size="sm" tag="a" href="{base}/privacy-policy">Privacy Policy</Text>
 		<Text contrast="lower" size="sm" tag="a" href="{base}/imprint">Imprint</Text>
 	</div>
